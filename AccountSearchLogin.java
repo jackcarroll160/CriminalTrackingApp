@@ -1,6 +1,6 @@
 /*
  * @author Kyle Persyn
- * This class is going to be the UserActions interface that will assist in searching and editing
+ * This class is going to be the AccountSearchLogin class that will assist in searching and editing
  */
 public class AccountSearchLogin {
 
