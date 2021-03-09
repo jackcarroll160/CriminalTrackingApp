@@ -2,7 +2,7 @@
  * @author Kyle Persyn
  * This class is going to be the Victim  class that will be included as part of the crimes
  */
-public class Victim {
+public class Victim extends Person{
 
 	private boolean isAlive;
 	private String gender;
