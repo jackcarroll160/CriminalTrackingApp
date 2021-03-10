@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 public class Crime {
 
+    private enum TypeOfCrime {PERSONAL, PROPERTY, HATE, VICTIMLESS, WHITECOLLAR, ORGANIZED, SOCIOLOGICAL}
+    private enum Grading {MISDEMEANOR, FELONY, INFRACTION} 
+
     private String description;
     private int idNum;
     private String dateOfCrime;
