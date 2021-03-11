@@ -1,0 +1,14 @@
+[
+    {
+        "victimId":1,
+        "crimeId":1,
+        "firstName":"Jessica",
+        "lastName":"Brewer",
+        "age": 27,
+        "contactInfo":"864-598-09876",
+        "isMinor":false,
+        "isAlive":true,
+        "isInjured":true,
+        "statement":"Strangled me when I took his muffin"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "crimeId":1,
+        "criminalId":2,
+        "description":"attempted murder",
+        "dateOfCrime":"07/24/2018",
+        "timeOfCrime":"8:40pm",
+        "caseOpen":false,
+        "witnesses":["Johnny Appleseed", "Meredith Grey", "Thomas Lincoln"],
+        "victimId": 1,
+        "victims":["Jessica Brewer"],
+        "suspects":["Justin Brown, James Bond, Muffin Man"],
+        "personOfInterest":["Jane Lander"],
+        "criminals":["Muffin Man"],
+        "officers":["Officer Brown", "Officer Thompson"]
+    },{
+        "crimeId":2,
+        "criminalId":1,
+        "description":"wreckless driving",
+        "dateOfCrime":"09/04/2020",
+        "timeOfCrime":"12:30pm",
+        "caseOpen":false,
+        "witnesses":["Meredith Grey"],
+        "victims":["N/A"],
+        "suspects":["Denice Knight"],
+        "personOfInterest":["Denice Knight"],
+        "criminals":["Denice Knight"],
+        "officers":["Officer Jelly", "Officer Butter"]
+    }
+]
