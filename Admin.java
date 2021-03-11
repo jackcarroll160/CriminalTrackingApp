@@ -1,3 +1,6 @@
+/**
+ * Author: Sydney Oklota
+ */
 public class Admin extends User{
     
     public Admin(String Fname, String Lname){
