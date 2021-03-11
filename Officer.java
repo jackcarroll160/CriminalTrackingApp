@@ -1,8 +1,13 @@
+/**
+ * Author: Sydney Okota
+ */
 public class Officer extends User {
 
     private String rank;
 
     public Officer(){
+
+        this.rank = rank;
 
     }
 
