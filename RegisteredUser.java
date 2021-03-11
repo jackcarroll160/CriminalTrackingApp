@@ -1,3 +1,6 @@
+/**
+ * Author: Sydney Oklota
+ */
 import java.util.*;
 public class RegisteredUser extends User{
 
