@@ -1,3 +1,6 @@
+/**
+ * Author: Sydney Oklota
+ */
 import java.util.*;
 import java.util.Map;
 public abstract class User implements UserInterface{
