@@ -1,3 +1,6 @@
+/**
+ * Author: Sydney Oklota
+ */
 import java.util.*;
 public class Criminal {
     
@@ -21,43 +24,133 @@ public class Criminal {
     private boolean hasFingerprints;
     private String criminalReport;
 
+
+    /**
+     * getters
+     */
     public String toString(){
 
     }
 
     public ArrayList<UUID> getID(){
 
-    }
-
-    public void setID(ArrayList<UUID>){
+        return this.ID;
 
     }
 
     public int getCriminalID(){
 
-    }
-
-    public void setCiminalID(){
+        return this.criminalID;
 
     }
 
     public String getNickname(){
 
-    }
-
-    public void setNickname(){
+        return this.nickname;
 
     }
 
     public String getKnownAddress(){
 
-    }
-
-    public void setKnowAddress(){
+        return this.knownAddress;
 
     }
 
     public ArrayList<String> getAffiliates(){
+
+        return this.affiliates;
+
+    }
+
+    public ArrayList<String> getFamilyMembers(){
+
+        return this.familyMembers;
+
+    }
+
+    public double getShoeSize(){
+
+        return this.shoeSize;
+
+    }
+
+    public ArrayList<Crime> getCrime(){
+
+        return this.crime;
+
+    }
+
+    public String getCrimeDescription(){
+
+        return this.crimeDescription;
+
+    }
+
+    public boolean getVictimStatus(){
+
+        return this.victimAlive;
+
+    }
+
+    public String getWitnessData(){
+
+        return this.witnessData;
+
+    }
+
+    public boolean getViolence(){
+
+        return this.isViolent;
+
+    }
+    
+    public String getGangAffiliation(){
+
+        return this.gangAffiliation;
+
+    }
+
+    public String getDateOfCrime(){
+
+        return this.dateOfCrime;
+
+    }
+
+    public Witness getWitness(){
+
+        return this.witness;
+
+    }
+
+    public boolean getHasFingerprints(){
+
+        return this.hasFingerprints;
+
+    }
+
+    public boolean getHasNickname(){
+
+        return this.hasNickname;
+
+    }
+
+
+    /**
+     * setters
+     */
+    public void setID(ArrayList<UUID>){
+
+    }
+
+    public void setCriminalID(int criminalID){
+
+    }
+
+    public void setNickname(String nickname){
+
+    }
+
+    public void setKnownAddress(String knownAddress){
 
     }
 
@@ -65,23 +158,11 @@ public class Criminal {
 
     }
 
-    public ArrayList<String> getFamilyMembers(){
-
-    }
-
     public void setFamilyMembers(ArrayList<String>){
 
     }
 
-    public double getShoeSize(){
-
-    }
-
-    public void setShoeSize(){
-
-    }
-
-    public Crime getCrime(){
+    public void setShoeSize(double shoeSize){
 
     }
 
@@ -89,15 +170,7 @@ public class Criminal {
 
     }
 
-    public String getCrimeDescription(){
-
-    }
-
-    public void setCrimeDescription(){
-
-    }
-
-    public boolean getVictimStatus(){
+    public void setCrimeDescription(String crimeDescription){
 
     }
 
@@ -105,82 +178,33 @@ public class Criminal {
 
     }
 
-    public String getWitnessData(){
-
-    }
-
-    public void setWitnessData(){
-
-    }
-
-    public boolean getViolence(){
+    public void setWitnessData(String witnessData){
 
     }
 
     public void setViolence(){
        
     }
-    
-    public String getGangAffiliation(){
+
+    public void setGangAffiliation(String gangAffiliation){
 
     }
 
-    public void setGangAffiliation(){
-
-    }
-
-    public String getDateOfCrime(){
-
-    }
-
-    public void setDateOfCrime(){
-
-    }
-
-    public Witness getWitness(){
+    public void setDateOfCrime(String dateOfCrime){
 
     }
 
     public void setWitness(Witness witness){
 
     }
-
-    public boolean getHasFingerprints(){
-
-    }
-
+    
     public void setHasFingerprints(){
-
-    }
-
-    public boolean getHasNickname(){
 
     }
 
     public void setHasNickname(){
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
