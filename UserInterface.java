@@ -1,3 +1,6 @@
+/**
+ * Author: Sydney Oklota
+ */
 public interface UserInterface {
 
     public void searchCriminalsByName(String Fname, String Lname);
