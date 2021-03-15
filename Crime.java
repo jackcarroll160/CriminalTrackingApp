@@ -1,8 +1,19 @@
 import java.util.ArrayList;
 
+/**
+ * Crime class for the information based on crime
+ * @author Overachievers
+ */
 public class Crime {
 
+    /**
+     * Enumeration for the types of crime
+     */
     private enum TypeOfCrime {PERSONAL, PROPERTY, HATE, VICTIMLESS, WHITECOLLAR, ORGANIZED, SOCIOLOGICAL}
+
+    /**
+     * Enumeration for the grading level of a crime
+     */
     private enum Grading {MISDEMEANOR, FELONY, INFRACTION} 
 
     private String description;
@@ -20,120 +31,228 @@ public class Crime {
     private TypeOfCrime typeOfCrime;
     private Grading grading;
 
-    public String toString() {
-
-    }
-
+    /**
+     * Gets the description of a crime
+     * @return A String for the description of a crime
+     */
     public String getDescription() {
         return this.description;
     }
 
-    public void setDescription(String descrip) {
-
+    /**
+     * Sets the description of a crime
+     * @param description A String for the description of a crime
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
+    /**
+     * Gets the identifying number of the crime case
+     * @return An integer associated with the identifying crime 
+     */
     public int getIdNum() {
         return this.idNum;
     }
 
-    public void setIdNum(int idnum) {
-
+    /**
+     * Sets the identification number of a crime case
+     * @param idNum an integer for the number identifyer of a case
+     */
+    public void setIdNum(int idNum) {
+        this.idNum = idNum;
     }
 
+    /**
+     * Gets the date of the crime
+     * @return A String for the date of the crime
+     */
     public String getDateOfCrime() {
         return this.dateOfCrime;
     }
 
-    public void setDateOfCrime(String date) {
-
+    /**
+     * Sets the date of a crime case
+     * @param dateOfCrime A String for the date the crime occured
+     */
+    public void setDateOfCrime(String dateOfCrime) {
+        this.dateOfCrime = dateOfCrime;
     }
 
+    /**
+     * Gets the time of the crime
+     * @return a String for the time a crime took place
+     */
     public String getTimeOfCrime() {
         return this.timeOfCrime;
     }
 
-    public void setTimeOfCrime(String time) {
-
+    /**
+     * Sets the time for a crime
+     * @param timeOfCrime A String for the time the crime occured
+     */
+    public void setTimeOfCrime(String timeOfCrime) {
+        this.timeOfCrime = timeOfCrime;
     }
 
+    /**
+     * Gets the evidence associated with the crime
+     * @return The evidence associated with a crime case
+     */
     public Evidence getEvidence() {
         return this.evidence;
     }
 
-    public void setEvidence(Evidence eviden) {
-
+    /**
+     * Sets the evidence with a crime case
+     * @param evidence Evidence for a crime
+     */
+    public void setEvidence(Evidence evidence) {
+        this.evidence = evidence;
     }
 
-    public boolean getCaseOpen() {
+    /**
+     * Gets the case status of a crime
+     * @return true/false if the case is open or not
+     */
+    public boolean isCaseOpen() {
         return this.caseOpen;
     }
 
-    public void setCaseOpen(boolean status) {
-
+    /**
+     * Sets the case status
+     * @param caseOpen true/false if the crime is open or not
+     */
+    public void setCaseOpen(boolean caseOpen) {
+        this.caseOpen = caseOpen;
     }
 
+    /**
+     * Gets the list of Witnesses assocaited with a crime
+     * @return the list of witnesses
+     */
     public ArrayList<Witness> getWitnesses() {
         return this.witnesses;
     }
 
-    public void setWitnesses(ArrayList<Witness> witness) {
-
+    /**
+     * Sets the witnesses 
+     * @param witnesses associated with a crime
+     */
+    public void setWitnesses(ArrayList<Witness> witnesses) {
+        this.witnesses = witnesses;
     }
 
+    /**
+     * Gets the list of victims for a crime
+     * @return the list of victims
+     */
     public ArrayList<Victim> getVictims() {
         return this.victims;
     }
 
-    public void setVictims(ArrayList<Victim> victim) {
-
+    /**
+     * Sets the victims list to a crime
+     * @param victims list to be added to a crime
+     */
+    public void setVictims(ArrayList<Victim> victims) {
+        this.victims = victims;
     }
 
+    /**
+     * Gets the suspects for a crime
+     * @return the list of suspects
+     */
     public ArrayList<Suspect> getSuspects() {
         return this.suspects;
     }
 
-    public void setSuspects(ArrayList<Suspect> suspect) {
-
+    /**
+     * Sets the suspect list for a crime
+     * @param suspects the list of suspects to be added to a crime
+     */
+    public void setSuspects(ArrayList<Suspect> suspects) {
+        this.suspects = suspects;
     }
 
+    /**
+     * Gets the person(s) of interest for a crime
+     * @return the person(s) of interest
+     */
     public ArrayList<PersonOfInterest> getPersonOfInterest() {
         return this.personOfInterest;
     }
 
-    public void setPersonOfInterest(ArrayList<PersonOfInterest> POI) {
-
+    /**
+     * Sets the person of interest list for a crime
+     * @param personOfInterest the list of person(s) of interest to be added to a crime
+     */
+    public void setPersonOfInterest(ArrayList<PersonOfInterest> personOfInterest) {
+        this.personOfInterest = personOfInterest;
     }
 
+    /**
+     * Gets the list of criminals associated with a crime
+     * @return the list of criminal(s) associated with a crime
+     */
     public ArrayList<Criminal> getCriminals() {
         return this.criminals;
     }
 
-    public void setCriminals(ArrayList<Criminal> criminal) {
-
+    /**
+     * Sets the list of criminals for a crime
+     * @param criminals the list of criminals for a crime
+     */
+    public void setCriminals(ArrayList<Criminal> criminals) {
+        this.criminals = criminals;
     }
 
-    public ArrayList<Officer> getOfficer() {
+    /**
+     * Gets the officers dealing with the crime
+     * @return the list of officers associated with the crime
+     */
+    public ArrayList<Officer> getOfficers() {
         return this.officers;
     }
 
-    public void setOfficer(ArrayList<Officer> officer) {
-
+    /**
+     * Sets the officer list for a crime
+     * @param officers a list of involved officers to add to a crime
+     */
+    public void setOfficers(ArrayList<Officer> officers) {
+        this.officers = officers;
     }
 
+    /**
+     * Gets the type of crime 
+     * @return TypeOfCrime the crime is 
+     */
     public TypeOfCrime getTypeOfCrime() {
         return this.typeOfCrime;
     }
 
-    public void setTypeOfCrime(TypeOfCrime type) {
-
+    /**
+     * Sets the type of crime 
+     * @param typeOfCrime for the type of crime that was committed 
+     */
+    public void setTypeOfCrime(TypeOfCrime typeOfCrime) {
+        this.typeOfCrime = typeOfCrime;
     }
 
+    /**
+     * Gets the grading level of the crime
+     * @return the grading level of the crime
+     */
     public Grading getGrading() {
         return this.grading;
     }
 
-    public void setGrading(Grading grade) {
-        
+    /**
+     * Sets the grading level of the crime
+     * @param grading for type of grading a crime is marked as
+     */
+    public void setGrading(Grading grading) {
+        this.grading = grading;
     }
 
 }
