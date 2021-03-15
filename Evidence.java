@@ -1,3 +1,7 @@
+/**
+ * Evidence class for the evidence information
+ * @author Overachievers
+ */
 public class Evidence {
     
     private int idNum;
@@ -6,55 +10,84 @@ public class Evidence {
     private String testimony;
     private String exhibits;
 
-    public String toString() {
-
-    }
-
+    /**
+     * Gets the identification number for associated crime
+     * @return an int for the identification number the evidence
+     */
     public int getIdNum() {
         return this.idNum;
     }
 
-    public void setIdNum(int idnum) {
-
+    /**
+     * Sets the Id number for Evidence
+     * @param idNum an int for the case number the evidence is associated with
+     */
+    public void setIdNum(int idNum) {
+        this.idNum = idNum;
     }
 
-    public String getDiscoveryDate() {
+    /**
+     * Gets the date the evidence was discovered
+     * @return A String for the date the evidence was found
+     */
+    public String getDateOfDiscovery() {
         return this.dateOfDiscovery;
     }
 
-    public void setDiscoveryDate(String date) {
-
+    /**
+     * Sets the Evidence discovery date
+     * @param dateOfDiscovery A String for the date the evidence was discovered
+     */
+    public void setDateOfDiscovery(String dateOfDiscovery) {
+        this.dateOfDiscovery = dateOfDiscovery;
     }
 
+    /**
+     * Gets the evidence description
+     * @return A String for the evidence description
+     */
     public String getDescription() {
         return this.description;
     }
 
-    public void setDescription(String descrip) {
-
+    /**
+     * Sets the evidence description
+     * @param description A String for the evidence description
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
+    /**
+     * Gets the testimony as evidence
+     * @return the testimony to use as evidence
+     */
     public String getTestimony() {
         return this.testimony;
     }
 
+    /**
+     * Sets a testimony to be used as evidence
+     * @param testimony A String for the testimony evidence
+     */
     public void setTestimony(String testimony) {
-
+        this.testimony = testimony;
     }
 
+    /**
+     * Gets the exhibit evidence
+     * @return the exhibit evidence
+     */
     public String getExhibits() {
         return this.exhibits;
     }
 
-    public void setExhibits(String exhibit) {
-
+    /**
+     * Sets the exhibit evidence
+     * @param exhibits A String for the exhibit evidence
+     */
+    public void setExhibits(String exhibits) {
+        this.exhibits = exhibits;
     }
 
-    public void crimeAssociated(Crime crime) {
-
-    }
-
-    private void officerInput(Officer officer) {
-        
-    }
 }
