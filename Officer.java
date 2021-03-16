@@ -34,7 +34,7 @@ public class Officer extends User {
 
     /**
      * remove misdemeanor from array list
-     * @param crime array list
+     * @param crime array list 
      * @param misdemeanor misdemeanor being removed
      */
     public void removeMisdemeanors(Criminal crime, String misdemeanor){
@@ -57,7 +57,7 @@ public class Officer extends User {
 
 
 
-    //should keep? what are they exactly?
+    //should keep? what are they exactly? difference between report and misdemeanors and felonies?
 
     public void addReport(Crime crime){
         

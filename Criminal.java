@@ -23,6 +23,8 @@ public class Criminal {
     private Witness witness;
     private boolean hasFingerprints;
     private String criminalReport;
+    private String firstName;
+    private String lastName;
 
 
     /**
@@ -184,7 +186,7 @@ public class Criminal {
     }
 
     public void setViolence(){
-       
+        
     }
 
     public void setGangAffiliation(String gangAffiliation){

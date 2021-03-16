@@ -10,7 +10,7 @@ public abstract class User implements UserInterface{
     protected HashMap<UUID, String> storeUserPwd;
     protected String email;
     protected int authorizationLevel;
-    protected String UserType;
+    
 
 
     public User(String username, String password, int authorizationLevel){
@@ -71,10 +71,22 @@ public abstract class User implements UserInterface{
         
 
     }
+ 
+    /**
+     * Adds crimininal to id array
+     * @param ID id array
+     * @param firstName criminal first name
+     * @param lastName criminal last name
+     */
+    public void addCriminal(Criminal ID, String firstName, String lastName){
+        ID.add(firstName);
+
+    }
 
 
 
 
+    
     public String toString(){
 
         return null;
@@ -86,10 +98,7 @@ public abstract class User implements UserInterface{
 
     }
 
-    public void addCriminal(Criminal ID, String firstName, String lastName){
-        ID.add(firstName);
-
-    }
+    
 
     public void favoiteReport(Criminal criminal){
 
