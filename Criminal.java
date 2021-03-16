@@ -35,6 +35,15 @@ public class Criminal {
 
     }
 
+    public String getFirstName(){
+
+        return this.firstName;
+    }
+
+    public String getLastName(){
+
+        return this.lastName;
+    }
     public ArrayList<UUID> getID(){
 
         return this.ID;
@@ -145,6 +154,14 @@ public class Criminal {
 
     }
 
+    public void setFirstName(String firstname){
+
+    }
+
+    public void setLastName(String lastname){
+
+    }
+    
     public void setCriminalID(int criminalID){
 
     }
