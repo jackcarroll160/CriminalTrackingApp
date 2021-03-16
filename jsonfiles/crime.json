@@ -6,12 +6,10 @@
         "dateOfCrime":"07/24/2018",
         "timeOfCrime":"8:40pm",
         "caseOpen":false,
-        "witnesses":["Johnny Appleseed", "Meredith Grey", "Thomas Lincoln"],
+        "witnessId": 1,
         "victimId": 1,
-        "victims":["Jessica Brewer"],
-        "suspects":["Justin Brown, James Bond, Muffin Man"],
-        "personOfInterest":["Jane Lander"],
-        "criminals":["Muffin Man"],
+        "suspectId":1,
+        "personOfInterestId":1,
         "officers":["Officer Brown", "Officer Thompson"]
     },{
         "crimeId":2,
@@ -20,11 +18,10 @@
         "dateOfCrime":"09/04/2020",
         "timeOfCrime":"12:30pm",
         "caseOpen":false,
-        "witnesses":["Meredith Grey"],
-        "victims":["N/A"],
-        "suspects":["Denice Knight"],
-        "personOfInterest":["Denice Knight"],
-        "criminals":["Denice Knight"],
+        "witnessId":2,
+        "victimId":2,
+        "suspectId":2,
+        "personOfInterestId":2,
         "officers":["Officer Jelly", "Officer Butter"]
     }
 ]
