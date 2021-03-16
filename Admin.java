@@ -3,13 +3,14 @@
  */
 public class Admin extends User{
     
-    public Admin(String Fname, String Lname){
+    public Admin(String username, String password, int authorizationLevel){
+
+        super(username, password, authorizationLevel);
 
     }
 
-    public void addReport(Criminal criminal){
-
-    }
+   
+    
 
     public void editReport(Criminal criminal){
 
@@ -23,31 +24,25 @@ public class Admin extends User{
 
     }
 
-    private void verifyAuthorizationReportEdit(){
 
+
+    
+
+    @Override
+    public void searchCriminalsByName(String Fname, String Lname) {
+        // TODO Auto-generated method stub
+        
     }
 
-    private void addOfficer(Officer officer){
-
+    @Override
+    public void editCriminalByName(String Fname, String Lname) {
+        // TODO Auto-generated method stub
+        
     }
 
-    private void deleteOfficer(Officer officer){
+  
 
-    }
 
-    private void addUser(User user){
 
-    }
-
-    private void deleteUser(User user){
-
-    }
-
-    private void getUsername(String name){
-
-    }
-
-    private void getUserID(String firstName, String lastName){
-
-    }
+   
 }
