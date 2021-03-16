@@ -29,6 +29,7 @@ public class Criminal {
      * getters
      */
     public String toString(){
+        return null;
 
     }
 
@@ -138,7 +139,7 @@ public class Criminal {
     /**
      * setters
      */
-    public void setID(ArrayList<UUID>){
+    public void setID(ArrayList<UUID> ID){
 
     }
 
@@ -154,11 +155,11 @@ public class Criminal {
 
     }
 
-    public void setAffiliates(ArrayList<String>){
+    public void setAffiliates(ArrayList<String> affiliates){
 
     }
 
-    public void setFamilyMembers(ArrayList<String>){
+    public void setFamilyMembers(ArrayList<String> familyMembers){
 
     }
 
@@ -205,6 +206,17 @@ public class Criminal {
     public void setHasNickname(){
 
     }
+
+
+
+
+    public void add(String misdemeanor) {
+    }
+
+    public void remove(String misdemeanor) {
+    }
+
+    
 
 
 }
