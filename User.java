@@ -2,17 +2,78 @@
  * Author: Sydney Oklota
  */
 import java.util.*;
-import java.util.Map;
 public abstract class User implements UserInterface{
     
     protected ArrayList<UUID> userID;
     protected String username;
     protected String password;
-    protected HashMap<String, String> storeUserPwd;
-    protected String firstName;
-    protected String lastName;
+    protected HashMap<UUID, String> storeUserPwd;
     protected String email;
     protected int authorizationLevel;
+    protected String UserType;
+
+
+    public User(String username, String password, int authorizationLevel){
+
+        this.username = username;
+        this.password = password;
+        this.authorizationLevel = authorizationLevel;
+        
+    }
+
+    /**
+     * stores user password into hashmap that contains user ID and password
+     * @param userID key, user ID number
+     * @param password value, user password
+     */
+    public void registerUser(UUID userID , String password) {
+        
+        storeUserPwd.put(userID, password);
+        
+    } 
+
+    /**
+     * removes user from hashmap of stored user passwords
+     * @param userID key that determines which user is being removed
+     */
+    public void removeUser(UUID userID) {
+
+        storeUserPwd.remove(userID);
+        
+    }
+
+    /**
+     * prints authorization level to screen upon login
+     * @param authorizationLevel level inputed by user at sign up and login
+     * @return whether or not access has been granted
+     */
+    private String checkAuthorization(int authorizationLevel){
+        if(authorizationLevel == 1){
+
+            return "Authorization Level: Admin";
+
+        }
+        else if(authorizationLevel == 2){
+
+            return "Authorization Level: Officer";
+            
+        }
+        else if(authorizationLevel == 3){
+
+            return "Authorization Level: Registered User";
+            
+        }
+        else{
+
+            return "Authorization Level: none";
+
+        } 
+        
+
+    }
+
+
+
 
     public String toString(){
 
@@ -21,10 +82,12 @@ public abstract class User implements UserInterface{
     }
 
     public void getCriminals(Criminal criminal){
+        return;
 
     }
 
-    public void addCriminal(Criminal criminal){
+    public void addCriminal(Criminal ID, String firstName, String lastName){
+        ID.add(firstName);
 
     }
 
@@ -36,58 +99,9 @@ public abstract class User implements UserInterface{
 
     }
 
-    private boolean checkAuthorization(){
+    
 
-        return true;
 
-    }
-
-    @Override
-    public void searchCriminalsByName(String Fname, String Lname) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void editCriminalByName(String Fname, String Lname) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void registerAdmin(Admin admin) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void registerOfficer(Officer officer) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void registerUser(RegisteredUser user) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void removeAdmin(Admin admin) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void removeOfficer(Officer officer) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void removeUser(RegisteredUser user) {
-        // TODO Auto-generated method stub
-        
-    }
+   
 }
 
