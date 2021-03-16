@@ -6,7 +6,8 @@ public class RegisteredUser extends User{
 
     private ArrayList<Criminal> criminals;
 
-    public RegisteredUser(){
+    public RegisteredUser(String username, String password, int authorizationLevel){
+        super(username, password, authorizationLevel);
 
     }
 
@@ -38,6 +39,18 @@ public class RegisteredUser extends User{
         
         return true;
 
+    }
+
+    @Override
+    public void searchCriminalsByName(String Fname, String Lname) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void editCriminalByName(String Fname, String Lname) {
+        // TODO Auto-generated method stub
+        
     }
     
 }
