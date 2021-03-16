@@ -68,7 +68,10 @@ public class CriminalList implements UserActions{
 	 */
 	public void editCriminalsByName(String Fname, String Lname) 
 	{
+		String[] Attributes = {"ID", "Criminal ID","Has Nickname" , "Nickname" , " Known Address", "Affiliates", "Family Members", "Shoe Size", "Crime", "Crime Description", "Victim Alive" , "Witness Data", "Is Violent", "Gang Affiliation", "Date Of Crime", "Has Witness", "Witness", "Has Fingerprints", "Criminal Report"};
 		
+		System.out.println("Which Attribute would you like to change: " + Attributes);
+		//ADD MORE HERE
 	}
 	
 	
