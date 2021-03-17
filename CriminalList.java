@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.UUID;
-
+import java.util.Scanner;
 
 /*
  * @author Kyle Persyn
@@ -71,7 +71,93 @@ public class CriminalList implements UserActions{
 		String[] Attributes = {"ID", "Criminal ID","Has Nickname" , "Nickname" , " Known Address", "Affiliates", "Family Members", "Shoe Size", "Crime", "Crime Description", "Victim Alive" , "Witness Data", "Is Violent", "Gang Affiliation", "Date Of Crime", "Has Witness", "Witness", "Has Fingerprints", "Criminal Report"};
 		
 		System.out.println("Which Attribute would you like to change: " + Attributes);
-		//ADD MORE HERE
+		Scanner keyboard = new Scanner(System.in);
+		String attribute = keyboard.nextLine();
+		
+		int searchLength = criminalList.size();
+		for (int i = 0; i < searchLength; i++)
+		{
+			if(criminalList.get(i) != null && criminalList.get(i).getFirstName() == Fname &&criminalList.get(i).getLastName() == Lname)
+			{
+				if(attribute.equalsIgnoreCase(Attributes[0]))
+				{
+					System.out.println("Enter the new ID: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[1]))
+				{
+					System.out.println("Enter the new Criminal ID: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[2]))
+				{
+					System.out.println("Enter the updated Has Nickname Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[3]))
+				{
+					System.out.println("Enter the new Nickname: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[4]))
+				{
+					System.out.println("Enter the new Known Address: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[5]))
+				{
+					System.out.println("Enter the new Affiliates: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[6]))
+				{
+					System.out.println("Enter the new Family Members: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[7]))
+				{
+					System.out.println("Enter the new Shoe Size: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[8]))
+				{
+					System.out.println("Enter the new Crime: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[9]))
+				{
+					System.out.println("Enter the new Crime Description: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[10]))
+				{
+					System.out.println("Enter the new Victim Alive Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[11]))
+				{
+					System.out.println("Enter the new Witness Information: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[12]))
+				{
+					System.out.println("Enter the new Is Violent Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[13]))
+				{
+					System.out.println("Enter the new Gang Affiliation Information: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[14]))
+				{
+					System.out.println("Enter the new Date Of Crime: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[15]))
+				{
+					System.out.println("Enter the new has Witness Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[16]))
+				{
+					System.out.println("Enter the new Witness: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[17]))
+				{
+					System.out.println("Enter the new Has Fingerprints Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[18]))
+				{
+					System.out.println("Enter the new Criminal Report: ");
+				}
+			}
+		}
+		
 	}
 	
 	
