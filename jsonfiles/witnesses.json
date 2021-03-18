@@ -1,0 +1,15 @@
+[
+    {
+        "witnessId":1,
+        "crimeId":1,
+        "firstName":"Madison",
+        "lastName":"Yager",
+        "age": 28,
+        "contactInfo":"803-555-0988",
+        "isMinor":false,
+        "proof":"was in the lobby when the attack happened",
+        "testimony": "I saw the man as I was waiting for my ride in the hotel lobby, and the muffin man started strangling a girl.",
+        "location": "Tipton Hotel",
+        "typeOfWitness": "lay witness"
+    }
+]
