@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Author: Sydney Okota
  */
@@ -17,7 +19,7 @@ public class Officer extends User {
      * @param crime array list
      * @param misdemeanor misdemeanor being added
      */
-    public void addMisdemeanors(Criminal crime, String misdemeanor){
+    public void addMisdemeanors(ArrayList<Crime> crime, Crime misdemeanor){
         crime.add(misdemeanor);
 
     }
@@ -27,7 +29,7 @@ public class Officer extends User {
      * @param crime array list
      * @param felony felony being added
      */
-    public void addFelonies(Criminal crime, String felony){
+    public void addFelonies(ArrayList<Crime> crime, Crime felony){
         crime.add(felony);
 
     }
@@ -37,7 +39,7 @@ public class Officer extends User {
      * @param crime array list 
      * @param misdemeanor misdemeanor being removed
      */
-    public void removeMisdemeanors(Criminal crime, String misdemeanor){
+    public void removeMisdemeanors(ArrayList<Crime> crime, Crime misdemeanor){
         crime.remove(misdemeanor);
 
     }
@@ -47,30 +49,31 @@ public class Officer extends User {
      * @param crime array list
      * @param felony felony being removed
      */
-    public void removeFelonies(Criminal crime, String felony){
+    public void removeFelonies(ArrayList<Crime> crime, Crime felony){
         crime.remove(felony);
     }
 
-
-
-
-
-
-
-    //should keep? what are they exactly? difference between report and misdemeanors and felonies?
-
-    public void addReport(Crime crime){
-        
+    /**
+     * add criminal report
+     */
+    public void addReport(){
+        CriminalList.getInstance();
 
     }
 
-    public void editReport(Crime crime){
+    /**
+     * allows officer to edit reports
+     * @param Fname first name of criminal
+     * @param Lname last name of criminal
+     */
+    public void editReport(String Fname, String Lname){
+        editCriminalByName(Fname, Lname);
 
     }
 
 
 
-    
+    //interface methods
 
     @Override
     public void searchCriminalsByName(String Fname, String Lname) {
@@ -81,6 +84,48 @@ public class Officer extends User {
 
     @Override
     public void editCriminalByName(String Fname, String Lname) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void registerAdmin(Admin admin) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void registerOfficer(Officer officer) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void registerUser(RegisteredUser user) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void removeAdmin(Admin admin) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void removeOfficer(Officer officer) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void removeUser(RegisteredUser user) {
         // TODO Auto-generated method stub
         
     }

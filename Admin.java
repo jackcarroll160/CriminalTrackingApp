@@ -58,15 +58,18 @@ public class Admin extends User{
        }
     }
 
-
-
-
-
-
-     public void editReport(Criminal criminal){
+    /**
+     * edit criminal report
+     * @param Fname first name of criminal
+     * @param Lname last name of criminal
+     */
+     public void editReport(String Fname, String Lname){
+         editCriminalByName(Fname, Lname);
 
     }
 
+
+    //interface methods
     @Override
     public void searchCriminalsByName(String Fname, String Lname) {
         // TODO Auto-generated method stub
@@ -75,6 +78,42 @@ public class Admin extends User{
 
     @Override
     public void editCriminalByName(String Fname, String Lname) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void registerAdmin(Admin admin) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void registerOfficer(Officer officer) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void registerUser(RegisteredUser user) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void removeAdmin(Admin admin) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void removeOfficer(Officer officer) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void removeUser(RegisteredUser user) {
         // TODO Auto-generated method stub
         
     }
