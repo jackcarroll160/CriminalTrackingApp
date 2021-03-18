@@ -78,7 +78,7 @@ public abstract class User implements UserInterface{
      * @param firstName criminal first name
      * @param lastName criminal last name
      */
-    public void addCriminal(Criminal ID, String firstName, String lastName){
+    public void addCriminal(ArrayList<Criminal> ID, Criminal firstName, Criminal lastName){
         ID.add(firstName);
 
     }
