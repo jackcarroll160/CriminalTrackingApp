@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Author: Sydney Okota
  */
@@ -17,7 +19,7 @@ public class Officer extends User {
      * @param crime array list
      * @param misdemeanor misdemeanor being added
      */
-    public void addMisdemeanors(Criminal crime, String misdemeanor){
+    public void addMisdemeanors(ArrayList<Crime> crime, Crime misdemeanor){
         crime.add(misdemeanor);
 
     }
@@ -27,7 +29,7 @@ public class Officer extends User {
      * @param crime array list
      * @param felony felony being added
      */
-    public void addFelonies(Criminal crime, String felony){
+    public void addFelonies(ArrayList<Crime> crime, Crime felony){
         crime.add(felony);
 
     }
@@ -37,7 +39,7 @@ public class Officer extends User {
      * @param crime array list 
      * @param misdemeanor misdemeanor being removed
      */
-    public void removeMisdemeanors(Criminal crime, String misdemeanor){
+    public void removeMisdemeanors(ArrayList<Crime> crime, Crime misdemeanor){
         crime.remove(misdemeanor);
 
     }
@@ -47,15 +49,23 @@ public class Officer extends User {
      * @param crime array list
      * @param felony felony being removed
      */
-    public void removeFelonies(Criminal crime, String felony){
+    public void removeFelonies(ArrayList<Crime> crime, Crime felony){
         crime.remove(felony);
     }
 
+    /**
+     * add criminal report
+     */
     public void addReport(){
         CriminalList.getInstance();
 
     }
 
+    /**
+     * allows officer to edit reports
+     * @param Fname first name of criminal
+     * @param Lname last name of criminal
+     */
     public void editReport(String Fname, String Lname){
         editCriminalByName(Fname, Lname);
 
@@ -63,7 +73,7 @@ public class Officer extends User {
 
 
 
-    
+    //interface methods
 
     @Override
     public void searchCriminalsByName(String Fname, String Lname) {

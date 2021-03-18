@@ -161,7 +161,7 @@ public class Criminal {
     public void setLastName(String lastname){
 
     }
-    
+
     public void setCriminalID(int criminalID){
 
     }
@@ -226,16 +226,6 @@ public class Criminal {
 
     }
 
-
-
-
-    public void add(String misdemeanor) {
-    }
-
-    public void remove(String misdemeanor) {
-    }
-
-    
 
 
 }

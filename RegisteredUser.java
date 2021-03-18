@@ -41,6 +41,8 @@ public class RegisteredUser extends User{
 
     }
 
+
+    //interface methods
     @Override
     public void searchCriminalsByName(String Fname, String Lname) {
         // TODO Auto-generated method stub

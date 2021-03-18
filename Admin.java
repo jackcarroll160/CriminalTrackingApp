@@ -58,15 +58,18 @@ public class Admin extends User{
        }
     }
 
-
-
-
-
-
-     public void editReport(Criminal criminal){
+    /**
+     * edit criminal report
+     * @param Fname first name of criminal
+     * @param Lname last name of criminal
+     */
+     public void editReport(String Fname, String Lname){
+         editCriminalByName(Fname, Lname);
 
     }
 
+
+    //interface methods
     @Override
     public void searchCriminalsByName(String Fname, String Lname) {
         // TODO Auto-generated method stub
