@@ -1,42 +1,66 @@
+import java.util.ArrayList;
+import java.util.UUID;
+import java.util.Scanner;
+
 /*
  * @author Kyle Persyn
  * This class is going to be the CriminalList  class that will hold all of the criminals
  */
 public class CriminalList implements UserActions{
 
-	private ArrayList<Criminal> criminalList;
-	private Criminal criminal;
+	private static ArrayList<Criminal> criminalList = new ArrayList<Criminal>();
+	private static Criminal criminal = null;
 	
 	/*
-	 * 
+	 * This is the constructor where the criminal array list will be constructed
 	 */
-	public CriminalList()
+	private CriminalList()
 	{
-		
+		criminalList = new DataLoader.loadCriminals();
 	}
 	
 	/*
-	 * 
+	 * This is the getInstance method that will create a new criminal as long as criminal List is not null
+	 * @return An instance of library
 	 */
-	public Criminal getInstance()
+	public static Criminal getInstance()
 	{
+		if (criminal == null) {
+			criminal = new Criminal();
+		}
 		return criminal;
 	}
 	
 	/*
 	 * 
 	 */
-	public ArrayList<Criminal> getCriminals(String fullName)
+	public ArrayList<Criminal> getCriminals()
 	{
 		return criminalList;
 	}
+	
 	
 	/*
 	 * 
 	 */
 	public void searchCriminalsByName(String Fname, String Lname)
 	{
+		int searchLength = criminalList.size();
+		boolean found = false;
 		
+		for (int i = 0; i < searchLength; i++)
+		{
+			if(criminalList.get(i) != null && criminalList.get(i).getFirstName() == Fname &&criminalList.get(i).getLastName() == Lname)
+			{
+				System.out.println(criminalList.get(i).toString());
+				found = true;
+			}
+		}
+		
+		if (!found)
+		{
+			System.out.println("The Criminal entered was not found in our database!");
+		}
 	}
 
 	/*
@@ -44,6 +68,95 @@ public class CriminalList implements UserActions{
 	 */
 	public void editCriminalsByName(String Fname, String Lname) 
 	{
+		String[] Attributes = {"ID", "Criminal ID","Has Nickname" , "Nickname" , " Known Address", "Affiliates", "Family Members", "Shoe Size", "Crime", "Crime Description", "Victim Alive" , "Witness Data", "Is Violent", "Gang Affiliation", "Date Of Crime", "Has Witness", "Witness", "Has Fingerprints", "Criminal Report"};
+		
+		System.out.println("Which Attribute would you like to change: " + Attributes);
+		Scanner keyboard = new Scanner(System.in);
+		String attribute = keyboard.nextLine();
+		
+		int searchLength = criminalList.size();
+		for (int i = 0; i < searchLength; i++)
+		{
+			if(criminalList.get(i) != null && criminalList.get(i).getFirstName() == Fname &&criminalList.get(i).getLastName() == Lname)
+			{
+				if(attribute.equalsIgnoreCase(Attributes[0]))
+				{
+					System.out.println("Enter the new ID: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[1]))
+				{
+					System.out.println("Enter the new Criminal ID: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[2]))
+				{
+					System.out.println("Enter the updated Has Nickname Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[3]))
+				{
+					System.out.println("Enter the new Nickname: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[4]))
+				{
+					System.out.println("Enter the new Known Address: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[5]))
+				{
+					System.out.println("Enter the new Affiliates: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[6]))
+				{
+					System.out.println("Enter the new Family Members: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[7]))
+				{
+					System.out.println("Enter the new Shoe Size: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[8]))
+				{
+					System.out.println("Enter the new Crime: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[9]))
+				{
+					System.out.println("Enter the new Crime Description: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[10]))
+				{
+					System.out.println("Enter the new Victim Alive Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[11]))
+				{
+					System.out.println("Enter the new Witness Information: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[12]))
+				{
+					System.out.println("Enter the new Is Violent Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[13]))
+				{
+					System.out.println("Enter the new Gang Affiliation Information: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[14]))
+				{
+					System.out.println("Enter the new Date Of Crime: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[15]))
+				{
+					System.out.println("Enter the new has Witness Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[16]))
+				{
+					System.out.println("Enter the new Witness: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[17]))
+				{
+					System.out.println("Enter the new Has Fingerprints Boolean: ");
+				}
+				else if (attribute.equalsIgnoreCase(Attributes[18]))
+				{
+					System.out.println("Enter the new Criminal Report: ");
+				}
+			}
+		}
 		
 	}
 	
