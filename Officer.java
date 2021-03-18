@@ -51,20 +51,13 @@ public class Officer extends User {
         crime.remove(felony);
     }
 
-
-
-
-
-
-
-    //should keep? what are they exactly? difference between report and misdemeanors and felonies?
-
-    public void addReport(Crime crime){
-        
+    public void addReport(){
+        CriminalList.getInstance();
 
     }
 
-    public void editReport(Crime crime){
+    public void editReport(String Fname, String Lname){
+        editCriminalByName(Fname, Lname);
 
     }
 
@@ -81,6 +74,48 @@ public class Officer extends User {
 
     @Override
     public void editCriminalByName(String Fname, String Lname) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void registerAdmin(Admin admin) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void registerOfficer(Officer officer) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void registerUser(RegisteredUser user) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void removeAdmin(Admin admin) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void removeOfficer(Officer officer) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void removeUser(RegisteredUser user) {
         // TODO Auto-generated method stub
         
     }
