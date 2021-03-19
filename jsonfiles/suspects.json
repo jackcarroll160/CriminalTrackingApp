@@ -5,11 +5,12 @@
         "firstName":"Cupcake",
         "lastName":"Man",
         "age": 45,
+        "gender":"male",
+        "ethnicity": "latino",
         "contactInfo":"505-467-0923",
         "isMinor":false,
         "statement":"I was in my room when it happened",
         "hasAlibi":false,
-        "isSuspect":true,
         "birthDate":"05/14/1975",
         "eyeColor":"brown",
         "hairDescription":"buzz cut",
@@ -27,8 +28,6 @@
         "complexion":"freckles",
         "clothingDescription":"bright pink shirt and blue shorts",
         "hasVehicle": true,
-        "vehicleDescription": "green punchbug",
-        "ethnicity": "latino",
-        "gender":"male"
+        "vehicleDescription": "green punchbug"
     }
 ]

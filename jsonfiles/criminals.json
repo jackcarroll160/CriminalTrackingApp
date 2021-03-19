@@ -28,7 +28,9 @@
         "complexion":"clear with makeup",
         "clothingDescription":"Purple sweatshirt and leggings",
         "isGuilty":true,
-        "hasFingerprints":true
+        "hasFingerprints":true,
+        "hasVehicle": true,
+        "vehicleDescription": "green punchbug"
     },{
         "criminalId":2,
         "firstName":"Muffin",
@@ -58,6 +60,8 @@
         "complexion":"Freckles",
         "clothingDescription":"White collared shirt and khakis",
         "isGuilty":true,
-        "hasFingerprints":true
+        "hasFingerprints":true,
+        "hasVehicle": true,
+        "vehicleDescription": "green punchbug"
     }
 ]
