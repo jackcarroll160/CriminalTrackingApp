@@ -33,4 +33,21 @@ public abstract class DataConstants {
     protected static final String CRIMINALS_IS_GUILTY = "isGuilty";
     protected static final String CRIMINALS_HAS_FINGERPRINTS = "hasFingerprints";
 
+    // crime.json
+    protected static final String CRIME_FILE_NAME = "src/jsonfiles/crime.json";
+    protected static final String CRIME = "crime";
+    protected static final String CRIME_CRIME_ID = "crimeId";
+    protected static final String CRIME_CRIMINAL_ID = "criminalId";
+    protected static final String CRIME_DESCRIPTION = "description";
+    protected static final String CRIME_DATE_OF_CRIME = "dateOfCrime";
+    protected static final String CRIME_TIME_OF_CRIME = "timeOfCrime";
+    protected static final String CRIME_CASE_OPEN = "caseOpen";
+    protected static final String CRIME_WITNESS_ID = "witnessId";
+    protected static final String CRIME_VICTIM_ID = "victimId";
+    protected static final String CRIME_SUSPECT_ID = "suspectId";
+    protected static final String CRIME_PERSON_OF_INTEREST_ID = "personOfInterestId";
+    protected static final String CRIME_OFFICERS = "officers";
+
+    // personOfInterest.json
+    
 }
