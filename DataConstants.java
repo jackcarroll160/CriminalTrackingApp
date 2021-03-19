@@ -111,5 +111,18 @@ public abstract class DataConstants {
     protected static final String VICTIMS_IS_INJURED = "isInjured";
     protected static final String VICTIMS_STATEMENT = "statement";
 
-    
+    // witnesses.json
+    protected static final String WITNESSES_FILE_NAME = "src/jsonfiles/witnesses.json";
+    protected static final String WITNESSES = "witnesses";
+    protected static final String WITNESSES_WITNESS_ID = "witnessId";
+    protected static final String WITNESSES_CRIME_ID = "crimeId";
+    protected static final String WITNESSES_FIRST_NAME = "firstName";
+    protected static final String WITNESSES_LAST_NAME = "lastName";
+    protected static final String WITNESSES_AGE = "age";
+    protected static final String WITNESSES_CONTACT_INFO = "contactinfo";
+    protected static final String WITNESSES_IS_MINOR = "isMinor";
+    protected static final String WITNESSES_PROOF = "proof";
+    protected static final String WITNESSES_TESTIMONY = "testimony";
+    protected static final String WITNESSES_LOCATION = "location";
+    protected static final String WITNESSES_TYPE_OF_WITNESS = "typeOfWitness";
 }
