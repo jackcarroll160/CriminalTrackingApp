@@ -16,7 +16,7 @@ public class CriminalList implements UserActions{
 	 */
 	private CriminalList()
 	{
-		criminalList = new DataLoader.loadCriminals();
+		criminalList = new DataLoader().loadCriminals();
 	}
 	
 	/*
