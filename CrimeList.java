@@ -34,7 +34,7 @@ public class CrimeList implements UserActions{
 	/*
 	 * 
 	 */
-	public ArrayList<Criminal> getCrime()
+	public ArrayList<Crime> getCrime()
 	{
 		return crimeList;
 	}
