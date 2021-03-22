@@ -6,11 +6,7 @@ public class Witness extends Person{
 	
 	private int witnessId;
 	private int crimeId;
-	private String firstName;
-	private String lastName;
-	private int age;
 	private String contanctInfo;
-	private boolean isMinor;
 	private String proof;
 	private String testimony;
 	private String location;
@@ -116,44 +112,12 @@ public class Witness extends Person{
 		this.crimeId = crimeId;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
 	public String getContanctInfo() {
 		return contanctInfo;
 	}
 
 	public void setContanctInfo(String contanctInfo) {
 		this.contanctInfo = contanctInfo;
-	}
-
-	public boolean getIsMinor() {
-		return isMinor;
-	}
-
-	public void setIsMinor(boolean isMinor) {
-		this.isMinor = isMinor;
 	}
 	
 }
