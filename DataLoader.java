@@ -62,10 +62,10 @@ public static ArrayList <Crime> loadCrime(){
                 String facialHairDescription = (String)criminalJSON.get(CRIMINALS_FACIAL_HAIR_DESCRIPTION);
                 String height = (String)criminalJSON.get(CRIMINALS_HEIGHT);
                 String weight = (String)criminalJSON.get(CRIMINALS_WEIGHT);
-                //BOOLEAN
+                //boolean
                 String hasTattoos = (String)criminalJSON.get(CRIMINALS_HAS_TATTOOS);
                 String tattooDescription = (String)criminalJSON.get(CRIMINALS_TATTOO_DESCRIPTION);
-                //BOOLEAN
+                //boolean
                 String hasPiercings = (String)criminalJSON.get(CRIMINALS_HAS_PIERCINGS);
 
 

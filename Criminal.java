@@ -19,22 +19,22 @@ public class Criminal {
     private String birthDate;
     private String eyeColor;
     private String hairDescription;
-    private Boolean facialHair;
+    private boolean facialHair;
     private String facialHairDescription;
     private String height;
     private String weight;
-    private Boolean hasTattoos;
+    private boolean hasTattoos;
     private String tattooDescription;
-    private Boolean hasPiercings;
+    private boolean hasPiercings;
     private String physicalMarksDescription;
     private String physicalBuild;
-    private Boolean hasWeapon;
+    private boolean hasWeapon;
     private String weaponDescription;
     private String complexion;
     private String clothingDescription;
-    private Boolean isGuilty;
-    private Boolean hasFingerprints;
-    private Boolean hasVehicle;
+    private boolean isGuilty;
+    private boolean hasFingerprints;
+    private boolean hasVehicle;
     private String vehicleDescription;
 
 
@@ -158,11 +158,11 @@ public class Criminal {
         this.hairDescription = hairDescription;
     }
 
-    public Boolean getFacialHair() {
+    public boolean getFacialHair() {
         return facialHair;
     }
 
-    public void setFacialHair(Boolean facialHair) {
+    public void setFacialHair(boolean facialHair) {
         this.facialHair = facialHair;
     }
 
@@ -190,11 +190,11 @@ public class Criminal {
         this.weight = weight;
     }
 
-    public Boolean getHasTattoos() {
+    public boolean getHasTattoos() {
         return hasTattoos;
     }
 
-    public void setHasTattoos(Boolean hasTattoos) {
+    public void setHasTattoos(boolean hasTattoos) {
         this.hasTattoos = hasTattoos;
     }
 
@@ -206,11 +206,11 @@ public class Criminal {
         this.tattooDescription = tattooDescription;
     }
 
-    public Boolean getHasPiercings() {
+    public boolean getHasPiercings() {
         return hasPiercings;
     }
 
-    public void setHasPiercings(Boolean hasPiercings) {
+    public void setHasPiercings(boolean hasPiercings) {
         this.hasPiercings = hasPiercings;
     }
 
@@ -230,11 +230,11 @@ public class Criminal {
         this.physicalBuild = physicalBuild;
     }
 
-    public Boolean getHasWeapon() {
+    public boolean getHasWeapon() {
         return hasWeapon;
     }
 
-    public void setHasWeapon(Boolean hasWeapon) {
+    public void setHasWeapon(boolean hasWeapon) {
         this.hasWeapon = hasWeapon;
     }
 
@@ -262,34 +262,34 @@ public class Criminal {
         this.clothingDescription = clothingDescription;
     }
 
-    public Boolean getIsGuilty() {
+    public boolean getIsGuilty() {
         return isGuilty;
     }
 
-    public void setIsGuilty(Boolean isGuilty) {
+    public void setIsGuilty(boolean isGuilty) {
         this.isGuilty = isGuilty;
     }
 
-    public Boolean getHasFingerprints() {
+    public boolean getHasFingerprints() {
         return hasFingerprints;
     }
 
-    public void setHasFingerprints(Boolean hasFingerprints) {
+    public void setHasFingerprints(boolean hasFingerprints) {
         this.hasFingerprints = hasFingerprints;
     }
 
-    public Boolean getHasVehicle() {
+    public boolean getHasVehicle() {
         return hasVehicle;
     }
 
-    public void setHasVehicle(Boolean hasVehicle) {
+    public void setHasVehicle(boolean hasVehicle) {
         this.hasVehicle = hasVehicle;
     }
 
     public String getVehicleDescription() {
         return vehicleDescription;
     }
-    
+
     public void setVehicleDescription(String vehicleDescription) {
         this.vehicleDescription = vehicleDescription;
     }

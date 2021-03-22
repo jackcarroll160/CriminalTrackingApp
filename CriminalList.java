@@ -69,7 +69,7 @@ public class CriminalList implements UserActions{
 	public void editCriminalsByName(String Fname, String Lname) 
 	{
 		Criminal crimEdit = searchCriminalsByName(Fname, Lname);
-		
+
 		
 	}
 
