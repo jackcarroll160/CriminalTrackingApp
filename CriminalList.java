@@ -45,14 +45,13 @@ public class CriminalList implements UserActions{
 	 */
 	public void searchCriminalsByName(String Fname, String Lname)
 	{
-		int searchLength = criminalList.size();
 		boolean found = false;
 		
-		for (int i = 0; i < searchLength; i++)
+		for (Criminal criminal : criminalList)
 		{
-			if(criminalList.get(i) != null && criminalList.get(i).getFirstName() == Fname &&criminalList.get(i).getLastName() == Lname)
+			if(criminal.getFirstName().equalsIgnoreCase(Fname) && criminal.getLastName().equalsIgnoreCase(Lname))
 			{
-				System.out.println(criminalList.get(i).toString());
+				System.out.println(criminal.toString());
 				found = true;
 			}
 		}
@@ -86,6 +85,10 @@ public class CriminalList implements UserActions{
 			}
 		}
 		
+	}
+
+	public void saveCriminals() {
+		DataWriter.saveCriminals();
 	}
 	
 }
