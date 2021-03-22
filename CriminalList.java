@@ -83,8 +83,7 @@ public class CriminalList implements UserActions{
 					System.out.println("Enter the new " + Attributes[i] + ":");
 				}
 			}
-		}
-		
+		}	
 	}
 
 	public void saveCriminals() {
