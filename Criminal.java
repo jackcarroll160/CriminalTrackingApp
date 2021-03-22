@@ -15,6 +15,10 @@ public class Criminal {
     private ArrayList<Crime> crime;
     private String crimeDescription;
     private boolean victimAlive;
+    private String hairColor;
+    private String clothing;
+    private String tattoo;
+    private String facialHair;
     private String witnessData;
     private boolean isViolent;
     private String gangAffiliation;
@@ -30,6 +34,25 @@ public class Criminal {
     /**
      * getters
      */
+    public String getHairColor()
+    {
+        return this.hairColor;
+    }
+    
+    public String getClothing()
+    {
+        return this.clothing;
+    }
+    public String getTattoo()
+    {
+        return this.tattoo;
+    }
+
+    public String getFacialHair()
+    {
+        return this.facialHair;
+    }
+
     public String toString(){
         return null;
 
@@ -150,6 +173,25 @@ public class Criminal {
     /**
      * setters
      */
+    public void setHairColor(String hairColor)
+    {
+        this.hairColor = hairColor;
+    }
+    
+    public void setClothing(String clothing)
+    {
+        this.clothing = clothing;
+    }
+    public void setTattoo(String tattoo)
+    {
+        this.tattoo = tattoo;
+    }
+
+    public void setFacialHair(String facialHair)
+    {
+        this.facialHair = facialHair;
+    }
+
     public void setID(ArrayList<UUID> ID){
         this.ID = ID;
     }
