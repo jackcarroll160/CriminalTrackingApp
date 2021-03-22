@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
  * @author Kyle Persyn
  * This class is going to be the AccountSearchLogin class that will assist in searching and editing

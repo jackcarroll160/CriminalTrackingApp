@@ -151,79 +151,79 @@ public class Criminal {
      * setters
      */
     public void setID(ArrayList<UUID> ID){
-
+        this.ID = ID;
     }
 
     public void setFirstName(String firstname){
-
+        this.firstName = firstname;
     }
 
     public void setLastName(String lastname){
-
+        this.lastName = lastname;
     }
 
     public void setCriminalID(int criminalID){
-
+        this.criminalID = criminalID;
     }
 
     public void setNickname(String nickname){
-
+        this.nickname = nickname;
     }
 
     public void setKnownAddress(String knownAddress){
-
+        this.knownAddress = knownAddress;
     }
 
     public void setAffiliates(ArrayList<String> affiliates){
-
+        this.affiliates = affiliates;
     }
 
     public void setFamilyMembers(ArrayList<String> familyMembers){
-
+        this.familyMembers = familyMembers;
     }
 
     public void setShoeSize(double shoeSize){
-
+        this.shoeSize = shoeSize;
     }
 
-    public void setCrime(Crime crime){
-
+    public void setCrime(ArrayList<Crime> crime){
+        this.crime = crime;
     }
 
     public void setCrimeDescription(String crimeDescription){
-
+        this.crimeDescription = crimeDescription;
     }
 
-    public void setVictimStatus(){
-
+    public void setVictimStatus(boolean victimAlive){
+        this.victimAlive = victimAlive;
     }
 
     public void setWitnessData(String witnessData){
-
+        this.witnessData = witnessData;
     }
 
-    public void setViolence(){
-        
+    public void setViolence(boolean isViolent){
+        this.isViolent = isViolent;
     }
 
     public void setGangAffiliation(String gangAffiliation){
-
+        this.gangAffiliation = gangAffiliation;
     }
 
     public void setDateOfCrime(String dateOfCrime){
-
+        this.dateOfCrime = dateOfCrime;
     }
 
     public void setWitness(Witness witness){
-
+        this.witness = witness;
     }
     
-    public void setHasFingerprints(){
-
+    public void setHasFingerprints(boolean hasFingerprints){
+        this.hasFingerprints = hasFingerprints;
     }
 
-    public void setHasNickname(){
-
+    public void setHasNickname(boolean hasNickname){
+        this.hasNickname = hasNickname;
     }
 
 
