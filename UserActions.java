@@ -9,7 +9,7 @@ public interface UserActions {
 	 * @param a Sring that holds the first name
 	 * @param a String that holds the last name
 	 */
-	public void searchCriminalsByName(String Fname, String Lname);
+	public Criminal searchCriminalsByName(String Fname, String Lname);
 	
 	/*
 	 * This method will allow for the user to edit a criminal by entering a first and last name

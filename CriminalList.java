@@ -43,7 +43,7 @@ public class CriminalList implements UserActions{
 	/*
 	 * 
 	 */
-	public void searchCriminalsByName(String Fname, String Lname)
+	public Criminal searchCriminalsByName(String Fname, String Lname)
 	{
 		boolean found = false;
 		
@@ -51,8 +51,8 @@ public class CriminalList implements UserActions{
 		{
 			if(criminal.getFirstName().equalsIgnoreCase(Fname) && criminal.getLastName().equalsIgnoreCase(Lname))
 			{
-				System.out.println(criminal.toString());
 				found = true;
+				return criminal;
 			}
 		}
 		
@@ -60,6 +60,7 @@ public class CriminalList implements UserActions{
 		{
 			System.out.println("The Criminal entered was not found in our database!");
 		}
+		return null;
 	}
 
 	/*
@@ -67,23 +68,9 @@ public class CriminalList implements UserActions{
 	 */
 	public void editCriminalsByName(String Fname, String Lname) 
 	{
-		String[] Attributes = {"ID", "Criminal ID","Has Nickname" , "Nickname" , " Known Address", "Affiliates", "Family Members", "Shoe Size", "Crime", "Crime Description", "Victim Alive" , "Witness Data", "Is Violent", "Gang Affiliation", "Date Of Crime", "Has Witness", "Witness", "Has Fingerprints", "Criminal Report"};
+		Criminal crimEdit = searchCriminalsByName(Fname, Lname);
 		
-		System.out.println("Which Attribute would you like to change: " + Attributes);
-		Scanner keyboard = new Scanner(System.in);
-		String attribute = keyboard.nextLine();
 		
-		int searchLength = criminalList.size();
-		for (int i = 0; i < searchLength; i++)
-		{
-			if(criminalList.get(i) != null && criminalList.get(i).getFirstName() == Fname &&criminalList.get(i).getLastName() == Lname)
-			{
-				if(attribute.equalsIgnoreCase(Attributes[i]))
-				{
-					System.out.println("Enter the new " + Attributes[i] + ":");
-				}
-			}
-		}	
 	}
 
 	public void saveCriminals() {
