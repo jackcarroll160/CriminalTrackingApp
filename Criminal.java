@@ -93,7 +93,9 @@ public class Criminal {
         this.vehicleDescription = vehicleDescription;
     }
 
-
+    public Criminal(){
+        
+    }
     public int getCriminalID() {
         return criminalID;
     }

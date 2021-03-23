@@ -2,12 +2,12 @@
  * Author: Sydney Oklota
  */
 import java.util.*;
-public abstract class User implements UserInterface{
-    
-    protected ArrayList<UUID> userID;
+public abstract class User {
+   
     protected String username;
     protected String password;
     protected HashMap<UUID, String> storeUserPwd;
+    
     
     
 
@@ -55,48 +55,6 @@ public abstract class User implements UserInterface{
         storeUserPwd.remove(userID);
         
     }
-
-    /**
-     * prints authorization level to screen upon login
-     * @param authorizationLevel level inputed by user at sign up and login
-     * @return whether or not access has been granted
-     */
-    private String checkAuthorization(int authorizationLevel){
-        if(authorizationLevel == 1){
-
-            return "Authorization Level: Admin";
-
-        }
-        else if(authorizationLevel == 2){
-
-            return "Authorization Level: Officer";
-            
-        }
-        else if(authorizationLevel == 3){
-
-            return "Authorization Level: Registered User";
-            
-        }
-        else{
-
-            return "Authorization Level: none";
-
-        } 
-        
- 
-    }
- 
-    /**
-     * Adds crimininal to id array
-     * @param ID id array
-     * @param firstName criminal first name
-     * @param lastName criminal last name
-     */
-    public void addCriminal(ArrayList<Criminal> ID, Criminal firstName, Criminal lastName){
-        ID.add(firstName);
-
-    }
-
 
     
 

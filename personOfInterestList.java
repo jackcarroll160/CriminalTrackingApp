@@ -5,6 +5,7 @@ import java.util.ArrayList;
  * will hold all persons of interest
  */
 public class personOfInterestList {
+	
     private static ArrayList<PersonOfInterest> POIList = new ArrayList<PersonOfInterest>();
 	private static PersonOfInterest POI = null;
 	
@@ -70,6 +71,9 @@ public class personOfInterestList {
 		
 	}
 
+	/**
+	 * 
+	 */
 	public void savePOI() {
 		DataWriter.savePOI();
 	}
