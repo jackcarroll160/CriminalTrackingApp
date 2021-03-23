@@ -40,22 +40,22 @@ public class personOfInterestList {
 	/*
 	 * 
 	 */
-	public Criminal searchCriminalsByName(String Fname, String Lname)
+	public PersonOfInterest searchPOIByName(String Fname, String Lname)
 	{
 		boolean found = false;
 		
-		for (Criminal criminal : criminalList)
+		for (PersonOfInterest POI : POIList)
 		{
-			if(criminal.getFirstName().equalsIgnoreCase(Fname) && criminal.getLastName().equalsIgnoreCase(Lname))
+			if(POI.getFirstName().equalsIgnoreCase(Fname) && POI.getLastName().equalsIgnoreCase(Lname))
 			{
 				found = true;
-				return criminal;
+				return POI;
 			}
 		}
 		
 		if (!found)
 		{
-			System.out.println("The Criminal entered was not found in our database!");
+			System.out.println("The person of interest entered was not found in our database!");
 		}
 		return null;
 	}
@@ -63,15 +63,15 @@ public class personOfInterestList {
 	/*
 	 * 
 	 */
-	public void editCriminalsByName(String Fname, String Lname) 
+	public void editPOIByName(String Fname, String Lname) 
 	{
-		Criminal crimEdit = searchCriminalsByName(Fname, Lname);
+		PersonOfInterest poiEdit = searchPOIByName(Fname, Lname);
 		
 		
 	}
 
-	public void saveCriminals() {
-		DataWriter.saveCriminals();
+	public void savePOI() {
+		DataWriter.savePOI();
 	}
 	
 
