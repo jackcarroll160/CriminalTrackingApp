@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.UUID;
 public class Criminal {
     
-    private ArrayList<UUID> ID;
+    private UUID ID;
     private int criminalID;
     private String firstName;
     private String lastName;
@@ -39,23 +39,23 @@ public class Criminal {
     private String vehicleDescription;
 
     public Criminal(){
-        this.id = UUID.randomUUID();
+        this.ID = UUID.randomUUID();
 
         // needs a lot added - rose
     }
 
-    public Criminal(UUID id){
-        this.id = id;
+    public Criminal(UUID iD){
+        this.ID = iD;
         // needs a lot added - rose
     }
 
 
-    public ArrayList<UUID> getID() {
+    public UUID getID() {
         return ID;
     }
 
-    public void setID(ArrayList<UUID> iD) {
-        ID = iD;
+    public void setID(UUID iD) {
+        this.ID = iD;
     }
 
     public int getCriminalID() {
