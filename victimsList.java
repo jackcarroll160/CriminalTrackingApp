@@ -70,6 +70,9 @@ public class victimsList {
 		
 	}
 
+    /**
+     * 
+     */
 	public void saveVictims() {
 		DataWriter.saveVictims();
 	}

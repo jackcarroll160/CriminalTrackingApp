@@ -51,7 +51,7 @@ public static ArrayList <Crime> loadCrime(){
             FileReader reader = new FileReader(CRIMINALS_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray criminalJSON = (JSONArray) new JSONParser().parse(reader);
-            }
+            
 
             for (int i = 0; i < criminalJSON.size(); i++){
                 JSONObject criminalJSON = (JSONObject)criminalJSON.get(i);
@@ -111,8 +111,8 @@ public static ArrayList <Crime> loadCrime(){
 
     
     // person of interest
-    public static ArrayList <POI> loadPOI(){
-        ArrayList <POI> poi = new ArrayList <POI>();
+    public static ArrayList <PersonOfInterest> loadPOI(){
+        ArrayList <PersonOfInterest> poi = new ArrayList <PersonOfInterest>();
 
         try{
             FileReader reader = new FileReader(PERSONOFINTEREST_FILE_NAME);
