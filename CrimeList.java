@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author Kyle Persyn
  * This class is going to be the CriminalList  class that will hold all of the criminals
  */
-public class CrimeList implements UserActions{
+public class CrimeList{
 
 	private static ArrayList<Crime> crimeList = new ArrayList<Crime>();
 	private static Crime crime = null;

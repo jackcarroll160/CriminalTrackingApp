@@ -6,10 +6,10 @@ import java.util.Scanner;
  * @author Kyle Persyn
  * This class is going to be the CriminalList  class that will hold all of the criminals
  */
-public class CriminalList implements UserActions{
+public class CriminalList{
 
 	private static ArrayList<Criminal> criminalList = new ArrayList<Criminal>();
-	private static Criminal criminal = null;
+	private static CriminalList criminal = null;
 	
 	/*
 	 * This is the constructor where the criminal array list will be constructed
@@ -23,10 +23,10 @@ public class CriminalList implements UserActions{
 	 * This is the getInstance method that will create a new criminal as long as criminal List is not null
 	 * @return An instance of library
 	 */
-	public static Criminal getInstance()
+	public static CriminalList getInstance()
 	{
 		if (criminal == null) {
-			criminal = new Criminal();
+			criminal = new CriminalList();
 		}
 		return criminal;
 	}

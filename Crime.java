@@ -27,7 +27,7 @@ public class Crime {
     private ArrayList<Suspect> suspects;
     private ArrayList<PersonOfInterest> personOfInterest;
     private ArrayList<Criminal> criminals;
-    private ArrayList<Officer> officers;
+    private ArrayList<User> officers;
     private TypeOfCrime typeOfCrime;
     private Grading grading;
 
@@ -211,7 +211,7 @@ public class Crime {
      * Gets the officers dealing with the crime
      * @return the list of officers associated with the crime
      */
-    public ArrayList<Officer> getOfficers() {
+    public ArrayList<User> getOfficers() {
         return this.officers;
     }
 
@@ -219,7 +219,7 @@ public class Crime {
      * Sets the officer list for a crime
      * @param officers a list of involved officers to add to a crime
      */
-    public void setOfficers(ArrayList<Officer> officers) {
+    public void setOfficers(ArrayList<User> officers) {
         this.officers = officers;
     }
 

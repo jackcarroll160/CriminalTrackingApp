@@ -2,12 +2,13 @@
  * @author Kyle Persyn
  * This class is going to be the PersonOfInterest  class that will be included as part of the crimes
  */
-public abstract class PersonOfInterest extends Person{
+public class PersonOfInterest extends Person{
 
 	private String statement;
 	private boolean hasAlibi;
 	private boolean isSuspect;
 	private int personId;
+
 	
 	/*
 	 * This is a method that will take all of the data that was input and return it in a readable string format
