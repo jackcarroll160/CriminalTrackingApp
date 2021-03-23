@@ -19,13 +19,19 @@ public static ArrayList <Crime> loadCrime(){
 
         for (int i = 0; i < crimeJSON.size(); i++){
             JSONObject crimeJSON = (JSONObject)crimeJSON.get(i);
+            UUID crimeId = UUID.fromString((String)crimeJSON.get(CRIME_CRIME_ID));
+            UUID criminalId = UUID.fromString((String)criminalJSON.get(CRIMINALS_CRIMINAL_ID));
             String description = (String)crimeJSON.get(CRIME_DESCRIPTION);
             String dateOfCrime = (String)crimeJSON.get(CRIME_DATE_OF_CRIME);
             String timeOfCrime = (String)crimeJSON.get(CRIME_TIME_OF_CRIME);
             //boolean
             String caseOpen = (String)crimeJSON.get(CRIME_CASE_OPEN);
+            UUID witnessId = UUID.fromString((String)crimeJSON.get(CRIME_WITNESS_ID);
+            UUID victimId = UUID.fromString((String)crimeJSON.get(CRIME_VICTIM_ID);
+            UUID suspectId = UUID.fromString((String)crimeJSON.get(CRIME_SUSPECT_ID);
+            UUID personOfInterestId = UUID.fromString((String)crimeJSON.get(CRIME_POI_ID);
             String officers = (String)crimeJSON.get(CRIME_OFFICERS);
-            crime.add(new Crime(description, dateOfCrime, timeOfCrime, caseOpen, officers));
+            crime.add(new Crime(crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId, officers));
         }
 
         return crime;
@@ -49,6 +55,7 @@ public static ArrayList <Crime> loadCrime(){
 
             for (int i = 0; i < criminalJSON.size(); i++){
                 JSONObject criminalJSON = (JSONObject)criminalJSON.get(i);
+                UUID criminalId = UUID.fromString((String)criminalJSON.get(CRIMINALS_CRIMINAL_ID));
                 String firstName = (String)criminalJSON.get(CRIMINALS_FIRST_NAME);
                 String lastName = (String)criminalJSON.get(CRIMINALS_LAST_NAME);
                 //boolean
@@ -59,6 +66,7 @@ public static ArrayList <Crime> loadCrime(){
                 String ethnicity = (String)criminalJSON.get(CRIMINALS_ETHNICITY);
                 String contactInfo = (String)criminalJSON.get(CRIMINALS_CONTACT_INFO);
                 String linkedCrime = (String)criminalJSON.get(CRIMINALS_LINKED_CRIME);
+                UUID crimeId = UUID.fromString((String)criminalJSON.get(CRIMINALS_CRIME_ID));
                 String birthDate = (String)criminalJSON.get(CRIMINALS_BIRTH_DATE);
                 String eyeColor = (String)criminalJSON.get(CRIMINALS_EYE_COLOR);
                 String hairDescription = (String)criminalJSON.get(CRIMINALS_HAIR_DESCRIPTION);
@@ -89,7 +97,7 @@ public static ArrayList <Crime> loadCrime(){
 
 
 
-                criminal.add(new Criminal(firstName,lastName, hasNickname, nickname, age, gender, ethnicity, contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, height, weight, hasTattoos, tattooDescription, hasPiercings, physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription, isGuilty, hasFingerprints, hasVehicle, vehicleDescription));
+                criminal.add(new Criminal(criminalId, firstName, lastName, hasNickname, nickname, age, gender, ethnicity, contactInfo, linkedCrime, crimeId, birthDate, eyeColor, hairDescription, facialHair, facialHairDescription, height, weight, hasTattoos, tattooDescription, hasPiercings, physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription, isGuilty, hasFingerprints, hasVehicle, vehicleDescription));
             }
 
             return criminal;
@@ -114,6 +122,9 @@ public static ArrayList <Crime> loadCrime(){
 
             for (int i = 0; i < poiJSON.size(); i++){
                 JSONObject poiJSON = (JSONObject)poiJSON.get(i);
+                UUID personOfInterestId = UUID.fromString((String)poiJSON.get(PERSONOFINTEREST_POI_ID);
+                UUID suspectId = UUID.fromString((String)poiJSON.get(PERSONOFINTEREST_SUSPECT_ID);
+                UUID crimeId = UUID.fromString((String)poiJSON.get(PERSONOFINTEREST_CRIME_ID);
                 String firstName = (String)poiJSON.get(PERSONOFINTEREST_FIRST_NAME);
                 String lastName = (String)poiJSON.get(PERSONOFINTEREST_LAST_NAME);
                 int age = ((Long)poiJSON.get(PERSONOFINTEREST_AGE)).intValue();
@@ -126,7 +137,7 @@ public static ArrayList <Crime> loadCrime(){
                 //BOOLEAN
                 String isSuspect = (String)poiJSON.get(PERSONOFINTEREST_IS_SUSPECT);
 
-                poi.add(new POI(firstName, lastName, age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
+                poi.add(new POI(personOfInterestId, suspectId, crimeId, firstName, lastName, age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
             }
 
             return poi;
@@ -149,6 +160,8 @@ public static ArrayList <Crime> loadCrime(){
 
             for (int i = 0; i < suspectJSON.size(); i++){
                 JSONObject suspectJSON = (JSONObject)suspectJSON.get(i);
+                UUID suspectId = UUID.fromString((String)suspectJSON.get(SUSPECTS_SUSPECT_ID);
+                UUID crimeId = UUID.fromString((String)suspectJSON.get(SUSPECTS_CRIME_ID);
                 String firstName = (String)suspectJSON.get(SUSPECTS_FIRST_NAME);
                 String lastName = (String)suspectJSON.get(SUSPECTS_LAST_NAME);
                 int age = ((Long)suspectJSON.get(SUSPECTS_AGE)).intValue();
@@ -184,7 +197,7 @@ public static ArrayList <Crime> loadCrime(){
                 String hasVehicle = (String)suspectJSON.get(SUSPECTS_HAS_VEHICLE);
                 String vehicleDescription = (String)suspectJSON.get(SUSPECTS_VEHICLE_DESCRIPTION);
 
-                suspect.add(new Suspect(firstName,lastName, age, gender, ethnicity, contactInfo, isMinor, statement, hasAlibi, birthDate, eyeColor, hairDescription, facialHair, facialHairDescription, height, weight, hasTattoos, tattooDescription, hasPiercings, physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription, hasVehicle, vehicleDescription));
+                suspect.add(new Suspect(suspectId, crimeId, firstName, lastName, age, gender, ethnicity, contactInfo, isMinor, statement, hasAlibi, birthDate, eyeColor, hairDescription, facialHair, facialHairDescription, height, weight, hasTattoos, tattooDescription, hasPiercings, physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription, hasVehicle, vehicleDescription));
             }
 
             return suspect;
@@ -208,6 +221,8 @@ public static ArrayList <Victim> loadVictims(){
 
         for (int i = 0; i < victimJSON.size(); i++){
             JSONObject victimJSON = (JSONObject)victimJSON.get(i);
+            UUID victimId = UUID.fromString((String)victimJSON.get(VICTIMS_VICTIM_ID);
+            UUID crimeId = UUID.fromString((String)victimJSON.get(VICTIMS_CRIME_ID);
             String firstName = (String)victimJSON.get(VICTIMS_FIRST_NAME);
             String lastName = (String)victimJSON.get(VICTIMS_LAST_NAME);
             int age = ((Long)victimJSON.get(VICTIMS_AGE)).intValue();
@@ -220,7 +235,7 @@ public static ArrayList <Victim> loadVictims(){
             String isInjured = (String)victimJSON.get(VICTIMS_IS_INJURED);
             String statement = (String)victimJSON.get(VICTIMS_STATEMENT);
 
-            victim.add(new Victim(firstName, lastName, age, contactInfo, isMinor, isAlive, isInjured, statement));
+            victim.add(new Victim(victimId, crimeId, firstName, lastName, age, contactInfo, isMinor, isAlive, isInjured, statement));
         }
 
         return victim;
@@ -243,6 +258,8 @@ public static ArrayList <Witness> loadWitnesses(){
 
         for (int i = 0; i < witnessJSON.size(); i++){
             JSONObject witnessJSON = (JSONObject)witnessJSON.get(i);
+            UUID witnessId = UUID.fromString((String)witnessJSON.get(WITNESSES_WITNESS_ID);
+            UUID crimeId = UUID.fromString((String)witnessJSON.get(WITNESSES_CRIME_ID);
             String firstName = (String)witnessJSON.get(WITNESSES_FIRST_NAME);
             String lastName = (String)witnessJSON.get(WITNESSES_LAST_NAME);
             int age = ((Long)witnessJSON.get(WITNESSES_AGE)).intValue();

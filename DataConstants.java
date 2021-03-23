@@ -12,7 +12,7 @@ public abstract class DataConstants {
     protected static final String CRIME_WITNESS_ID = "witnessId";
     protected static final String CRIME_VICTIM_ID = "victimId";
     protected static final String CRIME_SUSPECT_ID = "suspectId";
-    protected static final String CRIME_PERSON_OF_INTEREST_ID = "personOfInterestId";
+    protected static final String CRIME_POI_ID = "personOfInterestId";
     protected static final String CRIME_OFFICERS = "officers";
 
     // criminals.json
@@ -26,7 +26,7 @@ public abstract class DataConstants {
     protected static final String CRIMINALS_AGE = "age";
     protected static final String CRIMINALS_GENDER = "gender";
     protected static final String CRIMINALS_ETHNICITY = "ethnicity";
-    protected static final String CRIMINALS_CONTACT_INFO = "contactinfo";
+    protected static final String CRIMINALS_CONTACT_INFO = "contactInfo";
     protected static final String CRIMINALS_LINKED_CRIME = "linkedCrime";
     protected static final String CRIMINALS_CRIME_ID = "crimeId";
     protected static final String CRIMINALS_BIRTH_DATE = "birthDate";
@@ -53,6 +53,7 @@ public abstract class DataConstants {
     // personOfInterest.json
     protected static final String PERSONOFINTEREST_FILE_NAME = "src/jsonfiles/personOfInterest.json";
     protected static final String PERSONOFINTEREST = "personOfInterest";
+    protected static final String PERSONOFINTEREST_POI_ID = "personOfInterestId";
     protected static final String PERSONOFINTEREST_SUSPECT_ID = "suspectId";
     protected static final String PERSONOFINTEREST_CRIME_ID = "crimeId";
     protected static final String PERSONOFINTEREST_FIRST_NAME = "firstName";

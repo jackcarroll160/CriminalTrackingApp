@@ -1,5 +1,6 @@
 [
     {
+        "personOfInterestId": 1,
         "suspectId":1,
         "crimeId":1,
         "firstName":"Bagel",
