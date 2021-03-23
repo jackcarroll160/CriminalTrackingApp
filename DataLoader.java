@@ -59,7 +59,7 @@ public static ArrayList <Crime> loadCrime(){
                 String firstName = (String)criminalJSON.get(CRIMINALS_FIRST_NAME);
                 String lastName = (String)criminalJSON.get(CRIMINALS_LAST_NAME);
                 //boolean
-                boolean hasNickname = (String)criminalJSON.get(CRIMINALS_HAS_NICKNAME);
+                String hasNickname = (String)criminalJSON.get(CRIMINALS_HAS_NICKNAME);
                 String nickname = (String)criminalJSON.get(CRIMINALS_NICKNAME);
                 int age = ((Long)criminalJSON.get(CRIMINALS_AGE)).intValue();
                 String gender = (String)criminalJSON.get(CRIMINALS_GENDER);
@@ -111,36 +111,41 @@ public static ArrayList <Crime> loadCrime(){
 
     
     // person of interest
+<<<<<<< HEAD
+    public static ArrayList <PersonOfInterest> loadPersonOfInterest(){
+        ArrayList <PersonOfInterest> personofinterest = new ArrayList <PersonOfInterest>();
+=======
     public static ArrayList <PersonOfInterest> loadPOI(){
         ArrayList <PersonOfInterest> poi = new ArrayList <PersonOfInterest>();
+>>>>>>> c2e0107e38e3184de171916544cd547231e37223
 
         try{
             FileReader reader = new FileReader(PERSONOFINTEREST_FILE_NAME);
             JSONParser parser = new JSONParser();
-            JSONArray poiJSON = (JSONArray) new JSONParser().parse(reader);
+            JSONArray personofinterestJSON = (JSONArray) new JSONParser().parse(reader);
             
 
-            for (int i = 0; i < poiJSON.size(); i++){
-                JSONObject poiJSON = (JSONObject)poiJSON.get(i);
-                UUID personOfInterestId = UUID.fromString((String)poiJSON.get(PERSONOFINTEREST_POI_ID);
-                UUID suspectId = UUID.fromString((String)poiJSON.get(PERSONOFINTEREST_SUSPECT_ID);
-                UUID crimeId = UUID.fromString((String)poiJSON.get(PERSONOFINTEREST_CRIME_ID);
-                String firstName = (String)poiJSON.get(PERSONOFINTEREST_FIRST_NAME);
-                String lastName = (String)poiJSON.get(PERSONOFINTEREST_LAST_NAME);
-                int age = ((Long)poiJSON.get(PERSONOFINTEREST_AGE)).intValue();
-                String contactInfo = (String)poiJSON.get(PERSONOFINTEREST_CONTACT_INFO);
+            for (int i = 0; i < personofinterestJSON.size(); i++){
+                JSONObject personofinterestJSON = (JSONObject)personofinterestJSON.get(i);
+                UUID personOfInterestId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_POI_ID);
+                UUID suspectId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_SUSPECT_ID);
+                UUID crimeId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_CRIME_ID);
+                String firstName = (String)personofinterestJSON.get(PERSONOFINTEREST_FIRST_NAME);
+                String lastName = (String)personofinterestJSON.get(PERSONOFINTEREST_LAST_NAME);
+                int age = ((Long)personofinterestSON.get(PERSONOFINTEREST_AGE)).intValue();
+                String contactInfo = (String)personofinterestJSON.get(PERSONOFINTEREST_CONTACT_INFO);
                 // BOOLEAN
-                String isMinor = (String)poiJSON.get(PERSONOFINTEREST_IS_MINOR);
-                String statement = (String)poiJSON.get(PERSONOFINTEREST_STATEMENT);
+                String isMinor = (String)personofinterestJSON.get(PERSONOFINTEREST_IS_MINOR);
+                String statement = (String)personofinterestJSON.get(PERSONOFINTEREST_STATEMENT);
                 // BOOLEAN
-                String hasAlibi = (String)poiJSON.get(PERSONOFINTEREST_HAS_ALIBI);
+                String hasAlibi = (String)personofinterestJSON.get(PERSONOFINTEREST_HAS_ALIBI);
                 //BOOLEAN
-                String isSuspect = (String)poiJSON.get(PERSONOFINTEREST_IS_SUSPECT);
+                String isSuspect = (String)personofinterestJSON.get(PERSONOFINTEREST_IS_SUSPECT);
 
-                poi.add(new POI(personOfInterestId, suspectId, crimeId, firstName, lastName, age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
+                personofinterest.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
             }
 
-            return poi;
+            return personofinterest;
         } catch (Exception e){
             e.printStackTrace();
         }

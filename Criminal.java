@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.UUID;
 public class Criminal {
     
-    
+     
     private int criminalID;
     private String firstName;
     private String lastName;
