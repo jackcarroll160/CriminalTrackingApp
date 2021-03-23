@@ -74,7 +74,7 @@ public abstract class DataConstants {
     protected static final String SUSPECTS_AGE = "age";
     protected static final String SUSPECTS_GENDER = "gender";
     protected static final String SUSPECTS_ETHNICITY = "ethnicity";
-    protected static final String SUSPECTS_CONTACT_INFO = "contactinfo";
+    protected static final String SUSPECTS_CONTACT_INFO = "contactInfo";
     protected static final String SUSPECTS_IS_MINOR = "isMinor";
     protected static final String SUSPECTS_STATEMENT = "statement";
     protected static final String SUSPECTS_HAS_ALIBI = "hasAlibi";
@@ -119,7 +119,7 @@ public abstract class DataConstants {
     protected static final String WITNESSES_FIRST_NAME = "firstName";
     protected static final String WITNESSES_LAST_NAME = "lastName";
     protected static final String WITNESSES_AGE = "age";
-    protected static final String WITNESSES_CONTACT_INFO = "contactinfo";
+    protected static final String WITNESSES_CONTACT_INFO = "contactInfo";
     protected static final String WITNESSES_IS_MINOR = "isMinor";
     protected static final String WITNESSES_PROOF = "proof";
     protected static final String WITNESSES_TESTIMONY = "testimony";

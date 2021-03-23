@@ -57,7 +57,7 @@ public static ArrayList <Crime> loadCrime(){
                 int age = ((Long)criminalJSON.get(CRIMINALS_AGE)).intValue();
                 String gender = (String)criminalJSON.get(CRIMINALS_GENDER);
                 String ethnicity = (String)criminalJSON.get(CRIMINALS_ETHNICITY);
-                String contactinfo = (String)criminalJSON.get(CRIMINALS_CONTACT_INFO);
+                String contactInfo = (String)criminalJSON.get(CRIMINALS_CONTACT_INFO);
                 String linkedCrime = (String)criminalJSON.get(CRIMINALS_LINKED_CRIME);
                 String birthDate = (String)criminalJSON.get(CRIMINALS_BIRTH_DATE);
                 String eyeColor = (String)criminalJSON.get(CRIMINALS_EYE_COLOR);
@@ -89,7 +89,7 @@ public static ArrayList <Crime> loadCrime(){
 
 
 
-                criminal.add(new Criminal(firstName,lastName, hasNickname, nickname, age, gender, ethnicity, contactinfo, linkedCrime, birthDate, eyeColor, hairDescription, height, weight, hasTattoos, tattooDescription, hasPiercings, physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription, isGuilty, hasFingerprints, hasVehicle, vehicleDescription));
+                criminal.add(new Criminal(firstName,lastName, hasNickname, nickname, age, gender, ethnicity, contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, height, weight, hasTattoos, tattooDescription, hasPiercings, physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription, isGuilty, hasFingerprints, hasVehicle, vehicleDescription));
             }
 
             return criminal;
