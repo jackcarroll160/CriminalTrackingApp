@@ -7,10 +7,9 @@ public class Officer extends User {
     
     
     
-    public Officer(String username, String password, String rank, int authorizationLevel){
-        super(username, password, authorizationLevel);
-        
-
+    public Officer(String username, String password){
+        super(username, password);
+    
     }
 
 
@@ -23,7 +22,7 @@ public class Officer extends User {
         crime.add(misdemeanor);
 
     }
-
+ 
     /**
      * add felonies to crime arraylist
      * @param crime array list
@@ -71,7 +70,7 @@ public class Officer extends User {
 
     }
 
-
+ 
 
     //interface methods
 
