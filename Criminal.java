@@ -2,6 +2,7 @@
  * Author: Sydney Oklota
  */
 import java.util.*;
+import java.util.UUID;
 public class Criminal {
     
     private ArrayList<UUID> ID;
@@ -36,6 +37,17 @@ public class Criminal {
     private boolean hasFingerprints;
     private boolean hasVehicle;
     private String vehicleDescription;
+
+    public Criminal(){
+        this.id = UUID.randomUUID();
+
+        // needs a lot added - rose
+    }
+
+    public Criminal(UUID id){
+        this.id = id;
+        // needs a lot added - rose
+    }
 
 
     public ArrayList<UUID> getID() {
