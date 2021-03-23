@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CriminalList{
 
 	private static ArrayList<Criminal> criminalList = new ArrayList<Criminal>();
-	private static Criminal criminal = null;
+	private static CriminalList criminal = null;
 	
 	/*
 	 * This is the constructor where the criminal array list will be constructed
@@ -23,10 +23,10 @@ public class CriminalList{
 	 * This is the getInstance method that will create a new criminal as long as criminal List is not null
 	 * @return An instance of library
 	 */
-	public static Criminal getInstance()
+	public static CriminalList getInstance()
 	{
 		if (criminal == null) {
-			criminal = new Criminal();
+			criminal = new CriminalList();
 		}
 		return criminal;
 	}
