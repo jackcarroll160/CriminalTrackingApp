@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.UUID;
 public class Criminal {
     
-    private UUID ID;
+    
     private int criminalID;
     private String firstName;
     private String lastName;
@@ -37,26 +37,62 @@ public class Criminal {
     private boolean hasFingerprints;
     private boolean hasVehicle;
     private String vehicleDescription;
+    private UUID id;
 
-    public Criminal(){
-        this.ID = UUID.randomUUID();
+    public Criminal(String firstName, String lastName, String nickname, int age, String gender, String ethnicity, String contactInfo, String linkedCrime, String birthDate, String eyeColor, String hairDescription, String facialHairDescription, String height, String weight, String tattooDescription, String physicalMarksDescription, String physicalBuild, String weaponDescription, String complexion, String clothingDescription, String vehicleDescription){
 
-        // needs a lot added - rose
+        this.id = UUID.randomUUID();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nickname = nickname;
+        this.age = age;
+        this.gender = gender; 
+        this.ethnicity = ethnicity;
+        this.contactinfo = contactInfo;
+        this.linkedCrime = linkedCrime;
+        this.birthDate = birthDate;
+        this.eyeColor = eyeColor;
+        this.hairDescription = hairDescription;
+        this.facialHairDescription = facialHairDescription;
+        this.height = height;
+        this.weight = weight; 
+        this.tattooDescription = tattooDescription;
+        this.physicalMarksDescription = physicalMarksDescription;
+        this.physicalBuild = physicalBuild; 
+        this.weaponDescription = weaponDescription;
+        this.complexion = complexion;
+        this.clothingDescription = clothingDescription;
+        this.vehicleDescription = vehicleDescription;
+
+      
     }
 
-    public Criminal(UUID iD){
-        this.ID = iD;
-        // needs a lot added - rose
+    public Criminal(UUID id, String firstName, String lastName, String nickname, int age, String gender, String ethnicity, String contactInfo, String linkedCrime, String birthDate, String eyeColor, String hairDescription, String facialHairDescription, String height, String weight, String tattooDescription, String physicalMarksDescription, String physicalBuild, String weaponDescription, String complexion, String clothingDescription, String vehicleDescription){
+
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nickname = nickname;
+        this.age = age;
+        this.gender = gender; 
+        this.ethnicity = ethnicity;
+        this.contactinfo = contactInfo;
+        this.linkedCrime = linkedCrime;
+        this.birthDate = birthDate;
+        this.eyeColor = eyeColor;
+        this.hairDescription = hairDescription;
+        this.facialHairDescription = facialHairDescription;
+        this.height = height;
+        this.weight = weight; 
+        this.tattooDescription = tattooDescription;
+        this.physicalMarksDescription = physicalMarksDescription;
+        this.physicalBuild = physicalBuild; 
+        this.weaponDescription = weaponDescription;
+        this.complexion = complexion;
+        this.clothingDescription = clothingDescription;
+        this.vehicleDescription = vehicleDescription;
     }
 
-
-    public UUID getID() {
-        return ID;
-    }
-
-    public void setID(UUID iD) {
-        this.ID = iD;
-    }
 
     public int getCriminalID() {
         return criminalID;
