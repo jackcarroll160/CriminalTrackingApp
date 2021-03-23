@@ -110,14 +110,9 @@ public static ArrayList <Crime> loadCrime(){
     }
 
     
-    // person of interest
-<<<<<<< HEAD
-    public static ArrayList <PersonOfInterest> loadPersonOfInterest(){
-        ArrayList <PersonOfInterest> personofinterest = new ArrayList <PersonOfInterest>();
-=======
+    // persons of interest
     public static ArrayList <PersonOfInterest> loadPOI(){
         ArrayList <PersonOfInterest> poi = new ArrayList <PersonOfInterest>();
->>>>>>> c2e0107e38e3184de171916544cd547231e37223
 
         try{
             FileReader reader = new FileReader(PERSONOFINTEREST_FILE_NAME);
