@@ -52,7 +52,7 @@ public static ArrayList <Crime> loadCrime(){
                 String firstName = (String)criminalJSON.get(CRIMINALS_FIRST_NAME);
                 String lastName = (String)criminalJSON.get(CRIMINALS_LAST_NAME);
                 //boolean
-                String hasNickname = (String)criminalJSON.get(CRIMINALS_HAS_NICKNAME);
+                boolean hasNickname = (String)criminalJSON.get(CRIMINALS_HAS_NICKNAME);
                 String nickname = (String)criminalJSON.get(CRIMINALS_NICKNAME);
                 int age = ((Long)criminalJSON.get(CRIMINALS_AGE)).intValue();
                 String gender = (String)criminalJSON.get(CRIMINALS_GENDER);
