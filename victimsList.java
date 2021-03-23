@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class victimsList {
     
-    private static ArrayList<Victim> victimsList = new ArrayList<Victim>();
+    private static ArrayList<Victim> victimList = new ArrayList<Victim>();
 	private static Victim victims = null;
 	
 	/*
@@ -14,7 +14,7 @@ public class victimsList {
 	 */
 	private victimsList()
 	{
-		victimsList = new DataLoader().loadVictims();
+		victimList = new DataLoader().loadVictims();
 	}
 	
 	/*
@@ -33,7 +33,7 @@ public class victimsList {
 	 */
 	public ArrayList<Victim> getVictims()
 	{
-		return victimsList;
+		return victimList;
 	}
 	
 	
@@ -44,7 +44,7 @@ public class victimsList {
 	{
 		boolean found = false;
 		
-		for (Victim victims : victimsList)
+		for (Victim victims : victimList)
 		{
 			if(victims.getFirstName().equalsIgnoreCase(Fname) && victims.getLastName().equalsIgnoreCase(Lname))
 			{
