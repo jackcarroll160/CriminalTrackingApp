@@ -82,7 +82,7 @@ public class Criminal {
         this.lastName = lastName;
     }
 
-    public boolean isHasNickname() {
+    public boolean getHasNickname() {
         return hasNickname;
     }
 
