@@ -58,7 +58,7 @@ public abstract class DataConstants {
     protected static final String PERSONOFINTEREST_FIRST_NAME = "firstName";
     protected static final String PERSONOFINTEREST_LAST_NAME = "lastName";
     protected static final String PERSONOFINTEREST_AGE = "age";
-    protected static final String PERSONOFINTEREST_CONTACT_INFO = "contactinfo";
+    protected static final String PERSONOFINTEREST_CONTACT_INFO = "contactInfo";
     protected static final String PERSONOFINTEREST_IS_MINOR = "isMinor";
     protected static final String PERSONOFINTEREST_STATEMENT = "statement";
     protected static final String PERSONOFINTEREST_HAS_ALIBI = "hasAlibi";
@@ -105,7 +105,7 @@ public abstract class DataConstants {
     protected static final String VICTIMS_FIRST_NAME = "firstName";
     protected static final String VICTIMS_LAST_NAME = "lastName";
     protected static final String VICTIMS_AGE = "age";
-    protected static final String VICTIMS_CONTACT_INFO = "contactinfo";
+    protected static final String VICTIMS_CONTACT_INFO = "contactInfo";
     protected static final String VICTIMS_IS_MINOR = "isMinor";
     protected static final String VICTIMS_IS_ALIVE = "isAlive";
     protected static final String VICTIMS_IS_INJURED = "isInjured";
