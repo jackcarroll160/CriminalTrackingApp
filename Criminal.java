@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.UUID;
 public class Criminal {
     
-    private UUID ID;
+    
     private int criminalID;
     private String firstName;
     private String lastName;
@@ -37,27 +37,20 @@ public class Criminal {
     private boolean hasFingerprints;
     private boolean hasVehicle;
     private String vehicleDescription;
+    private UUID id;
 
     public Criminal(){
-        this.ID = UUID.randomUUID();
+        this.id = UUID.randomUUID();
 
         // needs a lot added - rose
     }
 
-    public Criminal(UUID iD){
-        this.ID = iD;
+    public Criminal(UUID id){
+        this.id = id;
         // needs a lot added - rose
     }
 
-
-    public UUID getID() {
-        return ID;
-    }
-
-    public void setID(UUID iD) {
-        this.ID = iD;
-    }
-
+    
     public int getCriminalID() {
         return criminalID;
     }
