@@ -8,17 +8,31 @@ public abstract class User implements UserInterface{
     protected String username;
     protected String password;
     protected HashMap<UUID, String> storeUserPwd;
-    protected String email;
-    protected int authorizationLevel;
+    
     
 
 
-    public User(String username, String password, int authorizationLevel){
+    public User(String username, String password){
 
         this.username = username;
         this.password = password;
-        this.authorizationLevel = authorizationLevel;
         
+    }
+
+    public void getUsername(String username){
+       
+    }
+
+    public void getPassword(String password){
+
+    }
+
+    public String setPassword(){
+        return this.password;
+    }
+
+    public String setUsername(){
+        return this.username;
     }
 
     /**
@@ -69,7 +83,7 @@ public abstract class User implements UserInterface{
 
         } 
         
-
+ 
     }
  
     /**
@@ -84,29 +98,7 @@ public abstract class User implements UserInterface{
     }
 
 
-
-
     
-    public String toString(){
-
-        return null;
-
-    }
-
-    public void getCriminals(Criminal criminal){
-        return;
-
-    }
-
-    
-
-    public void favoiteReport(Criminal criminal){
-
-    }
-
-    public void addReport(Criminal criminal){
-
-    }
 
     
 

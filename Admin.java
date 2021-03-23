@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+ 
 /**
  * Author: Sydney Oklota
  */
@@ -11,9 +11,9 @@ public class Admin extends User{
      * @param password admin password
      * @param authorizationLevel admin authorization level = 1
      */
-    public Admin(String username, String password, int authorizationLevel){
+    public Admin(String username, String password){
 
-        super(username, password, authorizationLevel);
+        super(username, password);
 
     }
 
@@ -58,15 +58,7 @@ public class Admin extends User{
        }
     }
 
-    /**
-     * edit criminal report
-     * @param Fname first name of criminal
-     * @param Lname last name of criminal
-     */
-     public void editReport(String Fname, String Lname){
-         editCriminalByName(Fname, Lname);
-
-    }
+    
 
 
     //interface methods
