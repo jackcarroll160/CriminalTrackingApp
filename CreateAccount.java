@@ -7,6 +7,7 @@ import javax.swing.border.TitledBorder;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 public class CreateAccount extends JFrame {
     private JButton btnCreate;
@@ -21,6 +22,7 @@ public class CreateAccount extends JFrame {
         super("Create Account");
         CreateAccountPanel();
 
+        
         // add DataWriter "saveUsers()" here for writing JSON
 
     }
@@ -65,15 +67,19 @@ public class CreateAccount extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 
-                if (Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())) {
-                    JOptionPane.showMessageDialog(null, "Account Created Successfully!");
-                    dispose();
-                    //CreateAccountPanel();
-                }
-                else {
-                    JOptionPane.showMessageDialog(null, "Sorry, that username is taken!\nTry another name");
-                    tfUsername.setText("");
-                    pfPassword.setText("");
+                try { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
+                    if (!Users.haveUser(tfUsername.getText())) {
+                        JOptionPane.showMessageDialog(null, "Account Created Successfully!");
+                        dispose();
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(null, "Sorry, that username is taken.\nPlease try a different name", "Create Account", JOptionPane.OK_OPTION);
+                        tfUsername.setText("");
+                        pfPassword.setText("");
+                    }
+                } catch (HeadlessException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
                 }
             }
         });
