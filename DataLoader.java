@@ -25,7 +25,7 @@ public static ArrayList <Crime> loadCrime(){
             String dateOfCrime = (String)crimeJSON.get(CRIME_DATE_OF_CRIME);
             String timeOfCrime = (String)crimeJSON.get(CRIME_TIME_OF_CRIME);
             //boolean
-            String caseOpen = (String)crimeJSON.get(CRIME_CASE_OPEN);
+            boolean caseOpen = getBoolean((String)crimeJSON.get(CRIME_CASE_OPEN));
             JSONArray witnessesIds = (JSONArray)crimeJSON.get(CRIME_WITNESS_ID);
             ArrayList witnesses = getWitnesses(witnessesIds);
             JSONArray victimsIds = (JSONArray)crimeJSON.get(CRIME_VICTIM_ID);
