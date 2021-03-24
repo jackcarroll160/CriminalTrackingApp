@@ -18,7 +18,7 @@ public static ArrayList <Crime> loadCrime(){
         
 
         for (int i = 0; i < crimeJSONList.size(); i++){
-            JSONObject crimeJSON = (JSONObject)crimeJSON.get(i);
+            JSONObject crimeJSON = (JSONObject)crimeJSONList.get(i);
             UUID crimeId = UUID.fromString((String)crimeJSON.get(CRIME_CRIME_ID));
             UUID criminalId = UUID.fromString((String)crimeJSON.get(CRIMINALS_CRIMINAL_ID));
             String description = (String)crimeJSON.get(CRIME_DESCRIPTION);
@@ -100,7 +100,7 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
             
 
             for (int i = 0; i < criminalJSONList.size(); i++){
-                JSONObject criminalJSON = (JSONObject)criminalJSON.get(i);
+                JSONObject criminalJSON = (JSONObject)criminalJSONList.get(i);
                 UUID criminalId = UUID.fromString((String)criminalJSON.get(CRIMINALS_CRIMINAL_ID));
                 String firstName = (String)criminalJSON.get(CRIMINALS_FIRST_NAME);
                 String lastName = (String)criminalJSON.get(CRIMINALS_LAST_NAME);
@@ -169,7 +169,7 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
             
 
             for (int i = 0; i < personofinterestJSONList.size(); i++){
-                JSONObject personofinterestJSON = (JSONObject)personofinterestJSON.get(i);
+                JSONObject personofinterestJSON = (JSONObject)personofinterestJSONList.get(i);
                 UUID personOfInterestId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_POI_ID));
                 UUID suspectId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_SUSPECT_ID));
                 UUID crimeId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_CRIME_ID));
@@ -197,8 +197,8 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
     }
 
     // suspects
-    public static ArrayList <Suspect> loadSuspect(){
-        ArrayList <Suspect> suspect = new ArrayList <Suspect>();
+    public static ArrayList<Suspect> loadSuspect(){
+        ArrayList<Suspect> suspect = new ArrayList<Suspect>();
 
         try{
             FileReader reader = new FileReader(SUSPECTS_FILE_NAME);
@@ -207,7 +207,7 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
             
 
             for (int i = 0; i < suspectJSONList.size(); i++){
-                JSONObject suspectJSON = (JSONObject)suspectJSON.get(i);
+                JSONObject suspectJSON = (JSONObject)suspectJSONList.get(i);
                 UUID suspectId = UUID.fromString((String)suspectJSON.get(SUSPECTS_SUSPECT_ID));
                 UUID crimeId = UUID.fromString((String)suspectJSON.get(SUSPECTS_CRIME_ID));
                 String firstName = (String)suspectJSON.get(SUSPECTS_FIRST_NAME);
@@ -268,7 +268,7 @@ public static ArrayList <Victim> loadVictims(){
         
 
         for (int i = 0; i < victimJSONList.size(); i++){
-            JSONObject victimJSON = (JSONObject)victimJSON.get(i);
+            JSONObject victimJSON = (JSONObject)victimJSONList.get(i);
             UUID victimId = UUID.fromString((String)victimJSON.get(VICTIMS_VICTIM_ID));
             UUID crimeId = UUID.fromString((String)victimJSON.get(VICTIMS_CRIME_ID));
             String firstName = (String)victimJSON.get(VICTIMS_FIRST_NAME);
@@ -305,7 +305,7 @@ public static ArrayList <Witness> loadWitnesses(){
         
 
         for (int i = 0; i < witnessJSONList.size(); i++){
-            JSONObject witnessJSON = (JSONObject)witnessJSON.get(i);
+            JSONObject witnessJSON = (JSONObject)witnessJSONList.get(i);
             UUID witnessId = UUID.fromString((String)witnessJSON.get(WITNESSES_WITNESS_ID));
             UUID crimeId = UUID.fromString((String)witnessJSON.get(WITNESSES_CRIME_ID));
             String firstName = (String)witnessJSON.get(WITNESSES_FIRST_NAME);
