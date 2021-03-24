@@ -107,7 +107,7 @@ public class personOfInterestList {
 	 * 
 	 */
 	public void savePOI() {
-		DataWriter.savePOI();
+		DataWriter.savePersonOfInterest();
 	}
 	
 	public Suspect getPOIById(UUID id)
