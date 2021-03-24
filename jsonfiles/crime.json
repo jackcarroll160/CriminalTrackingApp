@@ -6,10 +6,10 @@
         "dateOfCrime":"07/24/2018",
         "timeOfCrime":"8:40pm",
         "caseOpen":false,
-        "witnessId": 1,
-        "victimId": 1,
-        "suspectId":1,
-        "personOfInterestId":1,
+        "witnesses": [1],
+        "victims": [1],
+        "suspects":[1],
+        "personOfInterests":[1],
         "officers":["Officer Brown", "Officer Thompson"]
     },{
         "crimeId":2,
@@ -18,10 +18,10 @@
         "dateOfCrime":"09/04/2020",
         "timeOfCrime":"12:30pm",
         "caseOpen":false,
-        "witnessId":2,
-        "victimId":2,
-        "suspectId":2,
-        "personOfInterestId":2,
+        "witnesses": [2],
+        "victims": [2],
+        "suspects":[2],
+        "personOfInterests":[2],
         "officers":["Officer Jelly", "Officer Butter"]
     }
 ]

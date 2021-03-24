@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 /**
  * Author Sydney Oklota
  * list of victims
@@ -36,7 +37,17 @@ public class victimsList {
 		return victimList;
 	}
 	
-	
+	public Victim getVictimById(UUID id)
+	{
+		for(Victim victim : victimList)
+		{
+			if(victim.getVictimId().equals(id))
+			{
+				return victim;
+			}
+		}
+		return null;
+	}
 	/*
 	 * 
 	 */

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Author: Sydney Oklota
@@ -37,7 +38,18 @@ public class witnessList {
 		return witnessList;
 	}
 	
-	
+	public Witness getWitnessById(UUID id)
+	{
+		for(Witness witness : witnessList)
+		{
+			if(witness.getWitnessId().equals(id))
+			{
+				return witness;
+			}
+		}
+		return null;
+	}
+
 	/*
 	 * 
 	 */

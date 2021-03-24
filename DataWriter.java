@@ -10,7 +10,7 @@ public class DataWriter extends DataConstants{
     //crime
     public static void saveCrime(){
         CrimeList crime = CrimeList.getInstance();
-        ArrayList<Crime> crimeList = crime.getCrimeList();
+        ArrayList<Crime> crimeList = crime.getCrime();
         JSONArray jsonCrimeList = new JSONArray();
 
         // create json objects and loop through the crime list
@@ -38,7 +38,7 @@ public class DataWriter extends DataConstants{
         crimeInfo.put(CRIME_DATE_OF_CRIME, crime.getDateOfCrime());
         crimeInfo.put(CRIME_TIME_OF_CRIME, crime.getTimeOfCrime());
         //boolean
-        crimeInfo.put(CRIME_CASE_OPEN, crime.getCaseOpen());
+        crimeInfo.put(CRIME_CASE_OPEN, crime.isCaseOpen());
         crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnessId().toString());
         crimeInfo.put(CRIME_VICTIM_ID, crime.getVictimId().toString());
         crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterestId().toString());
@@ -49,7 +49,7 @@ public class DataWriter extends DataConstants{
     // criminals
     public static void saveCriminals(){
         CriminalList criminal = CriminalList.getInstance();
-        ArrayList<Criminal> criminalList = criminal.getCriminalList();
+        ArrayList<Criminal> criminalList = criminal.getCriminals();
         JSONArray jsonCriminalList = new JSONArray();
 
         // create json objects and loop through the criminal list
@@ -78,7 +78,7 @@ public class DataWriter extends DataConstants{
         criminalInfo.put(CRIMINALS_AGE, criminal.getAge().toString());
         criminalInfo.put(CRIMINALS_GENDER, criminal.getGender());
         criminalInfo.put(CRIMINALS_ETHNICITY, criminal.getEthnicity());
-        criminalInfo.put(CRIMINALS_CONTACT_INFO, criminal.getContactInfo());
+        criminalInfo.put(CRIMINALS_CONTACT_INFO, criminal.getContactinfo());
         criminalInfo.put(CRIMINALS_LINKED_CRIME, criminal.getLinkedCrime());
         criminalInfo.put(CRIMINALS_BIRTH_DATE, criminal.getBirthDate());
         criminalInfo.put(CRIMINALS_EYE_COLOR, criminal.getEyeColor());
