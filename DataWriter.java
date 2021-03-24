@@ -69,6 +69,8 @@ public class DataWriter extends DataConstants{
         crimeInfo.put(CRIME_VICTIM_ID, crime.getVictimId());
         crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterestId());
         crimeInfo.put(CRIME_OFFICERS, crime.getOfficers());
+
+        return crimeInfo;
     }
 
 
@@ -132,6 +134,8 @@ public class DataWriter extends DataConstants{
         //boolean
         criminalInfo.put(CRIMINALS_HAS_VEHICLE, criminal.getHasVehicle());
         criminalInfo.put(CRIMINALS_VEHICLE_DESCRIPTION, criminal.getVehicleDescription());
+
+        return criminalInfo;
 
     }
     
@@ -307,4 +311,4 @@ public class DataWriter extends DataConstants{
 
     }    
 
-}}
+}
