@@ -170,9 +170,9 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
 
             for (int i = 0; i < personofinterestJSONList.size(); i++){
                 JSONObject personofinterestJSON = (JSONObject)personofinterestJSON.get(i);
-                UUID personOfInterestId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_POI_ID);
-                UUID suspectId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_SUSPECT_ID);
-                UUID crimeId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_CRIME_ID);
+                UUID personOfInterestId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_POI_ID));
+                UUID suspectId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_SUSPECT_ID));
+                UUID crimeId = UUID.fromString((String)personofinterestJSON.get(PERSONOFINTEREST_CRIME_ID));
                 String firstName = (String)personofinterestJSON.get(PERSONOFINTEREST_FIRST_NAME);
                 String lastName = (String)personofinterestJSON.get(PERSONOFINTEREST_LAST_NAME);
                 int age = ((Long)personofinterestJSON.get(PERSONOFINTEREST_AGE)).intValue();
@@ -208,8 +208,8 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
 
             for (int i = 0; i < suspectJSONList.size(); i++){
                 JSONObject suspectJSON = (JSONObject)suspectJSON.get(i);
-                UUID suspectId = UUID.fromString((String)suspectJSON.get(SUSPECTS_SUSPECT_ID);
-                UUID crimeId = UUID.fromString((String)suspectJSON.get(SUSPECTS_CRIME_ID);
+                UUID suspectId = UUID.fromString((String)suspectJSON.get(SUSPECTS_SUSPECT_ID));
+                UUID crimeId = UUID.fromString((String)suspectJSON.get(SUSPECTS_CRIME_ID));
                 String firstName = (String)suspectJSON.get(SUSPECTS_FIRST_NAME);
                 String lastName = (String)suspectJSON.get(SUSPECTS_LAST_NAME);
                 int age = ((Long)suspectJSON.get(SUSPECTS_AGE)).intValue();
@@ -255,7 +255,7 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
 
         return null;
     }
-}
+
 
 // victims
 public static ArrayList <Victim> loadVictims(){
@@ -269,8 +269,8 @@ public static ArrayList <Victim> loadVictims(){
 
         for (int i = 0; i < victimJSONList.size(); i++){
             JSONObject victimJSON = (JSONObject)victimJSON.get(i);
-            UUID victimId = UUID.fromString((String)victimJSON.get(VICTIMS_VICTIM_ID);
-            UUID crimeId = UUID.fromString((String)victimJSON.get(VICTIMS_CRIME_ID);
+            UUID victimId = UUID.fromString((String)victimJSON.get(VICTIMS_VICTIM_ID));
+            UUID crimeId = UUID.fromString((String)victimJSON.get(VICTIMS_CRIME_ID));
             String firstName = (String)victimJSON.get(VICTIMS_FIRST_NAME);
             String lastName = (String)victimJSON.get(VICTIMS_LAST_NAME);
             int age = ((Long)victimJSON.get(VICTIMS_AGE)).intValue();
