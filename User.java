@@ -19,12 +19,12 @@ public abstract class User {
         
     }
 
-    public void getUsername(String username){
-       
+    public String getUsername(){
+        return this.username;
     }
 
-    public void getPassword(String password){
-
+    public String getPassword(){
+        return this.password;
     }
 
     public String setPassword(){
