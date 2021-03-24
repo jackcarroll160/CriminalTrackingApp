@@ -13,7 +13,11 @@ public class Witness extends Person{
 	private String typeOfWitness;
 	
 
-	/*
+	public Witness(String firstName, String lastName, int age, String contactInfo, boolean isMinor, String proof2,
+            String testimony2, String location2, String typeOfWitness2) {
+    }
+
+    /*
 	 * This is a method that will take all of the data that was input and return it in a readable string format
 	 * @return a String with all of the data and attributes
 	 */

@@ -1,3 +1,5 @@
+import java.util.UUID;
+
 /**
  * Suspect class extending Person of Interest
  * @author Overachievers 
@@ -29,6 +31,15 @@ public class Suspect extends PersonOfInterest{
     private boolean isGuilty;
     private String ethnicity;
     private String gender;
+
+    public Suspect(UUID suspectId2, UUID crimeId, String firstName, String lastName, int age, String gender2,
+            String ethnicity2, String contactInfo, boolean isMinor, String statement, boolean hasAlibi,
+            String birthDate2, String eyeColor2, String hairDescription2, boolean facialHair,
+            String facialHairDescription2, String height2, String weight2, boolean hasTattoos2,
+            String tattooDescription2, boolean hasPiercings2, String physicalMarksDescription2, String physicalBuild2,
+            boolean hasWeapon2, String weaponDescription2, String complexion2, String clothingDescription2,
+            boolean hasVehicle, String vehicleDescription2) {
+    }
 
     /**
      * Returns the linked crime

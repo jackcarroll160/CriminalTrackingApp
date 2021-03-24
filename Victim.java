@@ -1,3 +1,5 @@
+import java.util.UUID;
+
 /*
  * @author Kyle Persyn
  * This class is going to be the Victim  class that will be included as part of the crimes
@@ -10,7 +12,11 @@ public class Victim extends Person{
 	private String statement;
 	private int victimId;
 	
-	/*
+	public Victim(UUID victimId2, UUID crimeId, String firstName, String lastName, int age, String contactInfo,
+            boolean isMinor, boolean isAlive2, boolean isInjured2, String statement2) {
+    }
+
+    /*
 	 * This is the class that will return the alive boolean of the victim
 	 * @return a boolean that holds the alive flag
 	 */

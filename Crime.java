@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Crime class for the information based on crime
@@ -30,6 +31,13 @@ public class Crime {
     private ArrayList<User> officers;
     private TypeOfCrime typeOfCrime;
     private Grading grading;
+
+    public Crime(UUID crimeId, UUID criminalId, String description2, String dateOfCrime2, String timeOfCrime2,
+            boolean caseOpen2, ArrayList witnesses2, ArrayList victims2, ArrayList suspects2,
+            ArrayList personsOfInterest, String officers2) 
+            {
+                
+            }
 
     /**
      * Gets the description of a crime

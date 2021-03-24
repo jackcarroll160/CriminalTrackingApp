@@ -20,7 +20,7 @@ public static ArrayList <Crime> loadCrime(){
         for (int i = 0; i < crimeJSONList.size(); i++){
             JSONObject crimeJSON = (JSONObject)crimeJSON.get(i);
             UUID crimeId = UUID.fromString((String)crimeJSON.get(CRIME_CRIME_ID));
-            UUID criminalId = UUID.fromString((String)criminalsJSON.get(CRIMINALS_CRIMINAL_ID));
+            UUID criminalId = UUID.fromString((String)crimeJSON.get(CRIMINALS_CRIMINAL_ID));
             String description = (String)crimeJSON.get(CRIME_DESCRIPTION);
             String dateOfCrime = (String)crimeJSON.get(CRIME_DATE_OF_CRIME);
             String timeOfCrime = (String)crimeJSON.get(CRIME_TIME_OF_CRIME);

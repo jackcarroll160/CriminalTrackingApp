@@ -1,3 +1,5 @@
+import java.util.UUID;
+
 /*
  * @author Kyle Persyn
  * This class is going to be the PersonOfInterest  class that will be included as part of the crimes
@@ -10,7 +12,11 @@ public class PersonOfInterest extends Person{
 	private int personId;
 
 	
-	/*
+	public PersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName, String lastName,
+            int age, String contactInfo, boolean isMinor, String statement2, boolean hasAlibi2, boolean isSuspect2) {
+    }
+
+    /*
 	 * This is a method that will take all of the data that was input and return it in a readable string format
 	 * @return a String with all of the data and attributes
 	 */
