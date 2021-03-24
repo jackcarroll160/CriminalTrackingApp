@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Author: Sydney Oklota
@@ -67,8 +68,38 @@ public class personOfInterestList {
 	public void editPOIByName(String Fname, String Lname) 
 	{
 		PersonOfInterest poiEdit = searchPOIByName(Fname, Lname);
-		
-		
+		Scanner keyboard = new Scanner (System.in);
+
+		System.out.println("Would you like to edit: ");
+		System.out.println("1) Statement" ); 
+		System.out.println("2) Has Alibi");
+		System.out.println("3) Is Suspect");
+
+		int userInput = keyboard.nextInt();
+
+		if(userInput == 1)
+		{
+			System.out.println("Enter the New Statement: " );
+			String statement = keyboard.nextLine();
+			poiEdit.setStatement(statement);
+		}
+		if(userInput == 2)
+		{
+			System.out.println("Enter the New Has Alibi Value (True or False): " );
+			boolean hasAl = keyboard.nextBoolean();
+			poiEdit.setHasAlibi(hasAl);
+		}
+		if(userInput == 3)
+		{
+			System.out.println("Enter the New Is Suspect Value (True or False): " );
+			boolean isSus = keyboard.nextBoolean();
+			poiEdit.setSuspect(isSus);
+		}
+		if(userInput >= 4 || userInput <=0)
+		{
+			System.out.println("Invalid Input!");
+		}
+	
 	}
 
 	/**
