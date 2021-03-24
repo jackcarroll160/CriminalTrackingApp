@@ -7,13 +7,13 @@ import java.util.ArrayList;
  */
 public class Users {
     private static Users users;
-    private ArrayList<User> userList;
+    private static ArrayList<User> userList;
 
     /**
      * Users class default constructor
      * @throws IOException
      */
-    private Users() throws IOException {
+    public Users() throws IOException {
         userList = DataLoader.getUsers();
     }
 
@@ -35,7 +35,7 @@ public class Users {
      * @param userName a String for the User's username
      * @return true/false based on if the username was found in the list or not
      */
-    public boolean haveUser(String userName) {
+    public static boolean haveUser(String userName) {
         for (User user : userList) {
             if (user.getUsername().equalsIgnoreCase(userName)) {
                 return true;
@@ -82,7 +82,7 @@ public class Users {
     /**
      * Writes the saves used
      */
-    public void saveUsers() {
+    public static void saveUsers() {
         DataWriter.saveUsers();
     }
 }
