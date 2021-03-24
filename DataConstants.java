@@ -126,4 +126,9 @@ public abstract class DataConstants {
     protected static final String WITNESSES_TESTIMONY = "testimony";
     protected static final String WITNESSES_LOCATION = "location";
     protected static final String WITNESSES_TYPE_OF_WITNESS = "typeOfWitness";
+
+    // user.json
+    protected static final String USER_FILE_NAME = "src/jsonfiles/user.json";
+    protected static final String USER_USERNAME = "username";
+    protected static final String USER_PASSWORD = "password";
 }
