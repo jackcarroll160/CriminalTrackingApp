@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.UUID;
 
 /**
  * Author: Sydney Oklota
@@ -109,6 +110,17 @@ public class personOfInterestList {
 		DataWriter.savePOI();
 	}
 	
+	public Suspect getPOIById(UUID id)
+	{
+		for(PersonOfInterest poi : POIList)
+		{
+			if(poi.getPersonId().equals(id))
+			{
+				return poi;
+			}
+		}
+		return null;
+	}
 
 
     

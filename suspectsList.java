@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Author: Sydney Oklota
@@ -78,6 +79,17 @@ public class suspectsList {
 		DataWriter.saveSuspect();
 	}
 	
+	public Suspect getSuspectById(UUID id)
+	{
+		for(Suspect suspect : suspectsList)
+		{
+			if(suspect.getSuspectId().equals(id))
+			{
+				return suspect;
+			}
+		}
+		return null;
+	}
 
 
     
