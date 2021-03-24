@@ -135,17 +135,14 @@ public class DataWriter extends DataConstants{
 
     public static JSONObject getPersonOfInterestJSON(PersonOfInterest personOfInterest) {
         JSONObject personOfInterestInfo = new JSONObject();
-        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getCrimeId().toString());
-        crimeInfo.put(CRIME_CRIMINAL_ID, crime.getCriminalId().toString());
-        crimeInfo.put(CRIME_DESCRIPTION, crime.getDescription());
-        crimeInfo.put(CRIME_DATE_OF_CRIME, crime.getDateOfCrime());
-        crimeInfo.put(CRIME_TIME_OF_CRIME, crime.getTimeOfCrime());
-        //boolean
-        crimeInfo.put(CRIME_CASE_OPEN, crime.getCaseOpen());
-        crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnessId().toString());
-        crimeInfo.put(CRIME_VICTIM_ID, crime.getVictimId().toString());
-        crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterestId().toString());
-        crimeInfo.put(CRIME_OFFICERS, crime.getOfficers());
+        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getpersonOfInterestId().toString());
+        personOfInterestInfo.put(PERSONOFINTEREST_SUSPECT_ID, personOfInterest.getSuspectId().toString());
+        personOfInterestInfo.put(PERSONOFINTEREST_CRIME_ID, personOfInterest.getCrimeId().toString());
+        personOfInterestInfo.put(PERSONOFINTEREST_FIRST_NAME, personOfInterest.getFirstName());
+        personOfInterestInfo.put(PERSONOFINTEREST_LAST_NAME, personOfInterest.getLastName());
+        personOfInterestInfo.put(PERSONOFINTEREST_AGE, personOfInterest.getAge().toString());
+
+
     }
     
 
