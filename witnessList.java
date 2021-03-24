@@ -8,7 +8,7 @@ import java.util.UUID;
 public class witnessList {
 	
     private static ArrayList<Witness> witnessList = new ArrayList<Witness>();
-	private static Witness witness = null;
+	private static witnessList witness = null;
 	
 	/*
 	 * 
@@ -21,10 +21,10 @@ public class witnessList {
 	/*
 	 * 
 	 */
-	public static Witness getInstance()
+	public static witnessList getInstance()
 	{
         if (witness == null) {
-			witness = new Witness();
+			witness = new witnessList();
 		}
         return witness;
 		

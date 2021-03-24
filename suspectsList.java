@@ -8,7 +8,7 @@ import java.util.UUID;
 public class suspectsList {
 	
     private static ArrayList<Suspect> suspectsList = new ArrayList<Suspect>();
-	private static Suspect suspect = null;
+	private static suspectsList suspect = null;
 	
 	/*
 	 * 
@@ -21,10 +21,10 @@ public class suspectsList {
 	/*
 	 * 
 	 */
-	public static Suspect getInstance()
+	public static suspectsList getInstance()
 	{
         if (suspect == null) {
-			suspect = new Suspect();
+			suspect = new suspectsList();
 		}
         return suspect;
 		
