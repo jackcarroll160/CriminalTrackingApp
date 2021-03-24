@@ -335,13 +335,12 @@ public static ArrayList <Witness> loadWitnesses(){
     /**
     * Reading the User JSON file
     */
-    public static ArrayList<User> getUsers() throws IOException {
+    public static ArrayList<User> getUsers() {
         ArrayList<User> users = new ArrayList<User>();
-        FileReader reader = new FileReader(USER_FILE_NAME);
-        JSONParser parser = new JSONParser();
+       
         try {
-            //parser = new JSONParser(new FileReader(USER_FILE_NAME));
-            //new JSONParser(); 
+            FileReader reader = new FileReader(USER_FILE_NAME);
+            JSONParser parser = new JSONParser();
             JSONArray usersJSON = (JSONArray)new JSONParser().parse(reader);
 
             for(int i = 0; i < usersJSON.size(); i++) {
@@ -355,9 +354,7 @@ public static ArrayList <Witness> loadWitnesses(){
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            reader.close();
-        }
+        } 
         return null;
     }
 

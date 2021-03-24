@@ -6,23 +6,19 @@ import java.util.ArrayList;
  * @author Overachievers
  */
 public class Users {
-    private static Users users;
-    private static ArrayList<User> userList;
+    private static Users users = null;
+    private static ArrayList<User> userList = new ArrayList<User>();
 
-    /**
-     * Users class default constructor
-     * @throws IOException
-     */
-    public Users() throws IOException {
+   
+    private Users(){
         userList = DataLoader.getUsers();
     }
 
     /**
      * Returns a new Users
      * @return new Users if users is null
-     * @throws IOException
      */
-    public static Users getInstance() throws IOException {
+    public static Users getInstance() {
         if (users == null) {
             users = new Users();
         }
@@ -35,9 +31,9 @@ public class Users {
      * @param userName a String for the User's username
      * @return true/false based on if the username was found in the list or not
      */
-    public static boolean haveUser(String userName) {
-        for (User user : userList) {
-            if (user.getUsername().equalsIgnoreCase(userName)) {
+    public boolean haveUser(String userName) {
+        for (int i= 0; i< userList.size(); i++) {
+            if (userList.get(i).getUsername().equalsIgnoreCase(userName)) {
                 return true;
             }
         }
@@ -50,9 +46,9 @@ public class Users {
      * @return the user, if found, otherwise, returns null
      */
     public User getUser(String userName) {
-        for (User user : userList) {
-            if (user.getUsername().equalsIgnoreCase(userName)) {
-                return user;
+        for (int i= 0; i< userList.size(); i++) {
+            if (userList.get(i).getUsername().equalsIgnoreCase(userName)) {
+                return userList.get(i);
             }
         }
         return null;
@@ -76,13 +72,14 @@ public class Users {
         if(haveUser(userName))return false;
 
         userList.add(new User(userName, passWord));
+        saveUsers();
         return true;
     }
 
     /**
      * Writes the saves used
      */
-    public static void saveUsers() {
+    public void saveUsers() {
         DataWriter.saveUsers();
     }
 }
