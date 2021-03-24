@@ -337,11 +337,11 @@ public static ArrayList <Witness> loadWitnesses(){
     */
     public static ArrayList<User> getUsers() throws IOException {
         ArrayList<User> users = new ArrayList<User>();
-        FileReader reader = null;
-        JSONParser parser = null;
+        FileReader reader = new FileReader(USER_FILE_NAME);
+        JSONParser parser = new JSONParser();
         try {
-            reader = new FileReader(USER_FILE_NAME);
-            parser = new JSONParser(); 
+            //parser = new JSONParser(new FileReader(USER_FILE_NAME));
+            //new JSONParser(); 
             JSONArray usersJSON = (JSONArray)new JSONParser().parse(reader);
 
             for(int i = 0; i < usersJSON.size(); i++) {
