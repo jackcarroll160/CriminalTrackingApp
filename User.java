@@ -2,11 +2,11 @@
  * Author: Sydney Oklota
  */
 import java.util.*;
-public abstract class User {
+public class User {
    
-    protected String username;
-    protected String password;
-    protected HashMap<UUID, String> storeUserPwd;
+    private String username;
+    private String password;
+    private HashMap<UUID, String> storeUserPwd;
     
     
     
