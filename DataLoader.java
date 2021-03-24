@@ -1,4 +1,5 @@
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 import org.json.simple.JSONArray;
@@ -334,12 +335,13 @@ public static ArrayList <Witness> loadWitnesses(){
     /**
     * Reading the User JSON file
     */
-    public static ArrayList<User> getUsers() {
+    public static ArrayList<User> getUsers() throws IOException {
         ArrayList<User> users = new ArrayList<User>();
-
+        FileReader reader = null;
+        JSONParser parser = null;
         try {
-            FileReader reader = new FileReader(USER_FILE_NAME);
-            JSONParser parser = new JSONParser();
+            reader = new FileReader(USER_FILE_NAME);
+            parser = new JSONParser(); 
             JSONArray usersJSON = (JSONArray)new JSONParser().parse(reader);
 
             for(int i = 0; i < usersJSON.size(); i++) {
@@ -349,12 +351,14 @@ public static ArrayList <Witness> loadWitnesses(){
 
                 users.add(new User(username, password));
             }
-
             return users;
-            
+
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            reader.close();
         }
+        return null;
     }
 
 }

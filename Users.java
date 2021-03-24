@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -10,16 +11,18 @@ public class Users {
 
     /**
      * Users class default constructor
+     * @throws IOException
      */
-    private Users() {
+    private Users() throws IOException {
         userList = DataLoader.getUsers();
     }
 
     /**
      * Returns a new Users
      * @return new Users if users is null
+     * @throws IOException
      */
-    public static Users getInstance() {
+    public static Users getInstance() throws IOException {
         if (users == null) {
             users = new Users();
         }
