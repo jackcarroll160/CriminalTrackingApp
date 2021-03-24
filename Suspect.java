@@ -6,6 +6,13 @@ import java.util.UUID;
  */
 public class Suspect extends PersonOfInterest{
     
+    public Suspect(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName, String lastName, int age,
+            String contactInfo, boolean isMinor, String statement2, boolean hasAlibi2, boolean isSuspect2) {
+        super(personOfInterestId, suspectId, crimeId, firstName, lastName, age, contactInfo, isMinor, statement2, hasAlibi2,
+                isSuspect2);
+       
+    }
+
     private Crime linkedCrime;
     private int suspectId;
     private String birthDate;
