@@ -7,6 +7,46 @@ import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstants{
 
+    //crime
+    public static void saveCrime(){
+        CrimeList crime = CrimeList.getInstance();
+        ArrayList<Crime> crimeList = crime.getCrimeList();
+        JSONArray jsonCrimeList = new JSONArray();
+
+        // create json objects and loop through the crime list
+        for(int i = 0; i < crimeList.size(); i++){
+            jsonCrimeList.add(getCrimeJSON(crimeList.get(i)));
+        }
+
+    }
+
+    // write the criminal json file
+    try (FileWriter file = new FileWriter(CRIME_FILE_NAME)){
+
+        file.write(jsonCrimeList.toJSONString());
+        file.flush();
+
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+    public static JSONObject getCrimeJSON(Crime crime) {
+        JSONObject crimeInfo = new JSONObject();
+        crimeInfo.put(CRIME_CRIME_ID, crime.getCrimeId().toString());
+        crimeInfo.put(CRIME_CRIMINAL_ID, crime.getCriminalId().toString());
+        crimeInfo.put(CRIME_DESCRIPTION, crime.getDescription());
+        crimeInfo.put(CRIME_DATE_OF_CRIME, crime.getDateOfCrime());
+        crimeInfo.put(CRIME_TIME_OF_CRIME, crime.getTimeOfCrime());
+        //boolean
+        crimeInfo.put(CRIME_CASE_OPEN, crime.getCaseOpen());
+        crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnessId().toString());
+        crimeInfo.put(CRIME_VICTIM_ID, crime.getVictimId().toString());
+        crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterestId().toString());
+        crimeInfo.put(CRIME_OFFICERS, crime.getOfficers());
+    }
+
+
+    // criminals
     public static void saveCriminals(){
         CriminalList criminal = CriminalList.getInstance();
         ArrayList<Criminal> criminalList = criminal.getCriminalList();
@@ -71,7 +111,5 @@ public class DataWriter extends DataConstants{
 
     }
 
-
-}
 
 }
