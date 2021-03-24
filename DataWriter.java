@@ -20,7 +20,7 @@ public class DataWriter extends DataConstants{
 
     }
 
-    // write the criminal json file
+    // write the crime json file
     try (FileWriter file = new FileWriter(CRIME_FILE_NAME)){
 
         file.write(jsonCrimeList.toJSONString());
@@ -107,9 +107,46 @@ public class DataWriter extends DataConstants{
         criminalInfo.put(CRIMINALS_HAS_VEHICLE, criminal.getHasVehicle());
         criminalInfo.put(CRIMINALS_VEHICLE_DESCRIPTION, criminal.getVehicleDescription());
 
+    }
 
+
+    //PersonOfInterest
+    public static void savePersonOfInterest(){
+        PersonOfInterestList personOfInterest = PersonOfInterestList.getInstance();
+        ArrayList<PersonOfInterest> personOfInterestList = personOfInterest.getPersonOfInterestList();
+        JSONArray jsonPersonOfInterestList = new JSONArray();
+
+        // create json objects and loop through the PersonOfInterest list
+        for(int i = 0; i < personOfInterestList.size(); i++){
+            jsonPersonOfInterestList.add(getPersonOfInterestJSON(personOfInterestList.get(i)));
+        }
 
     }
 
+    // write the PersonOfInterest json file
+    try (FileWriter file = new FileWriter(PERSONOFINTEREST_FILE_NAME)){
+
+        file.write(jsonPersonOfInterestList.toJSONString());
+        file.flush();
+
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+    public static JSONObject getPersonOfInterestJSON(PersonOfInterest personOfInterest) {
+        JSONObject personOfInterestInfo = new JSONObject();
+        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getCrimeId().toString());
+        crimeInfo.put(CRIME_CRIMINAL_ID, crime.getCriminalId().toString());
+        crimeInfo.put(CRIME_DESCRIPTION, crime.getDescription());
+        crimeInfo.put(CRIME_DATE_OF_CRIME, crime.getDateOfCrime());
+        crimeInfo.put(CRIME_TIME_OF_CRIME, crime.getTimeOfCrime());
+        //boolean
+        crimeInfo.put(CRIME_CASE_OPEN, crime.getCaseOpen());
+        crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnessId().toString());
+        crimeInfo.put(CRIME_VICTIM_ID, crime.getVictimId().toString());
+        crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterestId().toString());
+        crimeInfo.put(CRIME_OFFICERS, crime.getOfficers());
+    }
+    
 
 }
