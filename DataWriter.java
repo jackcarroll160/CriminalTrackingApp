@@ -7,6 +7,32 @@ import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstants{
 
+    //user
+    public static void saveUsers() {
+        Users users = Users.getInstance();
+        ArrayList<User> userList = users.getUsers();
+        JSONArray jsonUsers = new JSONArray();
+
+        for (int i = 0; i < userList.size(); i++) {
+            jsonUsers.add(getUserLoginJSON(userList.get(i)));
+        }
+
+        try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
+            file.write(jsonUsers.toJSONString());
+            file.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static JSONObject getUserLoginJSON(User user) {
+        JSONObject userInfo = new JSONObject();
+        userInfo.put(USER_USERNAME, user.getUsername());
+        userInfo.put(USER_PASSWORD, user.getPassword());
+
+        return userInfo;
+    }
+
+
     //crime
     public static void saveCrime(){
         CrimeList crime = CrimeList.getInstance();
@@ -143,7 +169,6 @@ public class DataWriter extends DataConstants{
         personOfInterestInfo.put(PERSONOFINTEREST_AGE, personOfInterest.getAge().toString());
 
 
-    }
-    
+    }    
 
-}
+}} 
