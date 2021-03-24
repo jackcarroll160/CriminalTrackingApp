@@ -2,6 +2,8 @@
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.TitlePaneLayout;
@@ -56,18 +58,23 @@ public class LoginDialog extends JDialog {
             Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
             public void actionPerformed(ActionEvent e) {
-                if (Login.authenticate(getUsername(), getPassword())) {
-                    JOptionPane.showMessageDialog(LoginDialog.this, "Hi " + getUsername() + "! You have successfully logged in.", "Login", JOptionPane.INFORMATION_MESSAGE);
-                    dispose();
-                    succeeded = true;
-                } 
-                else {
-                    JOptionPane.showMessageDialog(LoginDialog.this, "Invalid username or password\n*Please try again*", "Login", JOptionPane.OK_CANCEL_OPTION);
-                    // reset username and password
-                    tfUsername.setText("");
-                    pfPassword.setText("");
-                    succeeded = false;
+                try {
+                    if (Login.authenticate(getUsername(), getPassword())) {
+                        JOptionPane.showMessageDialog(LoginDialog.this, "Hi " + getUsername() + "! You have successfully logged in.", "Login", JOptionPane.INFORMATION_MESSAGE);
+                        dispose();
+                        succeeded = true;
+                    } 
+                    else if(!Login.authenticateNewUser(getUsername(), getPassword())) {
+                        JOptionPane.showMessageDialog(LoginDialog.this, "Invalid username or password\n*Please try again*", "Login", JOptionPane.OK_CANCEL_OPTION);
+                        // reset username and password
+                        tfUsername.setText("");
+                        pfPassword.setText("");
+                        succeeded = false;
  
+                    }
+                } catch (HeadlessException | IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
                 }
             }
         });
