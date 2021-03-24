@@ -43,14 +43,71 @@ public class CrimeList{
 	/*
 	 * 
 	 */
-	public void searchCrimeByName(String Fname, String Lname)
+	public Crime searchCrimeByName(int CrimeID)
 	{
+		boolean found = false;
 		
+		for (Crime crime : crimeList)
+		{
+			if(crime.getIdNum() == CrimeID)
+			{
+				found = true;
+				return crime;
+			}
+		}
+		
+		if (!found)
+		{
+			System.out.println("The Crime entered was not found in our database!");
+		}
+		return null;
 	}
 
     public void editCrimeByName(int CrimeID)
     {
-        
+        Crime crimeEdit = searchCrimeByName(CrimeID);
+		Scanner keyboard = new Scanner (System.in);
+
+		System.out.println("Would you like to edit: ");
+		System.out.println("1) Description" ); 
+		System.out.println("2) Date Of Crime");
+		System.out.println("3) Time Of Crime");
+		System.out.println("4) Is Case Open");
+
+		int userInput = keyboard.nextInt();
+
+		if(userInput == 1)
+		{
+			System.out.println("Enter the New Description: " );
+			String Desc = keyboard.nextLine();
+			crimeEdit.setDescription(Desc);
+		}
+		if(userInput == 2)
+		{
+			System.out.println("Enter the New Date Of Crime: " );
+			String date = keyboard.nextLine();
+			crimeEdit.setDateOfCrime(date);
+		}
+		if(userInput == 3)
+		{
+			System.out.println("Enter the New Time Of Crime: " );
+			String time = keyboard.nextLine();
+			crimeEdit.setTimeOfCrime(time);
+		}
+		if(userInput == 4)
+		{
+			System.out.println("Enter the New Is Case Open Value (True or False): " );
+			boolean open = keyboard.nextBoolean();
+			crimeEdit.setCaseOpen(open);
+		}
+		if(userInput >= 5 || userInput <=0)
+		{
+			System.out.println("Invalid Input!");
+		}
+	
     }
+	public void saveCrime() {
+		DataWriter.saveCrime();
+	}
 }
 
