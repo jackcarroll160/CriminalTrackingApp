@@ -338,7 +338,7 @@ public static ArrayList <Witness> loadWitnesses(){
     public static ArrayList<User> getUsers() throws IOException {
         ArrayList<User> users = new ArrayList<User>();
         FileReader reader = null;
-        JSONParser parser;
+        JSONParser parser = null;
         try {
             reader = new FileReader(USER_FILE_NAME);
             parser = new JSONParser(); 
