@@ -1,30 +1,30 @@
 /**
  * Author: Sydney Oklota
  */
+import java.io.IOException;
 import java.util.*;
-public abstract class User {
+
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+public class User {
    
-    protected String username;
-    protected String password;
-    protected HashMap<UUID, String> storeUserPwd;
-    
-    
-    
+    private String username;
+    private String password;
+    private HashMap<UUID, String> storeUserPwd;
+       
+    public User(String string, String string2){
 
-
-    public User(String username, String password){
-
-        this.username = username;
-        this.password = password;
+        this.username = string;
+        this.password = string2;
         
     }
 
-    public void getUsername(String username){
-       
+    public String getUsername(){
+        return this.username;
     }
 
-    public void getPassword(String password){
-
+    public String getPassword(){
+        return this.password;
     }
 
     public String setPassword(){
@@ -54,6 +54,10 @@ public abstract class User {
 
         storeUserPwd.remove(userID);
         
+    }
+
+    public static void addUser(String username2, String password2) throws IOException {
+        Users.addUser(username2, password2);
     }
 
     

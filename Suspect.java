@@ -1,18 +1,60 @@
+import java.util.UUID;
+
 /**
  * Suspect class extending Person of Interest
  * @author Overachievers 
  */
-public class Suspect extends PersonOfInterest{
+public class Suspect extends Person{
     
+    public Suspect(UUID suspectId, UUID crimeId, String firstName, String lastName, int age, String gender,
+            String ethnicity, String contactInfo, boolean isMinor, String statement, boolean hasAlibi,
+            String birthDate, String eyeColor, String hairDescription, boolean facialHair,
+            String facialHairDescription, String height, String weight, boolean hasTattoos,
+            String tattooDescription, boolean hasPiercings, String physicalMarksDescription, String physicalBuild,
+            boolean hasWeapon, String weaponDescription, String complexion, String clothingDescription,
+            boolean hasVehicle, String vehicleDescription) 
+            {
+               super(firstName,lastName,age,contactInfo,isMinor);
+               this.suspectId = suspectId;
+               this.crimeId= crimeId;
+               this.gender =gender;
+               this.ethnicity =ethnicity;
+               this.statement = statement;
+               this.hasAlibi = hasAlibi;
+               this.birthDate = birthDate;
+               this.eyeColor = eyeColor;
+               this.hairDescription = hairDescription;
+               this.hasFacialHair = facialHair;
+               this.facialHairDescription = facialHairDescription;
+               this.height = height;
+               this.weight = weight;
+               this.hasTattoos = hasTattoos;
+               this.tattooDescription = tattooDescription;
+               this.hasPiercings = hasPiercings;
+               this.physicalMarksDescription = physicalMarksDescription;
+               this.physicalBuild = physicalBuild;
+               this.hasWeapon = hasWeapon;
+               this.weaponDescription = weaponDescription;
+               this.complexion = complexion;
+               this.clothingDescription = clothingDescription;
+               this.hasVehicle = hasVehicle;
+               this.vehicleDescription = vehicleDescription;
+
+
+            }
+
     private Crime linkedCrime;
-    private int suspectId;
+    private UUID crimeId;
+    private String statement;
+    private Boolean hasAlibi;
+    private UUID suspectId;
     private String birthDate;
     private String eyeColor;
     private String hairDescription;
     private boolean hasFacialHair;
     private String facialHairDescription;
     private String height;
-    private double weight;
+    private String weight;
     private boolean hasTattoos;
     private String tattooDescription;
     private boolean hasPiercings;
@@ -25,10 +67,12 @@ public class Suspect extends PersonOfInterest{
     private Evidence evidence;
     private boolean hasInterrogationReport;
     private String interrogationReport;
+    private Boolean hasVehicle;
     private String vehicleDescription;
     private boolean isGuilty;
     private String ethnicity;
     private String gender;
+
 
     /**
      * Returns the linked crime
@@ -50,7 +94,7 @@ public class Suspect extends PersonOfInterest{
      * Returns the Suspect's Id
      * @return an int for suspect Id
      */
-    public int getSuspectId() {
+    public UUID getSuspectId() {
         return this.suspectId;
     }
 
@@ -58,7 +102,7 @@ public class Suspect extends PersonOfInterest{
      * Sets the suspect's Id number
      * @param suspectId integer for suspect's Id number
      */
-    public void setSuspectId(int suspectId) {
+    public void setSuspectId(UUID suspectId) {
         this.suspectId = suspectId;
     }
 
@@ -162,7 +206,7 @@ public class Suspect extends PersonOfInterest{
      * Gets the weight of a suspect
      * @return a double corresponding to the weight of the suspect
      */
-    public double getWeight() {
+    public String getWeight() {
         return this.weight;
     }
 
@@ -170,7 +214,7 @@ public class Suspect extends PersonOfInterest{
      * Sets the weight of the suspect
      * @param weight to set weight of suspect
      */
-    public void setWeight(double weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
@@ -430,4 +474,35 @@ public class Suspect extends PersonOfInterest{
         this.gender = gender;
     }
 
+    public UUID getCrimeId() {
+        return this.crimeId;
+    }
+
+    public boolean getHasVehicle() {
+        return this.hasVehicle;
+    }
+
+    public void setCrimeId(UUID crimeId) {
+       this.crimeId = crimeId;
+    }
+
+    public void setHasVehicle(boolean hasVehicle) {
+        this.hasVehicle = hasVehicle;
+    }
+   
+    public String getStatement() {
+        return this.statement;
+    }
+
+    public boolean getHasAlibi() {
+        return this.hasAlibi;
+    }
+
+    public void getStatement(String statement) {
+       this.statement = statement;
+    }
+
+    public void getHasAlibi(boolean hasAlibi) {
+        this.hasAlibi = hasAlibi;
+    }
 }

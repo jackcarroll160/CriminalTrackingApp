@@ -11,6 +11,14 @@ public abstract class Person {
 	protected String contactInfo;
 	protected boolean isMinor;
 	
+	public Person(String firstName, String lastName, int age, String contactInfo, boolean isMinor)
+	{
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.contactInfo = contactInfo;
+		this.isMinor = isMinor;
+	}
 	
 	/*
 	 * This is the class that will return the first name of the person

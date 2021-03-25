@@ -1,16 +1,32 @@
+import java.util.UUID;
+
 /*
  * @author Kyle Persyn
  * This class is going to be the PersonOfInterest  class that will be included as part of the crimes
  */
 public class PersonOfInterest extends Person{
 
-	private String statement;
-	private boolean hasAlibi;
-	private boolean isSuspect;
-	private int personId;
+	protected String statement;
+	protected boolean hasAlibi;
+	protected boolean isSuspect;
+	protected UUID personId;
+	protected UUID suspectId;
+	protected UUID crimeId;
 
 	
-	/*
+	public PersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName, String lastName,
+            int age, String contactInfo, boolean isMinor, String statement, boolean hasAlibi, boolean isSuspect) {
+				super(firstName,lastName,age,contactInfo,isMinor);
+				this.statement = statement;
+				this.hasAlibi = hasAlibi;
+				this.isSuspect = isSuspect;
+				this.personId = personOfInterestId;
+				this.suspectId = suspectId;
+				this.crimeId = crimeId;
+				
+    }
+
+    /*
 	 * This is a method that will take all of the data that was input and return it in a readable string format
 	 * @return a String with all of the data and attributes
 	 */
@@ -72,7 +88,7 @@ public class PersonOfInterest extends Person{
 	 * This is the class that will return the id of the POI
 	 * @return an int that holds the id
 	 */
-	public int getPersonId() {
+	public UUID getPersonId() {
 		return personId;
 	}
 
@@ -80,9 +96,24 @@ public class PersonOfInterest extends Person{
 	 * This is the class that will set the id of the POI
 	 * @param an int that holds the id
 	 */
-	public void setPersonId(int personId) {
+	public void setPersonId(UUID personId) {
 		this.personId = personId;
 	}
-	
+
+	public UUID getCrimeId() {
+		return crimeId;
+	}
+
+	public UUID getSuspectId() {
+		return suspectId;
+	}
+
+	public void setCrimeId(UUID crimeId) {
+		this.crimeId = crimeId;
+	}
+
+	public void setSuspectId(UUID suspectId) {
+		this.suspectId = suspectId;
+	}
 	
 }

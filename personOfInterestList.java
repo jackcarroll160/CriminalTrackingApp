@@ -9,7 +9,7 @@ import java.util.UUID;
 public class personOfInterestList {
 	
     private static ArrayList<PersonOfInterest> POIList = new ArrayList<PersonOfInterest>();
-	private static PersonOfInterest POI = null;
+	private static personOfInterestList POI = null;
 	
 	/*
 	 * 
@@ -22,10 +22,10 @@ public class personOfInterestList {
 	/*
 	 * 
 	 */
-	public static PersonOfInterest getInstance()
+	public static personOfInterestList getInstance()
 	{
         if (POI == null) {
-			POI = new PersonOfInterest();
+			POI = new personOfInterestList();
 		}
         return POI;
 		
@@ -107,10 +107,10 @@ public class personOfInterestList {
 	 * 
 	 */
 	public void savePOI() {
-		DataWriter.savePOI();
+		DataWriter.savePersonOfInterest();
 	}
 	
-	public Suspect getPOIById(UUID id)
+	public PersonOfInterest getPOIById(Object id)
 	{
 		for(PersonOfInterest poi : POIList)
 		{

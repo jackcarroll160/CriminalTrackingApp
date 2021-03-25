@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Crime class for the information based on crime
@@ -17,7 +18,8 @@ public class Crime {
     private enum Grading {MISDEMEANOR, FELONY, INFRACTION} 
 
     private String description;
-    private int idNum;
+    private UUID crimeId;
+    private UUID criminalId;
     private String dateOfCrime;
     private String timeOfCrime;
     private Evidence evidence;
@@ -27,9 +29,26 @@ public class Crime {
     private ArrayList<Suspect> suspects;
     private ArrayList<PersonOfInterest> personOfInterest;
     private ArrayList<Criminal> criminals;
-    private ArrayList<User> officers;
+    private String officers;
     private TypeOfCrime typeOfCrime;
     private Grading grading;
+
+    public Crime(UUID crimeId, UUID criminalId, String description, String dateOfCrime, String timeOfCrime,
+            boolean caseOpen, ArrayList<Witness> witnesses, ArrayList<Victim> victims, ArrayList<Suspect> suspects,
+            ArrayList<PersonOfInterest> personsOfInterest, String officers) 
+            {
+                this.crimeId = crimeId;
+                this.criminalId = criminalId;
+                this.description = description;
+                this.dateOfCrime = dateOfCrime;
+                this.timeOfCrime = timeOfCrime;
+                this.caseOpen = caseOpen;
+                this.witnesses = witnesses;
+                this.victims = victims;
+                this.suspects = suspects;
+                this.personOfInterest = personsOfInterest;
+                this.officers = officers;
+            }
 
     /**
      * Gets the description of a crime
@@ -45,22 +64,6 @@ public class Crime {
      */
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    /**
-     * Gets the identifying number of the crime case
-     * @return An integer associated with the identifying crime 
-     */
-    public int getIdNum() {
-        return this.idNum;
-    }
-
-    /**
-     * Sets the identification number of a crime case
-     * @param idNum an integer for the number identifyer of a case
-     */
-    public void setIdNum(int idNum) {
-        this.idNum = idNum;
     }
 
     /**
@@ -211,7 +214,7 @@ public class Crime {
      * Gets the officers dealing with the crime
      * @return the list of officers associated with the crime
      */
-    public ArrayList<User> getOfficers() {
+    public String getOfficers() {
         return this.officers;
     }
 
@@ -219,7 +222,7 @@ public class Crime {
      * Sets the officer list for a crime
      * @param officers a list of involved officers to add to a crime
      */
-    public void setOfficers(ArrayList<User> officers) {
+    public void setOfficers(String officers) {
         this.officers = officers;
     }
 
@@ -254,5 +257,23 @@ public class Crime {
     public void setGrading(Grading grading) {
         this.grading = grading;
     }
+
+    public UUID getCriminalID() {
+        return this.criminalId;
+    }
+
+    public UUID getCrimeId() {
+        return this.crimeId;
+    }
+    
+    public void setCrimeId(UUID crimeId) {
+		this.crimeId = crimeId;
+	}
+
+    public void setCriminalId(UUID criminalId) {
+		this.criminalId = criminalId;
+	}
+
+    
 
 }

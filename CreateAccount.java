@@ -1,12 +1,12 @@
 //package jsonfiles;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 public class CreateAccount extends JFrame {
     private JButton btnCreate;
@@ -15,12 +15,13 @@ public class CreateAccount extends JFrame {
     private JPasswordField pfPassword;
     private JLabel lblUsername;
     private JLabel lblPassword;
+    private DataWriter writer;
 
 
-    public CreateAccount(){
+    public CreateAccount() throws IOException{
         super("Create Account");
         CreateAccountPanel();
-
+        
         // add DataWriter "saveUsers()" here for writing JSON
 
     }
@@ -65,15 +66,27 @@ public class CreateAccount extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 
-                if (Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())) {
-                    JOptionPane.showMessageDialog(null, "Account Created Successfully!");
-                    dispose();
-                    //CreateAccountPanel();
-                }
-                else {
-                    JOptionPane.showMessageDialog(null, "Sorry, that username is taken!\nTry another name");
-                    tfUsername.setText("");
-                    pfPassword.setText("");
+                try { 
+                    if (!Users.haveUser(tfUsername.getText())) { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
+                        Users userList = new Users();
+                        writer = new DataWriter();
+                        writer.saveUsers();
+                        userList.addUser(tfUsername.getText(), pfPassword.toString());
+
+                        JOptionPane.showMessageDialog(null, "Account Created Successfully!");
+                        Users.addUser(tfUsername.getText(), pfPassword.toString());
+                        dispose();
+                        
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(null, "Sorry, that username is taken.\nPlease try a different name", "Create Account", JOptionPane.OK_OPTION);
+                        tfUsername.setText("");
+                        pfPassword.setText("");
+                    }
+                } catch (HeadlessException e1) {
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
                 }
             }
         });
@@ -102,9 +115,5 @@ public class CreateAccount extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
-  /**
-   * Method to check username availability
-   */
 
 }

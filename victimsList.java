@@ -8,7 +8,7 @@ import java.util.UUID;
 public class victimsList {
     
     private static ArrayList<Victim> victimList = new ArrayList<Victim>();
-	private static Victim victims = null;
+	private static victimsList victims = null;
 	
 	/*
 	 * 
@@ -21,10 +21,10 @@ public class victimsList {
 	/*
 	 * 
 	 */
-	public static Victim getInstance()
+	public static victimsList getInstance()
 	{
 		if (victims == null) {
-			victims = new Victim();
+			victims = new victimsList();
 		}
 		return victims;
 	}
@@ -37,7 +37,7 @@ public class victimsList {
 		return victimList;
 	}
 	
-	public Victim getVictimById(UUID id)
+	public Victim getVictimById(Object id)
 	{
 		for(Victim victim : victimList)
 		{
@@ -85,7 +85,7 @@ public class victimsList {
      * 
      */
 	public void saveVictims() {
-		DataWriter.saveVictims();
+		DataWriter.saveVictim();
 	}
 	
     
