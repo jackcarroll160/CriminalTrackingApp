@@ -365,11 +365,8 @@ public static ArrayList <User> loadUsers(){
     return null;
 }
 
-<<<<<<< HEAD
 private static ArrayList<User> getUsers(JSONArray userIds)
-=======
 private static ArrayList<User> getUser(JSONArray userIds) throws IOException
->>>>>>> e790fea3f93200de5a6c1fec8edac7d6f9ebde9d
 {
     ArrayList<User> users = new ArrayList<User>();
     for(int i = 0; i < userIds.size(); i++)
