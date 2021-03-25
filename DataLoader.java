@@ -365,7 +365,7 @@ public static ArrayList <User> loadUsers(){
     return null;
 }
 
-private static ArrayList<User> getUser(JSONArray userIds)
+private static ArrayList<User> getUsers(JSONArray userIds)
 {
     ArrayList<User> users = new ArrayList<User>();
     for(int i = 0; i < userIds.size(); i++)
