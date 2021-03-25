@@ -77,4 +77,15 @@ public class Users {
         DataWriter.saveUsers();
      
     }
+
+    public User getUserById(Object id) {
+        for(User user : userList)
+		{
+			if(user.getUserId().equals(id))
+			{
+				return user;
+			}
+		}
+		return null;
+    }
 }

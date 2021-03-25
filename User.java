@@ -7,13 +7,14 @@ import java.util.*;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 public class User {
-   
+
+    private UUID userId;
     private String username;
     private String password;
     private HashMap<UUID, String> storeUserPwd;
        
-    public User(String string, String string2){
-
+    public User(UUID userId, String string, String string2){
+        this.userId = userId;
         this.username = string;
         this.password = string2;
         
@@ -27,12 +28,20 @@ public class User {
         return this.password;
     }
 
-    public String setPassword(){
-        return this.password;
+    public void setPassword(String password){
+        this.password = password;
     }
 
-    public String setUsername(){
-        return this.username;
+    public UUID getUserId(){
+        return this.userId;
+    }
+
+    public void setUserId(UUID userId){
+        this.userId = userId;
+    }
+
+    public void setUsername(String username){
+        this.username = username;
     }
 
     /**
