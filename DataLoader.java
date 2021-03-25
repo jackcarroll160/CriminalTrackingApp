@@ -370,7 +370,7 @@ private static ArrayList<User> getUser(JSONArray userIds)
     ArrayList<User> users = new ArrayList<User>();
     for(int i = 0; i < userIds.size(); i++)
     {
-        User user = userList.getInstance().getUserById(userIds.get(i));
+        User user = Users.getInstance().getUserById(userIds.get(i));
         users.add(user);
     }
     return users;
