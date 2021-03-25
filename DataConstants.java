@@ -129,6 +129,7 @@ public abstract class DataConstants {
 
     // user.json
     protected static final String USER_FILE_NAME = "src/jsonfiles/user.json";
+    protected static final String USER_USER_ID = "userId";
     protected static final String USER_USERNAME = "username";
     protected static final String USER_PASSWORD = "password";
 }

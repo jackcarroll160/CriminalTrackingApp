@@ -9,7 +9,7 @@ import org.json.simple.parser.JSONParser;
 
 public class DataLoader extends DataConstants{
 
-// crime
+// ----------------------   crime   -------------------------------------------------------------------------------
 public static ArrayList <Crime> loadCrime(){
     ArrayList <Crime> crime = new ArrayList <Crime>();
 
@@ -48,50 +48,7 @@ public static ArrayList <Crime> loadCrime(){
     return null;
 }
 
-private static ArrayList<Witness> getWitnesses(JSONArray witnessIds)
-{
-    ArrayList<Witness> witnesses = new ArrayList<Witness>();
-    for(int i = 0; i < witnessIds.size(); i++)
-    {
-        Witness witness = witnessList.getInstance().getWitnessById(witnessIds.get(i));
-        witnesses.add(witness);
-    }
-    return witnesses;
-}
-
-private static ArrayList<Victim> getVictims(JSONArray victimIds)
-{
-    ArrayList<Victim> victims = new ArrayList<Victim>();
-    for(int i = 0; i < victimIds.size(); i++)
-    {
-        Victim victim = victimsList.getInstance().getVictimById(victimIds.get(i));
-        victims.add(victim);
-    }
-    return victims;
-}
-
-private static ArrayList<Suspect> getSuspects(JSONArray suspectIds)
-{
-    ArrayList<Suspect> suspects = new ArrayList<Suspect>();
-    for(int i = 0; i < suspectIds.size(); i++)
-    {
-        Suspect suspect = suspectsList.getInstance().getSuspectById(suspectIds.get(i));
-        suspects.add(suspect);
-    }
-    return suspects;
-}
-
-private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray personOfInterestIds)
-{
-    ArrayList<PersonOfInterest> personsOfInterest = new ArrayList<PersonOfInterest>();
-    for(int i = 0; i < personOfInterestIds.size(); i++)
-    {
-        PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
-        personsOfInterest.add(poi);
-    }
-    return personsOfInterest;
-}
-    // criminal
+// ------------------------------------- criminal ---------------------------------------------------------------------------
     public static ArrayList <Criminal> loadCriminals(){
         ArrayList <Criminal> criminal = new ArrayList <Criminal>();
 
@@ -160,7 +117,8 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
             return item.equals("1");
     }
     
-    // persons of interest
+
+// --------------------------------------- persons of interest ---------------------------------------------------------
     public static ArrayList <PersonOfInterest> loadPOI(){
         ArrayList <PersonOfInterest> poi = new ArrayList <PersonOfInterest>();
 
@@ -198,7 +156,19 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
         return null;
     }
 
-    // suspects
+    private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray personOfInterestIds)
+    {
+        ArrayList<PersonOfInterest> personsOfInterest = new ArrayList<PersonOfInterest>();
+        for(int i = 0; i < personOfInterestIds.size(); i++)
+        {
+            PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
+            personsOfInterest.add(poi);
+        }
+        return personsOfInterest;
+    }
+
+
+// ------------------------------------------------- suspects ---------------------------------------------------------------
     public static ArrayList<Suspect> loadSuspect(){
         ArrayList<Suspect> suspect = new ArrayList<Suspect>();
 
@@ -258,8 +228,19 @@ private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray person
         return null;
     }
 
+    private static ArrayList<Suspect> getSuspects(JSONArray suspectIds)
+{
+    ArrayList<Suspect> suspects = new ArrayList<Suspect>();
+    for(int i = 0; i < suspectIds.size(); i++)
+    {
+        Suspect suspect = suspectsList.getInstance().getSuspectById(suspectIds.get(i));
+        suspects.add(suspect);
+    }
+    return suspects;
+}
 
-// victims
+
+// ------------------------------------------------- victims ------------------------------------------------------------------
 public static ArrayList <Victim> loadVictims(){
     ArrayList <Victim> victim = new ArrayList <Victim>();
 
@@ -296,7 +277,18 @@ public static ArrayList <Victim> loadVictims(){
     return null;
 }
 
-// witnesses
+private static ArrayList<Victim> getVictims(JSONArray victimIds)
+{
+    ArrayList<Victim> victims = new ArrayList<Victim>();
+    for(int i = 0; i < victimIds.size(); i++)
+    {
+        Victim victim = victimsList.getInstance().getVictimById(victimIds.get(i));
+        victims.add(victim);
+    }
+    return victims;
+}
+
+// ------------------------------------------------ witnesses ---------------------------------------------------------------
 public static ArrayList <Witness> loadWitnesses(){
     ArrayList <Witness> witness = new ArrayList <Witness>();
 
@@ -333,12 +325,64 @@ public static ArrayList <Witness> loadWitnesses(){
     return null;
 }
 
-    /**
+private static ArrayList<Witness> getWitnesses(JSONArray witnessIds)
+{
+    ArrayList<Witness> witnesses = new ArrayList<Witness>();
+    for(int i = 0; i < witnessIds.size(); i++)
+    {
+        Witness witness = witnessList.getInstance().getWitnessById(witnessIds.get(i));
+        witnesses.add(witness);
+    }
+    return witnesses;
+}
+
+
+//  ------------------------------------------------ users --------------------------------------------------------------------
+    
+public static ArrayList <User> loadUsers(){
+    ArrayList <User> user = new ArrayList <User>();
+
+    try{
+        FileReader reader = new FileReader(VICTIMS_FILE_NAME);
+        JSONParser parser = new JSONParser();
+        JSONArray userJSONList = (JSONArray) new JSONParser().parse(reader);
+        
+
+        for (int i = 0; i < userJSONList.size(); i++){
+            JSONObject userJSON = (JSONObject)userJSONList.get(i);
+            UUID userId = UUID.fromString((String)userJSON.get(USER_USER_ID));
+            String username = (String)userJSON.get(USER_USERNAME);
+            String password = (String)userJSON.get(USER_PASSWORD);
+
+            user.add(new User(userId, username, password));
+        }
+
+        return user;
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+
+    return null;
+}
+
+private static ArrayList<User> getUser(JSONArray userIds)
+{
+    ArrayList<User> user = new ArrayList<User>();
+    for(int i = 0; i < userIds.size(); i++)
+    {
+        User user = userList.getInstance().getUserById(userIds.get(i));
+        users.add(user);
+    }
+    return users;
+}
+
+
+/**
      * Reading the User JSON file
      * @return an empty ArrayList
      * @throws IOException
      */
-    public static ArrayList<User> getUsers() throws IOException {
+ /**   public static ArrayList<User> getUsers() throws IOException {
         
         ArrayList<User> usersList = new ArrayList<>();
 
@@ -364,3 +408,4 @@ public static ArrayList <Witness> loadWitnesses(){
     }
 
 }
+*/ 
