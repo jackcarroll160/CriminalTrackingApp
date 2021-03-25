@@ -301,30 +301,21 @@ public class DataWriter extends DataConstants{
 
     public static JSONObject getPersonOfInterestJSON(PersonOfInterest personOfInterest) {
         JSONObject personOfInterestInfo = new JSONObject();
-<<<<<<< HEAD
-        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getPersonOfInterestId().toString());
+        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getPersonId());
         personOfInterestInfo.put(PERSONOFINTEREST_SUSPECT_ID, personOfInterest.getSuspectId().toString());
         personOfInterestInfo.put(PERSONOFINTEREST_CRIME_ID, personOfInterest.getCrimeId().toString());
         personOfInterestInfo.put(PERSONOFINTEREST_FIRST_NAME, personOfInterest.getFirstName());
         personOfInterestInfo.put(PERSONOFINTEREST_LAST_NAME, personOfInterest.getLastName());
-        personOfInterestInfo.put(PERSONOFINTEREST_AGE, personOfInterest.getAge().toString());
+        personOfInterestInfo.put(PERSONOFINTEREST_AGE, personOfInterest.getAge());
         personOfInterestInfo.put(PERSONOFINTEREST_CONTACT_INFO, personOfInterest.getContactInfo());
         //boolean
         personOfInterestInfo.put(PERSONOFINTEREST_IS_MINOR, personOfInterest.getIsMinor());
         personOfInterestInfo.put(PERSONOFINTEREST_STATEMENT, personOfInterest.getStatement());
         //boolean
-        personOfInterestInfo.put(PERSONOFINTEREST_HAS_ALIBI, personOfInterest.getHasAlibi());
+        personOfInterestInfo.put(PERSONOFINTEREST_HAS_ALIBI, personOfInterest.isHasAlibi());
         personOfInterestInfo.put(PERSONOFINTEREST_IS_SUSPECT, personOfInterest.getIsMinor());
-=======
-        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getPersonId());
-        personOfInterestInfo.put(PERSONOFINTEREST_SUSPECT_ID, personOfInterest.getSuspectId());
-        personOfInterestInfo.put(PERSONOFINTEREST_CRIME_ID, personOfInterest.getCrimeId());
-        personOfInterestInfo.put(PERSONOFINTEREST_FIRST_NAME, personOfInterest.getFirstName());
-        personOfInterestInfo.put(PERSONOFINTEREST_LAST_NAME, personOfInterest.getLastName());
-        personOfInterestInfo.put(PERSONOFINTEREST_AGE, personOfInterest.getAge());
-        return personOfInterestInfo;
 
->>>>>>> 086f55381c8751d0d0cc2a0cc4c44e16640030a6
+        return personOfInterestInfo;
 
     }    
 
