@@ -43,13 +43,13 @@ public class CrimeList{
 	/*
 	 * 
 	 */
-	public Crime searchCrimeByName(int CrimeID)
+	public Crime searchCrimeByName(UUID CrimeID)
 	{
 		boolean found = false;
 		
 		for (Crime crime : crimeList)
 		{
-			if(crime.getIdNum() == CrimeID)
+			if(crime.getCrimeId() == CrimeID)
 			{
 				found = true;
 				return crime;
@@ -63,7 +63,7 @@ public class CrimeList{
 		return null;
 	}
 
-    public void editCrimeByName(int CrimeID)
+    public void editCrimeByName(UUID CrimeID)
     {
         Crime crimeEdit = searchCrimeByName(CrimeID);
 		Scanner keyboard = new Scanner (System.in);

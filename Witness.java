@@ -1,11 +1,13 @@
+import java.util.UUID;
+
 /*
  * @author Kyle Persyn
  * This class is going to be the Witness  class that will be included as part of the crimes
  */
 public class Witness extends Person{
 	
-	private int witnessId;
-	private int crimeId;
+	private UUID witnessId;
+	private UUID crimeId;
 	private String contanctInfo;
 	private String proof;
 	private String testimony;
@@ -13,8 +15,14 @@ public class Witness extends Person{
 	private String typeOfWitness;
 	
 
-	public Witness(String firstName, String lastName, int age, String contactInfo, boolean isMinor, String proof2,
-            String testimony2, String location2, String typeOfWitness2) {
+	public Witness(String firstName, String lastName, int age, String contactInfo, boolean isMinor, String proof,
+            String testimony, String location, String typeOfWitness) {
+			
+			super(firstName,lastName,age,contactInfo,isMinor);
+			this.proof = proof;
+			this.testimony = testimony;
+			this.location = location;
+			this.typeOfWitness = typeOfWitness;
     }
 
     /*
@@ -96,7 +104,7 @@ public class Witness extends Person{
 	 * This is the class that will return the id of the witness
 	 * @return an int that holds the id
 	 */
-	public int getWitnessId() {
+	public UUID getWitnessId() {
 		return witnessId;
 	}
 
@@ -104,15 +112,15 @@ public class Witness extends Person{
 	 * This is the class that will set the id of the witness
 	 * @param an int that holds the id
 	 */
-	public void setWitnessId(int witnessId) {
+	public void setWitnessId(UUID witnessId) {
 		this.witnessId = witnessId;
 	}
 	
-	public int getCrimeId() {
+	public UUID getCrimeId() {
 		return crimeId;
 	}
 
-	public void setCrimeId(int crimeId) {
+	public void setCrimeId(UUID crimeId) {
 		this.crimeId = crimeId;
 	}
 

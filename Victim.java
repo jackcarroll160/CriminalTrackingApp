@@ -10,11 +10,18 @@ public class Victim extends Person{
 	private String gender;
 	private boolean isInjured;
 	private String statement;
-	private int victimId;
+	private UUID victimId;
 	private UUID crimeId;
 	
-	public Victim(UUID victimId2, UUID crimeId, String firstName, String lastName, int age, String contactInfo,
-            boolean isMinor, boolean isAlive2, boolean isInjured2, String statement2) {
+	public Victim(UUID victimId, UUID crimeId, String firstName, String lastName, int age, String contactInfo,
+            boolean isMinor, boolean isAlive, boolean isInjured, String statement) {
+				super(firstName,lastName,age,contactInfo,isMinor);
+				this.victimId =victimId;
+				this.crimeId = crimeId;
+				this.isAlive = isAlive;
+				this.isInjured = isInjured;
+				this.statement =statement;
+				this.gender = gender;
     }
 
     /*
@@ -85,7 +92,7 @@ public class Victim extends Person{
 	 * This is the class that will return the victim id of the victim
 	 * @return an int that holds the id
 	 */
-	public int getVictimId() {
+	public UUID getVictimId() {
 		return victimId;
 	}
 	
@@ -93,7 +100,7 @@ public class Victim extends Person{
 	 * This is the class that will set the victim id of the victim
 	 * @param an int that holds the id
 	 */
-	public void setVictimId(int victimId) {
+	public void setVictimId(UUID victimId) {
 		this.victimId = victimId;
 	}
 
