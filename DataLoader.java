@@ -29,13 +29,13 @@ public static ArrayList <Crime> loadCrime(){
             //boolean
             boolean caseOpen = getBoolean((String)crimeJSON.get(CRIME_CASE_OPEN));
             JSONArray witnessesIds = (JSONArray)crimeJSON.get(CRIME_WITNESS_ID);
-            ArrayList witnesses = getWitnesses(witnessesIds);
+            ArrayList<Witness> witnesses = getWitnesses(witnessesIds);
             JSONArray victimsIds = (JSONArray)crimeJSON.get(CRIME_VICTIM_ID);
-            ArrayList victims = getVictims(victimsIds);
+            ArrayList<Victim> victims = getVictims(victimsIds);
             JSONArray suspectsIds = (JSONArray)crimeJSON.get(CRIME_SUSPECT_ID);
-            ArrayList suspects = getSuspects(suspectsIds);
+            ArrayList<Suspect> suspects = getSuspects(suspectsIds);
             JSONArray personOfInterestIds = (JSONArray)crimeJSON.get(CRIME_POI_ID);
-            ArrayList personsOfInterest = getPersonsOfInterest(personOfInterestIds);
+            ArrayList<PersonOfInterest> personsOfInterest = getPersonsOfInterest(personOfInterestIds);
             String officers = (String)crimeJSON.get(CRIME_OFFICERS);
             crime.add(new Crime(crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnesses, victims, suspects, personsOfInterest, officers));
         }
@@ -50,7 +50,7 @@ public static ArrayList <Crime> loadCrime(){
 
 private static ArrayList<Witness> getWitnesses(JSONArray witnessIds)
 {
-    ArrayList<Witness> witnesses = new ArrayList();
+    ArrayList<Witness> witnesses = new ArrayList<Witness>();
     for(int i = 0; i < witnessIds.size(); i++)
     {
         Witness witness = witnessList.getInstance().getWitnessById(witnessIds.get(i));
@@ -61,7 +61,7 @@ private static ArrayList<Witness> getWitnesses(JSONArray witnessIds)
 
 private static ArrayList<Victim> getVictims(JSONArray victimIds)
 {
-    ArrayList<Victim> victims = new ArrayList();
+    ArrayList<Victim> victims = new ArrayList<Victim>();
     for(int i = 0; i < victimIds.size(); i++)
     {
         Victim victim = victimsList.getInstance().getVictimById(victimIds.get(i));
@@ -72,7 +72,7 @@ private static ArrayList<Victim> getVictims(JSONArray victimIds)
 
 private static ArrayList<Suspect> getSuspects(JSONArray suspectIds)
 {
-    ArrayList<Suspect> suspects = new ArrayList();
+    ArrayList<Suspect> suspects = new ArrayList<Suspect>();
     for(int i = 0; i < suspectIds.size(); i++)
     {
         Suspect suspect = suspectsList.getInstance().getSuspectById(suspectIds.get(i));
@@ -83,7 +83,7 @@ private static ArrayList<Suspect> getSuspects(JSONArray suspectIds)
 
 private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray personOfInterestIds)
 {
-    ArrayList<PersonOfInterest> personsOfInterest = new ArrayList();
+    ArrayList<PersonOfInterest> personsOfInterest = new ArrayList<PersonOfInterest>();
     for(int i = 0; i < personOfInterestIds.size(); i++)
     {
         PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
