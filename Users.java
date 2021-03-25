@@ -75,14 +75,7 @@ public class Users {
        
 
         userList.add(new User(string, string2));
-        saveUsers();
-     
-    }
-
-    /**
-     * Writes the saves used
-     */
-    public static void saveUsers() {
         DataWriter.saveUsers();
+     
     }
 }

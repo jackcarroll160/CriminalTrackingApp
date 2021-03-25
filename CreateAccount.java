@@ -69,9 +69,11 @@ public class CreateAccount extends JFrame {
                 
                 try { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
                     if (!Users.haveUser(tfUsername.getText())) {
+                       
                         JOptionPane.showMessageDialog(null, "Account Created Successfully!");
+                        Users.addUser(tfUsername.getText(), pfPassword.getText()); //SOMETHING WRONG WITH THIS LINE
                         dispose();
-                        Users.addUser(tfUsername.getText(), pfPassword.getText());
+                        
                     }
                     else {
                         JOptionPane.showMessageDialog(null, "Sorry, that username is taken.\nPlease try a different name", "Create Account", JOptionPane.OK_OPTION);
