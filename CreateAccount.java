@@ -71,7 +71,7 @@ public class CreateAccount extends JFrame {
                     if (!Users.haveUser(tfUsername.getText())) {
                        
                         JOptionPane.showMessageDialog(null, "Account Created Successfully!");
-                        Users.addUser(tfUsername.getText(), pfPassword.getText()); //SOMETHING WRONG WITH THIS LINE
+                        Users.addUser(tfUsername.getText(), pfPassword.toString()); //SOMETHING WRONG WITH THIS LINE
                         dispose();
                         
                     }
@@ -81,7 +81,8 @@ public class CreateAccount extends JFrame {
                         pfPassword.setText("");
                     }
                 } catch (HeadlessException e1) {
-                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
                     e1.printStackTrace();
                 }
             }

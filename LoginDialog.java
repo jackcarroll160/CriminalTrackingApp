@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.TitlePaneLayout;
+import javax.swing.plaf.basic.*;
  
 public class LoginDialog extends JDialog {
  
@@ -52,14 +52,17 @@ public class LoginDialog extends JDialog {
         panel.add(pfPassword, cs);
         panel.setBorder(new LineBorder(Color.BLUE));
  
+        /**
+         * Login button on login prompt
+         */
         btnLogin = new JButton("Login");
         btnLogin.addActionListener(new ActionListener() {
  
             Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
             public void actionPerformed(ActionEvent e) {
-                try {
-                    if (Login.authenticate(getUsername(), getPassword())) {
+                try {  
+                    if (!Users.haveUser(tfUsername.getText())) {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Hi " + getUsername() + "! You have successfully logged in.", "Login", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                         succeeded = true;
@@ -73,7 +76,6 @@ public class LoginDialog extends JDialog {
  
                     }
                 } catch (HeadlessException | IOException e1) {
-                    // TODO Auto-generated catch block
                     e1.printStackTrace();
                 }
             }

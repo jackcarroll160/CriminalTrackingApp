@@ -2,13 +2,14 @@
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Login extends LoginDialog {
 
     //private static HashMap<String, String> loginInfo = new HashMap<>();
+    //private static ArrayList<User> temp = Users.getUsers();
  
     public static boolean authenticate(String username, String password) throws IOException {
-        Users userList = new Users();
         //loginInfo.put("user1", "password1");
         //loginInfo.put("user2", "password2");
 
