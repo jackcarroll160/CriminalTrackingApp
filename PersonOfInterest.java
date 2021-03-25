@@ -89,6 +89,14 @@ public class PersonOfInterest extends Person{
 	public void setPersonId(int personId) {
 		this.personId = personId;
 	}
+
+	public Object getCrimeId() {
+		return null;
+	}
+
+	public Object getSuspectId() {
+		return null;
+	}
 	
 	
 }

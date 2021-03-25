@@ -14,7 +14,7 @@ public class Suspect extends PersonOfInterest{
     }
 
     private Crime linkedCrime;
-    private int suspectId;
+    private UUID suspectId;
     private String birthDate;
     private String eyeColor;
     private String hairDescription;
@@ -60,7 +60,7 @@ public class Suspect extends PersonOfInterest{
      * Returns the Suspect's Id
      * @return an int for suspect Id
      */
-    public int getSuspectId() {
+    public UUID getSuspectId() {
         return this.suspectId;
     }
 
@@ -68,7 +68,7 @@ public class Suspect extends PersonOfInterest{
      * Sets the suspect's Id number
      * @param suspectId integer for suspect's Id number
      */
-    public void setSuspectId(int suspectId) {
+    public void setSuspectId(UUID suspectId) {
         this.suspectId = suspectId;
     }
 
@@ -438,6 +438,14 @@ public class Suspect extends PersonOfInterest{
      */
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public Object getCrimeId() {
+        return null;
+    }
+
+    public Object getHasVehicle() {
+        return null;
     }
 
 }
