@@ -79,7 +79,7 @@ public class suspectsList {
 		DataWriter.saveSuspect();
 	}
 	
-	public Suspect getSuspectById(UUID id)
+	public Suspect getSuspectById(Object id)
 	{
 		for(Suspect suspect : suspectsList)
 		{

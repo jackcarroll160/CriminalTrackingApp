@@ -110,7 +110,7 @@ public class personOfInterestList {
 		DataWriter.savePersonOfInterest();
 	}
 	
-	public PersonOfInterest getPOIById(UUID id)
+	public PersonOfInterest getPOIById(Object id)
 	{
 		for(PersonOfInterest poi : POIList)
 		{

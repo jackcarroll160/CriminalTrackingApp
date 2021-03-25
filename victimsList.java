@@ -37,7 +37,7 @@ public class victimsList {
 		return victimList;
 	}
 	
-	public Victim getVictimById(UUID id)
+	public Victim getVictimById(Object id)
 	{
 		for(Victim victim : victimList)
 		{

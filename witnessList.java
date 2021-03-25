@@ -38,7 +38,7 @@ public class witnessList {
 		return witnessList;
 	}
 	
-	public Witness getWitnessById(UUID id)
+	public Witness getWitnessById(Object id)
 	{
 		for(Witness witness : witnessList)
 		{
