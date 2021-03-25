@@ -10,8 +10,8 @@ public class Users {
     private static ArrayList<User> userList = new ArrayList<>();
 
    
-    Users() throws IOException{
-        userList = DataLoader.getUsers();
+    public Users(){
+        userList = DataLoader.loadUsers();
     }
 
     /**
