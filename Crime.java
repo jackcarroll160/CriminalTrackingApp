@@ -263,4 +263,14 @@ public class Crime {
         this.grading = grading;
     }
 
+    public Object getCriminalID() {
+        return null;
+    }
+
+    public Object getCrimeId() {
+        return null;
+    }
+
+ 
+
 }

@@ -59,15 +59,15 @@ public class DataWriter extends DataConstants{
     public static JSONObject getCrimeJSON(Crime crime) {
         JSONObject crimeInfo = new JSONObject();
         crimeInfo.put(CRIME_CRIME_ID, crime.getCrimeId());
-        crimeInfo.put(CRIME_CRIMINAL_ID, crime.getCriminalId());
+        crimeInfo.put(CRIME_CRIMINAL_ID, crime.getCriminalID());
         crimeInfo.put(CRIME_DESCRIPTION, crime.getDescription());
         crimeInfo.put(CRIME_DATE_OF_CRIME, crime.getDateOfCrime());
         crimeInfo.put(CRIME_TIME_OF_CRIME, crime.getTimeOfCrime());
         //boolean
         crimeInfo.put(CRIME_CASE_OPEN, crime.isCaseOpen());
-        crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnessId());
-        crimeInfo.put(CRIME_VICTIM_ID, crime.getVictimId());
-        crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterestId());
+        crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnesses());
+        crimeInfo.put(CRIME_VICTIM_ID, crime.getVictims());
+        crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterest());
         crimeInfo.put(CRIME_OFFICERS, crime.getOfficers());
 
         return crimeInfo;
@@ -175,14 +175,14 @@ public class DataWriter extends DataConstants{
         suspectDetails.put(SUSPECTS_ETHNICITY,suspect.getEthnicity());
         suspectDetails.put(SUSPECTS_EYE_COLOR, suspect.getEyeColor());
         suspectDetails.put(SUSPECTS_FACIAL_HAIR_DESCRIPTION, suspect.getFacialHairDescription());
-        suspectDetails.put(SUSPECTS_FACIAL_HAIR, suspect.getFacialHair());
+        suspectDetails.put(SUSPECTS_FACIAL_HAIR, suspect.isHasFacialHair());
         suspectDetails.put(SUSPECTS_GENDER, suspect.getGender());
         suspectDetails.put(SUSPECTS_HAIR_DESCRIPTION, suspect.getHairDescription());
-        suspectDetails.put(SUSPECTS_HAS_ALIBI, suspect.getAlibi());
-        suspectDetails.put(SUSPECTS_HAS_PIERCINGS, suspect.getHasPiercings());
-        suspectDetails.put(SUSPECTS_HAS_TATOOS, suspect.getHasTattoos());
+        suspectDetails.put(SUSPECTS_HAS_ALIBI, suspect.isHasAlibi());
+        suspectDetails.put(SUSPECTS_HAS_PIERCINGS, suspect.isHasPiercings());
+        suspectDetails.put(SUSPECTS_HAS_TATOOS, suspect.isHasTattoos());
         suspectDetails.put(SUSPECTS_HAS_VEHICLE, suspect.getHasVehicle());
-        suspectDetails.put(SUSPECTS_HAS_WEAPON, suspect.getHasWeapon());
+        suspectDetails.put(SUSPECTS_HAS_WEAPON, suspect.isHasWeapon());
         suspectDetails.put(SUSPECTS_HEIGHT, suspect.getHeight());
         suspectDetails.put(SUSPECTS_IS_MINOR, suspect.getIsMinor());
         suspectDetails.put(SUSPECTS_PHYSICAL_BUILD, suspect.getPhysicalBuild());
@@ -193,7 +193,7 @@ public class DataWriter extends DataConstants{
         suspectDetails.put(SUSPECTS_VEHICLE_DESCRIPTION, suspect.getVehicleDescription());
         suspectDetails.put(SUSPECTS_WEAPON_DESCRIPTION, suspect.getWeaponDescription());
         suspectDetails.put(SUSPECTS_WEIGHT, suspect.getWeight());
-
+        return suspectDetails;
     }
 
     public static void saveVictim()
@@ -227,8 +227,8 @@ public class DataWriter extends DataConstants{
         victimDetails.put(VICTIMS_CONTACT_INFO, victim.getContactInfo());
         victimDetails.put(VICTIMS_IS_MINOR, victim.getIsMinor());
         victimDetails.put(VICTIMS_STATEMENT, victim.getStatement());
-        victimDetails.put(VICTIMS_IS_INJURED, victim.getIsInjured());
-        victimDetails.put(VICTIMS_IS_ALIVE, victim.getIsAlive());
+        victimDetails.put(VICTIMS_IS_INJURED, victim.isInjured());
+        victimDetails.put(VICTIMS_IS_ALIVE, victim.isAlive());
         victimDetails.put(VICTIMS_CRIME_ID, victim.getCrimeId());
         victimDetails.put(VICTIMS_VICTIM_ID, victim.getVictimId());
         
@@ -301,12 +301,13 @@ public class DataWriter extends DataConstants{
 
     public static JSONObject getPersonOfInterestJSON(PersonOfInterest personOfInterest) {
         JSONObject personOfInterestInfo = new JSONObject();
-        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getpersonOfInterestId());
+        personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getPersonId());
         personOfInterestInfo.put(PERSONOFINTEREST_SUSPECT_ID, personOfInterest.getSuspectId());
         personOfInterestInfo.put(PERSONOFINTEREST_CRIME_ID, personOfInterest.getCrimeId());
         personOfInterestInfo.put(PERSONOFINTEREST_FIRST_NAME, personOfInterest.getFirstName());
         personOfInterestInfo.put(PERSONOFINTEREST_LAST_NAME, personOfInterest.getLastName());
         personOfInterestInfo.put(PERSONOFINTEREST_AGE, personOfInterest.getAge());
+        return personOfInterestInfo;
 
 
     }    

@@ -11,6 +11,7 @@ public class Victim extends Person{
 	private boolean isInjured;
 	private String statement;
 	private int victimId;
+	private UUID crimeId;
 	
 	public Victim(UUID victimId2, UUID crimeId, String firstName, String lastName, int age, String contactInfo,
             boolean isMinor, boolean isAlive2, boolean isInjured2, String statement2) {
@@ -94,6 +95,10 @@ public class Victim extends Person{
 	 */
 	public void setVictimId(int victimId) {
 		this.victimId = victimId;
+	}
+
+	public UUID getCrimeId() {
+		return this.crimeId;
 	}
 	
 	
