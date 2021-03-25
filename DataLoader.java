@@ -375,6 +375,7 @@ private static ArrayList<User> getUser(JSONArray userIds)
     }
     return users;
 }
+}
 
 
 /**
