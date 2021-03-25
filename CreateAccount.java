@@ -74,7 +74,6 @@ public class CreateAccount extends JFrame {
                         userList.addUser(tfUsername.getText(), pfPassword.toString());
 
                         JOptionPane.showMessageDialog(null, "Account Created Successfully!");
-                        Users.addUser(tfUsername.getText(), pfPassword.toString());
                         dispose();
                         
                     }

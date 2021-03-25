@@ -11,7 +11,7 @@ public class Users {
     private static ArrayList<User> userList = new ArrayList<>();
 
    
-    private Users() {
+    Users() {
         userList = DataLoader.loadUsers();
     }
 
@@ -71,10 +71,10 @@ public class Users {
      * @return true/false depending on if the user is in the database or not
      * @throws IOException
      */
-    public static void addUser(UUID id, String string, String string2) throws IOException {
+    public void addUser(String string, String string2) throws IOException {
        
 
-        userList.add(new User(id, string, string2));
+        userList.add(new User(UUID.randomUUID(), string, string2));
         DataWriter.saveUsers();
      
     }

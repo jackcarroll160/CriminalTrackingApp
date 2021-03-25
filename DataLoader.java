@@ -9,14 +9,23 @@ import org.json.simple.parser.JSONParser;
 
 public class DataLoader extends DataConstants{
 
+    public static void LoadData()
+    {
+        loadUsers();
+        loadCrime();
+        loadVictims();
+        loadWitnesses();
+        loadPOI();
+        loadSuspect();
+        loadCriminals();
+    }
 // ----------------------   crime   -------------------------------------------------------------------------------
 public static ArrayList <Crime> loadCrime(){
-    ArrayList <Crime> crime = new ArrayList <Crime>();
+    ArrayList<Crime> crime = new ArrayList <Crime>();
 
     try{
         FileReader reader = new FileReader(CRIME_FILE_NAME);
-        JSONParser parser = new JSONParser();
-        JSONArray crimeJSONList = (JSONArray) new JSONParser().parse(reader);
+        JSONArray crimeJSONList = (JSONArray)new JSONParser().parse(reader);
         
 
         for (int i = 0; i < crimeJSONList.size(); i++){
@@ -54,8 +63,7 @@ public static ArrayList <Crime> loadCrime(){
 
         try{
             FileReader reader = new FileReader(CRIMINALS_FILE_NAME);
-            JSONParser parser = new JSONParser();
-            JSONArray criminalJSONList = (JSONArray) new JSONParser().parse(reader);
+            JSONArray criminalJSONList = (JSONArray)new JSONParser().parse(reader);
             
 
             for (int i = 0; i < criminalJSONList.size(); i++){
@@ -124,7 +132,6 @@ public static ArrayList <Crime> loadCrime(){
 
         try{
             FileReader reader = new FileReader(PERSONOFINTEREST_FILE_NAME);
-            JSONParser parser = new JSONParser();
             JSONArray personofinterestJSONList = (JSONArray) new JSONParser().parse(reader);
             
 
@@ -174,7 +181,6 @@ public static ArrayList <Crime> loadCrime(){
 
         try{
             FileReader reader = new FileReader(SUSPECTS_FILE_NAME);
-            JSONParser parser = new JSONParser();
             JSONArray suspectJSONList = (JSONArray) new JSONParser().parse(reader);
             
 
@@ -246,7 +252,6 @@ public static ArrayList <Victim> loadVictims(){
 
     try{
         FileReader reader = new FileReader(VICTIMS_FILE_NAME);
-        JSONParser parser = new JSONParser();
         JSONArray victimJSONList = (JSONArray) new JSONParser().parse(reader);
         
 
@@ -294,7 +299,6 @@ public static ArrayList <Witness> loadWitnesses(){
 
     try{
         FileReader reader = new FileReader(WITNESSES_FILE_NAME);
-        JSONParser parser = new JSONParser();
         JSONArray witnessJSONList = (JSONArray) new JSONParser().parse(reader);
         
 
@@ -344,7 +348,6 @@ public static ArrayList <User> loadUsers(){
 
     try{
         FileReader reader = new FileReader(VICTIMS_FILE_NAME);
-        JSONParser parser = new JSONParser();
         JSONArray userJSONList = (JSONArray) new JSONParser().parse(reader);
         
 

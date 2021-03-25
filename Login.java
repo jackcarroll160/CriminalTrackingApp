@@ -31,7 +31,7 @@ public class Login extends LoginDialog {
 
     public static void authenticateNewUser(UUID id, String username, String password) throws IOException {
         authenticate(username, password);
-        Users.addUser(id, username, password);
+        userList.addUser( username, password);
     }
 
 }
