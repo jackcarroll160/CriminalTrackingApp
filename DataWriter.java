@@ -8,9 +8,9 @@ import org.json.simple.JSONObject;
 public class DataWriter extends DataConstants{
 
     //user
-    public static void saveUsers() {
+    public static void saveUsers() throws IOException {
         Users users = Users.getInstance();
-        ArrayList<User> userList = users.getUsers();
+        ArrayList<User> userList = users.getUsersList();
         JSONArray jsonUsers = new JSONArray();
 
         for (int i = 0; i < userList.size(); i++) {

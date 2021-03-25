@@ -2,17 +2,18 @@
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Login extends LoginDialog {
 
     //private static HashMap<String, String> loginInfo = new HashMap<>();
+    //private static ArrayList<User> temp = ;
  
     public static boolean authenticate(String username, String password) throws IOException {
-        Users userList = new Users();
+        
+        // verifying login credentials 
         //loginInfo.put("user1", "password1");
         //loginInfo.put("user2", "password2");
-
-        // verifying login credentials 
         /*if (loginInfo.containsKey(username) && loginInfo.get(username).equals(password)) {
             return true;
         }
@@ -20,16 +21,16 @@ public class Login extends LoginDialog {
             loginInfo.put(username, password);
             return false;
         } */
-        if (userList.haveUser(username)) {
+        if (Users.haveUser(username) && Users.haveUser(password)) {
             return true;
         }
         return false;
 
     }
 
-    public static boolean authenticateNewUser(String username, String password) throws IOException {
-        Users userList = new Users();
-        return userList.addUser(username, password);
+    public static void authenticateNewUser(String username, String password) throws IOException {
+        authenticate(username, password);
+        User.addUser(username, password);
     }
 
 }

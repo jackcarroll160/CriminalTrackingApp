@@ -1,6 +1,7 @@
 /**
  * Author: Sydney Oklota
  */
+import java.io.IOException;
 import java.util.*;
 
 import javax.swing.JPasswordField;
@@ -10,11 +11,7 @@ public class User {
     private String username;
     private String password;
     private HashMap<UUID, String> storeUserPwd;
-    
-    
-    
-
-
+       
     public User(String string, String string2){
 
         this.username = string;
@@ -57,6 +54,10 @@ public class User {
 
         storeUserPwd.remove(userID);
         
+    }
+
+    public static void addUser(String username2, String password2) throws IOException {
+        Users.addUser(username2, password2);
     }
 
     

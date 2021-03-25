@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -333,14 +334,17 @@ public static ArrayList <Witness> loadWitnesses(){
 }
 
     /**
-    * Reading the User JSON file
-    */
-    public static ArrayList<User> getUsers() {
-        ArrayList<User> users = new ArrayList<User>();
-       
-        try {
-            FileReader reader = new FileReader(USER_FILE_NAME);
-            JSONParser parser = new JSONParser();
+     * Reading the User JSON file
+     * @return an empty ArrayList
+     * @throws IOException
+     */
+    public static ArrayList<User> getUsers() throws IOException {
+        
+        ArrayList<User> usersList = new ArrayList<>();
+
+        try (FileReader reader = new FileReader(USER_FILE_NAME); 
+        ) {
+
             JSONArray usersJSON = (JSONArray)new JSONParser().parse(reader);
 
             for(int i = 0; i < usersJSON.size(); i++) {
@@ -348,14 +352,15 @@ public static ArrayList <Witness> loadWitnesses(){
                 String username = (String)userJSON.get(USER_USERNAME);
                 String password = (String)userJSON.get(USER_PASSWORD);
 
-                users.add(new User(username, password));
+                usersList.add(new User(username, password));
+                DataWriter.saveUsers();
             }
-            return users;
+            return usersList;
 
         } catch (Exception e) {
             e.printStackTrace();
         } 
-        return null;
+        return new ArrayList<>();
     }
 
 }

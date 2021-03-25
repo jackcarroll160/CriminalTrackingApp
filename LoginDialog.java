@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.TitlePaneLayout;
  
 public class LoginDialog extends JDialog {
  
@@ -52,19 +51,22 @@ public class LoginDialog extends JDialog {
         panel.add(pfPassword, cs);
         panel.setBorder(new LineBorder(Color.BLUE));
  
+        /**
+         * Login button on login prompt
+         */
         btnLogin = new JButton("Login");
         btnLogin.addActionListener(new ActionListener() {
  
             Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
             public void actionPerformed(ActionEvent e) {
-                try {
-                    if (Login.authenticate(getUsername(), getPassword())) {
+                try {  
+                    if (!Users.haveUser(pfPassword.toString())) {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Hi " + getUsername() + "! You have successfully logged in.", "Login", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                         succeeded = true;
                     } 
-                    else if(!Login.authenticateNewUser(getUsername(), getPassword())) {
+                    else if(Login.authenticate(getUsername(), getPassword())) {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Invalid username or password\n*Please try again*", "Login", JOptionPane.OK_CANCEL_OPTION);
                         // reset username and password
                         tfUsername.setText("");
@@ -73,7 +75,6 @@ public class LoginDialog extends JDialog {
  
                     }
                 } catch (HeadlessException | IOException e1) {
-                    // TODO Auto-generated catch block
                     e1.printStackTrace();
                 }
             }
