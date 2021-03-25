@@ -498,11 +498,12 @@ public class Suspect extends Person{
         return this.hasAlibi;
     }
 
-    public void getStatement(String statement) {
+    public void setStatement(String statement) {
        this.statement = statement;
     }
 
-    public void getHasAlibi(boolean hasAlibi) {
+    public void setHasAlibi(boolean hasAlibi) {
         this.hasAlibi = hasAlibi;
     }
+
 }

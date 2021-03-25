@@ -4,7 +4,7 @@ import java.util.UUID;
 
 /**
  * Author: Sydney Oklota
- * will hold all persons of interest
+ * holds all persons of interest
  */
 public class personOfInterestList {
 	
@@ -12,7 +12,7 @@ public class personOfInterestList {
 	private static personOfInterestList POI = null;
 	
 	/*
-	 * 
+	 * loads in POI library
 	 */
 	private personOfInterestList()
 	{
@@ -20,7 +20,7 @@ public class personOfInterestList {
 	}
 	
 	/*
-	 * 
+	 * creates new POI
 	 */
 	public static personOfInterestList getInstance()
 	{
@@ -32,7 +32,7 @@ public class personOfInterestList {
 	}
 	
 	/*
-	 * 
+	 * returns POIList
 	 */
 	public ArrayList<PersonOfInterest> getPOI()
 	{
@@ -41,7 +41,7 @@ public class personOfInterestList {
 	
 	
 	/*
-	 * 
+	 * searches for POI by first and last name
 	 */
 	public PersonOfInterest searchPOIByName(String Fname, String Lname)
 	{
@@ -64,7 +64,7 @@ public class personOfInterestList {
 	}
 
 	/*
-	 * 
+	 * allows user to edit POI information
 	 */
 	public void editPOIByName(String Fname, String Lname) 
 	{
@@ -104,12 +104,15 @@ public class personOfInterestList {
 	}
 
 	/**
-	 * 
+	 * saves POI in POI library
 	 */
 	public void savePOI() {
 		DataWriter.savePersonOfInterest();
 	}
 	
+	/**	
+	 * searches for POI by ID num
+	 */
 	public PersonOfInterest getPOIById(Object id)
 	{
 		for(PersonOfInterest poi : POIList)
