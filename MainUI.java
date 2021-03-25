@@ -2,6 +2,8 @@
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
+
 import javax.swing.*;
  
 public class MainUI {
@@ -24,7 +26,13 @@ public class MainUI {
             });
         btnCreateAccount.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                CreateAccount account = new CreateAccount();
+                CreateAccount account = null;
+                try {
+                    account = new CreateAccount();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
                 account.setVisible(true);
             }
         });

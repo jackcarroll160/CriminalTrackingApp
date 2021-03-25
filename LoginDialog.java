@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.plaf.basic.*;
  
 public class LoginDialog extends JDialog {
  
@@ -62,12 +61,12 @@ public class LoginDialog extends JDialog {
 
             public void actionPerformed(ActionEvent e) {
                 try {  
-                    if (!Users.haveUser(tfUsername.getText())) {
+                    if (!Users.haveUser(pfPassword.toString())) {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Hi " + getUsername() + "! You have successfully logged in.", "Login", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                         succeeded = true;
                     } 
-                    else if(!Login.authenticateNewUser(getUsername(), getPassword())) {
+                    else if(Login.authenticate(getUsername(), getPassword())) {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Invalid username or password\n*Please try again*", "Login", JOptionPane.OK_CANCEL_OPTION);
                         // reset username and password
                         tfUsername.setText("");

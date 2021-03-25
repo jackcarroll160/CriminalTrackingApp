@@ -10,7 +10,7 @@ public class Users {
     private static ArrayList<User> userList = new ArrayList<>();
 
    
-    private Users() throws IOException{
+    Users() throws IOException{
         userList = DataLoader.getUsers();
     }
 
@@ -34,7 +34,7 @@ public class Users {
      */
     public static boolean haveUser(String string) {
         for (int i= 0; i< userList.size(); i++) {
-            if (userList.get(i).getUsername() == string) {
+            if (userList != null && userList.get(i).getUsername().equals(string)) {
                 return true;
             }
         }
@@ -59,8 +59,8 @@ public class Users {
      * Returns the list of users
      * @return an ArrayList of users
      */
-    public ArrayList<User> getUsers() {
-        return this.userList;
+    public static ArrayList<User> getUsersList() {
+        return userList;
     }
 
     /**

@@ -1,7 +1,6 @@
 //package jsonfiles;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
@@ -16,12 +15,12 @@ public class CreateAccount extends JFrame {
     private JPasswordField pfPassword;
     private JLabel lblUsername;
     private JLabel lblPassword;
+    private DataWriter writer;
 
 
-    public CreateAccount(){
+    public CreateAccount() throws IOException{
         super("Create Account");
         CreateAccountPanel();
-
         
         // add DataWriter "saveUsers()" here for writing JSON
 
@@ -67,11 +66,15 @@ public class CreateAccount extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 
-                try { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
-                    if (!Users.haveUser(tfUsername.getText())) {
-                       
+                try { 
+                    if (!Users.haveUser(tfUsername.getText())) { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
+                        Users userList = new Users();
+                        writer = new DataWriter();
+                        writer.saveUsers();
+                        userList.addUser(tfUsername.getText(), pfPassword.toString());
+
                         JOptionPane.showMessageDialog(null, "Account Created Successfully!");
-                        Users.addUser(tfUsername.getText(), pfPassword.toString()); //SOMETHING WRONG WITH THIS LINE
+                        Users.addUser(tfUsername.getText(), pfPassword.toString());
                         dispose();
                         
                     }
@@ -112,9 +115,5 @@ public class CreateAccount extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
-  /**
-   * Method to check username availability
-   */
 
 }
