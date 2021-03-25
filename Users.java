@@ -10,8 +10,13 @@ public class Users {
     private static ArrayList<User> userList = new ArrayList<>();
 
    
+<<<<<<< HEAD
     private Users() {
         userList = DataLoader.getUsers();
+=======
+    public Users(){
+        userList = DataLoader.loadUsers();
+>>>>>>> e790fea3f93200de5a6c1fec8edac7d6f9ebde9d
     }
 
     /**
@@ -76,5 +81,16 @@ public class Users {
         userList.add(new User(string, string2));
         DataWriter.saveUsers();
      
+    }
+
+    public User getUserById(Object id) {
+        for(User user : userList)
+		{
+			if(user.getUserId().equals(id))
+			{
+				return user;
+			}
+		}
+		return null;
     }
 }
