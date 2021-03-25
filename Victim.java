@@ -21,7 +21,6 @@ public class Victim extends Person{
 				this.isAlive = isAlive;
 				this.isInjured = isInjured;
 				this.statement =statement;
-				this.gender = gender;
     }
 
     /*
