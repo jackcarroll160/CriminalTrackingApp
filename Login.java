@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.UUID;
 import java.util.ArrayList;
 
 public class Login extends LoginDialog {
@@ -28,9 +29,9 @@ public class Login extends LoginDialog {
 
     }
 
-    public static void authenticateNewUser(String username, String password) throws IOException {
+    public static void authenticateNewUser(UUID id, String username, String password) throws IOException {
         authenticate(username, password);
-        User.addUser(username, password);
+        Users.addUser(id, username, password);
     }
 
 }

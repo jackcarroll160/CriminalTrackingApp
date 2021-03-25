@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Users class for adding and removing users
@@ -11,7 +12,7 @@ public class Users {
 
    
     private Users() {
-        userList = DataLoader.getUsers();
+        userList = DataLoader.loadUsers();
     }
 
     /**
@@ -32,9 +33,9 @@ public class Users {
      * @param string a String for the User's username
      * @return true/false based on if the username was found in the list or not
      */
-    public boolean haveUser(String username) {
+    public static boolean haveUser(String username) {
         for (User user : userList) {
-            if(user.getUserName().equals(username)){
+            if(user.getUsername().equals(username)){
                 return true;
             }
         }
@@ -70,10 +71,10 @@ public class Users {
      * @return true/false depending on if the user is in the database or not
      * @throws IOException
      */
-    public static void addUser(String string, String string2) throws IOException {
+    public static void addUser(UUID id, String string, String string2) throws IOException {
        
 
-        userList.add(new User(string, string2));
+        userList.add(new User(id, string, string2));
         DataWriter.saveUsers();
      
     }

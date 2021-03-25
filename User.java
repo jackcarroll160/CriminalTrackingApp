@@ -64,10 +64,7 @@ public class User {
         storeUserPwd.remove(userID);
         
     }
-
-    public static void addUser(String username2, String password2) throws IOException {
-        Users.addUser(username2, password2);
-    }
+}
 
     
 
@@ -75,5 +72,5 @@ public class User {
 
 
    
-}
+
 
