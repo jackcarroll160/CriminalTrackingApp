@@ -10,13 +10,8 @@ public class Users {
     private static ArrayList<User> userList = new ArrayList<>();
 
    
-<<<<<<< HEAD
     private Users() {
         userList = DataLoader.getUsers();
-=======
-    public Users(){
-        userList = DataLoader.loadUsers();
->>>>>>> e790fea3f93200de5a6c1fec8edac7d6f9ebde9d
     }
 
     /**
