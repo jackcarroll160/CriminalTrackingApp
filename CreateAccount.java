@@ -71,6 +71,7 @@ public class CreateAccount extends JFrame {
                     if (!Users.haveUser(tfUsername.getText())) {
                         JOptionPane.showMessageDialog(null, "Account Created Successfully!");
                         dispose();
+                        Users.addUser(tfUsername.getText(), pfPassword.getText());
                     }
                     else {
                         JOptionPane.showMessageDialog(null, "Sorry, that username is taken.\nPlease try a different name", "Create Account", JOptionPane.OK_OPTION);

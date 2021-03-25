@@ -2,6 +2,9 @@
  * Author: Sydney Oklota
  */
 import java.util.*;
+
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 public class User {
    
     private String username;
@@ -12,10 +15,10 @@ public class User {
     
 
 
-    public User(String username, String password){
+    public User(String string, String string2){
 
-        this.username = username;
-        this.password = password;
+        this.username = string;
+        this.password = string2;
         
     }
 

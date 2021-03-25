@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  * Users class for adding and removing users
  * @author Overachievers
@@ -28,12 +31,12 @@ public class Users {
 
     /**
      * Checks if the username is already taken
-     * @param userName a String for the User's username
+     * @param string a String for the User's username
      * @return true/false based on if the username was found in the list or not
      */
-    public boolean haveUser(String userName) {
+    public static boolean haveUser(String string) {
         for (int i= 0; i< userList.size(); i++) {
-            if (userList.get(i).getUsername().equalsIgnoreCase(userName)) {
+            if (userList.get(i).getUsername() == string) {
                 return true;
             }
         }
@@ -64,22 +67,22 @@ public class Users {
 
     /**
      * Checks if user can be added
-     * @param userName a String for the user's username
-     * @param passWord a String for the user's password
+     * @param string a String for the user's username
+     * @param string2 a String for the user's password
      * @return true/false depending on if the user is in the database or not
      */
-    public boolean addUser(String userName, String passWord) {
-        if(haveUser(userName))return false;
+    public static void addUser(String string, String string2) {
+       
 
-        userList.add(new User(userName, passWord));
+        userList.add(new User(string, string2));
         saveUsers();
-        return true;
+     
     }
 
     /**
      * Writes the saves used
      */
-    public void saveUsers() {
+    public static void saveUsers() {
         DataWriter.saveUsers();
     }
 }
