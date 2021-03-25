@@ -16,7 +16,7 @@ public class CrimeList{
 	 */
 	private CrimeList()
 	{
-		crimeList = new DataLoader().loadCrime();
+		crimeList = DataLoader().loadCrime();
 	}
 	
 	/*
@@ -31,12 +31,12 @@ public class CrimeList{
 		return crime;
 	}
 	
-	/*
-	 * 
-	 */
-	public ArrayList<Crime> getCrime()
-	{
-		return crimeList;
+	public boolean haveCrime(int crimeId) {
+		for (Crime crime : crimeList) {
+			if (crime.getCrimeId().equals(crimeId)) {
+				return crime;
+			}
+		}
 	}
 	
 	
@@ -62,6 +62,15 @@ public class CrimeList{
 		}
 		return null;
 	}
+
+	/*
+	 * 
+	 */
+	public ArrayList<Crime> getCrime()
+	{
+		return crimeList;
+	}
+
 
     public void editCrimeByName(UUID CrimeID)
     {
@@ -105,7 +114,15 @@ public class CrimeList{
 			System.out.println("Invalid Input!");
 		}
 	
-    }
+	}
+	
+	public boolean addCrime(int crimeId, int criminalId, String description, String dateOfCrime, String timeOfCrime, boolean caseOpen, int witnessId, int victimId, int suspectId, int personOfInterestId, String officers)  {
+		if(haveCrime(crime))return false;
+
+		crimeList.add(new Crime(crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId, officers))
+		return true;
+	}
+
 	public void saveCrime() {
 		DataWriter.saveCrime();
 	}
