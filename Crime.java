@@ -33,20 +33,20 @@ public class Crime {
     private TypeOfCrime typeOfCrime;
     private Grading grading;
 
-    public Crime(UUID crimeId, UUID criminalId, String description, String dateOfCrime, String timeOfCrime,
-            boolean caseOpen, ArrayList<Witness> witnesses, ArrayList<Victim> victims, ArrayList<Suspect> suspects,
-            ArrayList<PersonOfInterest> personsOfInterest, String officers) 
+    public Crime(UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
+            boolean caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
+            ArrayList<PersonOfInterest> personOfInterestId, String officers) 
             {
-                this.crimeId = crimeId;
-                this.criminalId = criminalId;
+                this.crimeId = crimeId2;
+                this.criminalId = criminalId2;
                 this.description = description;
                 this.dateOfCrime = dateOfCrime;
                 this.timeOfCrime = timeOfCrime;
                 this.caseOpen = caseOpen;
-                this.witnesses = witnesses;
-                this.victims = victims;
-                this.suspects = suspects;
-                this.personOfInterest = personsOfInterest;
+                this.witnesses = witnessId;
+                this.victims = victimId;
+                this.suspects = suspectId;
+                this.personOfInterest = personOfInterestId;
                 this.officers = officers;
             }
 

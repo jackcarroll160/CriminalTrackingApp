@@ -16,7 +16,7 @@ public class CrimeList{
 	 */
 	private CrimeList()
 	{
-		crimeList = DataLoader().loadCrime();
+		crimeList = new DataLoader().loadCrime();
 	}
 	
 	/*
@@ -31,12 +31,13 @@ public class CrimeList{
 		return crime;
 	}
 	
-	public boolean haveCrime(int crimeId) {
+	public boolean haveCrime(UUID crimeId) {
 		for (Crime crime : crimeList) {
 			if (crime.getCrimeId().equals(crimeId)) {
-				return crime;
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	
@@ -116,10 +117,12 @@ public class CrimeList{
 	
 	}
 	
-	public boolean addCrime(int crimeId, int criminalId, String description, String dateOfCrime, String timeOfCrime, boolean caseOpen, int witnessId, int victimId, int suspectId, int personOfInterestId, String officers)  {
-		if(haveCrime(crime))return false;
+	public boolean addCrime(UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
+	boolean caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
+	ArrayList<PersonOfInterest> personOfInterestId, String officers)  {
+		if(haveCrime(crimeId2))return false;
 
-		crimeList.add(new Crime(crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId, officers))
+		crimeList.add(new Crime(crimeId2, criminalId2, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId, officers));
 		return true;
 	}
 
@@ -127,4 +130,5 @@ public class CrimeList{
 		DataWriter.saveCrime();
 	}
 }
+
 
