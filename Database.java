@@ -41,7 +41,7 @@ public class Database {
 
     // witness
     public static ArrayList<Witness> getWitnesses() {
-        return new ArrayList<Crime>();
+        return new ArrayList<Witness>();
 
     }
 
