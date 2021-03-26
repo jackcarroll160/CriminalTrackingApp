@@ -8,15 +8,10 @@ import org.json.simple.parser.JSONParser;
 
 public class DataLoader extends DataConstants {
 
-    public static void LoadData() {
-        loadUsers();
-        loadCrime();
-        loadVictims();
-        loadWitnesses();
-        loadPOI();
-        loadSuspect();
-        loadCriminals();
-    }
+    /**
+     * public static void LoadData() { loadUsers(); loadCrime(); loadVictims();
+     * loadWitnesses(); loadPOI(); loadSuspect(); loadCriminals(); }
+     */
 
     // ---------------------- crime
     // -------------------------------------------------------------------------------
@@ -165,17 +160,17 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-    private static ArrayList<PersonOfInterest> getPersonsOfInterest(JSONArray personOfInterestIds) {
-        ArrayList<PersonOfInterest> personsOfInterest = new ArrayList<PersonOfInterest>();
+    private static ArrayList<PersonOfInterest> getPersonOfInterest(JSONArray personOfInterestIds) {
+        ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
         for (int i = 0; i < personOfInterestIds.size(); i++) {
             PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
-            personsOfInterest.add(poi);
+            personOfInterest.add(poi);
         }
         return personsOfInterest;
     }
 
-    // ------------------------------------------------- suspects
-    // ---------------------------------------------------------------
+    // ------------------------------- suspects
+    // --------------------------------------------------
     public static ArrayList<Suspect> loadSuspect() {
         ArrayList<Suspect> suspect = new ArrayList<Suspect>();
 
@@ -246,7 +241,7 @@ public class DataLoader extends DataConstants {
         return suspects;
     }
 
-    // ------------------------------------------------- victims
+    // -------------------------------------- victims
     // ------------------------------------------------------------------
     public static ArrayList<Victim> loadVictims() {
         ArrayList<Victim> victim = new ArrayList<Victim>();

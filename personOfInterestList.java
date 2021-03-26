@@ -3,61 +3,52 @@ import java.util.Scanner;
 import java.util.UUID;
 
 /**
- * Author: Sydney Oklota
- * holds all persons of interest
+ * Author: Sydney Oklota holds all persons of interest
  */
 public class personOfInterestList {
-	
-    private static ArrayList<PersonOfInterest> POIList = new ArrayList<PersonOfInterest>();
+
+	private static ArrayList<PersonOfInterest> POIList = new ArrayList<PersonOfInterest>();
 	private static personOfInterestList POI = null;
-	
+
 	/*
 	 * loads in POI library
 	 */
-	private personOfInterestList()
-	{
-		POIList = new DataLoader().loadPOI();
+	private personOfInterestList() {
+		POIList = new DataLoader().getPersonOfInterest();
 	}
-	
+
 	/*
 	 * creates new POI
 	 */
-	public static personOfInterestList getInstance()
-	{
-        if (POI == null) {
+	public static personOfInterestList getInstance() {
+		if (POI == null) {
 			POI = new personOfInterestList();
 		}
-        return POI;
-		
+		return POI;
+
 	}
-	
+
 	/*
 	 * returns POIList
 	 */
-	public ArrayList<PersonOfInterest> getPOI()
-	{
+	public ArrayList<PersonOfInterest> getPersonOfInterest() {
 		return POIList;
 	}
-	
-	
+
 	/*
 	 * searches for POI by first and last name
 	 */
-	public PersonOfInterest searchPOIByName(String Fname, String Lname)
-	{
+	public PersonOfInterest searchPOIByName(String Fname, String Lname) {
 		boolean found = false;
-		
-		for (PersonOfInterest POI : POIList)
-		{
-			if(POI.getFirstName().equalsIgnoreCase(Fname) && POI.getLastName().equalsIgnoreCase(Lname))
-			{
+
+		for (PersonOfInterest POI : POIList) {
+			if (POI.getFirstName().equalsIgnoreCase(Fname) && POI.getLastName().equalsIgnoreCase(Lname)) {
 				found = true;
 				return POI;
 			}
 		}
-		
-		if (!found)
-		{
+
+		if (!found) {
 			System.out.println("The person of interest entered was not found in our database!");
 		}
 		return null;
@@ -66,41 +57,36 @@ public class personOfInterestList {
 	/*
 	 * allows user to edit POI information
 	 */
-	public void editPOIByName(String Fname, String Lname) 
-	{
+	public void editPOIByName(String Fname, String Lname) {
 		PersonOfInterest poiEdit = searchPOIByName(Fname, Lname);
-		Scanner keyboard = new Scanner (System.in);
+		Scanner keyboard = new Scanner(System.in);
 
 		System.out.println("Would you like to edit: ");
-		System.out.println("1) Statement" ); 
+		System.out.println("1) Statement");
 		System.out.println("2) Has Alibi");
 		System.out.println("3) Is Suspect");
 
 		int userInput = keyboard.nextInt();
 
-		if(userInput == 1)
-		{
-			System.out.println("Enter the New Statement: " );
+		if (userInput == 1) {
+			System.out.println("Enter the New Statement: ");
 			String statement = keyboard.nextLine();
 			poiEdit.setStatement(statement);
 		}
-		if(userInput == 2)
-		{
-			System.out.println("Enter the New Has Alibi Value (True or False): " );
+		if (userInput == 2) {
+			System.out.println("Enter the New Has Alibi Value (True or False): ");
 			boolean hasAl = keyboard.nextBoolean();
 			poiEdit.setHasAlibi(hasAl);
 		}
-		if(userInput == 3)
-		{
-			System.out.println("Enter the New Is Suspect Value (True or False): " );
+		if (userInput == 3) {
+			System.out.println("Enter the New Is Suspect Value (True or False): ");
 			boolean isSus = keyboard.nextBoolean();
 			poiEdit.setSuspect(isSus);
 		}
-		if(userInput >= 4 || userInput <=0)
-		{
+		if (userInput >= 4 || userInput <= 0) {
 			System.out.println("Invalid Input!");
 		}
-	
+
 	}
 
 	/**
@@ -109,22 +95,17 @@ public class personOfInterestList {
 	public void savePOI() {
 		DataWriter.savePersonOfInterest();
 	}
-	
-	/**	
+
+	/**
 	 * searches for POI by ID num
 	 */
-	public PersonOfInterest getPOIById(Object id)
-	{
-		for(PersonOfInterest poi : POIList)
-		{
-			if(poi.getPersonId().equals(id))
-			{
+	public PersonOfInterest getPOIById(Object id) {
+		for (PersonOfInterest poi : POIList) {
+			if (poi.getPersonId().equals(id)) {
 				return poi;
 			}
 		}
 		return null;
 	}
 
-
-    
 }
