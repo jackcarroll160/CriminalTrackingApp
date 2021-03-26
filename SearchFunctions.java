@@ -64,59 +64,7 @@ public class SearchFunctions extends JFrame {
         panel.setLayout(new FlowLayout());
         add(panel);
     }
-/*
-    private void setTable() { // Maybe make this a read JSON file method
-        
 
-        Object rowData[][] = {{ "Row1-Column1"}, {"Row1-Column2"}, {"Row1-Column3" }};
-        Object columnNames[] = { "Column One", "Column Two", "Column Three" };
-        result = new JTable(rowData, columnNames);
-
-        scrollPane = new JScrollPane(result);
-        //result.setFillsViewportHeight(true);
-        panel.setLayout(new BorderLayout());
-
-        panel.add(scrollPane,BorderLayout.PAGE_END);
-        panel.setSize(550, 200);
-        panel.setVisible(true);
-        try {
-            Client cl = Client.create();
-            WebResource webResource = cl
-                    .resource("http://localhost:8080/rest_server/rest/jersey/dbAccess/getDBVal");
-            ClientResponse response = webResource.accept("application/json")
-                    .get(ClientResponse.class);
-    
-            if (response.getStatus() != 200) {
-                System.out.println("no out put");
-                throw new RuntimeException("Failed : HTTP error code : "
-                        + response.getStatus());
-            }
-    
-            String output = response.getEntity(String.class);
-            // String[] output = response.getEntity(String.);
-            System.out.println("\n -------");
-            System.out.println(output);
-    
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        JFrame frame = new JFrame("JTable Test Display");
-
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
-
-        JTable table = new JTable();
-
-        JScrollPane tableContainer = new JScrollPane(table);
-
-        panel.add(tableContainer, BorderLayout.CENTER);
-        frame.getContentPane().add(panel);
-
-        frame.pack();
-        frame.setVisible(true);
-        
-    }
-*/
     /**
      * Creates a new frame to go "back" to the main page
      * CHANGE BACK BUTTON FOR DIFFERENT FUNCTIONS
