@@ -9,12 +9,20 @@ public class SearchFunctions extends JFrame {
     private JTextField nameSearch = new JTextField(30);
     private JButton searchButton = new JButton("Search");
     private JButton backButton = new JButton("Back");
-    private JCheckBox checkBox = new JCheckBox("Criminals");
-    private JCheckBox checkBox2 = new JCheckBox("Crimes");
-    private JCheckBox checkBox3 = new JCheckBox("Persons of Interest");
-    private JCheckBox checkBox4 = new JCheckBox("Suspects");
-    private JCheckBox checkBox5 = new JCheckBox("Victims");
-    private JCheckBox checkBox6 = new JCheckBox("Witnesses");
+    private JCheckBox checkBox = new JCheckBox("First Name");
+    private JCheckBox checkBox2 = new JCheckBox("Last Name");
+    private JCheckBox checkBox3 = new JCheckBox("Nickname");
+    private JCheckBox checkBox4 = new JCheckBox("Age");
+    private JCheckBox checkBox5 = new JCheckBox("Gender");
+    private JCheckBox checkBox6 = new JCheckBox("Ethnicity");
+    private JCheckBox checkBox7 = new JCheckBox("Contact Info");
+    private JCheckBox checkBox8 = new JCheckBox("Crime Description");
+    private JCheckBox checkBox9 = new JCheckBox("Eye Color");
+    private JCheckBox checkBox10 = new JCheckBox("Hair Description");
+    private JCheckBox checkBox11 = new JCheckBox("Facial Hair Description");
+    private JCheckBox checkBox12 = new JCheckBox("Height");
+    private JCheckBox checkBox13 = new JCheckBox("Weight");
+    private JCheckBox checkBox14 = new JCheckBox("Tattoo Description");
     private JTable result = new JTable();
     private JPanel panel = new JPanel();
     private JScrollPane scrollPane = new JScrollPane(result);
@@ -27,7 +35,7 @@ public class SearchFunctions extends JFrame {
         addComponents();
         backButtonFunction();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setTable(); //change this later to set names from JSON
+        //setTable(); //change this later to set names from JSON
         setVisible(true);
     }
 
@@ -41,37 +49,105 @@ public class SearchFunctions extends JFrame {
         panel.add(checkBox4);
         panel.add(checkBox5);
         panel.add(checkBox6);
-        panel.add(scrollPane);
+        panel.add(checkBox7);
+        panel.add(checkBox8);
+        panel.add(checkBox9);
+        panel.add(checkBox10);
+        panel.add(checkBox11);
+        panel.add(checkBox12);
+        panel.add(checkBox13);
+        panel.add(checkBox14);
         add(panel);
     }
 
-    private void setTable() { // Maybe make this a read JSON file method
-        // TODO put JSON connection here to search
+    /*private void setTable() { // Maybe make this a read JSON file method
         
-    }
+        try {
+            Client cl = Client.create();
+            WebResource webResource = cl
+                    .resource("http://localhost:8080/rest_server/rest/jersey/dbAccess/getDBVal");
+            ClientResponse response = webResource.accept("application/json")
+                    .get(ClientResponse.class);
+    
+            if (response.getStatus() != 200) {
+                System.out.println("no out put");
+                throw new RuntimeException("Failed : HTTP error code : "
+                        + response.getStatus());
+            }
+    
+            String output = response.getEntity(String.class);
+            // String[] output = response.getEntity(String.);
+            System.out.println("\n -------");
+            System.out.println(output);
+    
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        JFrame frame = new JFrame("JTable Test Display");
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+
+        JTable table = new JTable();
+
+        JScrollPane tableContainer = new JScrollPane(table);
+
+        panel.add(tableContainer, BorderLayout.CENTER);
+        frame.getContentPane().add(panel);
+
+        frame.pack();
+        frame.setVisible(true);
+        
+    }*/
 
     /**
      * Creates a new frame to go "back" to the main page
+     * CHANGE BACK BUTTON FOR DIFFERENT FUNCTIONS
      */
     private void backButtonFunction() {
-        JFrame frame = new JFrame("Criminal Tracking App - What Would you like to do?");
-        
+        JFrame frame = new JFrame("Criminal Tracking App - What would you like to do?");
+
+        searchButton.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                searchCriminalJSON(); //remove later
+            }
+        });
+
         backButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {                
                 dispose();
-                UserOptions userOp = new UserOptions(frame);
+                UserButtonOptions userOp = new UserButtonOptions(frame); //change this when ready
                 setLocationRelativeTo(null);
                 userOp.setVisible(true);
             }
         });
     }
 
-    /**
-     * Write Search Button Function here...
-     */
-    private void searchButtonFunction() {
-        // TODO
+    private void searchCriminalJSON() {
+
+        //checking first name
+        if (checkBox.isSelected()) {
+            for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
+			    if(criminal.getFirstName().equalsIgnoreCase(nameSearch.getText()))
+			    {
+				    boolean found = true;
+				    dispose();
+			    }
+		    }
+        }
+
+        //checking last name
+        if (checkBox2.isSelected()) {
+            for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
+			    if(criminal.getLastName().equalsIgnoreCase(nameSearch.getText()))
+			    {
+				    boolean found = true;
+				    dispose();
+			    }
+		    }
+        }
     }
     
 }

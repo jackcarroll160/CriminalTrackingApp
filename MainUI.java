@@ -21,6 +21,11 @@ public class MainUI {
                 if (loginDlg.isSucceeded()) {
                     UserOptions userOp = new UserOptions(frame);
                     userOp.setVisible(true);
+
+                    /*if (loginDlg.isSucceeded()) {
+                        UserButtonOptions btnUserOp = new UserButtonOptions(frame);
+                        btnUserOp.setVisible(true);
+                    }*/
                 }
             }
         });

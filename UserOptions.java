@@ -29,6 +29,10 @@ public class UserOptions extends JDialog {
 
             public void actionPerformed(ActionEvent e) {
                 dispose();
+                UserButtonOptions btnOp = new UserButtonOptions(parent);
+                pack();
+                btnOp.setVisible(true);
+                setLocationRelativeTo(null);
                 setSearchName(e);
             }
         });
@@ -39,20 +43,20 @@ public class UserOptions extends JDialog {
                 setSearchName(e);
             }
         });
-        btnRemove.addActionListener(new ActionListener() {
+        /*btnRemove.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 setSearchName(e);
             }
-        });
+        });*/
         btnEdit.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 setSearchName(e);
             }
-        });
+        }); 
         
         btnLogout.addActionListener(new ActionListener() {
 
@@ -65,7 +69,7 @@ public class UserOptions extends JDialog {
         JPanel bp = new JPanel(new GridLayout(5, 1, 10, 5));
         bp.add(btnSearchDatabase);
         bp.add(btnAdd);
-        bp.add(btnRemove);
+        //bp.add(btnRemove);
         bp.add(btnEdit);
         bp.add(btnLogout);
 
@@ -82,22 +86,22 @@ public class UserOptions extends JDialog {
     // set name based on button pressed 
     private void setSearchName(java.awt.event.ActionEvent evt) {
         SearchFunctions sf;
-        if (evt.getSource() == btnSearchDatabase) {
-            sf = new SearchFunctions("Database Search");
+        /*if (evt.getSource() == btnSearchDatabase) {
+            sf = new SearchFunctions("CRIMINAL TEST");
             sf.setLocationRelativeTo(null);
-        }
-        else if (evt.getSource() == btnAdd) {
-            sf = new SearchFunctions("Add New Report");
+        }*/
+        if (evt.getSource() == btnAdd) {
+            sf = new SearchFunctions("TEST HERE Add New Report");
             sf.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnRemove) {
-            sf = new SearchFunctions("Remove Old Report");
+            sf = new SearchFunctions("TEST HERE Remove Old Report");
             sf.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnEdit) {
-            sf = new SearchFunctions("Edit Existing Report");
+            sf = new SearchFunctions("TEST HERE Edit Existing Report");
             sf.setLocationRelativeTo(null);
         }
-    }
+    } 
 
 }

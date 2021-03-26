@@ -34,7 +34,7 @@ public class CriminalList{
 	/*
 	 * 
 	 */
-	public ArrayList<Criminal> getCriminals()
+	public ArrayList<Criminal> getCriminalList()
 	{
 		return criminalList;
 	}
@@ -66,7 +66,7 @@ public class CriminalList{
 	/*
 	 * 
 	 */
-	public void editCriminalsByName(String Fname, String Lname) 
+	/*public void editCriminalsByName(String Fname, String Lname) 
 	{
 		Criminal crimEdit = searchCriminalsByName(Fname, Lname);
 		Scanner keyboard = new Scanner (System.in);
@@ -275,7 +275,7 @@ public class CriminalList{
 		{
 			System.out.println("Invalid Input!");
 		}
-	}
+	} */
 
 	public void saveCriminals() {
 		DataWriter.saveCriminals();

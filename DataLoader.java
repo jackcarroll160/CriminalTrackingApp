@@ -103,10 +103,10 @@ public class DataLoader extends DataConstants {
                 boolean hasVehicle = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_VEHICLE));
                 String vehicleDescription = (String) criminalJSON.get(CRIMINALS_VEHICLE_DESCRIPTION);
 
-                criminal.add(new Criminal(criminalId, firstName, lastName, hasNickname, nickname, age, gender,
+                criminal.add(new Criminal(firstName, lastName, hasNickname, nickname, age, gender,
                         ethnicity, contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, facialHair,
                         facialHairDescription, height, weight, hasTattoos, hasPiercings, tattooDescription,
-                        physicalMarksDescription, physicalBuild, weaponDescription, complexion, clothingDescription,
+                        physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription,
                         isGuilty, hasFingerprints, hasVehicle, vehicleDescription));
             }
 
@@ -357,7 +357,6 @@ public class DataLoader extends DataConstants {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return null;
     }
 
