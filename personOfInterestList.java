@@ -5,34 +5,34 @@ import java.util.UUID;
 /**
  * Author: Sydney Oklota holds all persons of interest
  */
-public class personOfInterestList {
+public class PersonOfInterestList {
 
-	private static ArrayList<PersonOfInterest> POIList = new ArrayList<PersonOfInterest>();
-	private static personOfInterestList POI = null;
+	private static PersonOfInterestList personOfInterest;
+	private static ArrayList<PersonOfInterest> personOfInterestList;
 
 	/*
 	 * loads in POI library
 	 */
-	private personOfInterestList() {
-		POIList = new DataLoader().getPersonOfInterest();
+	private PersonOfInterestList() {
+		personOfInterestList = DataLoader.loadPersonOfInterestList();
 	}
 
 	/*
 	 * creates new POI
 	 */
-	public static personOfInterestList getInstance() {
-		if (POI == null) {
-			POI = new personOfInterestList();
+	public static PersonOfInterestList getInstance() {
+		if (personOfInterest == null) {
+			personOfInterest = new PersonOfInterestList();
 		}
-		return POI;
+		return personOfInterest;
 
 	}
 
 	/*
 	 * returns POIList
 	 */
-	public ArrayList<PersonOfInterest> getPersonOfInterest() {
-		return POIList;
+	public ArrayList<PersonOfInterest> getPersonOfInterestList() {
+		return personOfInterestList;
 	}
 
 	/*
@@ -106,6 +106,12 @@ public class personOfInterestList {
 			}
 		}
 		return null;
+	}
+
+	public void addPersonOfInterest() {
+		personOfInterestList.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age,
+				contactInfo, isMinor, statement, hasAlibi, isSuspect));
+		DataWriter.savePersonOfInterestList();
 	}
 
 }

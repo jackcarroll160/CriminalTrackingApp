@@ -38,10 +38,10 @@ public class DataLoader extends DataConstants {
                 JSONArray suspectsIds = (JSONArray) crimeJSON.get(CRIME_SUSPECT_ID);
                 ArrayList<Suspect> suspects = getSuspects(suspectsIds);
                 JSONArray personOfInterestIds = (JSONArray) crimeJSON.get(CRIME_POI_ID);
-                ArrayList<PersonOfInterest> personsOfInterest = getPersonsOfInterest(personOfInterestIds);
+                ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
                 String officers = (String) crimeJSON.get(CRIME_OFFICERS);
                 crime.add(new Crime(crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnesses,
-                        victims, suspects, personsOfInterest, officers));
+                        victims, suspects, personOfInterest, officers));
             }
 
             return crime;
@@ -124,35 +124,36 @@ public class DataLoader extends DataConstants {
 
     // --------------------------------------- persons of interest
     // ---------------------------------------------------------
-    public static ArrayList<PersonOfInterest> loadPOI() {
-        ArrayList<PersonOfInterest> poi = new ArrayList<PersonOfInterest>();
+    public static ArrayList<PersonOfInterest> loadPersonOfInterestList() {
+        ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
 
         try {
             FileReader reader = new FileReader(PERSONOFINTEREST_FILE_NAME);
-            JSONArray personofinterestJSONList = (JSONArray) new JSONParser().parse(reader);
+            JSONArray personOfInterestJSONList = (JSONArray) new JSONParser().parse(reader);
 
-            for (int i = 0; i < personofinterestJSONList.size(); i++) {
-                JSONObject personofinterestJSON = (JSONObject) personofinterestJSONList.get(i);
-                UUID personOfInterestId = UUID.fromString((String) personofinterestJSON.get(PERSONOFINTEREST_POI_ID));
-                UUID suspectId = UUID.fromString((String) personofinterestJSON.get(PERSONOFINTEREST_SUSPECT_ID));
-                UUID crimeId = UUID.fromString((String) personofinterestJSON.get(PERSONOFINTEREST_CRIME_ID));
-                String firstName = (String) personofinterestJSON.get(PERSONOFINTEREST_FIRST_NAME);
-                String lastName = (String) personofinterestJSON.get(PERSONOFINTEREST_LAST_NAME);
-                int age = ((Long) personofinterestJSON.get(PERSONOFINTEREST_AGE)).intValue();
-                String contactInfo = (String) personofinterestJSON.get(PERSONOFINTEREST_CONTACT_INFO);
+            for (int i = 0; i < personOfInterestJSONList.size(); i++) {
+                JSONObject personOfInterestListJSON = (JSONObject) personOfInterestJSONList.get(i);
+                UUID personOfInterestId = UUID
+                        .fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_POI_ID));
+                UUID suspectId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_SUSPECT_ID));
+                UUID crimeId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_CRIME_ID));
+                String firstName = (String) personOfInterestListJSON.get(PERSONOFINTEREST_FIRST_NAME);
+                String lastName = (String) personOfInterestListJSON.get(PERSONOFINTEREST_LAST_NAME);
+                int age = ((Long) personOfInterestListJSON.get(PERSONOFINTEREST_AGE)).intValue();
+                String contactInfo = (String) personOfInterestListJSON.get(PERSONOFINTEREST_CONTACT_INFO);
                 // BOOLEAN
-                boolean isMinor = getBoolean((String) personofinterestJSON.get(PERSONOFINTEREST_IS_MINOR));
-                String statement = (String) personofinterestJSON.get(PERSONOFINTEREST_STATEMENT);
+                boolean isMinor = getBoolean((String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_MINOR));
+                String statement = (String) personOfInterestListJSON.get(PERSONOFINTEREST_STATEMENT);
                 // BOOLEAN
-                boolean hasAlibi = getBoolean((String) personofinterestJSON.get(PERSONOFINTEREST_HAS_ALIBI));
+                boolean hasAlibi = getBoolean((String) personOfInterestListJSON.get(PERSONOFINTEREST_HAS_ALIBI));
                 // BOOLEAN
-                boolean isSuspect = getBoolean((String) personofinterestJSON.get(PERSONOFINTEREST_IS_SUSPECT));
+                boolean isSuspect = getBoolean((String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_SUSPECT));
 
-                poi.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age,
-                        contactInfo, isMinor, statement, hasAlibi, isSuspect));
+                personOfInterest.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName,
+                        age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
             }
 
-            return poi;
+            return personOfInterest;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -161,12 +162,13 @@ public class DataLoader extends DataConstants {
     }
 
     private static ArrayList<PersonOfInterest> getPersonOfInterest(JSONArray personOfInterestIds) {
-        ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
+        ArrayList<PersonOfInterest> personOfInterestList = new ArrayList<PersonOfInterest>();
         for (int i = 0; i < personOfInterestIds.size(); i++) {
-            PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
-            personOfInterest.add(poi);
+            PersonOfInterest personOfInterestList = PersonOfInterestList.getInstance()
+                    .getPOIById(personOfInterestIds.get(i));
+            personOfInterestList.add(new PersonOfInterest());
         }
-        return personsOfInterest;
+        return personOfInterest;
     }
 
     // ------------------------------- suspects
@@ -233,7 +235,7 @@ public class DataLoader extends DataConstants {
     }
 
     private static ArrayList<Suspect> getSuspects(JSONArray suspectIds) {
-        ArrayList<Suspect> suspects = new ArrayList<Suspect>();
+        ArrayList<Suspect> suspectsList = new ArrayList<Suspect>();
         for (int i = 0; i < suspectIds.size(); i++) {
             Suspect suspect = suspectsList.getInstance().getSuspectById(suspectIds.get(i));
             suspects.add(suspect);
