@@ -7,8 +7,8 @@ import java.util.UUID;
  */
 public class PersonOfInterestList {
 
-	private static PersonOfInterestList personOfInterest;
-	private static ArrayList<PersonOfInterest> personOfInterestList;
+	private static PersonOfInterestList personOfInterest = null;
+	private static ArrayList<PersonOfInterest> personOfInterestList = new ArrayList<PersonOfInterest>();
 
 	/*
 	 * loads in POI library
@@ -41,14 +41,17 @@ public class PersonOfInterestList {
 	public PersonOfInterest searchPOIByName(String Fname, String Lname) {
 		boolean found = false;
 
-		for (PersonOfInterest POI : POIList) {
-			if (POI.getFirstName().equalsIgnoreCase(Fname) && POI.getLastName().equalsIgnoreCase(Lname)) {
+		for (PersonOfInterest personOfInterest : personOfInterestList) {
+			if (personOfInterest.getFirstName().equalsIgnoreCase(Fname)
+					&& personOfInterest.getLastName().equalsIgnoreCase(Lname)) {
 				found = true;
-				return POI;
+				return personOfInterest;
 			}
 		}
 
-		if (!found) {
+		if (!found)
+
+		{
 			System.out.println("The person of interest entered was not found in our database!");
 		}
 		return null;
@@ -100,18 +103,20 @@ public class PersonOfInterestList {
 	 * searches for POI by ID num
 	 */
 	public PersonOfInterest getPOIById(Object id) {
-		for (PersonOfInterest poi : POIList) {
-			if (poi.getPersonId().equals(id)) {
-				return poi;
+		for (PersonOfInterest personOfInterest : personOfInterestList) {
+			if (personOfInterest.getPersonId().equals(id)) {
+				return personOfInterest;
 			}
 		}
 		return null;
 	}
 
-	public void addPersonOfInterest() {
+	public void addPersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName,
+			String lastName, int age, String contactInfo, boolean isMinor, String statement, boolean hasAlibi,
+			boolean isSuspect) {
 		personOfInterestList.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age,
 				contactInfo, isMinor, statement, hasAlibi, isSuspect));
-		DataWriter.savePersonOfInterestList();
+		DataWriter.savePersonOfInterest();
 	}
 
 }

@@ -162,11 +162,10 @@ public class DataLoader extends DataConstants {
     }
 
     private static ArrayList<PersonOfInterest> getPersonOfInterest(JSONArray personOfInterestIds) {
-        ArrayList<PersonOfInterest> personOfInterestList = new ArrayList<PersonOfInterest>();
+        ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
         for (int i = 0; i < personOfInterestIds.size(); i++) {
-            PersonOfInterest personOfInterestList = PersonOfInterestList.getInstance()
-                    .getPOIById(personOfInterestIds.get(i));
-            personOfInterestList.add(new PersonOfInterest());
+            PersonOfInterest poi = PersonOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
+            personOfInterest.add(poi);
         }
         return personOfInterest;
     }
@@ -235,12 +234,12 @@ public class DataLoader extends DataConstants {
     }
 
     private static ArrayList<Suspect> getSuspects(JSONArray suspectIds) {
-        ArrayList<Suspect> suspectsList = new ArrayList<Suspect>();
+        ArrayList<Suspect> suspect = new ArrayList<Suspect>();
         for (int i = 0; i < suspectIds.size(); i++) {
-            Suspect suspect = suspectsList.getInstance().getSuspectById(suspectIds.get(i));
-            suspects.add(suspect);
+            Suspect suspects = suspectsList.getInstance().getSuspectById(suspectIds.get(i));
+            suspect.add(suspects);
         }
-        return suspects;
+        return suspect;
     }
 
     // -------------------------------------- victims
@@ -361,7 +360,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-    private static ArrayList<User> getUser(JSONArray userIds) throws IOException {
+    private static ArrayList<User> getUser(JSONArray userIds) {
         ArrayList<User> users = new ArrayList<User>();
         for (int i = 0; i < userIds.size(); i++) {
             User user = Users.getInstance().getUserById(userIds.get(i));
