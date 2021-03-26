@@ -5,7 +5,7 @@ import java.awt.event.*;
 import java.io.IOException;
 
 import javax.swing.*;
- 
+
 public class MainUI {
     public static void main(String[] args) {
         final JFrame frame = new JFrame("CriminalTrackingApp");
@@ -13,24 +13,23 @@ public class MainUI {
         final JButton btnCreateAccount = new JButton("Create a new account");
         final JButton btnQuit = new JButton("Quit");
 
-        btnLogin.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent e) {
-                    LoginDialog loginDlg = new LoginDialog(frame);
-                    loginDlg.setVisible(true);
-                    // if logon successfully, go to user interface
-                    if(loginDlg.isSucceeded()){
-                        UserOptions userOp = new UserOptions(frame);
-                        userOp.setVisible(true);
-                    }
+        btnLogin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                LoginDialog loginDlg = new LoginDialog(frame);
+                loginDlg.setVisible(true);
+                // if logon successfully, go to user interface
+                if (loginDlg.isSucceeded()) {
+                    UserOptions userOp = new UserOptions(frame);
+                    userOp.setVisible(true);
                 }
-            });
+            }
+        });
         btnCreateAccount.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 CreateAccount account = null;
                 try {
                     account = new CreateAccount();
                 } catch (IOException e1) {
-                    // TODO Auto-generated catch block
                     e1.printStackTrace();
                 }
                 account.setVisible(true);

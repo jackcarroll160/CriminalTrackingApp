@@ -257,8 +257,8 @@ public class DataWriter extends DataConstants {
 
     // PersonOfInterest
     public static void savePersonOfInterest() {
-        personOfInterestList personOfInterest = personOfInterestList.getInstance();
-        ArrayList<PersonOfInterest> personOfInterestList = personOfInterest.getPersonOfInterest();
+        PersonOfInterestList personOfInterest = PersonOfInterestList.getInstance();
+        ArrayList<PersonOfInterest> poiArray = personOfInterest.getPersonOfInterest();
         JSONArray jsonPersonOfInterestList = new JSONArray();
 
         // create json objects and loop through the PersonOfInterest list
