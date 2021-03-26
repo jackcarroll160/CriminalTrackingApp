@@ -47,7 +47,7 @@ public class DataWriter extends DataConstants {
             file.write(jsonCrimeList.toJSONString());
             file.flush();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -85,7 +85,7 @@ public class DataWriter extends DataConstants {
             file.write(jsonCriminalList.toJSONString());
             file.flush();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -145,7 +145,7 @@ public class DataWriter extends DataConstants {
         try (FileWriter file = new FileWriter(SUSPECTS_FILE_NAME)) {
             file.write(jsonSuspect.toJSONString());
             file.flush();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -197,7 +197,7 @@ public class DataWriter extends DataConstants {
         try (FileWriter file = new FileWriter(VICTIMS_FILE_NAME)) {
             file.write(jsonVictim.toJSONString());
             file.flush();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -232,7 +232,7 @@ public class DataWriter extends DataConstants {
         try (FileWriter file = new FileWriter(WITNESSES_FILE_NAME)) {
             file.write(jsonWitness.toJSONString());
             file.flush();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
