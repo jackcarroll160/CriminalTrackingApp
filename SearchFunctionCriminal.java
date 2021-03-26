@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class SearchFunctions extends JFrame {
+public class SearchFunctionCriminal extends JFrame {
 
     private JTextField nameSearch = new JTextField(30);
     private JButton searchButton = new JButton("Search");
@@ -27,11 +27,11 @@ public class SearchFunctions extends JFrame {
     private JTable result = new JTable();
     private JPanel panel = new JPanel();
 
-    public SearchFunctions() {
+    public SearchFunctionCriminal() {
         new DataLoader();
     }
 
-    public SearchFunctions(String title) throws HeadlessException {
+    public SearchFunctionCriminal(String title) throws HeadlessException {
         super(title);
         
         setSize(500, 500);
@@ -166,7 +166,7 @@ public class SearchFunctions extends JFrame {
                         criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
                         JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
                     }
-                   
+                    
                 }
 		    }
         }

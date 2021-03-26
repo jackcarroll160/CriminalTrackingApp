@@ -106,10 +106,10 @@ public class UserButtonOptions extends JDialog {
 
     // set name based on button pressed 
     private void setSearchName(java.awt.event.ActionEvent evt) {
-        SearchFunctions sf;
+        SearchFunctionCriminal sfc;
         if (evt.getSource() == btnCriminalSearch) {
-            sf = new SearchFunctions("Criminal Search");
-            sf.setLocationRelativeTo(null);
+            sfc = new SearchFunctionCriminal("Criminal Search");
+            sfc.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnCrimeSearch) {
             sf = new SearchFunctions("Crime Search");
