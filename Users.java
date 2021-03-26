@@ -35,9 +35,9 @@ public class Users {
      * @param string a String for the User's username
      * @return true/false based on if the username was found in the list or not
      */
-    public static boolean haveUser(String username) {
+    public static boolean haveUser(String username, String password) {
         for (User user : userList) {
-            if (user.getUsername().equals(username)) {
+            if (user.getUsername().equals(username) && password.equals(username)) {
                 return true;
             }
         }
@@ -76,9 +76,9 @@ public class Users {
      * @return true/false depending on if the user is in the database or not
      * @throws IOException
      */
-    public static void addUser(String string, String string2) throws IOException {
+    public static void addUser(String string) throws IOException {
 
-        userList.add(new User(UUID.randomUUID(), string, string2));
+        userList.add(new User(UUID.randomUUID(), contains(string)));
         DataWriter.saveUsers();
 
     }
@@ -91,4 +91,6 @@ public class Users {
         }
         return null;
     }
+
+
 }
