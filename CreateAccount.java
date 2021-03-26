@@ -67,11 +67,10 @@ public class CreateAccount extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 
                 try { 
-                    if (Users.haveUser(tfUsername.getText())) { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
-                        Users userList = new Users();
+                    if (!Users.haveUser(tfUsername.getText())) { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
                         //writer = new DataWriter();
                         //writer.saveUsers();
-                        userList.addUser(tfUsername.getText(), pfPassword.toString());
+                        Users.getInstance().addUser(tfUsername.getText(), pfPassword.toString());
 
                         JOptionPane.showMessageDialog(null, "Account Created Successfully!");
                         dispose();
@@ -84,8 +83,8 @@ public class CreateAccount extends JFrame {
                     }
                 } catch (HeadlessException e1) {
                     e1.printStackTrace();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
             }
         });

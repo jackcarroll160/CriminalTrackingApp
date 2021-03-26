@@ -45,6 +45,14 @@ public class Users {
         return false;
     }
 
+    public static boolean haveUser(String username) {
+        for (User users : userList) {
+            if (users.getUsername().equals(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
     /**
      * Gets a user from the list
      * 
@@ -77,9 +85,9 @@ public class Users {
      * @return true/false depending on if the user is in the database or not
      * @throws IOException
      */
-    public void addUser(UUID userId, String username, String password) {
+    public void addUser( String username, String password) {
 
-        userList.add(new User(userId, username, password));
+        userList.add(new User(username, password));
         DataWriter.saveUsers();
 
     }

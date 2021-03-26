@@ -9,6 +9,13 @@
             "name": "Launch MainUI",
             "request": "launch",
             "mainClass": "MainUI",
+            "projectName": "CriminalTrackingApp_700d6d7f"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainUI",
+            "request": "launch",
+            "mainClass": "MainUI",
             "projectName": "CriminalTrackingApp_f9b2f1b7"
         },
         {
