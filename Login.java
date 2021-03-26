@@ -22,7 +22,7 @@ public class Login extends LoginDialog {
             loginInfo.put(username, password);
             return false;
         } */
-        if (Users.haveUser(username) && Users.haveUser(password)) {
+        if (Users.haveUser(username, User.haveUser(username))) {
             return true;
         }
         return false;
