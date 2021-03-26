@@ -65,7 +65,7 @@ public class Users {
      * 
      * @return an ArrayList of users
      */
-    public static ArrayList<User> getUsersList() {
+    public ArrayList<User> getUsersList() {
         return userList;
     }
 
