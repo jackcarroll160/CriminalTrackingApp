@@ -1,7 +1,7 @@
 [
     {
-        "crimeId":"6e406649-8cce-4774-a4e7-e7ae733e55cf", //1
-        "criminalId":"78c4919f-8f45-4f98-8a5a-29e1a3f14f52", //2
+        "crimeId":"6e406649-8cce-4774-a4e7-e7ae733e55cf", 
+        "criminalId":"78c4919f-8f45-4f98-8a5a-29e1a3f14f52", 
         "description":"attempted murder",
         "dateOfCrime":"07/24/2018",
         "timeOfCrime":"8:40pm",
@@ -12,8 +12,8 @@
         "personOfInterests":[1],
         "officers":["Officer Brown", "Officer Thompson"]
     },{
-        "crimeId":"6c566d78-ef39-46b8-aeeb-7077dcecd70d", //2
-        "criminalId":"fa331a07-5834-4d8d-9df7-2ce23b94a475", //1
+        "crimeId":"6c566d78-ef39-46b8-aeeb-7077dcecd70d", 
+        "criminalId":"fa331a07-5834-4d8d-9df7-2ce23b94a475", 
         "description":"wreckless driving",
         "dateOfCrime":"09/04/2020",
         "timeOfCrime":"12:30pm",

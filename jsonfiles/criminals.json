@@ -1,6 +1,6 @@
 [
     {
-        "criminalId":"fa331a07-5834-4d8d-9df7-2ce23b94a475", //1
+        "criminalId":"fa331a07-5834-4d8d-9df7-2ce23b94a475",
         "firstName":"Denice",
         "lastName":"Knight",
         "hasNickname": false,
@@ -10,7 +10,7 @@
         "ethnicity":"African American",
         "contactInfo":"864-555-4608",
         "linkedCrime:":"Wreckless driving",
-        "crimeId": "6c566d78-ef39-46b8-aeeb-7077dcecd70d", //2
+        "crimeId": "6c566d78-ef39-46b8-aeeb-7077dcecd70d", 
         "birthDate":"October 7, 1995",
         "eyeColor":"Brown",
         "hairDescription":"Medium length hair",
@@ -32,7 +32,7 @@
         "hasVehicle": true,
         "vehicleDescription": "green punchbug"
     },{
-        "criminalId":"78c4919f-8f45-4f98-8a5a-29e1a3f14f52", //2
+        "criminalId":"78c4919f-8f45-4f98-8a5a-29e1a3f14f52", 
         "firstName":"Muffin",
         "lastName":"Man",
         "hasNickname": true,
@@ -42,7 +42,7 @@
         "ethnicity":"White",
         "contactInfo":"803-555-3957",
         "linkedCrime:":"attempted murder",
-        "crimeId": "6e406649-8cce-4774-a4e7-e7ae733e55cf", //1
+        "crimeId": "6e406649-8cce-4774-a4e7-e7ae733e55cf", 
         "birthdate":"May 15, 1972",
         "eyeColor":"Blue",
         "hairDescription":"Short, dark, curly hair",
