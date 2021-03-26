@@ -61,7 +61,7 @@ public class LoginDialog extends JDialog {
 
             public void actionPerformed(ActionEvent e) {
                 try {  
-                    if (!Users.haveUser(pfPassword.toString())) {
+                    if (Users.haveUser(tfUsername.getText())) {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Hi " + getUsername() + "! You have successfully logged in.", "Login", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                         succeeded = true;
