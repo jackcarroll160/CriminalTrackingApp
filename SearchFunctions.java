@@ -167,7 +167,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getLastName().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -177,7 +177,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getNickname().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -187,7 +187,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getAge() == (Integer.parseInt(nameSearch.getText())))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -196,7 +196,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getGender().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -205,7 +205,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getEthnicity().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -214,7 +214,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getContactinfo().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -223,7 +223,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getLinkedCrime().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -232,7 +232,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getEyeColor().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -241,7 +241,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getHairDescription().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -250,7 +250,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getFacialHairDescription().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -259,7 +259,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getHeight().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -268,7 +268,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getWeight().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
@@ -277,7 +277,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getTattooDescription().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
 			    }
 		    }
         }
