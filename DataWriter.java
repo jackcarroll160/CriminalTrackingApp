@@ -270,7 +270,7 @@ public class DataWriter extends DataConstants {
             file.write(jsonPersonOfInterest.toJSONString());
             file.flush();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

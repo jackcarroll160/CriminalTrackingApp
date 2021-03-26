@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainUI",
+            "request": "launch",
+            "mainClass": "MainUI",
+            "projectName": "CriminalTrackingApp_f9b2f1b7"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
