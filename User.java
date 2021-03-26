@@ -9,14 +9,16 @@ import javax.swing.JTextField;
 public class User {
 
     private UUID userId;
-    private String username;
-    private String password;
+    private static HashMap<String, String> loginInfo = new HashMap<>();
     private HashMap<UUID, String> storeUserPwd;
+    private String username;
+    ///private String password;
        
-    public User(UUID userId, String string, String string2){
+    public User(UUID userId, String string){
         this.userId = userId;
         this.username = string;
-        this.password = string2;
+        //this.password = string2;
+        this.loginInfo = new HashMap<>(this.getUsername(), string.contains(string));
         
     }
 
