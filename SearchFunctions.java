@@ -152,12 +152,10 @@ public class SearchFunctions extends JFrame {
 				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
-                        dispose();
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
                     }
-                    else
-                    {
-                        
-                    }
+                   
                 }
 		    }
         }
@@ -168,7 +166,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getLastName().equalsIgnoreCase(nameSearch.getText()))
 			    {
                     int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                   
+                }
 		    }
         }
 
@@ -178,7 +182,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getNickname().equalsIgnoreCase(nameSearch.getText()))
 			    {
                     int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                   
+                }
 		    }
         }
 
@@ -188,7 +198,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getAge() == (Integer.parseInt(nameSearch.getText())))
 			    {
 				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    
+                }
 		    }
         }
          //checking last name
@@ -197,7 +213,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getGender().equalsIgnoreCase(nameSearch.getText()))
 			    {
                     int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                   
+                }
 		    }
         }
          //checking last name
@@ -206,7 +228,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getEthnicity().equalsIgnoreCase(nameSearch.getText()))
 			    {
 				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    
+                }
 		    }
         }
          //checking last name
@@ -215,7 +243,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getContactinfo().equalsIgnoreCase(nameSearch.getText()))
 			    {
                     int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    
+                }
 		    }
         }
          //checking last name
@@ -224,7 +258,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getLinkedCrime().equalsIgnoreCase(nameSearch.getText()))
 			    {
 				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    
+                }
 		    }
         }
          //checking last name
@@ -233,7 +273,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getEyeColor().equalsIgnoreCase(nameSearch.getText()))
 			    {
                     int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    
+                }
 		    }
         }
          //checking last name
@@ -242,7 +288,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getHairDescription().equalsIgnoreCase(nameSearch.getText()))
 			    {
 				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                   
+                }
 		    }
         }
          //checking last name
@@ -251,7 +303,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getFacialHairDescription().equalsIgnoreCase(nameSearch.getText()))
 			    {
 				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                   
+                }
 		    }
         }
          //checking last name
@@ -260,7 +318,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getHeight().equalsIgnoreCase(nameSearch.getText()))
 			    {
 				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                   
+                }
 		    }
         }
          //checking last name
@@ -269,7 +333,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getWeight().equalsIgnoreCase(nameSearch.getText()))
 			    {
                     int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                   
+                }
 		    }
         }
          //checking last name
@@ -278,7 +348,13 @@ public class SearchFunctions extends JFrame {
 			    if(criminal.getTattooDescription().equalsIgnoreCase(nameSearch.getText()))
 			    {
                     int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
-			    }
+                    if (choice == 0)
+                    {
+                        criminal.Download(criminal.toString(),criminal.getFirstName()+criminal.getLastName());
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    
+                }
 		    }
         }
 
