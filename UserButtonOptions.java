@@ -112,20 +112,20 @@ public class UserButtonOptions extends JDialog {
             sfc.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnCrimeSearch) {
-            sf = new SearchFunctions("Crime Search");
-            sf.setLocationRelativeTo(null);
+            sfc = new SearchFunctionCriminal("Crime Search");
+            sfc.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnPOI) {
-            sf = new SearchFunctions("Person of Interest Search");
-            sf.setLocationRelativeTo(null);
+            sfc = new SearchFunctionCriminal("Person of Interest Search");
+            sfc.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnVictim) {
-            sf = new SearchFunctions("Victim Search");
-            sf.setLocationRelativeTo(null);
+            sfc = new SearchFunctionCriminal("Victim Search");
+            sfc.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnWitness) {
-            sf = new SearchFunctions("Witness Search");
-            sf.setLocationRelativeTo(null);
+            sfc = new SearchFunctionCriminal("Witness Search");
+            sfc.setLocationRelativeTo(null);
         }
     } 
 

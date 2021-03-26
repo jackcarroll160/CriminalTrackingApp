@@ -82,24 +82,24 @@ public class UserOptions extends JDialog {
         setLocationRelativeTo(null);
 
     } // END OF USEROPTIONS
-
+    
     // set name based on button pressed 
     private void setSearchName(java.awt.event.ActionEvent evt) {
-        SearchFunctions sf;
+        SearchFunctionCriminal sf;
         /*if (evt.getSource() == btnSearchDatabase) {
             sf = new SearchFunctions("CRIMINAL TEST");
             sf.setLocationRelativeTo(null);
         }*/
         if (evt.getSource() == btnAdd) {
-            sf = new SearchFunctions("TEST HERE Add New Report");
+            sf = new SearchFunctionCriminal("TEST HERE Add New Report");
             sf.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnRemove) {
-            sf = new SearchFunctions("TEST HERE Remove Old Report");
+            sf = new SearchFunctionCriminal("TEST HERE Remove Old Report");
             sf.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnEdit) {
-            sf = new SearchFunctions("TEST HERE Edit Existing Report");
+            sf = new SearchFunctionCriminal("TEST HERE Edit Existing Report");
             sf.setLocationRelativeTo(null);
         }
     } 
