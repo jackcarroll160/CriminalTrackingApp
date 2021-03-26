@@ -22,8 +22,6 @@ public class User {
         this.password = password;
         // this.loginInfo = new HashMap<>(loginInfo.put(string);
 
-    }
-
     public User(UUID userId, String username, String password) {
         this.userId = userId;
         this.username = username;

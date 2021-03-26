@@ -20,7 +20,7 @@ public class Login extends LoginDialog {
          * loginInfo.get(username).equals(password)) { return true; } else {
          * loginInfo.put(username, password); return false; }
          */
-        if (Users.haveUser(username) && Users.haveUser(password)) {
+        //if (Users.haveUser(username) && Users.haveUser(password)) {
         
         // verifying login credentials 
         //loginInfo.put("user1", "password1");
@@ -32,10 +32,11 @@ public class Login extends LoginDialog {
             loginInfo.put(username, password);
             return false;
         } */
-        if (Users.haveUser(username, User.haveUser(username))) {
+        if (Users.haveUser(username)) {
             return true;
         }
         return false;
+    //}
 
     }
 
