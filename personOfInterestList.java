@@ -5,24 +5,24 @@ import java.util.UUID;
 /**
  * Author: Sydney Oklota holds all persons of interest
  */
-public class PersonOfInterestList {
+public class personOfInterestList {
 
-	private static PersonOfInterestList personOfInterest = null;
-	private static ArrayList<PersonOfInterest> personOfInterestList = new ArrayList<PersonOfInterest>();
+	private static personOfInterestList personOfInterest = null;
+	private static ArrayList<PersonOfInterest> PersonOfInterestList = new ArrayList<PersonOfInterest>();
 
 	/*
 	 * loads in POI library
 	 */
-	private PersonOfInterestList() {
-		personOfInterestList = new DataLoader().loadPersonOfInterests();
+	private personOfInterestList() {
+		PersonOfInterestList = new DataLoader().loadPersonOfInterests();
 	}
 
 	/*
 	 * creates new POI
 	 */
-	public static PersonOfInterestList getInstance() {
+	public static personOfInterestList getInstance() {
 		if (personOfInterest == null) {
-			personOfInterest = new PersonOfInterestList();
+			personOfInterest = new personOfInterestList();
 		}
 		return personOfInterest;
 
@@ -32,7 +32,7 @@ public class PersonOfInterestList {
 	 * returns POIList
 	 */
 	public ArrayList<PersonOfInterest> getPersonOfInterestList() {
-		return personOfInterestList;
+		return PersonOfInterestList;
 	}
 
 	/*
@@ -41,7 +41,7 @@ public class PersonOfInterestList {
 	public PersonOfInterest searchPOIByName(String Fname, String Lname) {
 		boolean found = false;
 
-		for (PersonOfInterest personOfInterest : personOfInterestList) {
+		for (PersonOfInterest personOfInterest : PersonOfInterestList) {
 			if (personOfInterest.getFirstName().equalsIgnoreCase(Fname)
 					&& personOfInterest.getLastName().equalsIgnoreCase(Lname)) {
 				found = true;
@@ -103,7 +103,7 @@ public class PersonOfInterestList {
 	 * searches for POI by ID num
 	 */
 	public PersonOfInterest getPOIById(Object id) {
-		for (PersonOfInterest personOfInterest : personOfInterestList) {
+		for (PersonOfInterest personOfInterest : PersonOfInterestList) {
 			if (personOfInterest.getPersonId().equals(id)) {
 				return personOfInterest;
 			}
@@ -114,7 +114,7 @@ public class PersonOfInterestList {
 	public void addPersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName,
 			String lastName, int age, String contactInfo, boolean isMinor, String statement, boolean hasAlibi,
 			boolean isSuspect) {
-		personOfInterestList.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age,
+				PersonOfInterestList.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age,
 				contactInfo, isMinor, statement, hasAlibi, isSuspect));
 		DataWriter.savePersonOfInterest();
 	}

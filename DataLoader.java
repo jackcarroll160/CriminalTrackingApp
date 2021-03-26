@@ -165,7 +165,7 @@ public class DataLoader extends DataConstants {
     private static ArrayList<PersonOfInterest> getPersonOfInterest(JSONArray personOfInterestIds) {
         ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
         for (int i = 0; i < personOfInterestIds.size(); i++) {
-            PersonOfInterest poi = PersonOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
+            PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
             personOfInterest.add(poi);
         }
         return personOfInterest;
