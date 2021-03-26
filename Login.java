@@ -11,7 +11,6 @@ public class Login extends LoginDialog {
     // private static ArrayList<User> temp = ;
 
     public static boolean authenticate(String username, String password) throws IOException {
-<<<<<<< HEAD
 
         // verifying login credentials
         // loginInfo.put("user1", "password1");
@@ -22,7 +21,6 @@ public class Login extends LoginDialog {
          * loginInfo.put(username, password); return false; }
          */
         if (Users.haveUser(username) && Users.haveUser(password)) {
-=======
         
         // verifying login credentials 
         //loginInfo.put("user1", "password1");
@@ -35,7 +33,6 @@ public class Login extends LoginDialog {
             return false;
         } */
         if (Users.haveUser(username, User.haveUser(username))) {
->>>>>>> a0e1ae6e4c7db76fe102a214a799708dc81df4d8
             return true;
         }
         return false;
