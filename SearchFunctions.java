@@ -27,6 +27,10 @@ public class SearchFunctions extends JFrame {
     private JPanel panel = new JPanel();
     private JScrollPane scrollPane = new JScrollPane(result);
 
+    public SearchFunctions() {
+        new DataLoader();
+    }
+
     public SearchFunctions(String title) throws HeadlessException {
         super(title);
 

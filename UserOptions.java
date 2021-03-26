@@ -66,7 +66,7 @@ public class UserOptions extends JDialog {
         });
 
         // Displays Buttons; their layout; window size; location
-        JPanel bp = new JPanel(new GridLayout(5, 1, 10, 5));
+        JPanel bp = new JPanel(new GridLayout(4, 1, 10, 5));
         bp.add(btnSearchDatabase);
         bp.add(btnAdd);
         //bp.add(btnRemove);

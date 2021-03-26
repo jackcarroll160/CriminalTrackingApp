@@ -70,7 +70,7 @@ public class UserButtonOptions extends JDialog {
         });
 
         // Displays Buttons; their layout; window size; location
-        JPanel bp = new JPanel(new GridLayout(5, 1, 10, 5));
+        JPanel bp = new JPanel(new GridLayout(2, 3, 10, 5));
         bp.add(btnCriminalSearch);
         bp.add(btnCrimeSearch);
         bp.add(btnPOI);
@@ -85,7 +85,7 @@ public class UserButtonOptions extends JDialog {
 
         pack();
         setResizable(false);
-        setSize(400, 400); //400x400
+        setSize(600, 400); //400x400 for search screen
         setLocationRelativeTo(null);
 
     } // END OF USEROPTIONS
