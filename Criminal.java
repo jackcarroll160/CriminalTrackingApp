@@ -39,85 +39,69 @@ public class Criminal {
     private boolean hasVehicle;
     private String vehicleDescription;
 
-    public Criminal(String firstName, String lastName, boolean hasNickname, String nickname, int age, String gender,
+    public Criminal(String firstName, String lastName,  String nickname, int age, String gender,
             String ethnicity, String contactInfo, String linkedCrime, String birthDate, String eyeColor,
-            String hairDescription, boolean facialHair, String facialHairDescription, String height, String weight,
-            boolean hasTattoos, boolean hasPiercings, String tattooDescription, String physicalMarksDescription,
-            String physicalBuild, boolean hasWeapon, String weaponDescription, String complexion,
-            String clothingDescription, boolean isGuilty, boolean hasFingerprints, boolean hasVehicle,
+            String hairDescription,  String facialHairDescription, String height, String weight,
+           String tattooDescription, String physicalMarksDescription,
+            String physicalBuild, String weaponDescription, String complexion,
+            String clothingDescription,
             String vehicleDescription) {
 
-        this.criminalID = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
-        this.hasNickname = hasNickname;
         this.nickname = nickname;
         this.age = age;
         this.gender = gender;
         this.ethnicity = ethnicity;
         this.contactInfo = contactInfo;
         this.linkedCrime = linkedCrime;
-        this.crimeId = UUID.randomUUID();
         this.birthDate = birthDate;
         this.eyeColor = eyeColor;
         this.hairDescription = hairDescription;
-        this.facialHair = facialHair;
         this.facialHairDescription = facialHairDescription;
         this.height = height;
         this.weight = weight;
-        this.hasTattoos = hasTattoos;
         this.tattooDescription = tattooDescription;
-        this.hasPiercings = hasPiercings;
         this.physicalMarksDescription = physicalMarksDescription;
         this.physicalBuild = physicalBuild;
-        this.hasWeapon = hasWeapon;
         this.weaponDescription = weaponDescription;
         this.complexion = complexion;
         this.clothingDescription = clothingDescription;
-        this.isGuilty = isGuilty;
-        this.hasFingerprints = hasFingerprints;
-        this.hasVehicle = hasVehicle;
         this.vehicleDescription = vehicleDescription;
     }
 
-    public Criminal(UUID criminalId, String firstName, String lastName, boolean hasNickname, String nickname, int age,
+    public Criminal(UUID criminalId, String firstName, String lastName, String nickname, int age,
             String gender, String ethnicity, String contactInfo, String linkedCrime, UUID crimeId, String birthDate,
-            String eyeColor, String hairDescription, boolean facialHair, String facialHairDescription, String height,
-            String weight, boolean hasTattoos, String tattooDescription, boolean hasPiercings,
-            String physicalMarksDescription, String physicalBuild, boolean hasWeapon, String weaponDescription,
-            String complexion, String clothingDescription, boolean isGuilty, boolean hasFingerprints,
-            boolean hasVehicle, String vehicleDescription) {
+            String eyeColor, String hairDescription, String facialHairDescription, String height,
+            String weight, String tattooDescription,
+            String physicalMarksDescription, String physicalBuild, String weaponDescription,
+            String complexion, String clothingDescription,
+            String vehicleDescription) {
 
+        this.criminalID = UUID.randomUUID();
+        this.crimeId = UUID.randomUUID();
         this.criminalID = criminalId;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.hasNickname = hasNickname;
         this.nickname = nickname;
         this.age = age;
         this.gender = gender;
-        this.ethnicity = ethnicity;
+        this.ethnicity = ethnicity; 
         this.contactInfo = contactInfo;
         this.linkedCrime = linkedCrime;
         this.crimeId = crimeId;
         this.birthDate = birthDate;
         this.eyeColor = eyeColor;
         this.hairDescription = hairDescription;
-        this.facialHair = facialHair;
         this.facialHairDescription = facialHairDescription;
         this.height = height;
         this.weight = weight;
-        this.hasTattoos = hasTattoos;
         this.tattooDescription = tattooDescription;
-        this.hasPiercings = hasPiercings;
         this.physicalMarksDescription = physicalMarksDescription;
         this.physicalBuild = physicalBuild;
-        this.hasWeapon = hasWeapon;
         this.weaponDescription = weaponDescription;
         this.complexion = complexion;
         this.clothingDescription = clothingDescription;
-        this.isGuilty = isGuilty;
-        this.hasFingerprints = hasFingerprints;
-        this.hasVehicle = hasVehicle;
         this.vehicleDescription = vehicleDescription;
     }
 

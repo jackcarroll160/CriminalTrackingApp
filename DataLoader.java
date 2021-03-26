@@ -66,8 +66,6 @@ public class DataLoader extends DataConstants {
                 UUID criminalId = UUID.fromString((String) criminalJSON.get(CRIMINALS_CRIMINAL_ID));
                 String firstName = (String) criminalJSON.get(CRIMINALS_FIRST_NAME);
                 String lastName = (String) criminalJSON.get(CRIMINALS_LAST_NAME);
-                // boolean
-                boolean hasNickname = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_NICKNAME));
                 String nickname = (String) criminalJSON.get(CRIMINALS_NICKNAME);
                 int age = ((Long) criminalJSON.get(CRIMINALS_AGE)).intValue();
                 String gender = (String) criminalJSON.get(CRIMINALS_GENDER);
@@ -78,36 +76,22 @@ public class DataLoader extends DataConstants {
                 String birthDate = (String) criminalJSON.get(CRIMINALS_BIRTH_DATE);
                 String eyeColor = (String) criminalJSON.get(CRIMINALS_EYE_COLOR);
                 String hairDescription = (String) criminalJSON.get(CRIMINALS_HAIR_DESCRIPTION);
-                // boolean
-                boolean facialHair = getBoolean((String) criminalJSON.get(CRIMINALS_FACIAL_HAIR));
                 String facialHairDescription = (String) criminalJSON.get(CRIMINALS_FACIAL_HAIR_DESCRIPTION);
                 String height = (String) criminalJSON.get(CRIMINALS_HEIGHT);
                 String weight = (String) criminalJSON.get(CRIMINALS_WEIGHT);
-                // boolean
-                boolean hasTattoos = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_TATTOOS));
                 String tattooDescription = (String) criminalJSON.get(CRIMINALS_TATTOO_DESCRIPTION);
-                // boolean
-                boolean hasPiercings = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_PIERCINGS));
                 String physicalMarksDescription = (String) criminalJSON.get(CRIMINALS_PHYSICAL_MARKS);
                 String physicalBuild = (String) criminalJSON.get(CRIMINALS_PHYSICAL_BUILD);
-                // BOOLEAN
-                boolean hasWeapon = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_WEAPON));
                 String weaponDescription = (String) criminalJSON.get(CRIMINALS_WEAPON_DESCRIPTION);
                 String complexion = (String) criminalJSON.get(CRIMINALS_COMPLEXION);
                 String clothingDescription = (String) criminalJSON.get(CRIMINALS_CLOTHING_DESCRIPTION);
-                // boolean
-                boolean isGuilty = getBoolean((String) criminalJSON.get(CRIMINALS_IS_GUILTY));
-                // boolean
-                boolean hasFingerprints = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_FINGERPRINTS));
-                // BOOLEAN
-                boolean hasVehicle = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_VEHICLE));
                 String vehicleDescription = (String) criminalJSON.get(CRIMINALS_VEHICLE_DESCRIPTION);
 
-                criminal.add(new Criminal(firstName, lastName, hasNickname, nickname, age, gender,
-                        ethnicity, contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, facialHair,
-                        facialHairDescription, height, weight, hasTattoos, hasPiercings, tattooDescription,
-                        physicalMarksDescription, physicalBuild, hasWeapon, weaponDescription, complexion, clothingDescription,
-                        isGuilty, hasFingerprints, hasVehicle, vehicleDescription));
+                criminal.add(new Criminal(criminalId,firstName, lastName, nickname, age, gender,
+                        ethnicity, contactInfo, linkedCrime, crimeId, birthDate, eyeColor, hairDescription,
+                        facialHairDescription, height, weight, tattooDescription,
+                        physicalMarksDescription, physicalBuild, weaponDescription, complexion, clothingDescription,
+                        vehicleDescription));
             }
 
             return criminal;
@@ -120,7 +104,10 @@ public class DataLoader extends DataConstants {
     }
 
     private static boolean getBoolean(String item) {
-        return item.equals("1");
+        if(item.equalsIgnoreCase("false"))
+            return false;
+        else
+            return true;
     }
 
     // --------------------------------------- persons of interest
