@@ -76,6 +76,7 @@ public class DataLoader extends DataConstants {
                 String birthDate = (String) criminalJSON.get(CRIMINALS_BIRTH_DATE);
                 String eyeColor = (String) criminalJSON.get(CRIMINALS_EYE_COLOR);
                 String hairDescription = (String) criminalJSON.get(CRIMINALS_HAIR_DESCRIPTION);
+                String hairColor = (String) criminalJSON.get(CRIMINALS_HAIR_COLOR);
                 String facialHairDescription = (String) criminalJSON.get(CRIMINALS_FACIAL_HAIR_DESCRIPTION);
                 String height = (String) criminalJSON.get(CRIMINALS_HEIGHT);
                 String weight = (String) criminalJSON.get(CRIMINALS_WEIGHT);
@@ -88,7 +89,7 @@ public class DataLoader extends DataConstants {
                 String vehicleDescription = (String) criminalJSON.get(CRIMINALS_VEHICLE_DESCRIPTION);
 
                 criminal.add(new Criminal(criminalId,firstName, lastName, nickname, age, gender,
-                        ethnicity, contactInfo, linkedCrime, crimeId, birthDate, eyeColor, hairDescription,
+                        ethnicity, contactInfo, linkedCrime, crimeId, birthDate, eyeColor, hairDescription, hairColor,
                         facialHairDescription, height, weight, tattooDescription,
                         physicalMarksDescription, physicalBuild, weaponDescription, complexion, clothingDescription,
                         vehicleDescription));

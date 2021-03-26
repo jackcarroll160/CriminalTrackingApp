@@ -11,7 +11,7 @@ public class MainUI {
         final JFrame frame = new JFrame("CriminalTrackingApp");
         final JButton btnLogin = new JButton("Login");
         final JButton btnCreateAccount = new JButton("Create a new account");
-        final JButton btnQuit = new JButton("Quit"); 
+        final JButton btnQuit = new JButton("Quit");
 
         btnLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

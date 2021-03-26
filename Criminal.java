@@ -21,6 +21,7 @@ public class Criminal {
     private String birthDate;
     private String eyeColor;
     private String hairDescription;
+    private String hairColor;
     private boolean facialHair;
     private String facialHairDescription;
     private String height;
@@ -46,7 +47,7 @@ public class Criminal {
             String physicalBuild, String weaponDescription, String complexion,
             String clothingDescription,
             String vehicleDescription) {
-
+        
         this.firstName = firstName;
         this.lastName = lastName;
         this.nickname = nickname;
@@ -72,12 +73,12 @@ public class Criminal {
 
     public Criminal(UUID criminalId, String firstName, String lastName, String nickname, int age,
             String gender, String ethnicity, String contactInfo, String linkedCrime, UUID crimeId, String birthDate,
-            String eyeColor, String hairDescription, String facialHairDescription, String height,
+            String eyeColor, String hairDescription,String hairColor, String facialHairDescription, String height,
             String weight, String tattooDescription,
             String physicalMarksDescription, String physicalBuild, String weaponDescription,
             String complexion, String clothingDescription,
             String vehicleDescription) {
-
+        this.hairColor = hairColor;
         this.criminalID = UUID.randomUUID();
         this.crimeId = UUID.randomUUID();
         this.criminalID = criminalId;
@@ -111,6 +112,14 @@ public class Criminal {
 
     public void setCriminalID(UUID criminalID) {
         this.criminalID = criminalID;
+    }
+
+    public String getHairColor() {
+        return hairColor;
+    }
+
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
     }
 
     public String getFirstName() {
@@ -351,6 +360,23 @@ public class Criminal {
 
     public void setVehicleDescription(String vehicleDescription) {
         this.vehicleDescription = vehicleDescription;
+    }
+    public String toString()
+    {
+        return "********* " + firstName +" " + lastName +"'s Report *********\n" + " Criminal Id: " + criminalID +
+        "\n NickName: " + nickname + "\n Age: " + age + "\n Gender: " + gender + "\n Ethnicity: " + ethnicity + "\n Complexion: " + complexion +
+         "\n Contact Information: " + contactInfo +
+        "\n Crime Description: " + linkedCrime + "\n Crime Id: " + crimeId + "\n Birth Date: " + birthDate + "\n Eye Color: " + eyeColor +
+        "\n Hair Desciption: " + hairDescription + "\n Hair Color: "+ hairColor + "\n Facial Hair Description: " + facialHairDescription + "\n Height: " + height +
+        "\n Weight: " + weight + "\n Tattoo Description: " + tattooDescription + "\n Physical Marks: " + physicalMarksDescription +
+        "\n Physical Build: " + physicalBuild + "\n Weapon Description: " + weaponDescription + "\n Clothing Description: " + clothingDescription +
+        "\n Vehicle Description: " + vehicleDescription;
+
+        
+    }
+
+    public void Display() {
+        //Display criminal.toString
     }
 
 }

@@ -26,7 +26,6 @@ public class SearchFunctions extends JFrame {
     private JCheckBox checkBox14 = new JCheckBox("Tattoo Description");
     private JTable result = new JTable();
     private JPanel panel = new JPanel();
-    private JScrollPane scrollPane = new JScrollPane(result);
 
     public SearchFunctions() {
         new DataLoader();
@@ -34,13 +33,13 @@ public class SearchFunctions extends JFrame {
 
     public SearchFunctions(String title) throws HeadlessException {
         super(title);
-
+        
         setSize(500, 500);
         setResizable(false);
         addComponents();
         backButtonFunction();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setTable(); //change this later to set names from JSON
+       // setTable(); //change this later to set names from JSON
         setVisible(true);
     }
 
@@ -62,21 +61,25 @@ public class SearchFunctions extends JFrame {
         panel.add(checkBox12);
         panel.add(checkBox13);
         panel.add(checkBox14);
-        panel.add(scrollPane);
+        panel.setLayout(new FlowLayout());
         add(panel);
     }
-
+/*
     private void setTable() { // Maybe make this a read JSON file method
         
-        Object rowData[][] = {{ "Row1-Column1", "Row1-Column2", "Row1-Column3" }};
+
+        Object rowData[][] = {{ "Row1-Column1"}, {"Row1-Column2"}, {"Row1-Column3" }};
         Object columnNames[] = { "Column One", "Column Two", "Column Three" };
         result = new JTable(rowData, columnNames);
 
-        DefaultTableModel model = new DefaultTableModel(columnNames, 0);
-        model.addRow(rowData);
-        result.setModel(model);
-        result.setVisible(true);
-      /*  try {
+        scrollPane = new JScrollPane(result);
+        //result.setFillsViewportHeight(true);
+        panel.setLayout(new BorderLayout());
+
+        panel.add(scrollPane,BorderLayout.PAGE_END);
+        panel.setSize(550, 200);
+        panel.setVisible(true);
+        try {
             Client cl = Client.create();
             WebResource webResource = cl
                     .resource("http://localhost:8080/rest_server/rest/jersey/dbAccess/getDBVal");
@@ -110,10 +113,10 @@ public class SearchFunctions extends JFrame {
         frame.getContentPane().add(panel);
 
         frame.pack();
-        frame.setVisible(true);*/
+        frame.setVisible(true);
         
     }
-
+*/
     /**
      * Creates a new frame to go "back" to the main page
      * CHANGE BACK BUTTON FOR DIFFERENT FUNCTIONS
@@ -146,8 +149,16 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getFirstName().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
-			    }
+				    int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+                    if (choice == 0)
+                    {
+                        dispose();
+                    }
+                    else
+                    {
+                        
+                    }
+                }
 		    }
         }
 
