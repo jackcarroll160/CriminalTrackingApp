@@ -10,7 +10,7 @@ import javax.swing.border.*;
 public class LoginDialog extends JDialog {
  
     private JTextField tfUsername;
-    private JPasswordField pfPassword;
+    private JTextField pfPassword;
     private JLabel lbUsername;
     private JLabel lbPassword;
     private JButton btnLogin;
@@ -44,7 +44,7 @@ public class LoginDialog extends JDialog {
         cs.gridwidth = 1;
         panel.add(lbPassword, cs);
  
-        pfPassword = new JPasswordField(20);
+        pfPassword = new JTextField(20);
         cs.gridx = 1;
         cs.gridy = 1;
         cs.gridwidth = 2;
@@ -61,12 +61,13 @@ public class LoginDialog extends JDialog {
 
             public void actionPerformed(ActionEvent e) {
                 try {  
-                    if (Users.haveUser(tfUsername.getText())) {
+                    if ((Users.getInstance().haveUser(tfUsername.getText(),pfPassword.getText()))) {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Hi " + getUsername() + "! You have successfully logged in.", "Login", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                         succeeded = true;
                     } 
-                    else if(Login.authenticate(getUsername(), getPassword())) {
+                    else// if(Login.authenticateNewUser(getUsername(), getPassword())) 
+                    {
                         JOptionPane.showMessageDialog(LoginDialog.this, "Invalid username or password\n*Please try again*", "Login", JOptionPane.OK_CANCEL_OPTION);
                         // reset username and password
                         tfUsername.setText("");
@@ -74,8 +75,11 @@ public class LoginDialog extends JDialog {
                         succeeded = false;
  
                     }
-                } catch (HeadlessException | IOException e1) {
+                } catch (HeadlessException e1) {
                     e1.printStackTrace();
+                } catch (Exception e2)
+                {
+                    e2.printStackTrace();
                 }
             }
         });
@@ -99,11 +103,11 @@ public class LoginDialog extends JDialog {
     }
  
     public String getUsername() {
-        return tfUsername.getText().trim();
+        return tfUsername.getText();
     }
  
     public String getPassword() {
-        return new String(pfPassword.getPassword());
+        return pfPassword.getText();
     }
  
     public boolean isSucceeded() {

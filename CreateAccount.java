@@ -12,7 +12,7 @@ public class CreateAccount extends JFrame {
     private JButton btnCreate;
     private JButton btnCancel;
     private JTextField tfUsername;
-    private JPasswordField pfPassword;
+    private JTextField pfPassword;
     private JLabel lblUsername;
     private JLabel lblPassword;
     //private DataWriter writer;
@@ -53,7 +53,7 @@ public class CreateAccount extends JFrame {
         cs.gridwidth = 1;
         createAccountPanel.add(lblPassword, cs);
  
-        pfPassword = new JPasswordField(20);
+        pfPassword = new JTextField(20);
         cs.gridx = 1;
         cs.gridy = 1;
         cs.gridwidth = 2;
@@ -67,10 +67,8 @@ public class CreateAccount extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 
                 try { 
-                    if (!Users.haveUser(tfUsername.getText())) { //Login.authenticateNewUser(tfUsername.getText(), pfPassword.getPassword().toString())
-                        //writer = new DataWriter();
-                        //writer.saveUsers();
-                        Users.getInstance().addUser(tfUsername.getText(), pfPassword.toString());
+                    if (!(Users.getInstance().haveUser(tfUsername.getText()))) {
+                        Users.getInstance().addUser(tfUsername.getText(), pfPassword.getText());
 
                         JOptionPane.showMessageDialog(null, "Account Created Successfully!");
                         dispose();

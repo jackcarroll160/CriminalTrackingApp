@@ -341,12 +341,12 @@ public class DataLoader extends DataConstants {
         ArrayList<User> user = new ArrayList<User>();
 
         try {
-            FileReader reader = new FileReader(VICTIMS_FILE_NAME);
+            FileReader reader = new FileReader(USER_FILE_NAME);
             JSONArray userJSONList = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < userJSONList.size(); i++) {
-                JSONObject userJSON = (JSONObject) userJSONList.get(i);
-                UUID userId = UUID.fromString((String) userJSON.get(USER_USER_ID));
+                JSONObject userJSON = ((JSONObject) userJSONList.get(i));
+                UUID userId = ((UUID) userJSON.get(USER_USER_ID));
                 String username = (String) userJSON.get(USER_USERNAME);
                 String password = (String) userJSON.get(USER_PASSWORD);
 

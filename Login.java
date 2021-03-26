@@ -3,6 +3,9 @@
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.UUID;
+
+import javax.swing.JOptionPane;
+
 import java.util.ArrayList;
 
 public class Login extends LoginDialog {
@@ -32,7 +35,7 @@ public class Login extends LoginDialog {
             loginInfo.put(username, password);
             return false;
         } */
-        if (Users.haveUser(username)) {
+        if (Users.getInstance().haveUser(username)) {
             return true;
         }
         return false;
@@ -40,9 +43,13 @@ public class Login extends LoginDialog {
 
     }
 
-    public static void authenticateNewUser(UUID id, String username, String password) throws IOException {
-        authenticate(username, password);
-        Users.addUser(username, password);
+    public static boolean authenticateNewUser(String username, String password) throws IOException {
+        if(authenticate(username, password))
+        {
+        Users.getInstance().addUser(username, password);
+        return true;
+        }
+        return false;
     }
 
 }

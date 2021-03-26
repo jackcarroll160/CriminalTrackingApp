@@ -12,7 +12,8 @@ public class Users {
     private static ArrayList<User> userList = new ArrayList<User>();
 
     private Users() {
-        userList = new DataLoader().loadUsers();
+        new DataLoader();
+        userList = DataLoader.loadUsers();
     }
 
     /**
@@ -38,7 +39,7 @@ public class Users {
 
     public static boolean haveUser(String username, String password) {
         for (User users : userList) {
-            if (users.getUsername().equals(username) && password.equals(password)) {
+            if (users.getUsername().equals(username) && users.getPassword().equals(password)) {
                 return true;
             }
         }
@@ -46,11 +47,12 @@ public class Users {
     }
 
     public static boolean haveUser(String username) {
-        for (User users : userList) {
-            if (users.getUsername().equals(username)) {
+        for (User user : userList) {
+            if (user.getUsername().equals(username)) {
                 return true;
             }
         }
+
         return false;
     }
     /**
