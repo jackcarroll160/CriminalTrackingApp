@@ -201,11 +201,11 @@ public class Criminal {
         this.linkedCrime = linkedCrime;
     }
 
-    public int getCrimeId() {
+    public UUID getCrimeId() {
         return crimeId;
     }
 
-    public void setCrimeId(int crimeId) {
+    public void setCrimeId(UUID crimeId) {
         this.crimeId = crimeId;
     }
 
