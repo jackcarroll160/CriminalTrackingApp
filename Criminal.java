@@ -47,7 +47,7 @@ public class Criminal {
             String clothingDescription, boolean isGuilty, boolean hasFingerprints, boolean hasVehicle,
             String vehicleDescription) {
 
-        this.criminalId = UUID.randomUUID();
+        this.criminalID = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.hasNickname = hasNickname;
@@ -88,7 +88,7 @@ public class Criminal {
             String complexion, String clothingDescription, boolean isGuilty, boolean hasFingerprints,
             boolean hasVehicle, String vehicleDescription) {
 
-        this.criminalId = criminalId;
+        this.criminalID = criminalId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.hasNickname = hasNickname;
@@ -121,11 +121,11 @@ public class Criminal {
         this.vehicleDescription = vehicleDescription;
     }
 
-    public int getCriminalID() {
+    public UUID getCriminalID() {
         return criminalID;
     }
 
-    public void setCriminalID(int criminalID) {
+    public void setCriminalID(UUID criminalID) {
         this.criminalID = criminalID;
     }
 
@@ -186,11 +186,11 @@ public class Criminal {
     }
 
     public String getContactinfo() {
-        return contactinfo;
+        return contactInfo;
     }
 
     public void setContactinfo(String contactinfo) {
-        this.contactinfo = contactinfo;
+        this.contactInfo = contactinfo;
     }
 
     public String getLinkedCrime() {
@@ -201,11 +201,11 @@ public class Criminal {
         this.linkedCrime = linkedCrime;
     }
 
-    public int getCrimeId() {
+    public UUID getCrimeId() {
         return crimeId;
     }
 
-    public void setCrimeId(int crimeId) {
+    public void setCrimeId(UUID crimeId) {
         this.crimeId = crimeId;
     }
 
