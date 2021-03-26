@@ -132,8 +132,7 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getFirstName().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    boolean found = true;
-				    dispose();
+				    JOptionPane.showMessageDialog(null, "Worked!", "Worked!", JOptionPane.OK_OPTION);
 			    }
 		    }
         }
@@ -143,7 +142,6 @@ public class SearchFunctions extends JFrame {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getLastName().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    boolean found = true;
 				    dispose();
 			    }
 		    }

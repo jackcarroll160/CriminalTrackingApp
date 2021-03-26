@@ -72,7 +72,7 @@ public class DataWriter extends DataConstants {
     // criminals
     public static void saveCriminals() {
         CriminalList criminal = CriminalList.getInstance();
-        ArrayList<Criminal> criminalList = criminal.getCriminals();
+        ArrayList<Criminal> criminalList = criminal.getCriminalList();
         JSONArray jsonCriminalList = new JSONArray();
 
         // create json objects and loop through the criminal list
