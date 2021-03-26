@@ -6,10 +6,10 @@
         "dateOfCrime":"07/24/2018",
         "timeOfCrime":"8:40pm",
         "caseOpen":false,
-        "witnesses": [1],
-        "victims": [1],
-        "suspects":[1],
-        "personOfInterests":[1],
+        "witnesses": ["4d1a7ab4-21ad-472f-84e8-3b4128f55c9b"],
+        "victims": ["17c1f447-8ebc-44d2-a75b-86bb4975406b"],
+        "suspects":["16b30468-f099-41e7-82c6-608a6424c1a2"],
+        "personOfInterests":["a13277c4-5380-4ba8-bf01-72b1c535181a"],
         "officers":["Officer Brown", "Officer Thompson"]
     },{
         "crimeId":"6c566d78-ef39-46b8-aeeb-7077dcecd70d", 

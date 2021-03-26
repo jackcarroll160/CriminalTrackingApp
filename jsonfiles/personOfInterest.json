@@ -1,8 +1,8 @@
 [
     {
-        "personOfInterestId": 1,
-        "suspectId":1,
-        "crimeId":1,
+        "personOfInterestId": "a13277c4-5380-4ba8-bf01-72b1c535181a",
+        "suspectId":"16b30468-f099-41e7-82c6-608a6424c1a2",
+        "crimeId":"6e406649-8cce-4774-a4e7-e7ae733e55cf",
         "firstName":"Bagel",
         "lastName":"Boy",
         "age": 30,
