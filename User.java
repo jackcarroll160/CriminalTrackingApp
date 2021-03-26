@@ -2,11 +2,11 @@
 /**
  * Author: Sydney Oklota
  */
-import java.io.IOException;
 import java.util.*;
 
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+/**
+ * import javax.swing.JPasswordField; import javax.swing.JTextField;
+ */
 
 public class User {
 
@@ -21,6 +21,7 @@ public class User {
         this.username = username;
         this.password = password;
         // this.loginInfo = new HashMap<>(loginInfo.put(string);
+    }
 
     public User(UUID userId, String username, String password) {
         this.userId = userId;
@@ -57,21 +58,21 @@ public class User {
      * 
      * @param userID   key, user ID number
      * @param password value, user password
-     */
-    public void registerUser(UUID userID, String password) {
-
-        storeUserPwd.put(userID, password);
-
-    }
-
-    /**
-     * removes user from hashmap of stored user passwords
      * 
-     * @param userID key that determines which user is being removed
+     *                 public void registerUser(UUID userID, String password) {
+     * 
+     *                 storeUserPwd.put(userID, password);
+     * 
+     *                 }
+     * 
+     *                 /** removes user from hashmap of stored user passwords
+     * 
+     * @param userID   key that determines which user is being removed
+     * 
+     *                 public void removeUser(UUID userID) {
+     * 
+     *                 storeUserPwd.remove(userID);
+     * 
+     *                 }
      */
-    public void removeUser(UUID userID) {
-
-        storeUserPwd.remove(userID);
-
-    }
 }

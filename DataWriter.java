@@ -1,5 +1,4 @@
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -7,7 +6,7 @@ import org.json.simple.JSONObject;
 public class DataWriter extends DataConstants {
 
     // user
-    public static void saveUsers() throws IOException {
+    public static void saveUsers() {
         Users users = Users.getInstance();
         ArrayList<User> userList = users.getUsersList();
         JSONArray jsonUsers = new JSONArray();

@@ -35,18 +35,10 @@ public class Users {
      * @param string a String for the User's username
      * @return true/false based on if the username was found in the list or not
      */
-<<<<<<< HEAD
+
     public static boolean haveUser(String username, String password) {
         for (User users : userList) {
-            if (users.getUsername().equals(username) && password.equals(username)) {
-=======
-    public static boolean haveUser(String username) {
-
-        //userLogin.getKey
-
-        for (User user : userList) {
-            if (user.getUsername().equals(username)) { 
->>>>>>> 3f5dd658d1c454b940e83e71a82838f8588ced34
+            if (users.getUsername().equals(username) && password.equals(password)) {
                 return true;
             }
         }
@@ -85,15 +77,9 @@ public class Users {
      * @return true/false depending on if the user is in the database or not
      * @throws IOException
      */
-<<<<<<< HEAD
     public void addUser(UUID userId, String username, String password) {
 
         userList.add(new User(userId, username, password));
-=======
-    public static void addUser(String username, String password) throws IOException {
-
-        userList.add(new User(UUID.randomUUID(), username, password));
->>>>>>> 3f5dd658d1c454b940e83e71a82838f8588ced34
         DataWriter.saveUsers();
 
     }
