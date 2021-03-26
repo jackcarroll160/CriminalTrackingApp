@@ -103,10 +103,11 @@ public class DataLoader extends DataConstants {
                 boolean hasVehicle = getBoolean((String) criminalJSON.get(CRIMINALS_HAS_VEHICLE));
                 String vehicleDescription = (String) criminalJSON.get(CRIMINALS_VEHICLE_DESCRIPTION);
 
-                criminal.add(new Criminal(criminalId, firstName, lastName, nickname, age, gender, ethnicity,
-                        contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, facialHairDescription, height,
-                        weight, tattooDescription, physicalMarksDescription, physicalBuild, weaponDescription,
-                        complexion, clothingDescription, vehicleDescription));
+                criminal.add(new Criminal(criminalId, firstName, lastName, hasNickname, nickname, age, gender,
+                        ethnicity, contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, facialHair,
+                        facialHairDescription, height, weight, hasTattoos, hasPiercings, tattooDescription,
+                        physicalMarksDescription, physicalBuild, weaponDescription, complexion, clothingDescription,
+                        isGuilty, hasFingerprints, hasVehicle, vehicleDescription));
             }
 
             return criminal;
