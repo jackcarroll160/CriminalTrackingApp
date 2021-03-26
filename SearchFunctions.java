@@ -142,13 +142,17 @@ public class SearchFunctions extends JFrame {
         }
 
         //checking last name
-        if (checkBox2.isSelected()) {
+        else if (checkBox2.isSelected()) {
             for (Criminal criminal : CriminalList.getInstance().getCriminalList()) {
 			    if(criminal.getLastName().equalsIgnoreCase(nameSearch.getText()))
 			    {
 				    dispose();
 			    }
 		    }
+        }
+
+        else {
+            JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
         }
     }
     
