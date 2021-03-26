@@ -3,6 +3,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class SearchFunctions extends JFrame {
 
@@ -39,7 +40,7 @@ public class SearchFunctions extends JFrame {
         addComponents();
         backButtonFunction();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //setTable(); //change this later to set names from JSON
+        setTable(); //change this later to set names from JSON
         setVisible(true);
     }
 
@@ -61,12 +62,21 @@ public class SearchFunctions extends JFrame {
         panel.add(checkBox12);
         panel.add(checkBox13);
         panel.add(checkBox14);
+        panel.add(scrollPane);
         add(panel);
     }
 
-    /*private void setTable() { // Maybe make this a read JSON file method
+    private void setTable() { // Maybe make this a read JSON file method
         
-        try {
+        Object rowData[][] = {{ "Row1-Column1", "Row1-Column2", "Row1-Column3" }};
+        Object columnNames[] = { "Column One", "Column Two", "Column Three" };
+        result = new JTable(rowData, columnNames);
+
+        DefaultTableModel model = new DefaultTableModel(columnNames, 0);
+        model.addRow(rowData);
+        result.setModel(model);
+        result.setVisible(true);
+      /*  try {
             Client cl = Client.create();
             WebResource webResource = cl
                     .resource("http://localhost:8080/rest_server/rest/jersey/dbAccess/getDBVal");
@@ -100,9 +110,9 @@ public class SearchFunctions extends JFrame {
         frame.getContentPane().add(panel);
 
         frame.pack();
-        frame.setVisible(true);
+        frame.setVisible(true);*/
         
-    }*/
+    }
 
     /**
      * Creates a new frame to go "back" to the main page
@@ -114,7 +124,7 @@ public class SearchFunctions extends JFrame {
         searchButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                searchCriminalJSON(); //remove later
+                searchCriminalJSON();
             }
         });
 
