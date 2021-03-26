@@ -11,39 +11,47 @@ import javax.swing.JTextField;
 public class User {
 
     private UUID userId;
-    private static HashMap<String, String> loginInfo = new HashMap<>();
-    private HashMap<UUID, String> storeUserPwd;
+    // private static HashMap<String, String> loginInfo = new HashMap<>();
+    // private HashMap<UUID, String> storeUserPwd;
     private String username;
-    /// private String password;
+    private String password;
 
-    public User(UUID userId, String string) {
+    public User(String username, String password) {
+        this.userId = UUID.randomUUID();
+        this.username = username;
+        this.password = password;
+        // this.loginInfo = new HashMap<>(loginInfo.put(string);
+
+    }
+
+    public User(UUID userId, String username, String password) {
         this.userId = userId;
-        this.username = string; 
-        this.password = string2;
-        this.loginInfo = new HashMap<>(loginInfo.put(string);
-
+        this.username = username;
+        this.password = password;
     }
-
-    public String getUsername() {
-        return this.username;
-    }
-
-    /*
-     * public String getPassword(){ return this.password; }
-     * 
-     * public void setPassword(String password){ this.password = password; }
-     */
 
     public UUID getUserId() {
-        return this.userId;
+        return userId;
     }
 
     public void setUserId(UUID userId) {
         this.userId = userId;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**

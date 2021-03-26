@@ -259,16 +259,16 @@ public class DataWriter extends DataConstants {
     public static void savePersonOfInterest() {
         PersonOfInterestList personOfInterest = PersonOfInterestList.getInstance();
         ArrayList<PersonOfInterest> poiArray = personOfInterest.getPersonOfInterest();
-        JSONArray jsonPersonOfInterestList = new JSONArray();
+        JSONArray jsonPersonOfInterest = new JSONArray();
 
         // create json objects and loop through the PersonOfInterest list
-        for (int i = 0; i < personOfInterestList.size(); i++) {
-            jsonPersonOfInterestList.add(getPersonOfInterestJSON(personOfInterestList.get(i)));
+        for (int i = 0; i < poiArray.size(); i++) {
+            jsonPersonOfInterest.add(getPersonOfInterestJSON(poiArray.get(i)));
         }
         // write the PersonOfInterest json file
         try (FileWriter file = new FileWriter(PERSONOFINTEREST_FILE_NAME)) {
 
-            file.write(jsonPersonOfInterestList.toJSONString());
+            file.write(jsonPersonOfInterest.toJSONString());
             file.flush();
 
         } catch (IOException e) {

@@ -14,7 +14,7 @@ public class PersonOfInterestList {
 	 * loads in POI library
 	 */
 	private PersonOfInterestList() {
-		personOfInterestList = DataLoader.loadPersonOfInterestList();
+		personOfInterestList = new DataLoader().loadPersonOfInterests();
 	}
 
 	/*

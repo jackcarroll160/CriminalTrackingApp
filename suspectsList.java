@@ -14,7 +14,7 @@ public class suspectsList {
 	 * loads in suspects library
 	 */
 	private suspectsList() {
-		suspectsList = new DataLoader().loadSuspect();
+		suspectsList = new DataLoader().loadSuspects();
 	}
 
 	/*

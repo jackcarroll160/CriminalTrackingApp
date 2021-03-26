@@ -1,4 +1,4 @@
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -11,8 +11,8 @@ public class Users {
     private static Users users = null;
     private static ArrayList<User> userList = new ArrayList<User>();
 
-    Users() {
-        userList = DataLoader.loadUsers();
+    private Users() {
+        userList = new DataLoader().loadUsers();
     }
 
     /**
@@ -36,8 +36,8 @@ public class Users {
      * @return true/false based on if the username was found in the list or not
      */
     public static boolean haveUser(String username, String password) {
-        for (User user : userList) {
-            if (user.getUsername().equals(username) && password.equals(username)) {
+        for (User users : userList) {
+            if (users.getUsername().equals(username) && password.equals(username)) {
                 return true;
             }
         }
@@ -76,9 +76,9 @@ public class Users {
      * @return true/false depending on if the user is in the database or not
      * @throws IOException
      */
-    public static void addUser(String string) throws IOException {
+    public void addUser(UUID userId, String username, String password) {
 
-        userList.add(new User(UUID.randomUUID(), contains(string)));
+        userList.add(new User(userId, username, password));
         DataWriter.saveUsers();
 
     }
@@ -91,6 +91,5 @@ public class Users {
         }
         return null;
     }
-
 
 }

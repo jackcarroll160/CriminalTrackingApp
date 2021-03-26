@@ -124,7 +124,7 @@ public class DataLoader extends DataConstants {
 
     // --------------------------------------- persons of interest
     // ---------------------------------------------------------
-    public static ArrayList<PersonOfInterest> loadPersonOfInterestList() {
+    public static ArrayList<PersonOfInterest> loadPersonOfInterests() {
         ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
 
         try {
@@ -172,7 +172,7 @@ public class DataLoader extends DataConstants {
 
     // ------------------------------- suspects
     // --------------------------------------------------
-    public static ArrayList<Suspect> loadSuspect() {
+    public static ArrayList<Suspect> loadSuspects() {
         ArrayList<Suspect> suspect = new ArrayList<Suspect>();
 
         try {
