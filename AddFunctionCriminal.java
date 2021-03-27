@@ -134,6 +134,11 @@ public class AddFunctionCriminal extends JFrame {
                         if(choice == 0)
                         {
                             CriminalList.getInstance().addCriminal(criminal);
+                            dispose();
+                            UserOptions userOp = new UserOptions(frame);
+                            setLocationRelativeTo(null);
+                            userOp.setVisible(true);
+
                         }
                     }
                      
@@ -149,7 +154,7 @@ public class AddFunctionCriminal extends JFrame {
 
             public void actionPerformed(ActionEvent e) {                
                 dispose();
-                UserButtonOptions userOp = new UserButtonOptions(frame); //change this when ready
+                UserOptions userOp = new UserOptions(frame); //change this when ready
                 setLocationRelativeTo(null);
                 userOp.setVisible(true);
             }
