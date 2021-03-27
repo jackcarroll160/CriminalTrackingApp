@@ -250,11 +250,11 @@ public class DataLoader extends DataConstants {
                 int age = ((Long) victimJSON.get(VICTIMS_AGE)).intValue();
                 String contactInfo = (String) victimJSON.get(VICTIMS_CONTACT_INFO);
                 // boolean
-                boolean isMinor = getBoolean((String) victimJSON.get(VICTIMS_IS_MINOR));
+                String isMinor = (String) victimJSON.get(VICTIMS_IS_MINOR);
                 // BOOLEAN
-                boolean isAlive = getBoolean((String) victimJSON.get(VICTIMS_IS_ALIVE));
+                String isAlive = (String) victimJSON.get(VICTIMS_IS_ALIVE);
                 // BOOLEAN
-                boolean isInjured = getBoolean((String) victimJSON.get(VICTIMS_IS_INJURED));
+                String isInjured = (String) victimJSON.get(VICTIMS_IS_INJURED);
                 String statement = (String) victimJSON.get(VICTIMS_STATEMENT);
 
                 victim.add(new Victim(victimId, crimeId, firstName, lastName, age, contactInfo, isMinor, isAlive,

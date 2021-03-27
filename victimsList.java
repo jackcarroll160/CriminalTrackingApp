@@ -33,7 +33,7 @@ public class victimsList {
 	/*
 	 * returns victimList
 	 */
-	public ArrayList<Victim> getVictims()
+	public ArrayList<Victim> getVictimList()
 	{
 		return victimList;
 	}
@@ -79,6 +79,7 @@ public class victimsList {
 	/*
 	 *allows user to edit victim information 
 	 */
+	/*
 	public void editVictimsByName(String Fname, String Lname) 
 	{
 		Victim victimEdit = searchVictimsByName(Fname, Lname);
@@ -122,7 +123,7 @@ public class victimsList {
 		if(userInput == 5)
 		{
 			System.out.println("Enter the New Is Minor Value (True or False): " );
-			boolean isMin = keyboard.nextBoolean();
+			String isMin = keyboard.nextBoolean();
 			victimEdit.setIsMinor(isMin);
 		}
 		if(userInput == 6)
@@ -150,7 +151,7 @@ public class victimsList {
 		
 		
 	}
-
+*/
     /**
      * saves victims to library
      */

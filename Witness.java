@@ -15,7 +15,7 @@ public class Witness extends Person{
 	private String typeOfWitness;
 	
 
-	public Witness(String firstName, String lastName, int age, String contactInfo, boolean isMinor, String proof,
+	public Witness(String firstName, String lastName, int age, String contactInfo, String isMinor, String proof,
             String testimony, String location, String typeOfWitness) {
 			
 			super(firstName,lastName,age,contactInfo,isMinor);

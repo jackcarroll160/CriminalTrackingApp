@@ -57,6 +57,7 @@ public class suspectsList {
 	/*
 	 * Allows users to choose which attribute they wish to edit
 	 */
+	/*
 	public void editSuspectsByName(String Fname, String Lname) {
 		Suspect suspectEdit = searchSuspectsByName(Fname, Lname);
 		Scanner keyboard = new Scanner(System.in);
@@ -227,7 +228,7 @@ public class suspectsList {
 		}
 
 	}
-
+*/
 	/**
 	 * saves suspect in suspect library
 	 */

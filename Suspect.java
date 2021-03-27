@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Suspect extends Person{
     
     public Suspect(UUID suspectId, UUID crimeId, String firstName, String lastName, int age, String gender,
-            String ethnicity, String contactInfo, boolean isMinor, String statement, boolean hasAlibi,
+            String ethnicity, String contactInfo, String isMinor, String statement, boolean hasAlibi,
             String birthDate, String eyeColor, String hairDescription, boolean facialHair,
             String facialHairDescription, String height, String weight, boolean hasTattoos,
             String tattooDescription, boolean hasPiercings, String physicalMarksDescription, String physicalBuild,
