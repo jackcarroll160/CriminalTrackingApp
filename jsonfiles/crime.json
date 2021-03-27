@@ -11,17 +11,5 @@
         "victimId": ["17c1f447-8ebc-44d2-a75b-86bb4975406b"],
         "suspectId":["16b30468-f099-41e7-82c6-608a6424c1a2"],
         "personOfInterestId":["a13277c4-5380-4ba8-bf01-72b1c535181a"]
-    },{
-        "crimeNum": 2,
-        "crimeId":"6c566d78-ef39-46b8-aeeb-7077dcecd70d", 
-        "criminalId":"fa331a07-5834-4d8d-9df7-2ce23b94a475", 
-        "description":"wreckless driving",
-        "dateOfCrime":"09/04/2020",
-        "timeOfCrime":"12:30pm",
-        "caseOpen":"Yes",
-        "witnesses": [2],
-        "victims": [2],
-        "suspects":[2],
-        "personOfInterests":[2]
     }
 ]

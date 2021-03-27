@@ -288,18 +288,37 @@ public class Crime {
 
     public String toString()
     {
-        return "********* " + crimeNum +"Report *********\n" + " Crime ID: " + crimeId +
+        return "********* Crime#" + crimeNum +" Report *********\n" + " Crime ID: " + crimeId +
         "\n Criminal ID: " + criminalId + "\n Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
-         "\n Case open: " + caseOpen + "\n Witnesses: " + witnesses + "\n Victims: " + victims + "\n Suspects: " + suspects + 
-         "\n Person(s) of Interest: " + personOfInterest ;
+         "\n Case open: " + caseOpen + "\n Witnesses Ids: " + witnesses + "\n Victims Ids: " + victims + "\n Suspects Ids: " + suspects + 
+         "\n Person(s) of Interest Ids: " + personOfInterest ;
 
         
     }
 
-    public void Download(String data, String name) {
+
+    public void Download(String data, ArrayList witnessId, ArrayList victimId, ArrayList suspectId,
+    ArrayList personOfInterestId, String name) {
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+ name + ".txt"));
             writer.write(data);
+            for(int i = 0; i < witnessId.size(); i++)
+            {
+             
+                writer.write(witnessList.getInstance().getWitnessById(witnessId.get(i)).toString() );
+            }
+            for(Object victim : victimId)
+            {
+                writer.write(victimsList.getInstance().getVictimById(victim).toString() );
+            }
+            for(Object suspect :suspectId)
+            {
+                writer.write(suspectsList.getInstance().getSuspectById(suspect).toString() );
+            }
+            for(Object poi: personOfInterestId)
+            {
+                writer.write(personOfInterestList.getInstance().getPOIById(poi).toString() );
+            }
             writer.close();
     } catch (IOException e)
         {

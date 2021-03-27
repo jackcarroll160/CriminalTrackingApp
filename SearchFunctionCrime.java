@@ -63,7 +63,6 @@ public class SearchFunctionCrime extends JFrame {
 
     private void searchCrimeJSON() {
 
-      
         //checking crime id
         if (checkBox.isSelected()) {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
@@ -72,7 +71,7 @@ public class SearchFunctionCrime extends JFrame {
                     int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
-                        crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
+                        crime.Download(crime.toString(),crime.getWitnesses(), crime.getVictims(), crime.getSuspects(), crime.getPersonOfInterest(),crime.getCrimeNum() + "CrimeReport");
                         JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
