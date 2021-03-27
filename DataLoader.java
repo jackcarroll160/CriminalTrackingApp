@@ -180,32 +180,32 @@ public class DataLoader extends DataConstants {
                 String ethnicity = (String) suspectJSON.get(SUSPECTS_ETHNICITY);
                 String contactInfo = (String) suspectJSON.get(SUSPECTS_CONTACT_INFO);
                 // BOOLEAN
-                boolean isMinor = getBoolean((String) suspectJSON.get(SUSPECTS_IS_MINOR));
+                String isMinor = (String) suspectJSON.get(SUSPECTS_IS_MINOR);
                 String statement = (String) suspectJSON.get(SUSPECTS_STATEMENT);
                 // BOOLEAN
-                boolean hasAlibi = getBoolean((String) suspectJSON.get(SUSPECTS_HAS_ALIBI));
+                String hasAlibi = (String) suspectJSON.get(SUSPECTS_HAS_ALIBI);
                 String birthDate = (String) suspectJSON.get(SUSPECTS_BIRTH_DATE);
                 String eyeColor = (String) suspectJSON.get(SUSPECTS_EYE_COLOR);
                 String hairDescription = (String) suspectJSON.get(SUSPECTS_HAIR_DESCRIPTION);
                 // boolean
-                boolean facialHair = getBoolean((String) suspectJSON.get(SUSPECTS_FACIAL_HAIR));
+                String facialHair = (String) suspectJSON.get(SUSPECTS_FACIAL_HAIR);
                 String facialHairDescription = (String) suspectJSON.get(SUSPECTS_FACIAL_HAIR_DESCRIPTION);
                 String height = (String) suspectJSON.get(SUSPECTS_HEIGHT);
                 String weight = (String) suspectJSON.get(SUSPECTS_WEIGHT);
                 // BOOLEAN
-                boolean hasTattoos = getBoolean((String) suspectJSON.get(SUSPECTS_HAS_TATOOS));
+                String hasTattoos = (String) suspectJSON.get(SUSPECTS_HAS_TATOOS);
                 String tattooDescription = (String) suspectJSON.get(SUSPECTS_TATTOO_DESCRIPTION);
                 // BOOLEAN
-                boolean hasPiercings = getBoolean((String) suspectJSON.get(SUSPECTS_HAS_PIERCINGS));
+                String hasPiercings = (String) suspectJSON.get(SUSPECTS_HAS_PIERCINGS);
                 String physicalMarksDescription = (String) suspectJSON.get(SUSPECTS_PHYSICAL_MARKS);
                 String physicalBuild = (String) suspectJSON.get(SUSPECTS_PHYSICAL_BUILD);
                 // BOOLEAN
-                boolean hasWeapon = getBoolean((String) suspectJSON.get(SUSPECTS_HAS_WEAPON));
+                String hasWeapon = (String) suspectJSON.get(SUSPECTS_HAS_WEAPON);
                 String weaponDescription = (String) suspectJSON.get(SUSPECTS_WEAPON_DESCRIPTION);
                 String complexion = (String) suspectJSON.get(SUSPECTS_COMPLEXION);
                 String clothingDescription = (String) suspectJSON.get(SUSPECTS_CLOTHING_DESCRIPTION);
                 // boolean
-                boolean hasVehicle = getBoolean((String) suspectJSON.get(SUSPECTS_HAS_VEHICLE));
+                String hasVehicle = (String) suspectJSON.get(SUSPECTS_HAS_VEHICLE);
                 String vehicleDescription = (String) suspectJSON.get(SUSPECTS_VEHICLE_DESCRIPTION);
 
                 suspect.add(new Suspect(suspectId, crimeId, firstName, lastName, age, gender, ethnicity, contactInfo,

@@ -31,7 +31,7 @@ public class suspectsList {
 	/*
 	 * returns suspectList
 	 */
-	public ArrayList<Suspect> getSuspect() {
+	public ArrayList<Suspect> getSuspectList() {
 		return suspectsList;
 	}
 

@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.UUID;
 
 /**
@@ -7,20 +10,20 @@ import java.util.UUID;
 public class Suspect extends Person{
     
     public Suspect(UUID suspectId, UUID crimeId, String firstName, String lastName, int age, String gender,
-            String ethnicity, String contactInfo, String isMinor, String statement, boolean hasAlibi,
-            String birthDate, String eyeColor, String hairDescription, boolean facialHair,
-            String facialHairDescription, String height, String weight, boolean hasTattoos,
-            String tattooDescription, boolean hasPiercings, String physicalMarksDescription, String physicalBuild,
-            boolean hasWeapon, String weaponDescription, String complexion, String clothingDescription,
-            boolean hasVehicle, String vehicleDescription) 
+            String ethnicity, String contactInfo, String isMinor, String statement, String hasAlibi2,
+            String birthDate, String eyeColor, String hairDescription, String facialHair,
+            String facialHairDescription, String height, String weight, String hasTattoos2,
+            String tattooDescription, String hasPiercings2, String physicalMarksDescription, String physicalBuild,
+            String hasWeapon2, String weaponDescription, String complexion, String clothingDescription,
+            String hasVehicle2, String vehicleDescription) 
             {
                super(firstName,lastName,age,contactInfo,isMinor);
-               this.suspectId = suspectId;
-               this.crimeId= crimeId;
+               this.suspectId = UUID.randomUUID();
+               this.crimeId= UUID.randomUUID();
                this.gender =gender;
                this.ethnicity =ethnicity;
                this.statement = statement;
-               this.hasAlibi = hasAlibi;
+               this.hasAlibi = hasAlibi2;
                this.birthDate = birthDate;
                this.eyeColor = eyeColor;
                this.hairDescription = hairDescription;
@@ -28,16 +31,16 @@ public class Suspect extends Person{
                this.facialHairDescription = facialHairDescription;
                this.height = height;
                this.weight = weight;
-               this.hasTattoos = hasTattoos;
+               this.hasTattoos = hasTattoos2;
                this.tattooDescription = tattooDescription;
-               this.hasPiercings = hasPiercings;
+               this.hasPiercings = hasPiercings2;
                this.physicalMarksDescription = physicalMarksDescription;
                this.physicalBuild = physicalBuild;
-               this.hasWeapon = hasWeapon;
+               this.hasWeapon = hasWeapon2;
                this.weaponDescription = weaponDescription;
                this.complexion = complexion;
                this.clothingDescription = clothingDescription;
-               this.hasVehicle = hasVehicle;
+               this.hasVehicle = hasVehicle2;
                this.vehicleDescription = vehicleDescription;
 
 
@@ -46,28 +49,28 @@ public class Suspect extends Person{
     private Crime linkedCrime;
     private UUID crimeId;
     private String statement;
-    private Boolean hasAlibi;
+    private String hasAlibi;
     private UUID suspectId;
     private String birthDate;
     private String eyeColor;
     private String hairDescription;
-    private boolean hasFacialHair;
+    private String hasFacialHair;
     private String facialHairDescription;
     private String height;
     private String weight;
-    private boolean hasTattoos;
+    private String hasTattoos;
     private String tattooDescription;
-    private boolean hasPiercings;
+    private String hasPiercings;
     private String physicalMarksDescription;
     private String physicalBuild;
-    private boolean hasWeapon;
+    private String hasWeapon;
     private String weaponDescription;
     private String complexion;
     private String clothingDescription;
     private Evidence evidence;
     private boolean hasInterrogationReport;
     private String interrogationReport;
-    private Boolean hasVehicle;
+    private String hasVehicle;
     private String vehicleDescription;
     private boolean isGuilty;
     private String ethnicity;
@@ -158,7 +161,7 @@ public class Suspect extends Person{
      * Gets the facial hair of the suspect
      * @return true/false based on suspect's facial hair
      */
-    public boolean isHasFacialHair() {
+    public String isHasFacialHair() {
         return this.hasFacialHair;
     }
 
@@ -166,7 +169,7 @@ public class Suspect extends Person{
      * Sets facial hair if the suspect has facial hair
      * @param hasFacialHair boolean for having facial hair or not
      */
-    public void setHasFacialHair(boolean hasFacialHair) {
+    public void setHasFacialHair(String hasFacialHair) {
         this.hasFacialHair = hasFacialHair;
     }
 
@@ -222,7 +225,7 @@ public class Suspect extends Person{
      * Returns true/false based on if suspect has tattoos or not
      * @return true/false for suspects tattoos
      */
-    public boolean isHasTattoos() {
+    public String isHasTattoos() {
         return this.hasTattoos;
     }
 
@@ -230,7 +233,7 @@ public class Suspect extends Person{
      * Sets the tattoos by having tattoos or not
      * @param hasTattoos a boolean to set true/false for suspect having tattoos
      */
-    public void setHasTattoos(boolean hasTattoos) {
+    public void setHasTattoos(String hasTattoos) {
         this.hasTattoos = hasTattoos;
     }
 
@@ -254,7 +257,7 @@ public class Suspect extends Person{
      * Gets the piercing status of a suspect
      * @return true/false if a suspect has tattoos or not
      */
-    public boolean isHasPiercings() {
+    public String isHasPiercings() {
         return this.hasPiercings;
     }
 
@@ -262,7 +265,7 @@ public class Suspect extends Person{
      * Sets the piercing status of a suspect
      * @param hasPiercings a boolean to determine if suspect does or does not have piercings
      */
-    public void setHasPiercings(boolean hasPiercings) {
+    public void setHasPiercings(String hasPiercings) {
         this.hasPiercings = hasPiercings;
     }
 
@@ -302,7 +305,7 @@ public class Suspect extends Person{
      * Gets a suspects weapon status
      * @return a boolean if the suspect had a weapon or not
      */
-    public boolean isHasWeapon() {
+    public String isHasWeapon() {
         return this.hasWeapon;
     }
 
@@ -310,7 +313,7 @@ public class Suspect extends Person{
      * Sets the weapon status of a suspect
      * @param hasWeapon boolean for having a weapon or not
      */
-    public void setHasWeapon(boolean hasWeapon) {
+    public void setHasWeapon(String hasWeapon) {
         this.hasWeapon = hasWeapon;
     }
 
@@ -478,7 +481,7 @@ public class Suspect extends Person{
         return this.crimeId;
     }
 
-    public boolean getHasVehicle() {
+    public String getHasVehicle() {
         return this.hasVehicle;
     }
 
@@ -486,7 +489,7 @@ public class Suspect extends Person{
        this.crimeId = crimeId;
     }
 
-    public void setHasVehicle(boolean hasVehicle) {
+    public void setHasVehicle(String hasVehicle) {
         this.hasVehicle = hasVehicle;
     }
    
@@ -494,7 +497,7 @@ public class Suspect extends Person{
         return this.statement;
     }
 
-    public boolean getHasAlibi() {
+    public String getHasAlibi() {
         return this.hasAlibi;
     }
 
@@ -502,8 +505,32 @@ public class Suspect extends Person{
        this.statement = statement;
     }
 
-    public void setHasAlibi(boolean hasAlibi) {
+    public void setHasAlibi(String hasAlibi) {
         this.hasAlibi = hasAlibi;
+    }
+
+    public String toString()
+    {
+        return "********* " + firstName +" " + lastName +"'s Report *********\n" + " Suspect Id: " + suspectId +
+        "\n Crime Id: " + crimeId + "\n Age: " + age + "\n Gender: " + gender + "\n Ethnicity: " + ethnicity + "\n Complexion: " + complexion +
+         "\n Contact Information: " + contactInfo +  "\n Is Minor: " + isMinor +  "\n Statement: " + statement +
+        "\n Has Alibi: " + hasAlibi + "\n Birth Date: " + birthDate+ "\n Eye Color: " + eyeColor + "\n Hair Description: " + hairDescription +
+        "\n Facial Hair: " + facialHairDescription + "\n Height: "+ height + "\n Weight: " + weight + "\n Tattoo Description: " + tattooDescription +
+        "\n Has Piercings: " + hasPiercings + "\n Physical Marks Descriptions: " + physicalMarksDescription + "\n Physical Build: " + physicalBuild+
+        "\n Weapon Description: " + weaponDescription + "\n Clothing Description: " + clothingDescription + "\n Vehicle Description: " + vehicleDescription ;
+
+        
+    }
+
+    public void Download(String string, String string2) {
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+string2+ ".txt"));
+            writer.write(string);
+            writer.close();
+    } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
 }
