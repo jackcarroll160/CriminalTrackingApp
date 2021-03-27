@@ -132,12 +132,12 @@ public class DataLoader extends DataConstants {
                 int age = ((Long) personOfInterestListJSON.get(PERSONOFINTEREST_AGE)).intValue();
                 String contactInfo = (String) personOfInterestListJSON.get(PERSONOFINTEREST_CONTACT_INFO);
                 // BOOLEAN
-                boolean isMinor = getBoolean((String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_MINOR));
+                String isMinor = (String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_MINOR);
                 String statement = (String) personOfInterestListJSON.get(PERSONOFINTEREST_STATEMENT);
                 // BOOLEAN
-                boolean hasAlibi = getBoolean((String) personOfInterestListJSON.get(PERSONOFINTEREST_HAS_ALIBI));
+                String hasAlibi = (String) personOfInterestListJSON.get(PERSONOFINTEREST_HAS_ALIBI);
                 // BOOLEAN
-                boolean isSuspect = getBoolean((String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_SUSPECT));
+                String isSuspect = (String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_SUSPECT);
 
                 personOfInterest.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName,
                         age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
