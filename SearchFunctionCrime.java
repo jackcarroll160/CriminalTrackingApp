@@ -87,11 +87,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getCrimeNum() == (Integer.parseInt(nameSearch.getText())))
 			    {
-				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
                 }
@@ -103,11 +103,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getCrimeId().equals(nameSearch.getText()))
 			    {
-                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
                 }
@@ -119,11 +119,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getCriminalID().equals(nameSearch.getText()))
 			    {
-                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum()+"CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
                 }
@@ -135,11 +135,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getDescription().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
                 }
@@ -150,11 +150,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getDateOfCrime().equalsIgnoreCase(nameSearch.getText()) || crime.getTimeOfCrime().equalsIgnoreCase(nameSearch.getText()))
 			    {
-                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
                 }
@@ -165,11 +165,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.isCaseOpen().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
                 }
@@ -180,11 +180,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getWitnesses().equals(nameSearch.getText()))
 			    {
-                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum()+ "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
                 }
@@ -195,11 +195,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getVictims().equals(nameSearch.getText()))
 			    {
-				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum()+ "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
                 }
@@ -210,11 +210,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getSuspects().equals(nameSearch.getText()))
 			    {
-                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+                    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
                 }
@@ -225,11 +225,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getPersonOfInterest().equals(nameSearch.getText()))
 			    {
-				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
                 }
@@ -240,11 +240,11 @@ public class SearchFunctionCrime extends JFrame {
             for (Crime crime : CrimeList.getInstance().getCrimeList()) {
 			    if(crime.getOfficers().equalsIgnoreCase(nameSearch.getText()))
 			    {
-				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+				    int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nDownload Information on this Crime?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     if (choice == 0)
                     {
                         crime.Download(crime.toString(), crime.getCrimeNum() + "CrimeReport");
-                        JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Download Successful", "Crime Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
                 }
