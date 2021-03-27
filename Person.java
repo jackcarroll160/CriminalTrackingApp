@@ -9,15 +9,15 @@ public abstract class Person {
 	protected String lastName;
 	protected int age;
 	protected String contactInfo;
-	protected boolean isMinor;
+	protected String isMinor;
 	
-	public Person(String firstName, String lastName, int age, String contactInfo, boolean isMinor)
+	public Person(String firstName, String lastName, int age, String contactInfo, String isMinor2)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
 		this.contactInfo = contactInfo;
-		this.isMinor = isMinor;
+		this.isMinor = isMinor2;
 	}
 	
 	/*
@@ -96,7 +96,7 @@ public abstract class Person {
 	 * This is the class that will return a boolean of the person on if they are a minor
 	 * @return a boolean with true if they are a minor
 	 */
-	public boolean getIsMinor()
+	public String getIsMinor()
 	{
 		return isMinor;
 	}
@@ -105,7 +105,7 @@ public abstract class Person {
 	 * This is the class that will set the minor boolean of the person
 	 * @param a boolean that holds true if they are a minor
 	 */
-	public void setIsMinor(boolean minor)
+	public void setIsMinor(String minor)
 	{
 		this.isMinor = minor;
 	}

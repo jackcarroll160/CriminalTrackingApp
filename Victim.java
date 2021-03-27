@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.UUID;
 
 /*
@@ -6,19 +9,19 @@ import java.util.UUID;
  */
 public class Victim extends Person{
 
-	private boolean isAlive;
+	private String isAlive;
 	private String gender;
-	private boolean isInjured;
+	private String isInjured;
 	private String statement;
 	private UUID victimId;
 	private UUID crimeId;
 	
 	public Victim(UUID victimId, UUID crimeId, String firstName, String lastName, int age, String contactInfo,
-            boolean isMinor, boolean isAlive, boolean isInjured, String statement) {
+            String isMinor, String isAlive2, String isInjured, String statement) {
 				super(firstName,lastName,age,contactInfo,isMinor);
 				this.victimId =victimId;
 				this.crimeId = crimeId;
-				this.isAlive = isAlive;
+				this.isAlive = isAlive2;
 				this.isInjured = isInjured;
 				this.statement =statement;
     }
@@ -27,7 +30,7 @@ public class Victim extends Person{
 	 * This is the class that will return the alive boolean of the victim
 	 * @return a boolean that holds the alive flag
 	 */
-	public boolean isAlive() {
+	public String isAlive() {
 		return isAlive;
 	}
 	
@@ -35,7 +38,7 @@ public class Victim extends Person{
 	 * This is the class that will set the alive boolean of the victim
 	 * @param a boolean that holds the alive flag
 	 */
-	public void setAlive(boolean isAlive) {
+	public void setAlive(String isAlive) {
 		this.isAlive = isAlive;
 	}
 	
@@ -59,7 +62,7 @@ public class Victim extends Person{
 	 * This is the class that will return the injured boolean of the victim
 	 * @return a boolean that holds the injured flag
 	 */
-	public boolean isInjured() {
+	public String isInjured() {
 		return isInjured;
 	}
 	
@@ -67,7 +70,7 @@ public class Victim extends Person{
 	 * This is the class that will set the injured boolean of the victim
 	 * @param a boolean that holds the injured flag
 	 */
-	public void setInjured(boolean isInjured) {
+	public void setInjured(String isInjured) {
 		this.isInjured = isInjured;
 	}
 	
@@ -105,6 +108,27 @@ public class Victim extends Person{
 
 	public UUID getCrimeId() {
 		return this.crimeId;
+	}
+
+	public String toString()
+	{
+		return "********* " + firstName +" " + lastName +"'s Report *********\n" + 
+		 "\n Age: " + age + "\n Gender: " + gender + "\n Victim ID: " + victimId + "\n Crime ID: " + crimeId+ 
+		 "\n Contact Information: " + contactInfo + "\n Victim ID: " + victimId + "\n Statement: " + statement +
+		 "\n Is Injured: " + isInjured+ "\n Is Alive: " + isAlive + "\n Victim ID: " + victimId + "\n Is Minor: " + isMinor ;
+
+		
+	}
+
+	public void Download(String string, String string2) {
+		try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+string2+ ".txt"));
+            writer.write(string);
+            writer.close();
+    } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
 	}
 	
 	

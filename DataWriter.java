@@ -186,7 +186,7 @@ public class DataWriter extends DataConstants {
 
     public static void saveVictim() {
         victimsList victim = victimsList.getInstance();
-        ArrayList<Victim> victimArray = victim.getVictims();
+        ArrayList<Victim> victimArray = victim.getVictimList();
         JSONArray jsonVictim = new JSONArray();
 
         // creating all of the json objects

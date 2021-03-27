@@ -14,7 +14,7 @@ public class PersonOfInterest extends Person {
 	private UUID crimeId;
 
 	public PersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName, String lastName,
-			int age, String contactInfo, boolean isMinor, String statement, boolean hasAlibi, boolean isSuspect) {
+			int age, String contactInfo, String isMinor, String statement, boolean hasAlibi, boolean isSuspect) {
 		super(firstName, lastName, age, contactInfo, isMinor);
 		this.statement = statement;
 		this.hasAlibi = hasAlibi;
