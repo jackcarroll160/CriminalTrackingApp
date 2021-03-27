@@ -129,8 +129,12 @@ public class AddFunctionCriminal extends JFrame {
                         Criminal criminal = new Criminal(firstName, lastName, nickname, age, gender, ethnicity, contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, 
                                                             facialHairDescription, hght, weight, tattooDescription, physicalMarkDescription, physicalBuild, weaponDescription, complexion, 
                                                             clothingDescription, vehicleDescription);
-                        CriminalList.getInstance().addCriminal(criminal);
-                        JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
+                        
+                        int choice = JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nAdd this Criminal?", "Add Reports" , JOptionPane.YES_NO_OPTION);
+                        if(choice == 0)
+                        {
+                            CriminalList.getInstance().addCriminal(criminal);
+                        }
                     }
                      
                     count++;
