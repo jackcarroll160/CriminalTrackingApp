@@ -10,7 +10,7 @@ public class UserOptions extends JDialog {
     private JButton btnSearchDatabase = new JButton("Search Database");
     private JButton btnAdd = new JButton("Add New Report");
     private JButton btnRemove = new JButton("Remove Old Report");
-    private JButton btnEdit = new JButton("Edit Existing Report");
+    //private JButton btnEdit = new JButton("Edit Existing Report");
     private JButton btnLogout = new JButton("Logout");
 
     public UserOptions(Frame parent) {
@@ -33,15 +33,20 @@ public class UserOptions extends JDialog {
                 pack();
                 btnOp.setVisible(true);
                 setLocationRelativeTo(null);
-                setSearchName(e);
+                //setSearchName(e);
             }
         });
         btnAdd.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                setSearchName(e);
+                AddReportFunction arf = new AddReportFunction(parent);
+                pack();
+                arf.setVisible(true);
+                setLocationRelativeTo(null);
+                //addReport(e);
             }
+
         });
         /*btnRemove.addActionListener(new ActionListener() {
 
@@ -50,13 +55,13 @@ public class UserOptions extends JDialog {
                 setSearchName(e);
             }
         });*/
-        btnEdit.addActionListener(new ActionListener() {
+        /*btnEdit.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 setSearchName(e);
             }
-        }); 
+        }); */
         
         btnLogout.addActionListener(new ActionListener() {
 
@@ -66,11 +71,11 @@ public class UserOptions extends JDialog {
         });
 
         // Displays Buttons; their layout; window size; location
-        JPanel bp = new JPanel(new GridLayout(4, 1, 10, 5));
+        JPanel bp = new JPanel(new GridLayout(3, 1, 10, 5));
         bp.add(btnSearchDatabase);
         bp.add(btnAdd);
         //bp.add(btnRemove);
-        bp.add(btnEdit);
+        //bp.add(btnEdit);
         bp.add(btnLogout);
 
         getContentPane().add(panel, BorderLayout.CENTER);
@@ -84,17 +89,18 @@ public class UserOptions extends JDialog {
     } // END OF USEROPTIONS
     
     // set name based on button pressed 
-    private void setSearchName(java.awt.event.ActionEvent evt) {
+    /*private void setSearchName(java.awt.event.ActionEvent evt) {
         SearchFunctionCriminal sf;
-        /*if (evt.getSource() == btnSearchDatabase) {
+        AddReportFunction arf;
+        if (evt.getSource() == btnSearchDatabase) {
             sf = new SearchFunctions("CRIMINAL TEST");
             sf.setLocationRelativeTo(null);
-        }*/
-        if (evt.getSource() == btnAdd) {
-            sf = new SearchFunctionCriminal("TEST HERE Add New Report");
-            sf.setLocationRelativeTo(null);
         }
-        else if (evt.getSource() == btnRemove) {
+        if (evt.getSource() == btnAdd) {
+            arf = new AddReportFunction("TEST HERE Add New Report");
+            arf.setLocationRelativeTo(null);
+        }
+        if (evt.getSource() == btnRemove) {
             sf = new SearchFunctionCriminal("TEST HERE Remove Old Report");
             sf.setLocationRelativeTo(null);
         }
@@ -102,6 +108,6 @@ public class UserOptions extends JDialog {
             sf = new SearchFunctionCriminal("TEST HERE Edit Existing Report");
             sf.setLocationRelativeTo(null);
         }
-    } 
+    } */
 
 }

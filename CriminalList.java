@@ -277,6 +277,13 @@ public class CriminalList{
 		}
 	} */
 
+	public void addCriminal(Criminal criminal) {
+
+        criminalList.add(criminal);
+        DataWriter.saveCriminals();
+
+    }
+
 	public void saveCriminals() {
 		DataWriter.saveCriminals();
 	}
