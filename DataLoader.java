@@ -295,8 +295,7 @@ public class DataLoader extends DataConstants {
                 String lastName = (String) witnessJSON.get(WITNESSES_LAST_NAME);
                 int age = ((Long) witnessJSON.get(WITNESSES_AGE)).intValue();
                 String contactInfo = (String) witnessJSON.get(WITNESSES_CONTACT_INFO);
-                // boolean
-                boolean isMinor = getBoolean((String) witnessJSON.get(WITNESSES_FIRST_NAME));
+                String isMinor = (String) witnessJSON.get(WITNESSES_IS_MINOR);;
                 String proof = (String) witnessJSON.get(WITNESSES_PROOF);
                 String testimony = (String) witnessJSON.get(WITNESSES_TESTIMONY);
                 String location = (String) witnessJSON.get(WITNESSES_LOCATION);

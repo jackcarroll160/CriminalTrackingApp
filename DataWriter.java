@@ -220,7 +220,7 @@ public class DataWriter extends DataConstants {
 
     public static void saveWitness() {
         witnessList witness = witnessList.getInstance();
-        ArrayList<Witness> witnessesArray = witness.getWitnesses();
+        ArrayList<Witness> witnessesArray = witness.getWitnessList();
         JSONArray jsonWitness = new JSONArray();
 
         // creating all of the json objects

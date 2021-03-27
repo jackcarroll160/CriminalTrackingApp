@@ -290,7 +290,7 @@ public class Crime {
     public String toString()
     {
         return "********* " + crimeNum +"Report *********\n" + " Crime ID: " + crimeId +
-        "\n Criminal ID: " + criminalId + "\n Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " @ " + timeOfCrime +
+        "\n Criminal ID: " + criminalId + "\n Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
          "\n Case open: " + caseOpen + "\n Witnesses: " + witnesses + "\n Victims: " + victims + "\n Suspects: " + suspects + 
          "\n Person(s) of Interest: " + personOfInterest + "\n Officers: " + officers;
 
