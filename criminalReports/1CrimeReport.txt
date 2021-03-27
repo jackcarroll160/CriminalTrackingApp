@@ -1,0 +1,64 @@
+********* Crime#1 Report *********
+ Description: attempted murder
+ Date & Time of Crime: 07/24/2018 at 8:40pm
+ Case open: No
+ ******* WITNESSES *******
+[********* Madison Yager's Report *********
+ Witness ID: 4d1a7ab4-21ad-472f-84e8-3b4128f55c9b
+ Crime ID: 6e406649-8cce-4774-a4e7-e7ae733e55cf
+ Name: Madison Yager
+ Age: 28
+ Contact Info: 803-555-0988
+ Minor: Yes
+ Proof: was in the lobby when the attack happened
+ Testimony: I saw the man as I was waiting for my ride in the hotel lobby, and the muffin man started strangling a girl.
+ Location: Tipton Hotel
+ Type: lay witness]
+ ******* VICTIMS *******
+[********* Jessica Brewer's Report *********
+
+ Age: 27
+ Victim ID: 17c1f447-8ebc-44d2-a75b-86bb4975406b
+ Crime ID: 6e406649-8cce-4774-a4e7-e7ae733e55cf
+ Contact Information: 864-598-09876
+ Statement: Strangled me when I took his muffin
+ Is Injured: true
+ Is Alive: true
+ Is Minor: false]
+ ******* SUSPECTS *******
+[********* Cupcake Man's Report *********
+ Suspect Id: 16b30468-f099-41e7-82c6-608a6424c1a2
+ Crime Id: 6e406649-8cce-4774-a4e7-e7ae733e55cf
+ Age: 45
+ Gender: male
+ Ethnicity: latino
+ Complexion: freckles
+ Contact Information: 505-467-0923
+ Is Minor: false
+ Statement: I was in my room when it happened
+ Has Alibi: false
+ Birth Date: 05/14/1975
+ Eye Color: brown
+ Hair Description: buzz cut
+ Facial Hair: None
+ Height: 5'10
+ Weight: 180
+ Tattoo Description: cupcake tattoo on arm
+ Has Piercings: false
+ Physical Marks Descriptions: null
+ Physical Build: slightly bulky
+ Weapon Description: N/A
+ Clothing Description: bright pink shirt and blue shorts
+ Vehicle Description: green punchbug]
+ ******* PERSONS OF INTEREST *******
+[********* Bagel Boy's Report *********
+
+ Age: 30
+ Contact Information: 779-467-0923
+ Statement: I hung out with Muffin Man earlier and he seemed fine.
+ Has Alibi: false
+ Is Suspect: false
+ Is Minor: false
+ Person Of Interest Id: a13277c4-5380-4ba8-bf01-72b1c535181a
+ Suspect Id: 16b30468-f099-41e7-82c6-608a6424c1a2
+ Crime Id: 6e406649-8cce-4774-a4e7-e7ae733e55cf]

@@ -36,8 +36,8 @@ public class Witness extends Person{
 			this.testimony = testimony2;
 			this.location = location2;
 			this.typeOfWitness = typeOfWitness2;
-			this.witnessId= UUID.randomUUID();
-			this.crimeId = UUID.randomUUID();
+			this.witnessId= witnessId2;
+			this.crimeId = crimeId2;
 	}
 
 	/*

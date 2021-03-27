@@ -18,8 +18,8 @@ public class Suspect extends Person{
             String hasVehicle2, String vehicleDescription) 
             {
                super(firstName,lastName,age,contactInfo,isMinor);
-               this.suspectId = UUID.randomUUID();
-               this.crimeId= UUID.randomUUID();
+               this.suspectId = suspectId;
+               this.crimeId= crimeId;
                this.gender =gender;
                this.ethnicity =ethnicity;
                this.statement = statement;
