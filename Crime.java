@@ -42,8 +42,8 @@ public class Crime {
             ArrayList<PersonOfInterest> personOfInterestId, String officers) 
             {
                 this.crimeNum = crimeNum;
-                this.crimeId = crimeId2;
-                this.criminalId = criminalId2;
+                this.crimeId = UUID.randomUUID();
+                this.criminalId = UUID.randomUUID();
                 this.description = description;
                 this.dateOfCrime = dateOfCrime;
                 this.timeOfCrime = timeOfCrime;

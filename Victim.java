@@ -113,9 +113,9 @@ public class Victim extends Person{
 	public String toString()
 	{
 		return "********* " + firstName +" " + lastName +"'s Report *********\n" + 
-		 "\n Age: " + age + "\n Gender: " + gender + "\n Victim ID: " + victimId + "\n Crime ID: " + crimeId+ 
-		 "\n Contact Information: " + contactInfo + "\n Victim ID: " + victimId + "\n Statement: " + statement +
-		 "\n Is Injured: " + isInjured+ "\n Is Alive: " + isAlive + "\n Victim ID: " + victimId + "\n Is Minor: " + isMinor ;
+		 "\n Age: " + age +  "\n Victim ID: " + victimId + "\n Crime ID: " + crimeId+ 
+		 "\n Contact Information: " + contactInfo  + "\n Statement: " + statement +
+		 "\n Is Injured: " + isInjured+ "\n Is Alive: " + isAlive +  "\n Is Minor: " + isMinor ;
 
 		
 	}

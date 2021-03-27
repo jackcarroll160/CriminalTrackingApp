@@ -149,7 +149,7 @@ public class DataWriter extends DataConstants {
             e.printStackTrace();
         }
     }
-
+ 
     public static JSONObject getSuspectJSON(Suspect suspect) {
         JSONObject suspectDetails = new JSONObject();
         suspectDetails.put(SUSPECTS_FIRST_NAME, suspect.getFirstName());

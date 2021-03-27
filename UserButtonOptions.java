@@ -10,6 +10,7 @@ public class UserButtonOptions extends JDialog {
     private JButton btnPOI = new JButton("Person of Interest Search");
     private JButton btnVictim = new JButton("Victim Search");
     private JButton btnWitness = new JButton("Witness Search");
+    private JButton btnSuspect = new JButton("Suspect Search");
     private JButton btnBack = new JButton("Back");
 
     public UserButtonOptions(Frame parent) {
@@ -61,6 +62,13 @@ public class UserButtonOptions extends JDialog {
             }
         });
 
+        btnSuspect.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                setSearchName(e);
+            }
+        });
         btnBack.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -70,12 +78,13 @@ public class UserButtonOptions extends JDialog {
         });
 
         // Displays Buttons; their layout; window size; location
-        JPanel bp = new JPanel(new GridLayout(2, 3, 10, 5));
+        JPanel bp = new JPanel(new GridLayout(3, 3, 10, 5));
         bp.add(btnCriminalSearch);
         bp.add(btnCrimeSearch);
         bp.add(btnPOI);
         bp.add(btnVictim);
         bp.add(btnWitness);
+        bp.add(btnSuspect);
         bp.add(btnBack);
 
         getContentPane().add(panel, BorderLayout.CENTER);
@@ -108,7 +117,10 @@ public class UserButtonOptions extends JDialog {
     private void setSearchName(java.awt.event.ActionEvent evt) {
         SearchFunctionCriminal sfc;
         SearchFunctionCrime sfcrim;
+        SearchFunctionPOI sfpoi;
         SearchFunctionVictim sfv;
+        SearchFunctionWitness sfw;
+       // SearchFunctionSuspect sfs;
         if (evt.getSource() == btnCriminalSearch) {
             sfc = new SearchFunctionCriminal("Criminal Search");
             sfc.setLocationRelativeTo(null);
@@ -118,17 +130,22 @@ public class UserButtonOptions extends JDialog {
             sfcrim.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnPOI) {
-            sfc = new SearchFunctionCriminal("Person of Interest Search");
-            sfc.setLocationRelativeTo(null);
+            sfpoi = new SearchFunctionPOI("Person of Interest Search");
+            sfpoi.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnVictim) {
             sfv = new SearchFunctionVictim("Victim Search");
             sfv.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnWitness) {
-            sfc = new SearchFunctionCriminal("Witness Search");
-            sfc.setLocationRelativeTo(null);
+            sfw = new SearchFunctionWitness("Witness Search");
+            sfw.setLocationRelativeTo(null);
         }
+      /*  else if (evt.getSource() == btnSuspect) {
+            sfs = new SearchFunctionSuspect("Suspect Search");
+            sfs.setLocationRelativeTo(null);
+        }
+        */
     } 
 
 }

@@ -28,6 +28,18 @@ public class Witness extends Person{
 			this.typeOfWitness = typeOfWitness;
     }
 
+	public Witness(UUID witnessId2, UUID crimeId2, String firstName, String lastName, int age, String contactInfo,
+			String isMinor, String proof2, String testimony2, String location2, String typeOfWitness2) {
+
+			super(firstName,lastName,age,contactInfo,isMinor);
+			this.proof = proof2;
+			this.testimony = testimony2;
+			this.location = location2;
+			this.typeOfWitness = typeOfWitness2;
+			this.witnessId= UUID.randomUUID();
+			this.crimeId = UUID.randomUUID();
+	}
+
 	/*
 	 * This is the class that will return the proof of the witness
 	 * @return a String that holds the proof

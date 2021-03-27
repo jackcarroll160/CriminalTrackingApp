@@ -301,7 +301,7 @@ public class DataLoader extends DataConstants {
                 String location = (String) witnessJSON.get(WITNESSES_LOCATION);
                 String typeOfWitness = (String) witnessJSON.get(WITNESSES_TYPE_OF_WITNESS);
 
-                witness.add(new Witness(firstName, lastName, age, contactInfo, isMinor, proof, testimony, location,
+                witness.add(new Witness(witnessId,crimeId,firstName, lastName, age, contactInfo, isMinor, proof, testimony, location,
                         typeOfWitness));
             }
 
