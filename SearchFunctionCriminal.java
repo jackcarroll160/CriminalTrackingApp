@@ -152,6 +152,9 @@ public class SearchFunctionCriminal extends JFrame {
                     }
                     
                 }
+                else {
+            JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
+        }
 		    }
         }
          //checking last name
@@ -166,6 +169,9 @@ public class SearchFunctionCriminal extends JFrame {
                         JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
                 }
 		    }
         }
@@ -182,6 +188,9 @@ public class SearchFunctionCriminal extends JFrame {
                     }
                     
                 }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
+                }
 		    }
         }
          //checking last name
@@ -196,6 +205,9 @@ public class SearchFunctionCriminal extends JFrame {
                         JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
                 }
 		    }
         }
@@ -212,6 +224,9 @@ public class SearchFunctionCriminal extends JFrame {
                     }
                     
                 }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
+                }
 		    }
         }
          //checking last name
@@ -226,6 +241,9 @@ public class SearchFunctionCriminal extends JFrame {
                         JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                     
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
                 }
 		    }
         }
@@ -242,6 +260,9 @@ public class SearchFunctionCriminal extends JFrame {
                     }
                    
                 }
+                else {
+            JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
+        }
 		    }
         }
          //checking last name
@@ -256,6 +277,9 @@ public class SearchFunctionCriminal extends JFrame {
                         JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
                 }
 		    }
         }
@@ -272,6 +296,9 @@ public class SearchFunctionCriminal extends JFrame {
                     }
                    
                 }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
+                }
 		    }
         }
          //checking last name
@@ -286,6 +313,9 @@ public class SearchFunctionCriminal extends JFrame {
                         JOptionPane.showMessageDialog(null, "Download Successful", "Criminal Download", JOptionPane.INFORMATION_MESSAGE);
                     }
                    
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
                 }
 		    }
         }
@@ -302,6 +332,9 @@ public class SearchFunctionCriminal extends JFrame {
                     }
                     
                 }
+                else {
+            JOptionPane.showMessageDialog(null, "User not found", "Error", JOptionPane.OK_OPTION);
+        }
 		    }
         }
 

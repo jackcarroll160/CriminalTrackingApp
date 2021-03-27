@@ -119,10 +119,10 @@ public class CrimeList{
 	
 	public boolean addCrime(int crimeNum, UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
 	String caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
-	ArrayList<PersonOfInterest> personOfInterestId, String officers)  {
+	ArrayList<PersonOfInterest> personOfInterestId)  {
 		if(haveCrime(crimeId2))return false;
 
-		crimeList.add(new Crime(crimeNum, crimeId2, criminalId2, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId, officers));
+		crimeList.add(new Crime(crimeNum, crimeId2, criminalId2, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId));
 		return true;
 	}
 

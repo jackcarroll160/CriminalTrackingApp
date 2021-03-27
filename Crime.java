@@ -33,13 +33,13 @@ public class Crime {
     private ArrayList<Suspect> suspects;
     private ArrayList<PersonOfInterest> personOfInterest;
     private ArrayList<Criminal> criminals;
-    private String officers;
+    private ArrayList<User> officers;
     private TypeOfCrime typeOfCrime;
     private Grading grading;
 
     public Crime(int crimeNum, UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
             String caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
-            ArrayList<PersonOfInterest> personOfInterestId, String officers) 
+            ArrayList<PersonOfInterest> personOfInterestId) 
             {
                 this.crimeNum = crimeNum;
                 this.crimeId = UUID.randomUUID();
@@ -52,7 +52,6 @@ public class Crime {
                 this.victims = victimId;
                 this.suspects = suspectId;
                 this.personOfInterest = personOfInterestId;
-                this.officers = officers;
             }
 
     public int getCrimeNum() {
@@ -227,7 +226,7 @@ public class Crime {
      * Gets the officers dealing with the crime
      * @return the list of officers associated with the crime
      */
-    public String getOfficers() {
+    public ArrayList<User> getOfficers() {
         return this.officers;
     }
 
@@ -235,7 +234,7 @@ public class Crime {
      * Sets the officer list for a crime
      * @param officers a list of involved officers to add to a crime
      */
-    public void setOfficers(String officers) {
+    public void setOfficers(ArrayList<User> officers) {
         this.officers = officers;
     }
 
@@ -292,7 +291,7 @@ public class Crime {
         return "********* " + crimeNum +"Report *********\n" + " Crime ID: " + crimeId +
         "\n Criminal ID: " + criminalId + "\n Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
          "\n Case open: " + caseOpen + "\n Witnesses: " + witnesses + "\n Victims: " + victims + "\n Suspects: " + suspects + 
-         "\n Person(s) of Interest: " + personOfInterest + "\n Officers: " + officers;
+         "\n Person(s) of Interest: " + personOfInterest ;
 
         
     }

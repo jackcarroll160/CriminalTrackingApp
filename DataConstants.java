@@ -10,11 +10,10 @@ public abstract class DataConstants {
     protected static final String CRIME_DATE_OF_CRIME = "dateOfCrime";
     protected static final String CRIME_TIME_OF_CRIME = "timeOfCrime";
     protected static final String CRIME_CASE_OPEN = "caseOpen";
-    protected static final String CRIME_WITNESS_ID = "witnessId";
+    protected static final String CRIME_WITNESS_ID = "witnessesId";
     protected static final String CRIME_VICTIM_ID = "victimId";
     protected static final String CRIME_SUSPECT_ID = "suspectId";
     protected static final String CRIME_POI_ID = "personOfInterestId";
-    protected static final String CRIME_OFFICERS = "officers";
 
     // criminals.json
     protected static final String CRIMINALS_FILE_NAME = "jsonfiles/criminals.json";

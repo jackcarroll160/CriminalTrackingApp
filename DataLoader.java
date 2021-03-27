@@ -33,16 +33,15 @@ public class DataLoader extends DataConstants {
                 // boolean
                 String caseOpen = (String) crimeJSON.get(CRIME_CASE_OPEN);
                 JSONArray witnessesIds = (JSONArray) crimeJSON.get(CRIME_WITNESS_ID);
-                ArrayList<Witness> witnesses = getWitnesses(witnessesIds);
+               // ArrayList<Witness> witnesses = getWitnesses(witnessesIds);
                 JSONArray victimsIds = (JSONArray) crimeJSON.get(CRIME_VICTIM_ID);
-                ArrayList<Victim> victims = getVictims(victimsIds);
+               // ArrayList<Victim> victims = getVictims(victimsIds);
                 JSONArray suspectsIds = (JSONArray) crimeJSON.get(CRIME_SUSPECT_ID);
-                ArrayList<Suspect> suspects = getSuspects(suspectsIds);
+               // ArrayList<Suspect> suspects = getSuspects(suspectsIds);
                 JSONArray personOfInterestIds = (JSONArray) crimeJSON.get(CRIME_POI_ID);
-                ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
-                String officers = (String) crimeJSON.get(CRIME_OFFICERS);
-                crime.add(new Crime(crimeNum, crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnesses,
-                        victims, suspects, personOfInterest, officers));
+               // ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
+                crime.add(new Crime(crimeNum, crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnessesIds,
+                victimsIds, suspectsIds, personOfInterestIds));
             }
 
             return crime;
@@ -52,7 +51,6 @@ public class DataLoader extends DataConstants {
 
         return null;
     }
-
     // ------------------------------------- criminal
     // ---------------------------------------------------------------------------
     public static ArrayList<Criminal> loadCriminals() {

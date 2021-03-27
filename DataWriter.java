@@ -64,7 +64,6 @@ public class DataWriter extends DataConstants {
         crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnesses());
         crimeInfo.put(CRIME_VICTIM_ID, crime.getVictims());
         crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterest());
-        crimeInfo.put(CRIME_OFFICERS, crime.getOfficers());
 
         return crimeInfo;
     }
