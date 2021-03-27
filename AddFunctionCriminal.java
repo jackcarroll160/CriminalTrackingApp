@@ -3,7 +3,29 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class AddFunctionCriminal extends JFrame {
-
+    String firstName = "";
+    String lastName = "";
+    String nickname = "";
+    int age = 0;
+    String gender = "";
+    String ethnicity = "";
+    String contactInfo = "";
+    String linkedCrime = "";
+    String crimeID = "";
+    String birthDate = "";
+    String eyeColor = "";
+    String hairDescription = "";
+    String hairColor = "";
+    String facialHairDescription = "";
+    String hght = "";
+    String weight = "";
+    String tattooDescription = "";
+    String physicalMarkDescription = "";
+    String physicalBuild = "";
+    String weaponDescription = "";
+    String complexion = "";
+    String clothingDescription = "";
+    String vehicleDescription = "";
     private JTextField addItem = new JTextField(30);
     private JButton addButton = new JButton("Add");
     private JButton backButton = new JButton("Cancel");
@@ -50,37 +72,11 @@ public class AddFunctionCriminal extends JFrame {
      */
     private void backButtonFunction() {
         JFrame frame = new JFrame("Criminal Tracking App - What would you like to do?");
-
+       
         addButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 
-
-                String firstName = "";
-                String lastName = "";
-                String nickname = "";
-                int age = 0;
-                String gender = "";
-                String ethnicity = "";
-                String contactInfo = "";
-                String linkedCrime = "";
-                String crimeID = "";
-                String birthDate = "";
-                String eyeColor = "";
-                String hairDescription = "";
-                String hairColor = "";
-                String facialHairDescription = "";
-                String height = "";
-                String weight = "";
-                String tattooDescription = "";
-                String physicalMarkDescription = "";
-                String physicalBuild = "";
-                String weaponDescription = "";
-                String complexion = "";
-                String clothingDescription = "";
-                String vehicleDescription = "";
-
-                if(count < criminalItems.length - 1) {
                     if(count == 0)
                         firstName = addItem.getText();
                     else if(count == 1)
@@ -110,7 +106,7 @@ public class AddFunctionCriminal extends JFrame {
                     else if(count == 13)
                         facialHairDescription = addItem.getText();
                     else if(count == 14)
-                        height = addItem.getText();
+                        hght = addItem.getText();
                     else if(count == 15)
                         weight = addItem.getText();
                     else if(count == 16)
@@ -128,22 +124,22 @@ public class AddFunctionCriminal extends JFrame {
                     else if(count == 22) {
                         vehicleDescription = addItem.getText();
                     }
-                    count++;
-                   
-
-                    if(count >= 23) {
+                    else
+                    {
                         Criminal criminal = new Criminal(firstName, lastName, nickname, age, gender, ethnicity, contactInfo, linkedCrime, birthDate, eyeColor, hairDescription, 
-                                                            facialHairDescription, height, weight, tattooDescription, physicalMarkDescription, physicalBuild, weaponDescription, complexion, 
+                                                            facialHairDescription, hght, weight, tattooDescription, physicalMarkDescription, physicalBuild, weaponDescription, complexion, 
                                                             clothingDescription, vehicleDescription);
                         CriminalList.getInstance().addCriminal(criminal);
+                        JOptionPane.showConfirmDialog(null, criminal.toString() + "\n\nDownload Information on this Criminal?", "Search Results" , JOptionPane.YES_NO_OPTION);
                     }
-                    else {
+                     
+                    count++;
+                    if (count <= 22 )
                         addItem.setText("Enter " + criminalItems[count] + " here...");
-                    }
-                    
+                   
                 }
             }
-        });
+        );
 
         backButton.addActionListener(new ActionListener() {
 
