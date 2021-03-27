@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.UUID;
 
 /*
@@ -7,18 +10,18 @@ import java.util.UUID;
 public class PersonOfInterest extends Person {
 
 	private String statement;
-	private boolean hasAlibi;
-	private boolean isSuspect;
+	private String hasAlibi;
+	private String isSuspect;
 	private UUID personId;
 	private UUID suspectId;
 	private UUID crimeId;
 
 	public PersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName, String lastName,
-			int age, String contactInfo, String isMinor, String statement, boolean hasAlibi, boolean isSuspect) {
+			int age, String contactInfo, String isMinor, String statement, String hasAlibi2, String isSuspect2) {
 		super(firstName, lastName, age, contactInfo, isMinor);
 		this.statement = statement;
-		this.hasAlibi = hasAlibi;
-		this.isSuspect = isSuspect;
+		this.hasAlibi = hasAlibi2;
+		this.isSuspect = isSuspect2;
 		this.personId = personOfInterestId;
 		this.suspectId = suspectId;
 		this.crimeId = crimeId;
@@ -32,8 +35,10 @@ public class PersonOfInterest extends Person {
 	 * @return a String with all of the data and attributes
 	 */
 	public String toString() {
-		return "Statement: " + statement + " \n Has Alibi: " + hasAlibi + " \n Suspect: " + isSuspect + "\n ID: "
-				+ personId;
+		return "********* " + firstName +" " + lastName +"'s Report *********\n" + 
+		 "\n Age: " + age + "\n Contact Information: " + contactInfo + "\n Statement: " + statement +  "\n Has Alibi: " + hasAlibi +
+		 "\n Is Suspect: " + isSuspect+
+		 "\n Is Minor: " + isMinor + "\n Person Of Interest Id: " + personId + "\n Suspect Id: " + suspectId + "\n Crime Id: " + crimeId;
 	}
 
 	/*
@@ -59,7 +64,7 @@ public class PersonOfInterest extends Person {
 	 * 
 	 * @return a boolean that holds the alibi flag
 	 */
-	public boolean isHasAlibi() {
+	public String isHasAlibi() {
 		return hasAlibi;
 	}
 
@@ -68,7 +73,7 @@ public class PersonOfInterest extends Person {
 	 * 
 	 * @param a boolean that holds the alibi flag
 	 */
-	public void setHasAlibi(boolean hasAlibi) {
+	public void setHasAlibi(String hasAlibi) {
 		this.hasAlibi = hasAlibi;
 	}
 
@@ -77,7 +82,7 @@ public class PersonOfInterest extends Person {
 	 * 
 	 * @return a boolean that holds the suspect flag
 	 */
-	public boolean isSuspect() {
+	public String isSuspect() {
 		return isSuspect;
 	}
 
@@ -86,7 +91,7 @@ public class PersonOfInterest extends Person {
 	 * 
 	 * @param a boolean that holds the suspect flag
 	 */
-	public void setSuspect(boolean isSuspect) {
+	public void setSuspect(String isSuspect) {
 		this.isSuspect = isSuspect;
 	}
 
@@ -122,6 +127,17 @@ public class PersonOfInterest extends Person {
 
 	public void setSuspectId(UUID suspectId) {
 		this.suspectId = suspectId;
+	}
+
+	public void Download(String string, String string2) {
+		try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+string2+ ".txt"));
+            writer.write(string);
+            writer.close();
+    } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
 	}
 
 }

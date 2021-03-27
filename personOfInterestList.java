@@ -60,6 +60,7 @@ public class personOfInterestList {
 	/*
 	 * allows user to edit POI information
 	 */
+	/*
 	public void editPOIByName(String Fname, String Lname) {
 		PersonOfInterest poiEdit = searchPOIByName(Fname, Lname);
 		Scanner keyboard = new Scanner(System.in);
@@ -78,12 +79,12 @@ public class personOfInterestList {
 		}
 		if (userInput == 2) {
 			System.out.println("Enter the New Has Alibi Value (True or False): ");
-			boolean hasAl = keyboard.nextBoolean();
+			String hasAl = keyboard.nextLine();
 			poiEdit.setHasAlibi(hasAl);
 		}
 		if (userInput == 3) {
 			System.out.println("Enter the New Is Suspect Value (True or False): ");
-			boolean isSus = keyboard.nextBoolean();
+			String isSus = keyboard.nextLine();
 			poiEdit.setSuspect(isSus);
 		}
 		if (userInput >= 4 || userInput <= 0) {
@@ -91,7 +92,7 @@ public class personOfInterestList {
 		}
 
 	}
-
+*/
 	/**
 	 * saves POI in POI library
 	 */
@@ -112,8 +113,8 @@ public class personOfInterestList {
 	}
 
 	public void addPersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName,
-			String lastName, int age, String contactInfo, boolean isMinor, String statement, boolean hasAlibi,
-			boolean isSuspect) {
+			String lastName, int age, String contactInfo, String isMinor, String statement, String hasAlibi,
+			String isSuspect) {
 				PersonOfInterestList.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age,
 				contactInfo, isMinor, statement, hasAlibi, isSuspect));
 		DataWriter.savePersonOfInterest();

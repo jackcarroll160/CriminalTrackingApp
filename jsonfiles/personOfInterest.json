@@ -7,9 +7,9 @@
         "lastName":"Boy",
         "age": 30,
         "contactInfo":"779-467-0923",
-        "isMinor":false,
+        "isMinor":"false",
         "statement":"I hung out with Muffin Man earlier and he seemed fine.",
-        "hasAlibi":false,
-        "isSuspect":false
+        "hasAlibi":"false",
+        "isSuspect":"false"
     }
 ]
