@@ -34,7 +34,7 @@ public class witnessList {
 	/*
 	 * returns witnessList
 	 */
-	public ArrayList<Witness> getWitnesses()
+	public ArrayList<Witness> getWitnessList()
 	{
 		return witnessList;
 	}

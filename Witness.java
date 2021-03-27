@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.UUID;
 
 /*
@@ -24,17 +27,6 @@ public class Witness extends Person{
 			this.location = location;
 			this.typeOfWitness = typeOfWitness;
     }
-
-    /*
-	 * This is a method that will take all of the data that was input and return it in a readable string format
-	 * @return a String with all of the data and attributes
-	 */
-	public String toString()
-	{
-		return "Proof: " + proof + " \n Testimony: " +testimony +
-				" \n Location: " + location + "\n Type Of Witness: " + typeOfWitness +
-				"\n Witness ID: " + witnessId;
-	}
 
 	/*
 	 * This is the class that will return the proof of the witness
@@ -131,5 +123,23 @@ public class Witness extends Person{
 	public void setContanctInfo(String contanctInfo) {
 		this.contanctInfo = contanctInfo;
 	}
-	
+
+	public String toString() {
+		return "********* " + this.firstName + " " + lastName +"'s Report *********\n Witness ID: " + witnessId + "\n Crime ID: " + crimeId +
+		"\n Name: " + firstName + " " + lastName + "\n Age: " + age + "\n Contact Info: " + contactInfo + "\n Minor: " + isMinor + 
+		"\n Proof: " + proof + "\n Testimony: " + testimony + "\n Location: " + location + "\n Type: " + typeOfWitness;
+	}
+
+	public void Download(String report, String name) {
+		try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter("witnessReports/" + name + ".txt"));
+            writer.write(report);
+            writer.close();
+    } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
+	
+
