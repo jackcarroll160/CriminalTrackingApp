@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -17,13 +20,14 @@ public class Crime {
      */
     private enum Grading {MISDEMEANOR, FELONY, INFRACTION} 
 
+    private int crimeNum;
     private String description;
     private UUID crimeId;
     private UUID criminalId;
     private String dateOfCrime;
     private String timeOfCrime;
     private Evidence evidence;
-    private boolean caseOpen;
+    private String caseOpen;
     private ArrayList<Witness> witnesses;
     private ArrayList<Victim> victims;
     private ArrayList<Suspect> suspects;
@@ -33,10 +37,11 @@ public class Crime {
     private TypeOfCrime typeOfCrime;
     private Grading grading;
 
-    public Crime(UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
-            boolean caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
+    public Crime(int crimeNum, UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
+            String caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
             ArrayList<PersonOfInterest> personOfInterestId, String officers) 
             {
+                this.crimeNum = crimeNum;
                 this.crimeId = crimeId2;
                 this.criminalId = criminalId2;
                 this.description = description;
@@ -50,6 +55,14 @@ public class Crime {
                 this.officers = officers;
             }
 
+    public int getCrimeNum() {
+        return this.crimeNum;
+    }
+
+    public void setCrimeNum(int num) {
+        this.crimeNum = num;
+    }
+    
     /**
      * Gets the description of a crime
      * @return A String for the description of a crime
@@ -118,7 +131,7 @@ public class Crime {
      * Gets the case status of a crime
      * @return true/false if the case is open or not
      */
-    public boolean isCaseOpen() {
+    public String isCaseOpen() {
         return this.caseOpen;
     }
 
@@ -126,7 +139,7 @@ public class Crime {
      * Sets the case status
      * @param caseOpen true/false if the crime is open or not
      */
-    public void setCaseOpen(boolean caseOpen) {
+    public void setCaseOpen(String caseOpen) {
         this.caseOpen = caseOpen;
     }
 
@@ -273,6 +286,31 @@ public class Crime {
     public void setCriminalId(UUID criminalId) {
 		this.criminalId = criminalId;
 	}
+
+    public String toString()
+    {
+        return "********* " + crimeNum +"Report *********\n" + " Crime ID: " + crimeId +
+        "\n Criminal ID: " + criminalId + "\n Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " @ " + timeOfCrime +
+         "\n Case open: " + caseOpen + "\n Witnesses: " + witnesses + "\n Victims: " + victims + "\n Suspects: " + suspects + 
+         "\n Person(s) of Interest: " + personOfInterest + "\n Officers: " + officers;
+
+        
+    }
+
+    public void Download(String data, String name) {
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+ name + ".txt"));
+            writer.write(data);
+            writer.close();
+    } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public String getNickname() {
+        return null;
+    }
 
     
 

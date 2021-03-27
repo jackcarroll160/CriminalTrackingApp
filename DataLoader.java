@@ -24,13 +24,14 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < crimeJSONList.size(); i++) {
                 JSONObject crimeJSON = (JSONObject) crimeJSONList.get(i);
+                int crimeNum = ((Long) crimeJSON.get(CRIME_NUM)).intValue();
                 UUID crimeId = UUID.fromString((String) crimeJSON.get(CRIME_CRIME_ID));
                 UUID criminalId = UUID.fromString((String) crimeJSON.get(CRIMINALS_CRIMINAL_ID));
                 String description = (String) crimeJSON.get(CRIME_DESCRIPTION);
                 String dateOfCrime = (String) crimeJSON.get(CRIME_DATE_OF_CRIME);
                 String timeOfCrime = (String) crimeJSON.get(CRIME_TIME_OF_CRIME);
                 // boolean
-                boolean caseOpen = getBoolean((String) crimeJSON.get(CRIME_CASE_OPEN));
+                String caseOpen = (String) crimeJSON.get(CRIME_CASE_OPEN);
                 JSONArray witnessesIds = (JSONArray) crimeJSON.get(CRIME_WITNESS_ID);
                 ArrayList<Witness> witnesses = getWitnesses(witnessesIds);
                 JSONArray victimsIds = (JSONArray) crimeJSON.get(CRIME_VICTIM_ID);
@@ -40,7 +41,7 @@ public class DataLoader extends DataConstants {
                 JSONArray personOfInterestIds = (JSONArray) crimeJSON.get(CRIME_POI_ID);
                 ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
                 String officers = (String) crimeJSON.get(CRIME_OFFICERS);
-                crime.add(new Crime(crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnesses,
+                crime.add(new Crime(crimeNum, crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnesses,
                         victims, suspects, personOfInterest, officers));
             }
 

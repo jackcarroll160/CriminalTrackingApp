@@ -67,7 +67,7 @@ public class CrimeList{
 	/*
 	 * 
 	 */
-	public ArrayList<Crime> getCrime()
+	public ArrayList<Crime> getCrimeList()
 	{
 		return crimeList;
 	}
@@ -107,7 +107,7 @@ public class CrimeList{
 		if(userInput == 4)
 		{
 			System.out.println("Enter the New Is Case Open Value (True or False): " );
-			boolean open = keyboard.nextBoolean();
+			String open = keyboard.nextLine();
 			crimeEdit.setCaseOpen(open);
 		}
 		if(userInput >= 5 || userInput <=0)
@@ -117,12 +117,12 @@ public class CrimeList{
 	
 	}
 	
-	public boolean addCrime(UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
-	boolean caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
+	public boolean addCrime(int crimeNum, UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
+	String caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
 	ArrayList<PersonOfInterest> personOfInterestId, String officers)  {
 		if(haveCrime(crimeId2))return false;
 
-		crimeList.add(new Crime(crimeId2, criminalId2, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId, officers));
+		crimeList.add(new Crime(crimeNum, crimeId2, criminalId2, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId, officers));
 		return true;
 	}
 

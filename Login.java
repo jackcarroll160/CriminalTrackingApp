@@ -15,26 +15,6 @@ public class Login extends LoginDialog {
 
     public static boolean authenticate(String username, String password) throws IOException {
 
-        // verifying login credentials
-        // loginInfo.put("user1", "password1");
-        // loginInfo.put("user2", "password2");
-        /*
-         * if (loginInfo.containsKey(username) &&
-         * loginInfo.get(username).equals(password)) { return true; } else {
-         * loginInfo.put(username, password); return false; }
-         */
-        //if (Users.haveUser(username) && Users.haveUser(password)) {
-        
-        // verifying login credentials 
-        //loginInfo.put("user1", "password1");
-        //loginInfo.put("user2", "password2");
-        /*if (loginInfo.containsKey(username) && loginInfo.get(username).equals(password)) {
-            return true;
-        }
-        else {
-            loginInfo.put(username, password);
-            return false;
-        } */
         if (Users.getInstance().haveUser(username)) {
             return true;
         }
