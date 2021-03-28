@@ -259,7 +259,7 @@ public class DataLoader extends DataConstants {
                 String isInjured = (String) victimJSON.get(VICTIMS_IS_INJURED);
                 String statement = (String) victimJSON.get(VICTIMS_STATEMENT);
 
-                victim.add(new Victim(victimId, crimeId, firstName, lastName, age, contactInfo, isMinor, isAlive,
+                victim.add(new Victim(firstName, lastName, age, contactInfo, isMinor, isAlive,
                         isInjured, statement));
             }
 

@@ -16,11 +16,11 @@ public class Victim extends Person{
 	private UUID victimId;
 	private UUID crimeId;
 	
-	public Victim(UUID victimId, UUID crimeId, String firstName, String lastName, int age, String contactInfo,
+	public Victim(String firstName, String lastName, int age, String contactInfo,
             String isMinor, String isAlive2, String isInjured, String statement) {
 				super(firstName,lastName,age,contactInfo,isMinor);
-				this.victimId =victimId;
-				this.crimeId = crimeId;
+				this.victimId = UUID.randomUUID();
+				this.crimeId = UUID.randomUUID();
 				this.isAlive = isAlive2;
 				this.isInjured = isInjured;
 				this.statement =statement;
