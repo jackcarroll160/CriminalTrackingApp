@@ -120,7 +120,7 @@ public class AddReportFunction extends JDialog {
         AddFunctionCrime afcrime;
         AddFunctionVictim afv;
         AddFunctionWitness afw;
-        SearchFunctionSuspect sfs;
+        AddFunctionPOI afpoi;
         if (evt.getSource() == btnCriminalSearch) {
             afc = new AddFunctionCriminal("Add Criminal Report");
             afc.setLocationRelativeTo(null);
@@ -130,8 +130,8 @@ public class AddReportFunction extends JDialog {
             afcrime.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnPOI) {
-            sfcrim = new SearchFunctionCrime("Person of Interest Search");
-            sfcrim.setLocationRelativeTo(null);
+            afpoi = new AddFunctionPOI("Person of Interest Search");
+            afpoi.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnVictim) {
             afv = new AddFunctionVictim("Add Victim Report");
@@ -142,8 +142,8 @@ public class AddReportFunction extends JDialog {
             afw.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnSuspect) {
-            sfs = new SearchFunctionSuspect("Suspect Search");
-            sfs.setLocationRelativeTo(null);
+            sfcrim = new SearchFunctionCrime("Suspect Search");
+            sfcrim.setLocationRelativeTo(null);
         }
         
     } 
