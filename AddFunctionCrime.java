@@ -21,7 +21,7 @@ public class AddFunctionCrime extends JFrame {
     ArrayList<Victim> victims = new ArrayList<Victim>();
     ArrayList<Suspect> suspects = new ArrayList<Suspect>();
     ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
-    ArrayList<Criminal> criminals;
+    ArrayList<Criminal> criminals = new ArrayList<Criminal>();
     
 
     private JTextField addItem = new JTextField(30);
