@@ -10,6 +10,7 @@
         "witnessesId": ["4d1a7ab4-21ad-472f-84e8-3b4128f55c9b"],
         "victimId": ["17c1f447-8ebc-44d2-a75b-86bb4975406b"],
         "suspectId":["16b30468-f099-41e7-82c6-608a6424c1a2"],
-        "personOfInterestId":["a13277c4-5380-4ba8-bf01-72b1c535181a"]
+        "personOfInterestId":["a13277c4-5380-4ba8-bf01-72b1c535181a"],
+        "evidence": ["Brown Hair Found" , "Bullet From HandGun"]
     }
 ]

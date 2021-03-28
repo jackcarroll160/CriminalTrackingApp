@@ -26,7 +26,6 @@ public class Crime {
     private UUID criminalId;
     private String dateOfCrime;
     private String timeOfCrime;
-    private Evidence evidence;
     private String caseOpen;
     private ArrayList<Witness> witnesses;
     private ArrayList<Victim> victims;
@@ -36,10 +35,11 @@ public class Crime {
     private ArrayList<User> officers;
     private TypeOfCrime typeOfCrime;
     private Grading grading;
+    private ArrayList<String> evidence;
 
     public Crime(int crimeNum, String description, String dateOfCrime, String timeOfCrime,
             String caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
-            ArrayList<PersonOfInterest> personOfInterestId) 
+            ArrayList<PersonOfInterest> personOfInterestId,ArrayList<String> evidence2) 
             {
                 this.crimeNum = crimeNum;
                 this.crimeId = UUID.randomUUID();
@@ -52,6 +52,7 @@ public class Crime {
                 this.victims = victimId;
                 this.suspects = suspectId;
                 this.personOfInterest = personOfInterestId;
+                this.evidence = evidence2;
             }
 
     public int getCrimeNum() {
@@ -111,22 +112,6 @@ public class Crime {
     }
 
     /**
-     * Gets the evidence associated with the crime
-     * @return The evidence associated with a crime case
-     */
-    public Evidence getEvidence() {
-        return this.evidence;
-    }
-
-    /**
-     * Sets the evidence with a crime case
-     * @param evidence Evidence for a crime
-     */
-    public void setEvidence(Evidence evidence) {
-        this.evidence = evidence;
-    }
-
-    /**
      * Gets the case status of a crime
      * @return true/false if the case is open or not
      */
@@ -156,6 +141,16 @@ public class Crime {
      */
     public void setWitnesses(ArrayList<Witness> witnesses) {
         this.witnesses = witnesses;
+    }
+
+    public void setEvidence(ArrayList<String> evidence)
+    {
+        this.evidence = evidence;
+    }
+
+    public ArrayList<String> getEvidence()
+    {
+        return evidence;
     }
 
     /**
@@ -298,7 +293,7 @@ public class Crime {
     public void Download( String name) {
         try{
             String data = "********* Crime#" + crimeNum +" Report *********\n" + " Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
-            "\n Case open: " + caseOpen + "\n ******* WITNESSES *******\n" + witnesses + "\n ******* VICTIMS *******\n" + victims + "\n ******* SUSPECTS *******\n" + suspects + 
+            "\n Case open: " + caseOpen +  "\n Evidece: " + evidence +"\n ******* WITNESSES *******\n" + witnesses + "\n ******* VICTIMS *******\n" + victims + "\n ******* SUSPECTS *******\n" + suspects + 
             "\n ******* PERSONS OF INTEREST *******\n" + personOfInterest;
             BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+ name + ".txt"));
             writer.write(data);

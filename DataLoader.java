@@ -39,9 +39,16 @@ public class DataLoader extends DataConstants {
                 JSONArray suspectsIds = (JSONArray) crimeJSON.get(CRIME_SUSPECT_ID);
                 ArrayList<Suspect> suspects = getSuspects(suspectsIds);
                 JSONArray personOfInterestIds = (JSONArray) crimeJSON.get(CRIME_POI_ID);
+                JSONArray evidenceJ = (JSONArray) crimeJSON.get(CRIME_EVIDENCE);
+                ArrayList<String> evidence = new ArrayList<String>();
+                for(int j = 0; j < evidenceJ.size(); j++)
+                {
+                    evidence.add(evidenceJ.get(i).toString());
+                }
                 ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
                 crime.add(new Crime(crimeNum, description, dateOfCrime, timeOfCrime, caseOpen, witnesses,
-                victims, suspects, personOfInterest));
+                victims, suspects, personOfInterest,evidence));
+                
             }
 
             return crime;

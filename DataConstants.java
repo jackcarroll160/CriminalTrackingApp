@@ -14,6 +14,7 @@ public abstract class DataConstants {
     protected static final String CRIME_VICTIM_ID = "victimId";
     protected static final String CRIME_SUSPECT_ID = "suspectId";
     protected static final String CRIME_POI_ID = "personOfInterestId";
+    protected static final String CRIME_EVIDENCE = "evidence";
 
     // criminals.json
     protected static final String CRIMINALS_FILE_NAME = "jsonfiles/criminals.json";

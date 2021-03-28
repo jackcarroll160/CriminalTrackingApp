@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 public class AddFunctionCrime extends JFrame {
+    boolean flag = false;
     String description = "";
     String date = "";
     String time = "";
@@ -14,10 +15,12 @@ public class AddFunctionCrime extends JFrame {
     String victimName = "";
     String suspectName = "";
     String poiName = "";
-    ArrayList<Witness> witnesses;
-    ArrayList<Victim> victims;
-    ArrayList<Suspect> suspects;
-    ArrayList<PersonOfInterest> personOfInterest;
+    int evidenceNum = 0;
+    ArrayList<String> evidence= new ArrayList<String>();
+    ArrayList<Witness> witnesses  = new ArrayList<Witness>();
+    ArrayList<Victim> victims = new ArrayList<Victim>();
+    ArrayList<Suspect> suspects = new ArrayList<Suspect>();
+    ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
     ArrayList<Criminal> criminals;
     
 
@@ -28,7 +31,7 @@ public class AddFunctionCrime extends JFrame {
     private JPanel panel = new JPanel();
     public int count = 0;
     public String[] crimeItems = {"Description" , "Date", "Time" , "Case Open", " Crime Number" , " Witness Name" , "Victim Name" , "Suspect Name"
-                                    , "Person Of Interest Name"};
+                                    , "Person Of Interest Name", "Number Of Evidence Pieces", "Evidence"};
 
     public AddFunctionCrime() {
         //CreateCriminalAdd();
@@ -124,9 +127,57 @@ public class AddFunctionCrime extends JFrame {
                          }
                     }
                 }
+                else if(count == 9)
+                {
+                    evidenceNum= Integer.parseInt(addItem.getText());  
+                   
+                }
+                else if(count == 10 && evidenceNum != 0)
+                {
+                        addItem.setText("Enter Piece here...");
+                        evidence.add(addItem.getText());
+                        evidenceNum--;
+                    
+                   
+                }
+                else if(count == 11 && evidenceNum != 0)
+                {
+                    evidence.add(addItem.getText());
+                        evidenceNum--;
+                        addItem.setText("Enter Next Piece here...");
+                   
+                }
+                else if(count == 12 && evidenceNum != 0)
+                {
+                   
+                    evidence.add(addItem.getText());
+                    evidenceNum--;
+                    addItem.setText("Enter Next Piece here...");
+                   
+                }
+                else if(count == 13 && evidenceNum != 0)
+                {
+                   
+                    evidence.add(addItem.getText());
+                    evidenceNum--;
+                    addItem.setText("Enter Next Piece here...");
+                   
+                }
+                else if(count == 14 && evidenceNum != 0)
+                {
+                    
+                    evidence.add(addItem.getText());
+                    evidenceNum--;
+                   
+                }
+                else if(evidenceNum == 0 && !flag)
+                {
+                    addItem.setText("Click Save Again To Begin Download");
+                    flag = true;
+                }
                     else
                     {
-                        Crime crime = new Crime(crimeNumber, description, date, time , caseOpen, witnesses, victims, suspects, personOfInterest);
+                        Crime crime = new Crime(crimeNumber, description, date, time , caseOpen, witnesses, victims, suspects, personOfInterest,evidence);
                         
                         int choice = JOptionPane.showConfirmDialog(null, crime.toString() + "\n\nAdd this Crime?", "Add Reports" , JOptionPane.YES_NO_OPTION);
                         if(choice == 0)
@@ -141,7 +192,7 @@ public class AddFunctionCrime extends JFrame {
                     }
                      
                     count++;
-                    if (count <= 8 )
+                    if (count <= 9 )
                         addItem.setText("Enter " + crimeItems[count] + " here...");
                    
                 }
