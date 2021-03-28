@@ -152,6 +152,14 @@ public class victimsList {
 		
 	}
 */
+
+	public void addWitness(Victim victim) {
+
+		victimList.add(victim);
+		DataWriter.saveVictim();
+
+	}
+
     /**
      * saves victims to library
      */
