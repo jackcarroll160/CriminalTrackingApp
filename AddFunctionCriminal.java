@@ -63,8 +63,6 @@ public class AddFunctionCriminal extends JFrame {
         add(panel);
     }
 
-    //
-
 
     /**
      * Creates a new frame to go "back" to the main page
