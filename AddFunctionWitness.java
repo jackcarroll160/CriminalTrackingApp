@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class AddFunctionCriminal extends JFrame {
+public class AddFunctionWitness extends JFrame {
 
     private JTextField addItem = new JTextField(30);
     private JButton addButton = new JButton("Add");
@@ -10,17 +10,17 @@ public class AddFunctionCriminal extends JFrame {
     private JTable result = new JTable();
     private JPanel panel = new JPanel();
     public int count = 0;
-    public String[] criminalItems = {"First Name", "Last Name", "Nickname", "Age", "Gender", "Ethnicity", "Contact Info", 
+    public String[] criminalItems = {"First Name", "Last Name", "Age", "Contact Info", "Ethnicity", "Contact Info", 
                                         "Linked Crime", "Crime ID", "Birth Date", "Eye Color", "Hair Description", "Hair Color", "Facial Hair Description", 
                                         "Height", "Weight", "Tattoo Description", "Physical Marks Description", "Physical Build", "Weapon Description", "Complexion", 
                                         "Clothing Description", "Vehicle Description"};
 
-    public AddFunctionCriminal() {
+    public AddFunctionWitness() {
         //CreateCriminalAdd();
         new DataLoader();
     }
 
-    public AddFunctionCriminal(String title) throws HeadlessException {
+    public AddFunctionWitness(String title) throws HeadlessException {
         super(title);
         
         setSize(500, 500);
