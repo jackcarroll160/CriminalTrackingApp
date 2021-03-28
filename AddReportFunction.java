@@ -116,11 +116,11 @@ public class AddReportFunction extends JDialog {
     // set name based on button pressed 
     private void addReport(java.awt.event.ActionEvent evt) {
         AddFunctionCriminal afc;
-        SearchFunctionCrime sfcrim;
         AddFunctionCrime afcrime;
         AddFunctionVictim afv;
         AddFunctionWitness afw;
         AddFunctionPOI afpoi;
+        AddFunctionSuspect afs;
         if (evt.getSource() == btnCriminalSearch) {
             afc = new AddFunctionCriminal("Add Criminal Report");
             afc.setLocationRelativeTo(null);
@@ -142,8 +142,8 @@ public class AddReportFunction extends JDialog {
             afw.setLocationRelativeTo(null);
         }
         else if (evt.getSource() == btnSuspect) {
-            sfcrim = new SearchFunctionCrime("Suspect Search");
-            sfcrim.setLocationRelativeTo(null);
+            afs = new AddFunctionSuspect("Add Suspect Report");
+            afs.setLocationRelativeTo(null);
         }
         
     } 
