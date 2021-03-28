@@ -8,17 +8,16 @@ public class AddFunctionVictim extends JFrame {
     int age = 0;
     String contactInfo = "";
     String minorStatus = "";
-    String proof = "";
-    String testimony = "";
-    String location = "";
-    String witnessType = "";
+    String alive = "";
+    String injured = "";
+    String statement = "";
     private JTextField addItem = new JTextField(30);
     private JButton addButton = new JButton("Add");
     private JButton backButton = new JButton("Cancel");
     private JPanel panel = new JPanel();
     public int count = 0;
-    public String[] witnessItems = {"First Name", "Last Name", "Age", "Contact Info", "Minor Status", "proof", 
-                                        "Testimony", "Location", "Witness Type"};
+    public String[] victimItems = {"First Name", "Last Name", "Age", "Contact Info", "Minor Status", "Alive or Not", 
+                                        "Injured or Not", "Statement"};
                                         
     public AddFunctionVictim() {
         new DataLoader();
@@ -67,21 +66,19 @@ public class AddFunctionVictim extends JFrame {
                         else if(count == 4)
                             minorStatus = addItem.getText();
                         else if(count == 5)
-                            proof = addItem.getText();
+                            alive = addItem.getText();
                         else if(count == 6)
-                            testimony = addItem.getText();
+                            injured = addItem.getText();
                         else if(count == 7)
-                            location = addItem.getText();
-                        else if(count == 8)
-                            witnessType = addItem.getText();
+                            statement = addItem.getText();
                         else
                         {
-                            Witness witness = new Witness(firstName, lastName, age, contactInfo, minorStatus, proof, testimony, location, witnessType);
+                            Victim victim = new Victim(firstName, lastName, age, contactInfo, minorStatus, alive, injured, statement);
                                                                 
-                            int choice = JOptionPane.showConfirmDialog(null, witness.toString() + "\n\nAdd this Witness?", "Add Witness Reports" , JOptionPane.YES_NO_OPTION);
+                            int choice = JOptionPane.showConfirmDialog(null, victim.toString() + "\n\nAdd this Witness?", "Add Victim Reports" , JOptionPane.YES_NO_OPTION);
                             if(choice == 0)
                             {
-                                witnessList.getInstance().addWitness(witness);
+                                victimsList.getInstance().addVictim(victim);
                                 dispose();
                                 UserOptions userOp = new UserOptions(frame);
                                 setLocationRelativeTo(null);
@@ -91,8 +88,8 @@ public class AddFunctionVictim extends JFrame {
                         }
                                                              
                         count++;
-                        if (count <= 22 )
-                            addItem.setText("Enter " + witnessItems[count] + " here...");
+                        if (count <= 7)
+                            addItem.setText("Enter " + victimItems[count] + " here...");
                                                            
                     }
                 });

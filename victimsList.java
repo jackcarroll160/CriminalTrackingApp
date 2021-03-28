@@ -153,7 +153,7 @@ public class victimsList {
 	}
 */
 
-	public void addWitness(Victim victim) {
+	public void addVictim(Victim victim) {
 
 		victimList.add(victim);
 		DataWriter.saveVictim();

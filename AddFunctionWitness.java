@@ -91,7 +91,7 @@ public class AddFunctionWitness extends JFrame {
                         }
                                                              
                         count++;
-                        if (count <= 22 )
+                        if (count <= 8)
                             addItem.setText("Enter " + witnessItems[count] + " here...");
                                                            
                     }
