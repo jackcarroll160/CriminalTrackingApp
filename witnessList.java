@@ -144,6 +144,13 @@ public class witnessList {
 		
 	}
 
+	public void addWitness(Witness witness) {
+
+        witnessItems.add(witness);
+        DataWriter.saveWitness();
+
+    }
+
 	/**
 	 * saves witness in library
 	 */

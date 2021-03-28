@@ -22,6 +22,8 @@ public class Witness extends Person{
             String testimony, String location, String typeOfWitness) {
 			
 			super(firstName,lastName,age,contactInfo,isMinor);
+			this.witnessId = UUID.randomUUID();
+			this.crimeId = UUID.randomUUID();
 			this.proof = proof;
 			this.testimony = testimony;
 			this.location = location;
@@ -32,6 +34,8 @@ public class Witness extends Person{
 			String isMinor, String proof2, String testimony2, String location2, String typeOfWitness2) {
 
 			super(firstName,lastName,age,contactInfo,isMinor);
+			this.witnessId = UUID.randomUUID();
+			this.crimeId = UUID.randomUUID();
 			this.proof = proof2;
 			this.testimony = testimony2;
 			this.location = location2;
