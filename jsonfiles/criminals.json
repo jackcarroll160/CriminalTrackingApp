@@ -49,5 +49,31 @@
         "complexion":"Freckles",
         "clothingDescription":"White collared shirt and khakis",
         "vehicleDescription": "green punchbug"
+    },
+    {
+        "criminalId":"4d54b419-1347-4d21-9bd9-3fffc89cf573", 
+        "firstName":"Not",
+        "lastName":"Found Yet",
+        "nickname":"",
+        "age": 0,
+        "gender":"",
+        "ethnicity":"",
+        "contactInfo":"",
+        "linkedCrime:":"",
+        "crimeId": "688eb0b6-ae03-4d1a-b66d-7dff9862ac3f", 
+        "birthdate":"",
+        "eyeColor":"",
+        "hairDescription":"",
+        "hairColor":"",
+        "facialHairDescription":"",
+        "height":"",
+        "weight":"",
+        "tattooDescription":"",
+        "physicalMarksDescription":"",
+        "physicalBuild":"",
+        "weaponDescription":"",
+        "complexion":"",
+        "clothingDescription":"",
+        "vehicleDescription": ""
     }
 ]

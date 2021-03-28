@@ -141,7 +141,7 @@ public class Witness extends Person{
 	}
 
 	public String toString() {
-		return "********* " + this.firstName + " " + lastName +"'s Report *********\n Witness ID: " + witnessId + "\n Crime ID: " + crimeId +
+		return "\n********* " + this.firstName + " " + lastName +"'s Report *********\n Witness ID: " + witnessId + "\n Crime ID: " + crimeId +
 		"\n Name: " + firstName + " " + lastName + "\n Age: " + age + "\n Contact Info: " + contactInfo + "\n Minor: " + isMinor + 
 		"\n Proof: " + proof + "\n Testimony: " + testimony + "\n Location: " + location + "\n Type: " + typeOfWitness;
 	}

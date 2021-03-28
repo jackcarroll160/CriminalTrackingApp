@@ -11,5 +11,18 @@
         "statement":"I hung out with Muffin Man earlier and he seemed fine.",
         "hasAlibi":"false",
         "isSuspect":"false"
+    },
+    {
+        "personOfInterestId": "2134d1d0-5c9a-4ef2-9a0a-40a07b89e35e",
+        "suspectId":"933b9963-9d58-4ca0-bf98-5855005f7eb9",
+        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f",
+        "firstName":"Da",
+        "lastName":"Baby",
+        "age": 30,
+        "contactInfo":"779-623-1234",
+        "isMinor":"false",
+        "statement":"I hung out with Paul Earlier Today.",
+        "hasAlibi":"false",
+        "isSuspect":"false"
     }
 ]

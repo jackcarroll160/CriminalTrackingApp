@@ -26,6 +26,16 @@ public class Victim extends Person{
 				this.statement =statement;
     }
 
+    public Victim(UUID victimId2, UUID crimeId2, String firstName, String lastName, int age, String contactInfo,
+            String isMinor, String isAlive2, String isInjured2, String statement2) {
+				super(firstName,lastName,age,contactInfo,isMinor);
+				this.victimId = victimId2;
+				this.crimeId = crimeId2;
+				this.isAlive = isAlive2;
+				this.isInjured = isInjured2;
+				this.statement =statement2;
+    }
+
     /*
 	 * This is the class that will return the alive boolean of the victim
 	 * @return a boolean that holds the alive flag

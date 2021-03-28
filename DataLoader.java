@@ -39,15 +39,15 @@ public class DataLoader extends DataConstants {
                 JSONArray suspectsIds = (JSONArray) crimeJSON.get(CRIME_SUSPECT_ID);
                 ArrayList<Suspect> suspects = getSuspects(suspectsIds);
                 JSONArray personOfInterestIds = (JSONArray) crimeJSON.get(CRIME_POI_ID);
+                ArrayList<PersonOfInterest> pois = getPersonOfInterest(personOfInterestIds);
                 JSONArray evidenceJ = (JSONArray) crimeJSON.get(CRIME_EVIDENCE);
                 ArrayList<String> evidence = new ArrayList<String>();
                 for(int j = 0; j < evidenceJ.size(); j++)
                 {
                     evidence.add(evidenceJ.get(i).toString());
                 }
-                ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
                 crime.add(new Crime(crimeNum, description, dateOfCrime, timeOfCrime, caseOpen, witnesses,
-                victims, suspects, personOfInterest,evidence));
+                victims, suspects, pois,evidence));
                 
             }
 
@@ -128,10 +128,10 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < personOfInterestJSONList.size(); i++) {
                 JSONObject personOfInterestListJSON = (JSONObject) personOfInterestJSONList.get(i);
-               /* UUID personOfInterestId = UUID
+                UUID personOfInterestId = UUID
                         .fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_POI_ID));
                 UUID suspectId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_SUSPECT_ID));
-                UUID crimeId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_CRIME_ID));*/
+                UUID crimeId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_CRIME_ID));
                 String firstName = (String) personOfInterestListJSON.get(PERSONOFINTEREST_FIRST_NAME);
                 String lastName = (String) personOfInterestListJSON.get(PERSONOFINTEREST_LAST_NAME);
                 int age = ((Long) personOfInterestListJSON.get(PERSONOFINTEREST_AGE)).intValue();
@@ -144,7 +144,7 @@ public class DataLoader extends DataConstants {
                 // BOOLEAN
                 String isSuspect = (String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_SUSPECT);
 
-                personOfInterest.add(new PersonOfInterest( firstName, lastName,
+                personOfInterest.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName,
                         age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
             }
 
@@ -215,7 +215,7 @@ public class DataLoader extends DataConstants {
                 String hasVehicle = (String) suspectJSON.get(SUSPECTS_HAS_VEHICLE);
                 String vehicleDescription = (String) suspectJSON.get(SUSPECTS_VEHICLE_DESCRIPTION);
 
-                suspect.add(new Suspect(firstName, lastName, age, gender, ethnicity, contactInfo, isMinor, statement, hasAlibi, birthDate, 
+                suspect.add(new Suspect(suspectId, crimeId, firstName, lastName, age, gender, ethnicity, contactInfo, isMinor, statement, hasAlibi, birthDate, 
                                         eyeColor, hairDescription,
                                         facialHairDescription, height, weight, tattooDescription, hasPiercings,
                                         physicalMarksDescription, physicalBuild, weaponDescription, complexion,
@@ -266,7 +266,7 @@ public class DataLoader extends DataConstants {
                 String isInjured = (String) victimJSON.get(VICTIMS_IS_INJURED);
                 String statement = (String) victimJSON.get(VICTIMS_STATEMENT);
 
-                victim.add(new Victim(firstName, lastName, age, contactInfo, isMinor, isAlive,
+                victim.add(new Victim(victimId, crimeId,firstName, lastName, age, contactInfo, isMinor, isAlive,
                         isInjured, statement));
             }
 

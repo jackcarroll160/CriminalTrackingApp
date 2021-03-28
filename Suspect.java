@@ -45,6 +45,41 @@ public class Suspect extends Person{
 
             }
 
+    public Suspect(UUID suspectId2, UUID crimeId2, String firstName, String lastName, int age, String gender2,
+            String ethnicity2, String contactInfo, String isMinor, String statement2, String hasAlibi2,
+            String birthDate2, String eyeColor2, String hairDescription2, String facialHairDescription2, String height2,
+            String weight2, String tattooDescription2, String hasPiercings2, String physicalMarksDescription2,
+            String physicalBuild2, String weaponDescription2, String complexion2, String clothingDescription2,
+            String vehicleDescription2) {
+                
+                super(firstName,lastName,age,contactInfo,isMinor);
+               this.crimeId = crimeId2;
+                this.suspectId = suspectId2;
+               this.gender =gender2;
+               this.ethnicity =ethnicity2;
+               this.statement = statement2;
+               this.hasAlibi = hasAlibi2;
+               this.birthDate = birthDate2;
+               this.eyeColor = eyeColor2;
+               this.hairDescription = hairDescription2;
+               //this.hasFacialHair = facialHair;
+               this.facialHairDescription = facialHairDescription2;
+               this.height = height2;
+               this.weight = weight2;
+               //this.hasTattoos = hasTattoos2;
+               this.tattooDescription = tattooDescription2;
+               this.hasPiercings = hasPiercings2;
+               this.physicalMarksDescription = physicalMarksDescription2;
+               this.physicalBuild = physicalBuild2;
+               //this.hasWeapon = hasWeapon2;
+               this.weaponDescription = weaponDescription2;
+               this.complexion = complexion2;
+               this.clothingDescription = clothingDescription2;
+               //this.hasVehicle = hasVehicle2;
+               this.vehicleDescription = vehicleDescription2;
+
+    }
+
     private Crime linkedCrime;
     private UUID crimeId;
     private String statement;

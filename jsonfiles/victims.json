@@ -11,4 +11,17 @@
         "isInjured":"true",
         "statement":"Strangled me when I took his muffin"
     }
+    ,
+    {
+        "victimId":"c2a7bb5d-322e-4f4c-9697-2862dc7e90a5",
+        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f",
+        "firstName":"Michelle",
+        "lastName":"Olana",
+        "age": 28,
+        "contactInfo":"864-528-0376",
+        "isMinor":"false",
+        "isAlive":"true",
+        "isInjured":"true",
+        "statement":"Strangled me and stole my purse"
+    }
 ]

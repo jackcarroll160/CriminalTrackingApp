@@ -30,7 +30,20 @@ public class PersonOfInterest extends Person {
 
 
 
-	/*
+	public PersonOfInterest(UUID personOfInterestId, UUID suspectId2, UUID crimeId2, String firstName, String lastName,
+            int age, String contactInfo, String isMinor, String statement2, String hasAlibi2, String isSuspect2) {
+				super(firstName, lastName, age, contactInfo, isMinor);
+		this.statement = statement2;
+		this.hasAlibi = hasAlibi2;
+		this.isSuspect = isSuspect2;
+		this.personId = personOfInterestId;
+		this.suspectId = suspectId2;
+		this.crimeId = crimeId2;
+    }
+
+
+
+    /*
 	 * This is a method that will take all of the data that was input and return it
 	 * in a readable string format
 	 * 

@@ -12,4 +12,32 @@
         "location": "Tipton Hotel",
         "typeOfWitness": "lay witness"
     }
+    ,
+    {
+        "witnessId":"6ed06be5-32dc-4259-a942-1d5d11b03378",
+        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f",
+        "firstName":"Michael",
+        "lastName":"Roberts",
+        "age": 28,
+        "contactInfo":"803-545-7892",
+        "isMinor":"No",
+        "proof":"was in the lobby when the attack happened",
+        "testimony": "I saw the man as I was waiting for my ride in the hotel lobby, and there was a middle aged man screaming at a girl.",
+        "location": "Hilton Hotel",
+        "typeOfWitness": "lay witness"
+    }
+    ,  
+    {
+        "witnessId":"866f8e75-d60d-40e6-aaea-066717b1b57e",
+        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f",
+        "firstName":"Tim",
+        "lastName":"Jolly",
+        "age": 23,
+        "contactInfo":"813-235-7342",
+        "isMinor":"No",
+        "proof":"was in my room when the robery happened",
+        "testimony": "I heard screaming so I looked out the window and saw a man running away with a purse.",
+        "location": "Hilton Hotel",
+        "typeOfWitness": "lay witness"
+    }
 ]

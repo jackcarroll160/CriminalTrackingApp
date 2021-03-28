@@ -13,4 +13,19 @@
         "personOfInterestId":["a13277c4-5380-4ba8-bf01-72b1c535181a"],
         "evidence": ["Brown Hair Found" , "Bullet From HandGun"]
     }
+    ,
+    {
+        "crimeNum": 327,
+        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f", 
+        "criminalId":"933b9963-9d58-4ca0-bf98-5855005f7eb9", 
+        "description":"Robery at Gunpoint",
+        "dateOfCrime":"07/24/2020",
+        "timeOfCrime":"8:59pm",
+        "caseOpen":"Yes",
+        "witnessesId": ["6ed06be5-32dc-4259-a942-1d5d11b03378","866f8e75-d60d-40e6-aaea-066717b1b57e"],
+        "victimId": ["c2a7bb5d-322e-4f4c-9697-2862dc7e90a5"],
+        "suspectId":["933b9963-9d58-4ca0-bf98-5855005f7eb9"],
+        "personOfInterestId":["2134d1d0-5c9a-4ef2-9a0a-40a07b89e35e"],
+        "evidence": ["Brown Hair Found On Ground at the Scene" , "Bullet Found From HandGun"]  
+    }
 ]
