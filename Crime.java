@@ -37,7 +37,7 @@ public class Crime {
     private TypeOfCrime typeOfCrime;
     private Grading grading;
 
-    public Crime(int crimeNum, UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
+    public Crime(int crimeNum, String description, String dateOfCrime, String timeOfCrime,
             String caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
             ArrayList<PersonOfInterest> personOfInterestId) 
             {

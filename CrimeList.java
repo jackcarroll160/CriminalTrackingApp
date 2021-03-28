@@ -31,9 +31,9 @@ public class CrimeList{
 		return crime;
 	}
 	
-	public boolean haveCrime(UUID crimeId) {
+	public boolean haveCrime(int crimeNum) {
 		for (Crime crime : crimeList) {
-			if (crime.getCrimeId().equals(crimeId)) {
+			if (crime.getCrimeNum() == (crimeNum)) {
 				return true;
 			}
 		}
@@ -117,17 +117,14 @@ public class CrimeList{
 	
 	}
 	
-	public boolean addCrime(int crimeNum, UUID crimeId2, UUID criminalId2, String description, String dateOfCrime, String timeOfCrime,
-	String caseOpen, ArrayList<Witness> witnessId, ArrayList<Victim> victimId, ArrayList<Suspect> suspectId,
-	ArrayList<PersonOfInterest> personOfInterestId)  {
-		if(haveCrime(crimeId2))return false;
-
-		crimeList.add(new Crime(crimeNum, crimeId2, criminalId2, description, dateOfCrime, timeOfCrime, caseOpen, witnessId, victimId, suspectId, personOfInterestId));
-		return true;
-	}
 
 	public void saveCrime() {
 		DataWriter.saveCrime();
+	}
+
+	public void addCrime(Crime crime2) {
+		crimeList.add(crime2);
+        DataWriter.saveCriminals();
 	}
 }
 
