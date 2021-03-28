@@ -8,7 +8,7 @@ import java.util.UUID;
  */
 public class witnessList {
 	
-    private static ArrayList<Witness> witnessList = new ArrayList<Witness>();
+    private static ArrayList<Witness> witnessItems = new ArrayList<Witness>();
 	private static witnessList witness = null;
 	
 	/*
@@ -16,7 +16,7 @@ public class witnessList {
 	 */
 	private witnessList()
 	{
-		witnessList = new DataLoader().loadWitnesses();
+		witnessItems = new DataLoader().loadWitnesses();
 	}
 	
 	/*
@@ -36,23 +36,13 @@ public class witnessList {
 	 */
 	public ArrayList<Witness> getWitnessList()
 	{
-		return witnessList;
+		return witnessItems;
 	}
 	
 	/**
 	 * searches for witness by ID num
 	 */
-	public Witness getWitnessById(Object id)
-	{
-		for(Witness witness : witnessList)
-		{
-			if(witness.getWitnessId().equals(id))
-			{
-				return witness;
-			}
-		}
-		return null;
-	}
+
 
 	/*
 	 * searches for witness by first and last name
@@ -61,7 +51,7 @@ public class witnessList {
 	{
 		boolean found = false;
 		
-		for (Witness witness : witnessList)
+		for (Witness witness : witnessItems)
 		{
 			if(witness.getFirstName().equalsIgnoreCase(Fname) && witness.getLastName().equalsIgnoreCase(Lname))
 			{
@@ -160,6 +150,17 @@ public class witnessList {
 	public void saveWitnesses() {
 		DataWriter.saveWitness();
 	}
+
+    public Witness getWitnessById(Object witnessId) {
+        for(Witness witness : witnessItems)
+		{
+			if(witness.getWitnessId().equals(witnessId))
+			{
+				return witness;
+			}
+		}
+		return null;
+    }
 	
 
 

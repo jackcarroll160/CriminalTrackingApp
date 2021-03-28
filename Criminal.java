@@ -51,7 +51,8 @@ public class Criminal {
             String physicalBuild, String weaponDescription, String complexion,
             String clothingDescription,
             String vehicleDescription) {
-        
+        this.criminalID = UUID.randomUUID();
+        this.crimeId = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.nickname = nickname;

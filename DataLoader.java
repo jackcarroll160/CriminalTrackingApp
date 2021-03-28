@@ -33,15 +33,15 @@ public class DataLoader extends DataConstants {
                 // boolean
                 String caseOpen = (String) crimeJSON.get(CRIME_CASE_OPEN);
                 JSONArray witnessesIds = (JSONArray) crimeJSON.get(CRIME_WITNESS_ID);
-               // ArrayList<Witness> witnesses = getWitnesses(witnessesIds);
+                ArrayList<Witness> witnesses = getWitnesses(witnessesIds);
                 JSONArray victimsIds = (JSONArray) crimeJSON.get(CRIME_VICTIM_ID);
-               // ArrayList<Victim> victims = getVictims(victimsIds);
+                ArrayList<Victim> victims = getVictims(victimsIds);
                 JSONArray suspectsIds = (JSONArray) crimeJSON.get(CRIME_SUSPECT_ID);
-               // ArrayList<Suspect> suspects = getSuspects(suspectsIds);
+                ArrayList<Suspect> suspects = getSuspects(suspectsIds);
                 JSONArray personOfInterestIds = (JSONArray) crimeJSON.get(CRIME_POI_ID);
-               // ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
-                crime.add(new Crime(crimeNum, crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnessesIds,
-                victimsIds, suspectsIds, personOfInterestIds));
+                ArrayList<PersonOfInterest> personOfInterest = getPersonOfInterest(personOfInterestIds);
+                crime.add(new Crime(crimeNum, crimeId, criminalId, description, dateOfCrime, timeOfCrime, caseOpen, witnesses,
+                victims, suspects, personOfInterest));
             }
 
             return crime;
@@ -152,7 +152,9 @@ public class DataLoader extends DataConstants {
     private static ArrayList<PersonOfInterest> getPersonOfInterest(JSONArray personOfInterestIds) {
         ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
         for (int i = 0; i < personOfInterestIds.size(); i++) {
-            PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(personOfInterestIds.get(i));
+            
+            UUID poiId = UUID.fromString((String)personOfInterestIds.get(i));
+            PersonOfInterest poi = personOfInterestList.getInstance().getPOIById(poiId);
             personOfInterest.add(poi);
         }
         return personOfInterest;
@@ -224,7 +226,9 @@ public class DataLoader extends DataConstants {
     private static ArrayList<Suspect> getSuspects(JSONArray suspectIds) {
         ArrayList<Suspect> suspect = new ArrayList<Suspect>();
         for (int i = 0; i < suspectIds.size(); i++) {
-            Suspect suspects = suspectsList.getInstance().getSuspectById(suspectIds.get(i));
+            
+            UUID suspectId = UUID.fromString((String)suspectIds.get(i));
+            Suspect suspects = suspectsList.getInstance().getSuspectById(suspectId);
             suspect.add(suspects);
         }
         return suspect;
@@ -270,7 +274,9 @@ public class DataLoader extends DataConstants {
     private static ArrayList<Victim> getVictims(JSONArray victimIds) {
         ArrayList<Victim> victims = new ArrayList<Victim>();
         for (int i = 0; i < victimIds.size(); i++) {
-            Victim victim = victimsList.getInstance().getVictimById(victimIds.get(i));
+            
+            UUID victimId = UUID.fromString((String)victimIds.get(i));
+            Victim victim = victimsList.getInstance().getVictimById(victimId);
             victims.add(victim);
         }
         return victims;
@@ -314,7 +320,8 @@ public class DataLoader extends DataConstants {
     private static ArrayList<Witness> getWitnesses(JSONArray witnessIds) {
         ArrayList<Witness> witnesses = new ArrayList<Witness>();
         for (int i = 0; i < witnessIds.size(); i++) {
-            Witness witness = witnessList.getInstance().getWitnessById(witnessIds.get(i));
+            UUID witnessId = UUID.fromString((String)witnessIds.get(i));
+            Witness witness = witnessList.getInstance().getWitnessById(witnessId);
             witnesses.add(witness);
         }
         return witnesses;
@@ -349,7 +356,9 @@ public class DataLoader extends DataConstants {
     private static ArrayList<User> getUser(JSONArray userIds) {
         ArrayList<User> users = new ArrayList<User>();
         for (int i = 0; i < userIds.size(); i++) {
-            User user = Users.getInstance().getUserById(userIds.get(i));
+            
+            UUID userId = UUID.fromString((String)userIds.get(i));
+            User user = Users.getInstance().getUserById(userId);
             users.add(user);
         }
         return users;
