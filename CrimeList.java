@@ -124,7 +124,7 @@ public class CrimeList{
 
 	public void addCrime(Crime crime2) {
 		crimeList.add(crime2);
-        DataWriter.saveCriminals();
+        DataWriter.saveCrime();
 	}
 }
 

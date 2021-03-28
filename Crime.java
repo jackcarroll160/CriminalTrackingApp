@@ -283,7 +283,7 @@ public class Crime {
 
     public String toString()
     {
-        return "********* Crime#" + crimeNum +" Report *********\n" + " Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
+        return "********* Crime #" + crimeNum +" Report *********\n" + " Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
          "\n Case open: " + caseOpen + "\n FOR FULL REPORT DOWNLOAD FILE: ";
 
         
@@ -292,7 +292,7 @@ public class Crime {
 
     public void Download( String name) {
         try{
-            String data = "********* Crime#" + crimeNum +" Report *********\n" + " Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
+            String data = "********* Crime #" + crimeNum +" Report *********\n" + " Description: " + description + "\n Date & Time of Crime: " + dateOfCrime + " at " + timeOfCrime +
             "\n Case open: " + caseOpen +  "\n Evidece: " + evidence +"\n ******* WITNESSES *******\n" + witnesses + "\n ******* VICTIMS *******\n" + victims + "\n ******* SUSPECTS *******\n" + suspects + 
             "\n ******* PERSONS OF INTEREST *******\n" + personOfInterest;
             BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+ name + ".txt"));

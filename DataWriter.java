@@ -61,9 +61,30 @@ public class DataWriter extends DataConstants {
         crimeInfo.put(CRIME_TIME_OF_CRIME, crime.getTimeOfCrime());
         // boolean
         crimeInfo.put(CRIME_CASE_OPEN, crime.isCaseOpen());
-        crimeInfo.put(CRIME_WITNESS_ID, crime.getWitnesses());
-        crimeInfo.put(CRIME_VICTIM_ID, crime.getVictims());
-        crimeInfo.put(CRIME_POI_ID, crime.getPersonOfInterest());
+        ArrayList<String> witnessIds = new ArrayList<String>();
+        ArrayList<String> victimIds = new ArrayList<String>();
+        ArrayList<String> poisIds = new ArrayList<String>();
+        ArrayList<String> suspectIds = new ArrayList<String>();
+        for (Witness witness : crime.getWitnesses())
+        {
+            witnessIds.add(witness.getWitnessId().toString());
+        }
+        for (Victim victim : crime.getVictims())
+        {
+            victimIds.add(victim.getVictimId().toString());
+        }
+        for (PersonOfInterest poi : crime.getPersonOfInterest())
+        {
+            poisIds.add(poi.getPersonId().toString());
+        }
+        for (Suspect suspect : crime.getSuspects())
+        {
+            suspectIds.add(suspect.getSuspectId().toString());
+        }
+        crimeInfo.put(CRIME_WITNESS_ID, witnessIds);
+        crimeInfo.put(CRIME_VICTIM_ID, victimIds);
+        crimeInfo.put(CRIME_POI_ID, poisIds);
+        crimeInfo.put(CRIME_SUSPECT_ID, suspectIds);
         crimeInfo.put(CRIME_EVIDENCE, crime.getEvidence());
 
         return crimeInfo;
