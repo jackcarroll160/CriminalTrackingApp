@@ -16,17 +16,19 @@ public class PersonOfInterest extends Person {
 	private UUID suspectId;
 	private UUID crimeId;
 
-	public PersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName, String lastName,
+	public PersonOfInterest(String firstName, String lastName,
 			int age, String contactInfo, String isMinor, String statement, String hasAlibi2, String isSuspect2) {
 		super(firstName, lastName, age, contactInfo, isMinor);
 		this.statement = statement;
 		this.hasAlibi = hasAlibi2;
 		this.isSuspect = isSuspect2;
-		this.personId = personOfInterestId;
-		this.suspectId = suspectId;
-		this.crimeId = crimeId;
+		this.personId = UUID.randomUUID();
+		this.suspectId = UUID.randomUUID();
+		this.crimeId = UUID.randomUUID();
 
 	}
+
+
 
 	/*
 	 * This is a method that will take all of the data that was input and return it

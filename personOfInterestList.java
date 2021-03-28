@@ -112,10 +112,10 @@ public class personOfInterestList {
 		return null;
 	}
 
-	public void addPersonOfInterest(UUID personOfInterestId, UUID suspectId, UUID crimeId, String firstName,
+	public void addPersonOfInterest( String firstName,
 			String lastName, int age, String contactInfo, String isMinor, String statement, String hasAlibi,
 			String isSuspect) {
-				PersonOfInterestList.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName, age,
+				PersonOfInterestList.add(new PersonOfInterest( firstName, lastName, age,
 				contactInfo, isMinor, statement, hasAlibi, isSuspect));
 		DataWriter.savePersonOfInterest();
 	}

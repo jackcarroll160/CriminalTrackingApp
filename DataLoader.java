@@ -121,10 +121,10 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < personOfInterestJSONList.size(); i++) {
                 JSONObject personOfInterestListJSON = (JSONObject) personOfInterestJSONList.get(i);
-                UUID personOfInterestId = UUID
+               /* UUID personOfInterestId = UUID
                         .fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_POI_ID));
                 UUID suspectId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_SUSPECT_ID));
-                UUID crimeId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_CRIME_ID));
+                UUID crimeId = UUID.fromString((String) personOfInterestListJSON.get(PERSONOFINTEREST_CRIME_ID));*/
                 String firstName = (String) personOfInterestListJSON.get(PERSONOFINTEREST_FIRST_NAME);
                 String lastName = (String) personOfInterestListJSON.get(PERSONOFINTEREST_LAST_NAME);
                 int age = ((Long) personOfInterestListJSON.get(PERSONOFINTEREST_AGE)).intValue();
@@ -137,7 +137,7 @@ public class DataLoader extends DataConstants {
                 // BOOLEAN
                 String isSuspect = (String) personOfInterestListJSON.get(PERSONOFINTEREST_IS_SUSPECT);
 
-                personOfInterest.add(new PersonOfInterest(personOfInterestId, suspectId, crimeId, firstName, lastName,
+                personOfInterest.add(new PersonOfInterest( firstName, lastName,
                         age, contactInfo, isMinor, statement, hasAlibi, isSuspect));
             }
 
