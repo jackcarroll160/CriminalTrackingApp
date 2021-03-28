@@ -74,7 +74,7 @@ public class SearchFunctionSuspect extends JFrame {
         searchButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                searchVictimJSON();
+                searchSuspectJSON();
             }
         });
 
@@ -89,7 +89,7 @@ public class SearchFunctionSuspect extends JFrame {
         });
     }
 
-    private void searchVictimJSON() {
+    private void searchSuspectJSON() {
 
         //checking first name
         if (checkBox.isSelected()) {
