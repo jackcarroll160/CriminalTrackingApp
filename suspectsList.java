@@ -8,13 +8,13 @@ import java.util.UUID;
 public class suspectsList {
 
 	private static suspectsList suspect = null;
-	private static ArrayList<Suspect> suspectsList = new ArrayList<Suspect>();
+	private static ArrayList<Suspect> suspectList = new ArrayList<Suspect>();
 
 	/*
 	 * loads in suspects library
 	 */
 	private suspectsList() {
-		suspectsList = new DataLoader().loadSuspects();
+		suspectList = new DataLoader().loadSuspects();
 	}
 
 	/*
@@ -32,7 +32,7 @@ public class suspectsList {
 	 * returns suspectList
 	 */
 	public ArrayList<Suspect> getSuspectList() {
-		return suspectsList;
+		return suspectList;
 	}
 
 	/*
@@ -41,7 +41,7 @@ public class suspectsList {
 	public Suspect searchSuspectsByName(String Fname, String Lname) {
 		boolean found = false;
 
-		for (Suspect suspect : suspectsList) {
+		for (Suspect suspect : suspectList) {
 			if (suspect.getFirstName().equalsIgnoreCase(Fname) && suspect.getLastName().equalsIgnoreCase(Lname)) {
 				found = true;
 				return suspect;
@@ -229,6 +229,14 @@ public class suspectsList {
 
 	}
 */
+
+	public void addSuspect(Suspect suspect) {
+
+		suspectList.add(suspect);
+		DataWriter.saveSuspect();
+		
+	}
+
 	/**
 	 * saves suspect in suspect library
 	 */
@@ -240,7 +248,7 @@ public class suspectsList {
 	 * searches for suspects by ID num
 	 */
 	public Suspect getSuspectById(Object id) {
-		for (Suspect suspect : suspectsList) {
+		for (Suspect suspect : suspectList) {
 			if (suspect.getSuspectId().equals(id)) {
 				return suspect;
 			}

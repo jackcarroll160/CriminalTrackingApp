@@ -9,17 +9,16 @@ import java.util.UUID;
  */
 public class Suspect extends Person{
     
-    public Suspect(UUID suspectId, UUID crimeId, String firstName, String lastName, int age, String gender,
+    public Suspect(String firstName, String lastName, int age, String gender,
             String ethnicity, String contactInfo, String isMinor, String statement, String hasAlibi2,
-            String birthDate, String eyeColor, String hairDescription, String facialHair,
-            String facialHairDescription, String height, String weight, String hasTattoos2,
+            String birthDate, String eyeColor, String hairDescription,
+            String facialHairDescription, String height, String weight,
             String tattooDescription, String hasPiercings2, String physicalMarksDescription, String physicalBuild,
-            String hasWeapon2, String weaponDescription, String complexion, String clothingDescription,
-            String hasVehicle2, String vehicleDescription) 
+            String weaponDescription, String complexion, String clothingDescription, String vehicleDescription) 
             {
                super(firstName,lastName,age,contactInfo,isMinor);
-               this.suspectId = suspectId;
-               this.crimeId= crimeId;
+               this.suspectId = UUID.randomUUID();
+               this.crimeId= UUID.randomUUID();
                this.gender =gender;
                this.ethnicity =ethnicity;
                this.statement = statement;
@@ -27,20 +26,20 @@ public class Suspect extends Person{
                this.birthDate = birthDate;
                this.eyeColor = eyeColor;
                this.hairDescription = hairDescription;
-               this.hasFacialHair = facialHair;
+               //this.hasFacialHair = facialHair;
                this.facialHairDescription = facialHairDescription;
                this.height = height;
                this.weight = weight;
-               this.hasTattoos = hasTattoos2;
+               //this.hasTattoos = hasTattoos2;
                this.tattooDescription = tattooDescription;
                this.hasPiercings = hasPiercings2;
                this.physicalMarksDescription = physicalMarksDescription;
                this.physicalBuild = physicalBuild;
-               this.hasWeapon = hasWeapon2;
+               //this.hasWeapon = hasWeapon2;
                this.weaponDescription = weaponDescription;
                this.complexion = complexion;
                this.clothingDescription = clothingDescription;
-               this.hasVehicle = hasVehicle2;
+               //this.hasVehicle = hasVehicle2;
                this.vehicleDescription = vehicleDescription;
 
 
