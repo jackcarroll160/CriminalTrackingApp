@@ -1,7 +1,6 @@
 [
     {
         "witnessId":"4d1a7ab4-21ad-472f-84e8-3b4128f55c9b",
-        "crimeId":"6e406649-8cce-4774-a4e7-e7ae733e55cf",
         "firstName":"Madison",
         "lastName":"Yager",
         "age": 28,
@@ -15,7 +14,6 @@
     ,
     {
         "witnessId":"6ed06be5-32dc-4259-a942-1d5d11b03378",
-        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f",
         "firstName":"Michael",
         "lastName":"Roberts",
         "age": 28,
@@ -29,7 +27,6 @@
     ,  
     {
         "witnessId":"866f8e75-d60d-40e6-aaea-066717b1b57e",
-        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f",
         "firstName":"Tim",
         "lastName":"Jolly",
         "age": 23,

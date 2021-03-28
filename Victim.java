@@ -26,11 +26,10 @@ public class Victim extends Person{
 				this.statement =statement;
     }
 
-    public Victim(UUID victimId2, UUID crimeId2, String firstName, String lastName, int age, String contactInfo,
+    public Victim(UUID victimId2, String firstName, String lastName, int age, String contactInfo,
             String isMinor, String isAlive2, String isInjured2, String statement2) {
 				super(firstName,lastName,age,contactInfo,isMinor);
 				this.victimId = victimId2;
-				this.crimeId = crimeId2;
 				this.isAlive = isAlive2;
 				this.isInjured = isInjured2;
 				this.statement =statement2;
@@ -123,7 +122,7 @@ public class Victim extends Person{
 	public String toString()
 	{
 		return "********* " + firstName +" " + lastName +"'s Report *********\n" + 
-		 "\n Age: " + age +  "\n Victim ID: " + victimId + "\n Crime ID: " + crimeId+ 
+		 "\n Age: " + age +  "\n Victim ID: " + victimId + 
 		 "\n Contact Information: " + contactInfo  + "\n Statement: " + statement +
 		 "\n Is Injured: " + isInjured+ "\n Is Alive: " + isAlive +  "\n Is Minor: " + isMinor ;
 

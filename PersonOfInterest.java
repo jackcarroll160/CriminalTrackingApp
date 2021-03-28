@@ -30,15 +30,13 @@ public class PersonOfInterest extends Person {
 
 
 
-	public PersonOfInterest(UUID personOfInterestId, UUID suspectId2, UUID crimeId2, String firstName, String lastName,
+	public PersonOfInterest(UUID personOfInterestId, String firstName, String lastName,
             int age, String contactInfo, String isMinor, String statement2, String hasAlibi2, String isSuspect2) {
 				super(firstName, lastName, age, contactInfo, isMinor);
 		this.statement = statement2;
 		this.hasAlibi = hasAlibi2;
 		this.isSuspect = isSuspect2;
 		this.personId = personOfInterestId;
-		this.suspectId = suspectId2;
-		this.crimeId = crimeId2;
     }
 
 

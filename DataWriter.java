@@ -159,7 +159,6 @@ public class DataWriter extends DataConstants {
         suspectDetails.put(SUSPECTS_CLOTHING_DESCRIPTION, suspect.getClothingDescription());
         suspectDetails.put(SUSPECTS_COMPLEXION, suspect.getComplexion());
         suspectDetails.put(SUSPECTS_CONTACT_INFO, suspect.getContactInfo());
-        suspectDetails.put(SUSPECTS_CRIME_ID, suspect.getCrimeId());
         suspectDetails.put(SUSPECTS_ETHNICITY, suspect.getEthnicity());
         suspectDetails.put(SUSPECTS_EYE_COLOR, suspect.getEyeColor());
         suspectDetails.put(SUSPECTS_FACIAL_HAIR_DESCRIPTION, suspect.getFacialHairDescription());
@@ -212,7 +211,6 @@ public class DataWriter extends DataConstants {
         victimDetails.put(VICTIMS_STATEMENT, victim.getStatement());
         victimDetails.put(VICTIMS_IS_INJURED, victim.isInjured());
         victimDetails.put(VICTIMS_IS_ALIVE, victim.isAlive());
-        victimDetails.put(VICTIMS_CRIME_ID, victim.getCrimeId());
         victimDetails.put(VICTIMS_VICTIM_ID, victim.getVictimId());
 
         return victimDetails;
@@ -248,7 +246,6 @@ public class DataWriter extends DataConstants {
         witnessDetails.put(WITNESSES_PROOF, witness.getProof());
         witnessDetails.put(WITNESSES_TESTIMONY, witness.getTestimony());
         witnessDetails.put(WITNESSES_TYPE_OF_WITNESS, witness.getTypeOfWitness());
-        witnessDetails.put(WITNESSES_CRIME_ID, witness.getCrimeId());
         witnessDetails.put(WITNESSES_WITNESS_ID, witness.getWitnessId());
 
         return witnessDetails;
@@ -278,8 +275,6 @@ public class DataWriter extends DataConstants {
     public static JSONObject getPersonOfInterestJSON(PersonOfInterest personOfInterest) {
         JSONObject personOfInterestInfo = new JSONObject();
         personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getPersonId());
-        personOfInterestInfo.put(PERSONOFINTEREST_SUSPECT_ID, personOfInterest.getSuspectId().toString());
-        personOfInterestInfo.put(PERSONOFINTEREST_CRIME_ID, personOfInterest.getCrimeId().toString());
         personOfInterestInfo.put(PERSONOFINTEREST_FIRST_NAME, personOfInterest.getFirstName());
         personOfInterestInfo.put(PERSONOFINTEREST_LAST_NAME, personOfInterest.getLastName());
         personOfInterestInfo.put(PERSONOFINTEREST_AGE, personOfInterest.getAge());

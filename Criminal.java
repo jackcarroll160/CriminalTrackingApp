@@ -77,7 +77,7 @@ public class Criminal {
     }
 
     public Criminal(UUID criminalId, String firstName, String lastName, String nickname, int age,
-            String gender, String ethnicity, String contactInfo, String linkedCrime, UUID crimeId, String birthDate,
+            String gender, String ethnicity, String contactInfo, String linkedCrime, String birthDate,
             String eyeColor, String hairDescription,String hairColor, String facialHairDescription, String height,
             String weight, String tattooDescription,
             String physicalMarksDescription, String physicalBuild, String weaponDescription,
@@ -85,7 +85,6 @@ public class Criminal {
             String vehicleDescription) {
         this.hairColor = hairColor;
         this.criminalID = UUID.randomUUID();
-        this.crimeId = UUID.randomUUID();
         this.criminalID = criminalId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -95,7 +94,6 @@ public class Criminal {
         this.ethnicity = ethnicity; 
         this.contactInfo = contactInfo;
         this.linkedCrime = linkedCrime;
-        this.crimeId = crimeId;
         this.birthDate = birthDate;
         this.eyeColor = eyeColor;
         this.hairDescription = hairDescription;

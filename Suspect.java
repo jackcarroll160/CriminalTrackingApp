@@ -45,7 +45,7 @@ public class Suspect extends Person{
 
             }
 
-    public Suspect(UUID suspectId2, UUID crimeId2, String firstName, String lastName, int age, String gender2,
+    public Suspect(UUID suspectId2, String firstName, String lastName, int age, String gender2,
             String ethnicity2, String contactInfo, String isMinor, String statement2, String hasAlibi2,
             String birthDate2, String eyeColor2, String hairDescription2, String facialHairDescription2, String height2,
             String weight2, String tattooDescription2, String hasPiercings2, String physicalMarksDescription2,
@@ -53,7 +53,6 @@ public class Suspect extends Person{
             String vehicleDescription2) {
                 
                 super(firstName,lastName,age,contactInfo,isMinor);
-               this.crimeId = crimeId2;
                 this.suspectId = suspectId2;
                this.gender =gender2;
                this.ethnicity =ethnicity2;
@@ -545,10 +544,9 @@ public class Suspect extends Person{
 
     public String toString()
     {
-        return "********* " + firstName +" " + lastName +"'s Report *********\n" + " Suspect Id: " + suspectId +
-        "\n Crime Id: " + crimeId + "\n Age: " + age + "\n Gender: " + gender + "\n Ethnicity: " + ethnicity + "\n Complexion: " + complexion +
+        return "********* " + firstName +" " + lastName +"'s Report *********\n" + " Suspect Id: " + suspectId + "\n Age: " + age + "\n Gender: " + gender + "\n Ethnicity: " + ethnicity + "\n Complexion: " + complexion +
          "\n Contact Information: " + contactInfo +  "\n Is Minor: " + isMinor +  "\n Statement: " + statement +
-        "\n Has Alibi: " + hasAlibi + "\n Birth Date: " + birthDate+ "\n Eye Color: " + eyeColor + "\n Hair Description: " + hairDescription +
+        "\n In Prison: " + hasAlibi + "\n Birth Date: " + birthDate+ "\n Eye Color: " + eyeColor + "\n Hair Description: " + hairDescription +
         "\n Facial Hair: " + facialHairDescription + "\n Height: "+ height + "\n Weight: " + weight + "\n Tattoo Description: " + tattooDescription +
         "\n Has Piercings: " + hasPiercings + "\n Physical Marks Descriptions: " + physicalMarksDescription + "\n Physical Build: " + physicalBuild+
         "\n Weapon Description: " + weaponDescription + "\n Clothing Description: " + clothingDescription + "\n Vehicle Description: " + vehicleDescription ;

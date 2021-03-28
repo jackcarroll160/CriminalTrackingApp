@@ -1,8 +1,6 @@
 [
     {
         "personOfInterestId": "a13277c4-5380-4ba8-bf01-72b1c535181a",
-        "suspectId":"16b30468-f099-41e7-82c6-608a6424c1a2",
-        "crimeId":"6e406649-8cce-4774-a4e7-e7ae733e55cf",
         "firstName":"Bagel",
         "lastName":"Boy",
         "age": 30,
@@ -14,8 +12,6 @@
     },
     {
         "personOfInterestId": "2134d1d0-5c9a-4ef2-9a0a-40a07b89e35e",
-        "suspectId":"933b9963-9d58-4ca0-bf98-5855005f7eb9",
-        "crimeId":"688eb0b6-ae03-4d1a-b66d-7dff9862ac3f",
         "firstName":"Da",
         "lastName":"Baby",
         "age": 30,

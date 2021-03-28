@@ -30,18 +30,17 @@ public class Witness extends Person{
 			this.typeOfWitness = typeOfWitness;
     }
 
-	public Witness(UUID witnessId2, UUID crimeId2, String firstName, String lastName, int age, String contactInfo,
+	public Witness(UUID witnessId2, String firstName, String lastName, int age, String contactInfo,
 			String isMinor, String proof2, String testimony2, String location2, String typeOfWitness2) {
 
 			super(firstName,lastName,age,contactInfo,isMinor);
 			this.witnessId = UUID.randomUUID();
-			this.crimeId = UUID.randomUUID();
 			this.proof = proof2;
 			this.testimony = testimony2;
 			this.location = location2;
 			this.typeOfWitness = typeOfWitness2;
 			this.witnessId= witnessId2;
-			this.crimeId = crimeId2;
+			
 	}
 
 	/*
