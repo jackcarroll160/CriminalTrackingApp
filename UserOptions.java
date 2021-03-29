@@ -48,20 +48,7 @@ public class UserOptions extends JDialog {
             }
 
         });
-        /*btnRemove.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-                setSearchName(e);
-            }
-        });*/
-        /*btnEdit.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-                setSearchName(e);
-            }
-        }); */
+    
         
         btnLogout.addActionListener(new ActionListener() {
 
@@ -88,26 +75,6 @@ public class UserOptions extends JDialog {
 
     } // END OF USEROPTIONS
     
-    // set name based on button pressed 
-    /*private void setSearchName(java.awt.event.ActionEvent evt) {
-        SearchFunctionCriminal sf;
-        AddReportFunction arf;
-        if (evt.getSource() == btnSearchDatabase) {
-            sf = new SearchFunctions("CRIMINAL TEST");
-            sf.setLocationRelativeTo(null);
-        }
-        if (evt.getSource() == btnAdd) {
-            arf = new AddReportFunction("TEST HERE Add New Report");
-            arf.setLocationRelativeTo(null);
-        }
-        if (evt.getSource() == btnRemove) {
-            sf = new SearchFunctionCriminal("TEST HERE Remove Old Report");
-            sf.setLocationRelativeTo(null);
-        }
-        else if (evt.getSource() == btnEdit) {
-            sf = new SearchFunctionCriminal("TEST HERE Edit Existing Report");
-            sf.setLocationRelativeTo(null);
-        }
-    } */
+  
 
 }
