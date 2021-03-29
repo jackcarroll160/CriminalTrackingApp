@@ -3,33 +3,32 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class AddFunctionCriminal extends JFrame {
-    String firstName = "";
-    String lastName = "";
-    String nickname = "";
-    int age = 0;
-    String gender = "";
-    String ethnicity = "";
-    String contactInfo = "";
-    String linkedCrime = "";
-    String crimeID = "";
-    String birthDate = "";
-    String eyeColor = "";
-    String hairDescription = "";
-    String hairColor = "";
-    String facialHairDescription = "";
-    String hght = "";
-    String weight = "";
-    String tattooDescription = "";
-    String physicalMarkDescription = "";
-    String physicalBuild = "";
-    String weaponDescription = "";
-    String complexion = "";
-    String clothingDescription = "";
-    String vehicleDescription = "";
+    private String firstName = "";
+    private String lastName = "";
+    private String nickname = "";
+    private int age = 0;
+    private String gender = "";
+    private String ethnicity = "";
+    private String contactInfo = "";
+    private String linkedCrime = "";
+    private String crimeID = "";
+    private String birthDate = "";
+    private String eyeColor = "";
+    private String hairDescription = "";
+    private String hairColor = "";
+    private String facialHairDescription = "";
+    private String hght = "";
+    private String weight = "";
+    private String tattooDescription = "";
+    private String physicalMarkDescription = "";
+    private String physicalBuild = "";
+    private String weaponDescription = "";
+    private String complexion = "";
+    private String clothingDescription = "";
+    private String vehicleDescription = "";
     private JTextField addItem = new JTextField(30);
     private JButton addButton = new JButton("Add");
     private JButton backButton = new JButton("Cancel");
-    private JTable result = new JTable();
     private JPanel panel = new JPanel();
     public int count = 0;
     public String[] criminalItems = {"First Name", "Last Name", "Nickname", "Age", "Gender", "Ethnicity", "Contact Info", 
@@ -38,7 +37,6 @@ public class AddFunctionCriminal extends JFrame {
                                         "Clothing Description", "Vehicle Description"};
 
     public AddFunctionCriminal() {
-        //CreateCriminalAdd();
         new DataLoader();
     }
 
@@ -50,7 +48,6 @@ public class AddFunctionCriminal extends JFrame {
         addComponents();
         backButtonFunction();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-       // setTable(); //change this later to set names from JSON
         setVisible(true);
     }
 
@@ -62,7 +59,6 @@ public class AddFunctionCriminal extends JFrame {
         panel.setLayout(new FlowLayout());
         add(panel);
     }
-
 
     /**
      * Creates a new frame to go "back" to the main page
@@ -152,7 +148,7 @@ public class AddFunctionCriminal extends JFrame {
 
             public void actionPerformed(ActionEvent e) {                
                 dispose();
-                UserOptions userOp = new UserOptions(frame); //change this when ready
+                UserOptions userOp = new UserOptions(frame);
                 setLocationRelativeTo(null);
                 userOp.setVisible(true);
             }

@@ -5,36 +5,34 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 public class AddFunctionCrime extends JFrame {
-    boolean flag = false;
-    String description = "";
-    String date = "";
-    String time = "";
-    String caseOpen = "";
-    int crimeNumber = 0;
-    String witnessName = "";
-    String victimName = "";
-    String suspectName = "";
-    String poiName = "";
-    int evidenceNum = 0;
-    ArrayList<String> evidence= new ArrayList<String>();
-    ArrayList<Witness> witnesses  = new ArrayList<Witness>();
-    ArrayList<Victim> victims = new ArrayList<Victim>();
-    ArrayList<Suspect> suspects = new ArrayList<Suspect>();
-    ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
-    ArrayList<Criminal> criminals = new ArrayList<Criminal>();
+    private boolean flag = false;
+    private String description = "";
+    private String date = "";
+    private String time = "";
+    private String caseOpen = "";
+    private int crimeNumber = 0;
+    private String witnessName = "";
+    private String victimName = "";
+    private String suspectName = "";
+    private String poiName = "";
+    private int evidenceNum = 0;
+    private ArrayList<String> evidence= new ArrayList<String>();
+    private ArrayList<Witness> witnesses  = new ArrayList<Witness>();
+    private ArrayList<Victim> victims = new ArrayList<Victim>();
+    private ArrayList<Suspect> suspects = new ArrayList<Suspect>();
+    private ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
+    private ArrayList<Criminal> criminals = new ArrayList<Criminal>();
     
 
     private JTextField addItem = new JTextField(30);
     private JButton addButton = new JButton("Add");
     private JButton backButton = new JButton("Cancel");
-    private JTable result = new JTable();
     private JPanel panel = new JPanel();
     public int count = 0;
     public String[] crimeItems = {"Description" , "Date", "Time" , "Case Open", " Crime Number" , " Witness Name" , "Victim Name" , "Suspect Name"
                                     , "Person Of Interest Name", "Number Of Evidence Pieces", "Evidence"};
 
     public AddFunctionCrime() {
-        //CreateCriminalAdd();
         new DataLoader();
     }
 
@@ -46,7 +44,6 @@ public class AddFunctionCrime extends JFrame {
         addComponents();
         backButtonFunction();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-       // setTable(); //change this later to set names from JSON
         setVisible(true);
     }
 
@@ -58,9 +55,6 @@ public class AddFunctionCrime extends JFrame {
         panel.setLayout(new FlowLayout());
         add(panel);
     }
-
-    //
-
 
     /**
      * Creates a new frame to go "back" to the main page
@@ -203,7 +197,7 @@ public class AddFunctionCrime extends JFrame {
 
             public void actionPerformed(ActionEvent e) {                
                 dispose();
-                UserOptions userOp = new UserOptions(frame); //change this when ready
+                UserOptions userOp = new UserOptions(frame);
                 setLocationRelativeTo(null);
                 userOp.setVisible(true);
             }

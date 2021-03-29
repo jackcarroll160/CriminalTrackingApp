@@ -3,29 +3,29 @@ import java.awt.event.*;
 import javax.swing.*;
                                         
 public class AddFunctionSuspect extends JFrame {
-    String firstName = "";
-    String lastName = "";
-    int age = 0;
-    String gender = "";
-    String ethnicity = "";
-    String contactInfo = "";
-    String minorStatus = "";
-    String statement = "";
-    String hasAlibi = "";
-    String birthDate = "";
-    String eyeColor = "";
-    String hairDescription = "";
-    String facialHairDescription = "";
-    String hght = "";
-    String weight = "";
-    String tattooDescription = "";
-    String piercingDescription = "";
-    String physicalMarksDescription = "";
-    String physicalBuild = "";
-    String weaponDescription = "";
-    String complexion = "";
-    String clothingDescription = "";
-    String vehicleDescription = "";
+    private String firstName = "";
+    private String lastName = "";
+    private int age = 0;
+    private String gender = "";
+    private String ethnicity = "";
+    private String contactInfo = "";
+    private String minorStatus = "";
+    private String statement = "";
+    private String hasAlibi = "";
+    private String birthDate = "";
+    private String eyeColor = "";
+    private String hairDescription = "";
+    private String facialHairDescription = "";
+    private String hght = "";
+    private String weight = "";
+    private String tattooDescription = "";
+    private String piercingDescription = "";
+    private String physicalMarksDescription = "";
+    private String physicalBuild = "";
+    private String weaponDescription = "";
+    private String complexion = "";
+    private String clothingDescription = "";
+    private String vehicleDescription = "";
 
     private JTextField addItem = new JTextField(30);
     private JButton addButton = new JButton("Add");
@@ -59,8 +59,7 @@ public class AddFunctionSuspect extends JFrame {
         panel.add(backButton);
         panel.setLayout(new FlowLayout());
         add(panel);
-    }
-                                        
+    }                                     
                                         
     /**
     * Creates a new frame to go "back" to the main page
@@ -148,7 +147,7 @@ public class AddFunctionSuspect extends JFrame {
                                         
                     public void actionPerformed(ActionEvent e) {                
                         dispose();
-                        UserOptions userOp = new UserOptions(frame); //change this when ready
+                        UserOptions userOp = new UserOptions(frame);
                         setLocationRelativeTo(null);
                         userOp.setVisible(true);
                     }

@@ -22,7 +22,6 @@ public class AddFunctionPOI extends JFrame {
                                         "Is Minor", "Statement" , "Has Alibi" , "Is Suspect"};
 
     public AddFunctionPOI() {
-        //CreateCriminalAdd();
         new DataLoader();
     }
 
@@ -34,7 +33,6 @@ public class AddFunctionPOI extends JFrame {
         addComponents();
         backButtonFunction();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-       // setTable(); //change this later to set names from JSON
         setVisible(true);
     }
 
@@ -103,7 +101,7 @@ public class AddFunctionPOI extends JFrame {
 
             public void actionPerformed(ActionEvent e) {                
                 dispose();
-                UserOptions userOp = new UserOptions(frame); //change this when ready
+                UserOptions userOp = new UserOptions(frame);
                 setLocationRelativeTo(null);
                 userOp.setVisible(true);
             }

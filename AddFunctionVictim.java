@@ -3,14 +3,14 @@ import java.awt.event.*;
 import javax.swing.*;
                                         
 public class AddFunctionVictim extends JFrame {
-    String firstName = "";
-    String lastName = "";
-    int age = 0;
-    String contactInfo = "";
-    String minorStatus = "";
-    String alive = "";
-    String injured = "";
-    String statement = "";
+    private String firstName = "";
+    private String lastName = "";
+    private int age = 0;
+    private String contactInfo = "";
+    private String minorStatus = "";
+    private String alive = "";
+    private String injured = "";
+    private String statement = "";
     private JTextField addItem = new JTextField(30);
     private JButton addButton = new JButton("Add");
     private JButton backButton = new JButton("Cancel");
@@ -41,8 +41,7 @@ public class AddFunctionVictim extends JFrame {
         panel.add(backButton);
         panel.setLayout(new FlowLayout());
         add(panel);
-    }
-                                        
+    }                                   
                                         
     /**
     * Creates a new frame to go "back" to the main page
@@ -98,7 +97,7 @@ public class AddFunctionVictim extends JFrame {
                                         
                     public void actionPerformed(ActionEvent e) {                
                         dispose();
-                        UserOptions userOp = new UserOptions(frame); //change this when ready
+                        UserOptions userOp = new UserOptions(frame);
                         setLocationRelativeTo(null);
                         userOp.setVisible(true);
                     }

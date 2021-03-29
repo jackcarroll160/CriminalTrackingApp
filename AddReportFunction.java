@@ -73,7 +73,6 @@ public class AddReportFunction extends JDialog {
 
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                //setSearchName(e);
             }
         });
 
