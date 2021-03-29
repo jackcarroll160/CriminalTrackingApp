@@ -420,30 +420,4 @@ public class DataLoader extends DataConstants {
     }
 }
 
-/**
- * Reading the User JSON file
- * 
- * @return an empty ArrayList
- * @throws IOException
- */
-/**
- * public static ArrayList<User> getUsers() throws IOException {
- * 
- * ArrayList<User> usersList = new ArrayList<>();
- * 
- * try (FileReader reader = new FileReader(USER_FILE_NAME); ) {
- * 
- * JSONArray usersJSON = (JSONArray)new JSONParser().parse(reader);
- * 
- * for(int i = 0; i < usersJSON.size(); i++) { JSONObject userJSON =
- * (JSONObject)usersJSON.get(i); String username =
- * (String)userJSON.get(USER_USERNAME); String password =
- * (String)userJSON.get(USER_PASSWORD);
- * 
- * usersList.add(new User(username, password)); DataWriter.saveUsers(); } return
- * usersList;
- * 
- * } catch (Exception e) { e.printStackTrace(); } return new ArrayList<>(); }
- * 
- * }
- */
+
