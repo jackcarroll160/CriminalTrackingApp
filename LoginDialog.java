@@ -102,14 +102,26 @@ public class LoginDialog extends JDialog {
         setLocationRelativeTo(parent);
     }
  
+    
+    /** 
+     * @return String
+     */
     public String getUsername() {
         return tfUsername.getText();
     }
  
+    
+    /** 
+     * @return String
+     */
     public String getPassword() {
         return pfPassword.getText();
     }
  
+    
+    /** 
+     * @return boolean
+     */
     public boolean isSucceeded() {
         return succeeded;
     }

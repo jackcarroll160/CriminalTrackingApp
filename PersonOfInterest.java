@@ -41,7 +41,11 @@ public class PersonOfInterest extends Person {
 
 
 
-    /*
+    
+	/** 
+	 * @return String
+	 */
+	/*
 	 * This is a method that will take all of the data that was input and return it
 	 * in a readable string format
 	 * 
@@ -54,6 +58,10 @@ public class PersonOfInterest extends Person {
 		 "\n Is Minor: " + isMinor + "\n Person Of Interest Id: " + personId + "\n Suspect Id: " + suspectId + "\n Crime Id: " + crimeId;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the statemet of the POI
 	 * 
@@ -63,6 +71,10 @@ public class PersonOfInterest extends Person {
 		return statement;
 	}
 
+	
+	/** 
+	 * @param statement
+	 */
 	/*
 	 * This is the class that will set the statemet of the POI
 	 * 
@@ -72,6 +84,10 @@ public class PersonOfInterest extends Person {
 		this.statement = statement;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the boolean of alibi of the POI
 	 * 
@@ -81,6 +97,10 @@ public class PersonOfInterest extends Person {
 		return hasAlibi;
 	}
 
+	
+	/** 
+	 * @param hasAlibi
+	 */
 	/*
 	 * This is the class that will set the boolean of alibi of the POI
 	 * 
@@ -90,6 +110,10 @@ public class PersonOfInterest extends Person {
 		this.hasAlibi = hasAlibi;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the suspect boolean of the POI
 	 * 
@@ -99,6 +123,10 @@ public class PersonOfInterest extends Person {
 		return isSuspect;
 	}
 
+	
+	/** 
+	 * @param isSuspect
+	 */
 	/*
 	 * This is the class that will set the suspect boolean of the POI
 	 * 
@@ -108,6 +136,10 @@ public class PersonOfInterest extends Person {
 		this.isSuspect = isSuspect;
 	}
 
+	
+	/** 
+	 * @return UUID
+	 */
 	/*
 	 * This is the class that will return the id of the POI
 	 * 
@@ -117,6 +149,10 @@ public class PersonOfInterest extends Person {
 		return personId;
 	}
 
+	
+	/** 
+	 * @param personId
+	 */
 	/*
 	 * This is the class that will set the id of the POI
 	 * 
@@ -126,22 +162,43 @@ public class PersonOfInterest extends Person {
 		this.personId = personId;
 	}
 
+	
+	/** 
+	 * @return UUID
+	 */
 	public UUID getCrimeId() {
 		return crimeId;
 	}
 
+	
+	/** 
+	 * @return UUID
+	 */
 	public UUID getSuspectId() {
 		return suspectId;
 	}
 
+	
+	/** 
+	 * @param crimeId
+	 */
 	public void setCrimeId(UUID crimeId) {
 		this.crimeId = crimeId;
 	}
 
+	
+	/** 
+	 * @param suspectId
+	 */
 	public void setSuspectId(UUID suspectId) {
 		this.suspectId = suspectId;
 	}
 
+	
+	/** 
+	 * @param string
+	 * @param string2
+	 */
 	public void Download(String string, String string2) {
 		try{
             BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+string2+ ".txt"));

@@ -10,6 +10,13 @@ import java.util.ArrayList;
 
 public class Login extends LoginDialog {
 
+    
+    /** 
+     * @param username
+     * @param password
+     * @return boolean
+     * @throws IOException
+     */
     // private static HashMap<String, String> loginInfo = new HashMap<>();
     // private static ArrayList<User> temp = ;
 
@@ -23,6 +30,13 @@ public class Login extends LoginDialog {
 
     }
 
+    
+    /** 
+     * @param username
+     * @param password
+     * @return boolean
+     * @throws IOException
+     */
     public static boolean authenticateNewUser(String username, String password) throws IOException {
         if(authenticate(username, password))
         {

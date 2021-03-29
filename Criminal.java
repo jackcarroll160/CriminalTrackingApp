@@ -109,261 +109,521 @@ public class Criminal {
         this.vehicleDescription = vehicleDescription;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     public UUID getCriminalID() {
         return criminalID;
     }
 
+    
+    /** 
+     * @param criminalID
+     */
     public void setCriminalID(UUID criminalID) {
         this.criminalID = criminalID;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getHairColor() {
         return hairColor;
     }
 
+    
+    /** 
+     * @param hairColor
+     */
     public void setHairColor(String hairColor) {
         this.hairColor = hairColor;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    
+    /** 
+     * @param firstName
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getLastName() {
         return lastName;
     }
 
+    
+    /** 
+     * @param lastName
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getHasNickname() {
         return hasNickname;
     }
 
+    
+    /** 
+     * @param hasNickname
+     */
     public void setHasNickname(boolean hasNickname) {
         this.hasNickname = hasNickname;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getNickname() {
         return nickname;
     }
 
+    
+    /** 
+     * @param nickname
+     */
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getAge() {
         return age;
     }
 
+    
+    /** 
+     * @param age
+     */
     public void setAge(int age) {
         this.age = age;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getGender() {
         return gender;
     }
 
+    
+    /** 
+     * @param gender
+     */
     public void setGender(String gender) {
         this.gender = gender;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getEthnicity() {
         return ethnicity;
     }
 
+    
+    /** 
+     * @param ethnicity
+     */
     public void setEthnicity(String ethnicity) {
         this.ethnicity = ethnicity;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getContactinfo() {
         return contactInfo;
     }
 
+    
+    /** 
+     * @param contactinfo
+     */
     public void setContactinfo(String contactinfo) {
         this.contactInfo = contactinfo;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getLinkedCrime() {
         return linkedCrime;
     }
 
+    
+    /** 
+     * @param linkedCrime
+     */
     public void setLinkedCrime(String linkedCrime) {
         this.linkedCrime = linkedCrime;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     public UUID getCrimeId() {
         return crimeId;
     }
 
+    
+    /** 
+     * @param crimeId
+     */
     public void setCrimeId(UUID crimeId) {
         this.crimeId = crimeId;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getBirthDate() {
         return birthDate;
     }
 
+    
+    /** 
+     * @param birthDate
+     */
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getEyeColor() {
         return eyeColor;
     }
 
+    
+    /** 
+     * @param eyeColor
+     */
     public void setEyeColor(String eyeColor) {
         this.eyeColor = eyeColor;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getHairDescription() {
         return hairDescription;
     }
 
+    
+    /** 
+     * @param hairDescription
+     */
     public void setHairDescription(String hairDescription) {
         this.hairDescription = hairDescription;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getFacialHair() {
         return facialHair;
     }
 
+    
+    /** 
+     * @param facialHair
+     */
     public void setFacialHair(boolean facialHair) {
         this.facialHair = facialHair;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getFacialHairDescription() {
         return facialHairDescription;
     }
 
+    
+    /** 
+     * @param facialHairDescription
+     */
     public void setFacialHairDescription(String facialHairDescription) {
         this.facialHairDescription = facialHairDescription;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getHeight() {
         return height;
     }
 
+    
+    /** 
+     * @param height
+     */
     public void setHeight(String height) {
         this.height = height;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getWeight() {
         return weight;
     }
 
+    
+    /** 
+     * @param weight
+     */
     public void setWeight(String weight) {
         this.weight = weight;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getHasTattoos() {
         return hasTattoos;
     }
 
+    
+    /** 
+     * @param hasTattoos
+     */
     public void setHasTattoos(boolean hasTattoos) {
         this.hasTattoos = hasTattoos;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getTattooDescription() {
         return tattooDescription;
     }
 
+    
+    /** 
+     * @param tattooDescription
+     */
     public void setTattooDescription(String tattooDescription) {
         this.tattooDescription = tattooDescription;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getHasPiercings() {
         return hasPiercings;
     }
 
+    
+    /** 
+     * @param hasPiercings
+     */
     public void setHasPiercings(boolean hasPiercings) {
         this.hasPiercings = hasPiercings;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getPhysicalMarksDescription() {
         return physicalMarksDescription;
     }
 
+    
+    /** 
+     * @param physicalMarksDescription
+     */
     public void setPhysicalMarksDescription(String physicalMarksDescription) {
         this.physicalMarksDescription = physicalMarksDescription;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getPhysicalBuild() {
         return physicalBuild;
     }
 
+    
+    /** 
+     * @param physicalBuild
+     */
     public void setPhysicalBuild(String physicalBuild) {
         this.physicalBuild = physicalBuild;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getHasWeapon() {
         return hasWeapon;
     }
 
+    
+    /** 
+     * @param hasWeapon
+     */
     public void setHasWeapon(boolean hasWeapon) {
         this.hasWeapon = hasWeapon;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getWeaponDescription() {
         return weaponDescription;
     }
 
+    
+    /** 
+     * @param weaponDescription
+     */
     public void setWeaponDescription(String weaponDescription) {
         this.weaponDescription = weaponDescription;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getComplexion() {
         return complexion;
     }
 
+    
+    /** 
+     * @param complexion
+     */
     public void setComplexion(String complexion) {
         this.complexion = complexion;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getClothingDescription() {
         return clothingDescription;
     }
 
+    
+    /** 
+     * @param clothingDescription
+     */
     public void setClothingDescription(String clothingDescription) {
         this.clothingDescription = clothingDescription;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getIsGuilty() {
         return isGuilty;
     }
 
+    
+    /** 
+     * @param isGuilty
+     */
     public void setIsGuilty(boolean isGuilty) {
         this.isGuilty = isGuilty;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getHasFingerprints() {
         return hasFingerprints;
     }
 
+    
+    /** 
+     * @param hasFingerprints
+     */
     public void setHasFingerprints(boolean hasFingerprints) {
         this.hasFingerprints = hasFingerprints;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getHasVehicle() {
         return hasVehicle;
     }
 
+    
+    /** 
+     * @param hasVehicle
+     */
     public void setHasVehicle(boolean hasVehicle) {
         this.hasVehicle = hasVehicle;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getVehicleDescription() {
         return vehicleDescription;
     }
 
+    
+    /** 
+     * @param vehicleDescription
+     */
     public void setVehicleDescription(String vehicleDescription) {
         this.vehicleDescription = vehicleDescription;
     }
+    
+    /** 
+     * @return String
+     */
     public String toString()
     {
         return "********* " + firstName +" " + lastName +"'s Report *********\n" + " Criminal Id: " + criminalID +
@@ -378,6 +638,11 @@ public class Criminal {
         
     }
 
+    
+    /** 
+     * @param data
+     * @param criminalName
+     */
     public void Download(String data,String criminalName) {
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+criminalName+ ".txt"));

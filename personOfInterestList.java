@@ -17,6 +17,10 @@ public class personOfInterestList {
 		PersonOfInterestList = new DataLoader().loadPersonOfInterests();
 	}
 
+	
+	/** 
+	 * @return personOfInterestList
+	 */
 	/*
 	 * creates new POI
 	 */
@@ -28,6 +32,10 @@ public class personOfInterestList {
 
 	}
 
+	
+	/** 
+	 * @return ArrayList<PersonOfInterest>
+	 */
 	/*
 	 * returns POIList
 	 */
@@ -35,6 +43,12 @@ public class personOfInterestList {
 		return PersonOfInterestList;
 	}
 
+	
+	/** 
+	 * @param Fname
+	 * @param Lname
+	 * @return PersonOfInterest
+	 */
 	/*
 	 * searches for POI by first and last name
 	 */
@@ -112,6 +126,17 @@ public class personOfInterestList {
 		return null;
 	}
 
+	
+	/** 
+	 * @param firstName
+	 * @param lastName
+	 * @param age
+	 * @param contactInfo
+	 * @param isMinor
+	 * @param statement
+	 * @param hasAlibi
+	 * @param isSuspect
+	 */
 	public void addPersonOfInterest( String firstName,
 			String lastName, int age, String contactInfo, String isMinor, String statement, String hasAlibi,
 			String isSuspect) {

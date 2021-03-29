@@ -17,6 +17,10 @@ public class suspectsList {
 		suspectList = new DataLoader().loadSuspects();
 	}
 
+	
+	/** 
+	 * @return suspectsList
+	 */
 	/*
 	 * creates new suspect
 	 */
@@ -28,6 +32,10 @@ public class suspectsList {
 
 	}
 
+	
+	/** 
+	 * @return ArrayList<Suspect>
+	 */
 	/*
 	 * returns suspectList
 	 */
@@ -35,6 +43,12 @@ public class suspectsList {
 		return suspectList;
 	}
 
+	
+	/** 
+	 * @param Fname
+	 * @param Lname
+	 * @return Suspect
+	 */
 	/*
 	 * searches suspects by first and last name
 	 */

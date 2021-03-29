@@ -510,38 +510,74 @@ public class Suspect extends Person{
         this.gender = gender;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     public UUID getCrimeId() {
         return this.crimeId;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getHasVehicle() {
         return this.hasVehicle;
     }
 
+    
+    /** 
+     * @param crimeId
+     */
     public void setCrimeId(UUID crimeId) {
        this.crimeId = crimeId;
     }
 
+    
+    /** 
+     * @param hasVehicle
+     */
     public void setHasVehicle(String hasVehicle) {
         this.hasVehicle = hasVehicle;
     }
    
+    
+    /** 
+     * @return String
+     */
     public String getStatement() {
         return this.statement;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getHasAlibi() {
         return this.hasAlibi;
     }
 
+    
+    /** 
+     * @param statement
+     */
     public void setStatement(String statement) {
        this.statement = statement;
     }
 
+    
+    /** 
+     * @param hasAlibi
+     */
     public void setHasAlibi(String hasAlibi) {
         this.hasAlibi = hasAlibi;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String toString()
     {
         return "********* " + firstName +" " + lastName +"'s Report *********\n" + " Suspect Id: " + suspectId + "\n Age: " + age + "\n Gender: " + gender + "\n Ethnicity: " + ethnicity + "\n Complexion: " + complexion +
@@ -554,6 +590,11 @@ public class Suspect extends Person{
         
     }
 
+    
+    /** 
+     * @param string
+     * @param string2
+     */
     public void Download(String string, String string2) {
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+string2+ ".txt"));

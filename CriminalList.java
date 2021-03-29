@@ -19,6 +19,10 @@ public class CriminalList{
 		criminalList = new DataLoader().loadCriminals();
 	}
 	
+	
+	/** 
+	 * @return CriminalList
+	 */
 	/*
 	 * This is the getInstance method that will create a new criminal as long as criminal List is not null
 	 * @return An instance of library
@@ -31,6 +35,10 @@ public class CriminalList{
 		return criminal;
 	}
 	
+	
+	/** 
+	 * @return ArrayList<Criminal>
+	 */
 	/*
 	 * 
 	 */
@@ -40,6 +48,12 @@ public class CriminalList{
 	}
 	
 	
+	
+	/** 
+	 * @param Fname
+	 * @param Lname
+	 * @return Criminal
+	 */
 	/*
 	 * 
 	 */

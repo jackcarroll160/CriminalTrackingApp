@@ -46,6 +46,11 @@ public class Users {
         return false;
     }
 
+    
+    /** 
+     * @param username
+     * @return boolean
+     */
     public static boolean haveUser(String username) {
         for (User user : userList) {
             if (user.getUsername().equals(username)) {
@@ -94,6 +99,11 @@ public class Users {
 
     }
 
+    
+    /** 
+     * @param id
+     * @return User
+     */
     public User getUserById(Object id) {
         for (User user : userList) {
             if (user.getUserId().equals(id)) {

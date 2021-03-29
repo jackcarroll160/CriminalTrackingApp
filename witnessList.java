@@ -21,6 +21,7 @@ public class witnessList {
 	
 	/*
 	 * creates new witness
+	 * @return a witness List
 	 */
 	public static witnessList getInstance()
 	{
@@ -33,19 +34,18 @@ public class witnessList {
 	
 	/*
 	 * returns witnessList
+	 * @return an array list of witnesses
 	 */
 	public ArrayList<Witness> getWitnessList()
 	{
 		return witnessItems;
 	}
 	
-	/**
-	 * searches for witness by ID num
-	 */
-
-
 	/*
 	 * searches for witness by first and last name
+	 * @param String for the firstName
+	 * @param String for the lastName
+	 * @return Witness
 	 */
 	public Witness searchWitnessByName(String Fname, String Lname)
 	{
@@ -69,6 +69,8 @@ public class witnessList {
 
 	/*
 	 * allows user to edit witness info
+	 * @param String for the firstName
+	 * @param String for the lastName
 	 */
 	public void editWitnessByName(String Fname, String Lname) 
 	{
@@ -159,7 +161,9 @@ public class witnessList {
 	}
 
 	/*
-	
+	This will search through the witness list and return the witness at that id
+	@param An objest that is the Witness id
+	@return a witness
 	*/
     public Witness getWitnessById(Object witnessId) {
         for(Witness witness : witnessItems)

@@ -58,6 +58,10 @@ public class DataLoader extends DataConstants {
 
         return null;
     }
+    
+    /** 
+     * @return ArrayList<Criminal>
+     */
     // ------------------------------------- criminal
     // ---------------------------------------------------------------------------
     public static ArrayList<Criminal> loadCriminals() {
@@ -109,6 +113,11 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    
+    /** 
+     * @param item
+     * @return boolean
+     */
     private static boolean getBoolean(String item) {
         if(item.equalsIgnoreCase("false"))
             return false;
@@ -116,6 +125,10 @@ public class DataLoader extends DataConstants {
             return true;
     }
 
+    
+    /** 
+     * @return ArrayList<PersonOfInterest>
+     */
     // --------------------------------------- persons of interest
     // ---------------------------------------------------------
     public static ArrayList<PersonOfInterest> loadPersonOfInterests() {
@@ -153,6 +166,11 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    
+    /** 
+     * @param personOfInterestIds
+     * @return ArrayList<PersonOfInterest>
+     */
     private static ArrayList<PersonOfInterest> getPersonOfInterest(JSONArray personOfInterestIds) {
         ArrayList<PersonOfInterest> personOfInterest = new ArrayList<PersonOfInterest>();
         for (int i = 0; i < personOfInterestIds.size(); i++) {
@@ -164,6 +182,10 @@ public class DataLoader extends DataConstants {
         return personOfInterest;
     }
 
+    
+    /** 
+     * @return ArrayList<Suspect>
+     */
     // ------------------------------- suspects
     // --------------------------------------------------
     public static ArrayList<Suspect> loadSuspects() {
@@ -226,6 +248,11 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    
+    /** 
+     * @param suspectIds
+     * @return ArrayList<Suspect>
+     */
     private static ArrayList<Suspect> getSuspects(JSONArray suspectIds) {
         ArrayList<Suspect> suspect = new ArrayList<Suspect>();
         for (int i = 0; i < suspectIds.size(); i++) {
@@ -237,6 +264,10 @@ public class DataLoader extends DataConstants {
         return suspect;
     }
 
+    
+    /** 
+     * @return ArrayList<Victim>
+     */
     // -------------------------------------- victims
     // ------------------------------------------------------------------
     public static ArrayList<Victim> loadVictims() {
@@ -273,6 +304,11 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    
+    /** 
+     * @param victimIds
+     * @return ArrayList<Victim>
+     */
     private static ArrayList<Victim> getVictims(JSONArray victimIds) {
         ArrayList<Victim> victims = new ArrayList<Victim>();
         for (int i = 0; i < victimIds.size(); i++) {
@@ -284,6 +320,10 @@ public class DataLoader extends DataConstants {
         return victims;
     }
 
+    
+    /** 
+     * @return ArrayList<Witness>
+     */
     // ------------------------------------------------ witnesses
     // ---------------------------------------------------------------
     public static ArrayList<Witness> loadWitnesses() {
@@ -318,6 +358,11 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    
+    /** 
+     * @param witnessIds
+     * @return ArrayList<Witness>
+     */
     private static ArrayList<Witness> getWitnesses(JSONArray witnessIds) {
         ArrayList<Witness> witnesses = new ArrayList<Witness>();
         for (int i = 0; i < witnessIds.size(); i++) {
@@ -328,6 +373,10 @@ public class DataLoader extends DataConstants {
         return witnesses;
     }
 
+    
+    /** 
+     * @return ArrayList<User>
+     */
     // ------------------------------------------------ users
     // --------------------------------------------------------------------
 
@@ -354,6 +403,11 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    
+    /** 
+     * @param userIds
+     * @return ArrayList<User>
+     */
     private static ArrayList<User> getUser(JSONArray userIds) {
         ArrayList<User> users = new ArrayList<User>();
         for (int i = 0; i < userIds.size(); i++) {

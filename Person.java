@@ -20,6 +20,10 @@ public abstract class Person {
 		this.isMinor = isMinor2;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the first name of the person
 	 * @return a String that holds the first name
@@ -29,6 +33,10 @@ public abstract class Person {
 		return firstName;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 *  This is the class that will return the last name of the person
 	 * @return a String that holds the last name
@@ -38,6 +46,10 @@ public abstract class Person {
 		return lastName;
 	}
 	
+	
+	/** 
+	 * @param Fname
+	 */
 	/*
 	 *   This is the class that will set the first name of the person
 	 * @param a String that holds the first name
@@ -47,6 +59,10 @@ public abstract class Person {
 		this.firstName = Fname;
 	}
 	
+	
+	/** 
+	 * @param Lname
+	 */
 	/*
 	 * This is the class that will set the last name of the person
 	 * @param a String that holds the last name
@@ -56,6 +72,10 @@ public abstract class Person {
 		this.lastName = Lname;
 	}
 	
+	
+	/** 
+	 * @return int
+	 */
 	/*
 	 * This is the class that will return the age of the person
 	 * @return an int that holds the Age
@@ -65,6 +85,10 @@ public abstract class Person {
 		return age;
 	}
 	
+	
+	/** 
+	 * @param ageNum
+	 */
 	/*
 	 * This is the class that will set the age of the person
 	 * @param an int that holds the age of the person
@@ -74,6 +98,10 @@ public abstract class Person {
 		this.age = ageNum;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the contact info of the person
 	 * @return a string with the contact info
@@ -83,6 +111,10 @@ public abstract class Person {
 		return contactInfo;
 	}
 	
+	
+	/** 
+	 * @param contactInformation
+	 */
 	/*
 	 * This is the class that will set the contact info of the person
 	 * @param a String that holds the contact information
@@ -92,6 +124,10 @@ public abstract class Person {
 		this.contactInfo = contactInformation;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return a boolean of the person on if they are a minor
 	 * @return a boolean with true if they are a minor
@@ -101,6 +137,10 @@ public abstract class Person {
 		return isMinor;
 	}
 	
+	
+	/** 
+	 * @param minor
+	 */
 	/*
 	 * This is the class that will set the minor boolean of the person
 	 * @param a boolean that holds true if they are a minor

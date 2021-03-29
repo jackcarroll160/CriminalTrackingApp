@@ -19,6 +19,10 @@ public class CrimeList{
 		crimeList = new DataLoader().loadCrime();
 	}
 	
+	
+	/** 
+	 * @return CrimeList
+	 */
 	/*
 	 * This is the getInstance method that will create a new criminal as long as criminal List is not null
 	 * @return An instance of library
@@ -31,6 +35,11 @@ public class CrimeList{
 		return crime;
 	}
 	
+	
+	/** 
+	 * @param crimeNum
+	 * @return boolean
+	 */
 	public boolean haveCrime(int crimeNum) {
 		for (Crime crime : crimeList) {
 			if (crime.getCrimeNum() == (crimeNum)) {
@@ -41,6 +50,11 @@ public class CrimeList{
 	}
 	
 	
+	
+	/** 
+	 * @param CrimeID
+	 * @return Crime
+	 */
 	/*
 	 * 
 	 */
@@ -64,6 +78,10 @@ public class CrimeList{
 		return null;
 	}
 
+	
+	/** 
+	 * @return ArrayList<Crime>
+	 */
 	/*
 	 * 
 	 */
@@ -73,7 +91,11 @@ public class CrimeList{
 	}
 
 
-    public void editCrimeByName(UUID CrimeID)
+    
+	/** 
+	 * @param CrimeID
+	 */
+	public void editCrimeByName(UUID CrimeID)
     {
         Crime crimeEdit = searchCrimeByName(CrimeID);
 		Scanner keyboard = new Scanner (System.in);
@@ -122,6 +144,10 @@ public class CrimeList{
 		DataWriter.saveCrime();
 	}
 
+	
+	/** 
+	 * @param crime2
+	 */
 	public void addCrime(Crime crime2) {
 		crimeList.add(crime2);
         DataWriter.saveCrime();

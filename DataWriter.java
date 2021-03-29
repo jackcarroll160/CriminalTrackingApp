@@ -23,6 +23,11 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    
+    /** 
+     * @param user
+     * @return JSONObject
+     */
     public static JSONObject getUserLoginJSON(User user) {
         JSONObject userInfo = new JSONObject();
         userInfo.put(USER_USERNAME, user.getUsername());
@@ -52,6 +57,11 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    
+    /** 
+     * @param crime
+     * @return JSONObject
+     */
     public static JSONObject getCrimeJSON(Crime crime) {
         JSONObject crimeInfo = new JSONObject();
         crimeInfo.put(CRIME_CRIME_ID, crime.getCrimeId());
@@ -111,6 +121,11 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    
+    /** 
+     * @param criminal
+     * @return JSONObject
+     */
     public static JSONObject getCriminalJSON(Criminal criminal) {
         JSONObject criminalInfo = new JSONObject();
         criminalInfo.put(CRIMINALS_FIRST_NAME, criminal.getFirstName());
@@ -171,6 +186,11 @@ public class DataWriter extends DataConstants {
         }
     }
  
+    
+    /** 
+     * @param suspect
+     * @return JSONObject
+     */
     public static JSONObject getSuspectJSON(Suspect suspect) {
         JSONObject suspectDetails = new JSONObject();
         suspectDetails.put(SUSPECTS_FIRST_NAME, suspect.getFirstName());
@@ -222,6 +242,11 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    
+    /** 
+     * @param victim
+     * @return JSONObject
+     */
     public static JSONObject getVictimJSON(Victim victim) {
         JSONObject victimDetails = new JSONObject();
         victimDetails.put(VICTIMS_FIRST_NAME, victim.getFirstName());
@@ -257,6 +282,11 @@ public class DataWriter extends DataConstants {
 
     }
 
+    
+    /** 
+     * @param witness
+     * @return JSONObject
+     */
     public static JSONObject getWitnessJSON(Witness witness) {
         JSONObject witnessDetails = new JSONObject();
         witnessDetails.put(WITNESSES_FIRST_NAME, witness.getFirstName());
@@ -293,6 +323,11 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    
+    /** 
+     * @param personOfInterest
+     * @return JSONObject
+     */
     public static JSONObject getPersonOfInterestJSON(PersonOfInterest personOfInterest) {
         JSONObject personOfInterestInfo = new JSONObject();
         personOfInterestInfo.put(PERSONOFINTEREST_POI_ID, personOfInterest.getPersonId());

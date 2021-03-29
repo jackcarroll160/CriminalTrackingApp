@@ -19,6 +19,10 @@ public class victimsList {
 		victimList = new DataLoader().loadVictims();
 	}
 	
+	
+	/** 
+	 * @return victimsList
+	 */
 	/*
 	 * creates new victim 
 	 */
@@ -30,6 +34,10 @@ public class victimsList {
 		return victims;
 	}
 	
+	
+	/** 
+	 * @return ArrayList<Victim>
+	 */
 	/*
 	 * returns victimList
 	 */
@@ -53,6 +61,12 @@ public class victimsList {
 		return null;
 	}
 
+	
+	/** 
+	 * @param Fname
+	 * @param Lname
+	 * @return Victim
+	 */
 	/*
 	 * searches for victims by first and last name
 	 */

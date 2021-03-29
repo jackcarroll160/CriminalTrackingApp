@@ -7,6 +7,10 @@ import java.io.IOException;
 import javax.swing.*;
 
 public class MainUI {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         final JFrame frame = new JFrame("CriminalTrackingApp");
         final JButton btnLogin = new JButton("Login");

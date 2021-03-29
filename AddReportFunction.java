@@ -113,6 +113,10 @@ public class AddReportFunction extends JDialog {
         });
     }
 
+    
+    /** 
+     * @param evt
+     */
     // set name based on button pressed 
     private void addReport(java.awt.event.ActionEvent evt) {
         AddFunctionCriminal afc;

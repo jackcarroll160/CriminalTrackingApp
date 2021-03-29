@@ -35,7 +35,11 @@ public class Victim extends Person{
 				this.statement =statement2;
     }
 
-    /*
+    
+	/** 
+	 * @return String
+	 */
+	/*
 	 * This is the class that will return the alive boolean of the victim
 	 * @return a boolean that holds the alive flag
 	 */
@@ -43,6 +47,10 @@ public class Victim extends Person{
 		return isAlive;
 	}
 	
+	
+	/** 
+	 * @param isAlive
+	 */
 	/*
 	 * This is the class that will set the alive boolean of the victim
 	 * @param a boolean that holds the alive flag
@@ -51,6 +59,10 @@ public class Victim extends Person{
 		this.isAlive = isAlive;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the Gender of the victim
 	 * @return a String that holds the gender of the victim
@@ -59,6 +71,10 @@ public class Victim extends Person{
 		return gender;
 	}
 	
+	
+	/** 
+	 * @param gender
+	 */
 	/*
 	 * This is the class that will set the Gender of the victim
 	 * @param a String that holds the gender of the victim
@@ -67,6 +83,10 @@ public class Victim extends Person{
 		this.gender = gender;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the injured boolean of the victim
 	 * @return a boolean that holds the injured flag
@@ -75,6 +95,10 @@ public class Victim extends Person{
 		return isInjured;
 	}
 	
+	
+	/** 
+	 * @param isInjured
+	 */
 	/*
 	 * This is the class that will set the injured boolean of the victim
 	 * @param a boolean that holds the injured flag
@@ -83,6 +107,10 @@ public class Victim extends Person{
 		this.isInjured = isInjured;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	/*
 	 * This is the class that will return the statement of the victim
 	 * @return a String that holds the statement
@@ -91,6 +119,10 @@ public class Victim extends Person{
 		return statement;
 	}
 	
+	
+	/** 
+	 * @param statement
+	 */
 	/*
 	 * This is the class that will set the statement of the victim
 	 * @param a String that holds the statement
@@ -99,6 +131,10 @@ public class Victim extends Person{
 		this.statement = statement;
 	}
 	
+	
+	/** 
+	 * @return UUID
+	 */
 	/*
 	 * This is the class that will return the victim id of the victim
 	 * @return an int that holds the id
@@ -107,6 +143,10 @@ public class Victim extends Person{
 		return victimId;
 	}
 	
+	
+	/** 
+	 * @param victimId
+	 */
 	/*
 	 * This is the class that will set the victim id of the victim
 	 * @param an int that holds the id
@@ -115,10 +155,18 @@ public class Victim extends Person{
 		this.victimId = victimId;
 	}
 
+	
+	/** 
+	 * @return UUID
+	 */
 	public UUID getCrimeId() {
 		return this.crimeId;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	public String toString()
 	{
 		return "********* " + firstName +" " + lastName +"'s Report *********\n" + 
@@ -129,6 +177,11 @@ public class Victim extends Person{
 		
 	}
 
+	
+	/** 
+	 * @param string
+	 * @param string2
+	 */
 	public void Download(String string, String string2) {
 		try{
             BufferedWriter writer = new BufferedWriter(new FileWriter("criminalReports/"+string2+ ".txt"));
