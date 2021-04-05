@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainUI",
+            "request": "launch",
+            "mainClass": "MainUI",
+            "projectName": "CriminalTrackingApp_fce688cf"
+        },
+        {
+            "type": "java",
             "name": "Launch uuidCreator",
             "request": "launch",
             "mainClass": "uuidCreator",

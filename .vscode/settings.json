@@ -2,6 +2,7 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "/Users/rosesatriano/Downloads/json-simple-1.1.1.jar",
-        "jsonfiles/json-simple-1.1.1.jar"
+        "jsonfiles/json-simple-1.1.1.jar",
+        "libraries/junit-platform-console-standalone-1.7.0.jar"
     ]
 }
