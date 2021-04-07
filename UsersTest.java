@@ -63,5 +63,12 @@ class UsersTest {
 		boolean hasNull = userList.get(0).getUsername().equalsIgnoreCase(null);
 		assertFalse(hasNull);
 	}
+
+	@Test
+    void testForSearchNotInList() {
+        boolean hasPW = userList.get(0).getPassword().equalsIgnoreCase("Lokasd1we1");
+        assertFalse(hasPW);
+
+    }
 	
 }
