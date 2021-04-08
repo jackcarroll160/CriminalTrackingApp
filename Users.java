@@ -11,7 +11,7 @@ public class Users {
     private static Users users = null;
     private static ArrayList<User> userList = new ArrayList<User>();
 
-    private Users() {
+    public Users() {
         new DataLoader();
         userList = DataLoader.loadUsers();
     }
