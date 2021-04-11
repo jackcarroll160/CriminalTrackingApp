@@ -70,5 +70,14 @@ class UsersTest {
         assertFalse(hasPW);
 
     }
+
+	/**
+	 * This test added by Jack
+	 */
+	@Test
+	void testForHaveUserPasswordEmpty() {
+		boolean hasEmpty = userList.get(0).getPassword().equalsIgnoreCase("");
+		assertFalse(hasEmpty);
+	}
 	
 }
