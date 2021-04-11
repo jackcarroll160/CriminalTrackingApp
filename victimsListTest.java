@@ -7,21 +7,41 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class victimsListTest {
-	private ArrayList<Victim> VictimsList = new ArrayList<Victim>();
+	private victimsList victims = victimsList.getInstance();
+	private ArrayList<Victim> VictimsList = victims.getVictimList();
 	
 	@BeforeEach
 	public void setup() {
-		VictimsList.clear();
-        
+		VictimsList.clear();  
 		VictimsList.add(new Victim("Kyle", "Persyn", 19, "803-792-2294", "False", "True", "True", "I was walking down the street and was shot"));
         VictimsList.add(new Victim("Canaan", "Eident", 20, "803-298-7924", "False", "True", "False", "Someone tried to rob me while I was pumping gas"));
-            }
+		DataWriter.saveVictim();
+	}
 	
 	@AfterEach
 	public void tearDown() {
-		VictimsList.clear();
+		victimsList.getInstance().getVictimList().clear();
+		DataWriter.saveVictim();
 	}
 	
+	@Test
+	void testHaveFirstVictimInList(){
+		boolean hasFirst = victims.searchVictimsByName("Kyle", "Persyn") != null;
+		assertTrue(hasFirst);
+	}
+
+	@Test
+	void testHaveSecondVictimInList(){
+		boolean hasFirst = victims.searchVictimsByName("Canaan", "Eident") != null;
+		assertTrue(hasFirst);
+	}
+
+	@Test
+	void testCreateDupe() {
+		Victim canaan = new Victim("Canaan", "Eident", 20, "803-298-7924", "False", "True", "False", "Someone tried to rob me while I was pumping gas");
+		victims.addVictim(canaan);
+		assertNotEquals(victims.getVictimList().size(), 3);
+	}
 	
 	@Test
 	void testHaveFirstVictimValidFirstName() {

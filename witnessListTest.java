@@ -7,21 +7,30 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class witnessListTest {
-	private ArrayList<Witness> WitnessList = new ArrayList<Witness>();
+	private witnessList witnesses = witnessList.getInstance();
+	private ArrayList<Witness> WitnessList = witnesses.getWitnessList();
 	
 	@BeforeEach
 	public void setup() {
 		WitnessList.clear();
 		WitnessList.add(new Witness("Kyle", "Persyn", 19, "803-792-2294", "False", "I found the suspects jacket on the floor", "I was fueling my car when the suspect stole the purse", "Shell Gas Station", "Bystander"));
         WitnessList.add(new Witness("Canaan", "Eident", 20, "803-298-7924", "False", "No Proof", "I was in my room during the crime and watched it from window", "Hilton Hotel", "Bystander"));
-            }
+		DataWriter.saveWitness();
+	}
 	
 	@AfterEach
 	public void tearDown() {
-		WitnessList.clear();
+		witnessList.getInstance().getWitnessList().clear();
+		DataWriter.saveWitness();
 	}
 	
-	
+	@Test
+	void testCreateDupe() {
+		Witness canaan = new Witness("Canaan", "Eident", 20, "803-298-7924", "False", "No Proof", "I was in my room during the crime and watched it from window", "Hilton Hotel", "Bystander");
+		witnesses.addWitness(canaan);
+		assertNotEquals(witnesses.getWitnessList().size(), 3);
+	}
+
 	@Test
 	void testHaveFirstWitnessValidFirstName() {
         Witness firstWitness = WitnessList.get(0);

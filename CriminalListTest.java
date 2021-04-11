@@ -7,20 +7,29 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CriminalListTest {
-	private ArrayList<Criminal> criminalList = new ArrayList<Criminal>();
+	private CriminalList criminals = CriminalList.getInstance();
+	private ArrayList<Criminal> criminalList = criminals.getCriminalList();
 	
 	@BeforeEach
 	public void setup() {
 		criminalList.clear();
 		criminalList.add(new Criminal("Kyle", "Persyn", "KP", 19, "Male", "White", "803-792-2294", "Speeding", "July 24, 2001", "Green", "Short Brown Hair", "Beard", "5'11", "178", "No Tattoos", "No Physical Marks", "Athletic", "No Weapon", "Smooth Tan Complexion", "Nike Gym Wear", "Black Chevy Avalanche"));
 		criminalList.add(new Criminal("Canaan", "Eident", "Cnan", 20, "Female", "White", "803-298-7924", "Trespassing", "March 17, 2001", "Hazel", "Medium Length Brown Hair", "No Facial Hair", "5'5", "130", "No Tattoos", "No Physical Marks", "Athletic", "No Weapon", "Smooth Tan Complexion", "Yoga Athletic Wear", "Gray Camry"));
+		DataWriter.saveCriminals();
 	}
 	
 	@AfterEach
 	public void tearDown() {
-		criminalList.clear();
+		CriminalList.getInstance().getCriminalList().clear();
+		DataWriter.saveCriminals();
 	}
 	
+	@Test
+	void testCreateDupe() {
+		Criminal kyle = new Criminal("Kyle", "Persyn", "KP", 19, "Male", "White", "803-792-2294", "Speeding", "July 24, 2001", "Green", "Short Brown Hair", "Beard", "5'11", "178", "No Tattoos", "No Physical Marks", "Athletic", "No Weapon", "Smooth Tan Complexion", "Nike Gym Wear", "Black Chevy Avalanche");
+		criminals.addCriminal(kyle);
+		assertNotEquals(criminals.getCriminalList().size(), 3);
+	}
 	
 	@Test
 	void testHaveFirstCriminalValidFirstName() {

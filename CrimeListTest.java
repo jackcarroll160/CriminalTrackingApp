@@ -7,7 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CrimeListTest {
-	private ArrayList<Crime> crimeList = new ArrayList<Crime>();
+    private CrimeList crimes = CrimeList.getInstance();
+	private ArrayList<Crime> crimeList = crimes.getCrimeList();
 	
 	@BeforeEach
 	public void setup() {
@@ -15,11 +16,20 @@ class CrimeListTest {
         
 		crimeList.add(new Crime(1, "Store GunFight", "4/5/2021", "10:42 PM", "true", null, null, null, null,null));
         crimeList.add(new Crime(2, "Bombing", "4/7/2021", "9:34 AM", "false", null, null, null, null,null));
+        DataWriter.saveCrime();
     }
 	
 	@AfterEach
 	public void tearDown() {
-		crimeList.clear();
+		CrimeList.getInstance().getCrimeList().clear();
+        DataWriter.saveCrime();
+	}
+
+    @Test
+	void testCreateDupe() {
+		Crime test = new Crime(1, "Store GunFight", "4/5/2021", "10:42 PM", "true", null, null, null, null,null);
+        crimes.addCrime(test);
+		assertNotEquals(crimes.getCrimeList().size(), 3);
 	}
 
     @Test

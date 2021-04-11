@@ -7,7 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class personOfInterestListTest {
-	private ArrayList<PersonOfInterest> poiList = new ArrayList<PersonOfInterest>();
+	private personOfInterestList pois = personOfInterestList.getInstance();
+	private ArrayList<PersonOfInterest> poiList = pois.getPersonOfInterestList();
 	
 	@BeforeEach
 	public void setup() {
@@ -15,13 +16,21 @@ class personOfInterestListTest {
         
 		poiList.add(new PersonOfInterest("Kyle", "Persyn", 19, "803-792-2294", "False", "I was on a plane when the crime happend", "True", "False"));
         poiList.add(new PersonOfInterest("Canaan", "Eident", 20, "803-298-7924", "False", "I was on a run at the time of the crime", "False", "True"));
-            }
+		DataWriter.savePersonOfInterest();
+	}
 	
 	@AfterEach
 	public void tearDown() {
-		poiList.clear();
+		personOfInterestList.getInstance().getPersonOfInterestList().clear();
+		DataWriter.savePersonOfInterest();
 	}
 	
+	@Test
+	void testCreateDupe() {
+		PersonOfInterest kyle = new PersonOfInterest("Kyle", "Persyn", 19, "803-792-2294", "False", "I was on a plane when the crime happend", "True", "False");
+		pois.addPersonOfInterest("Kyle", "Persyn", 19, "803-792-2294", "False", "I was on a plane when the crime happend", "True", "False");
+		assertNotEquals(pois.getPersonOfInterestList().size(), 3);
+	}
 	
 	@Test
 	void testHaveFirstPOIValidFirstName() {
