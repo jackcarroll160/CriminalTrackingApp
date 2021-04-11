@@ -1,7 +1,7 @@
 public abstract class DataConstants {
 
     // crime.json
-    protected static final String CRIME_FILE_NAME = "jsonfiles/crime.json";
+    protected static final String CRIME_FILE_NAME = "/Users/kpers/247Group/CriminalTrackingApp/jsonfiles/crime.json";
     protected static final String CRIME = "crime";
     protected static final String CRIME_NUM = "crimeNum";
     protected static final String CRIME_CRIME_ID = "crimeId";
@@ -17,7 +17,7 @@ public abstract class DataConstants {
     protected static final String CRIME_EVIDENCE = "evidence";
 
     // criminals.json
-    protected static final String CRIMINALS_FILE_NAME = "jsonfiles/criminals.json";
+    protected static final String CRIMINALS_FILE_NAME = "/Users/kpers/247Group/CriminalTrackingApp/jsonfiles/criminals.json";
     protected static final String CRIMINALS = "criminals";
     protected static final String CRIMINALS_CRIMINAL_ID = "criminalId";
     protected static final String CRIMINALS_FIRST_NAME = "firstName";
@@ -52,7 +52,7 @@ public abstract class DataConstants {
     protected static final String CRIMINALS_VEHICLE_DESCRIPTION = "vehicleDescription";
 
     // personOfInterest.json
-    protected static final String PERSONOFINTEREST_FILE_NAME = "jsonfiles/personOfInterest.json";
+    protected static final String PERSONOFINTEREST_FILE_NAME = "/Users/kpers/247Group/CriminalTrackingApp/jsonfiles/personOfInterest.json";
     protected static final String PERSONOFINTEREST = "personOfInterest";
     protected static final String PERSONOFINTEREST_POI_ID = "personOfInterestId";
     protected static final String PERSONOFINTEREST_FIRST_NAME = "firstName";
@@ -65,7 +65,7 @@ public abstract class DataConstants {
     protected static final String PERSONOFINTEREST_IS_SUSPECT = "isSuspect";
 
     // suspects.json
-    protected static final String SUSPECTS_FILE_NAME = "jsonfiles/suspects.json";
+    protected static final String SUSPECTS_FILE_NAME = "/Users/kpers/247Group/CriminalTrackingApp/jsonfiles/suspects.json";
     protected static final String SUSPECTS = "suspects";
     protected static final String SUSPECTS_SUSPECT_ID = "suspectId";
     protected static final String SUSPECTS_FIRST_NAME = "firstName";
@@ -97,7 +97,7 @@ public abstract class DataConstants {
     protected static final String SUSPECTS_VEHICLE_DESCRIPTION = "vehicleDescription";
 
     // victims.json
-    protected static final String VICTIMS_FILE_NAME = "jsonfiles/victims.json";
+    protected static final String VICTIMS_FILE_NAME = "/Users/kpers/247Group/CriminalTrackingApp/jsonfiles/victims.json";
     protected static final String VICTIMS = "victims";
     protected static final String VICTIMS_VICTIM_ID = "victimId";
     protected static final String VICTIMS_FIRST_NAME = "firstName";
@@ -110,7 +110,7 @@ public abstract class DataConstants {
     protected static final String VICTIMS_STATEMENT = "statement";
 
     // witnesses.json
-    protected static final String WITNESSES_FILE_NAME = "jsonfiles/witnesses.json";
+    protected static final String WITNESSES_FILE_NAME = "/Users/kpers/247Group/CriminalTrackingApp/jsonfiles/witnesses.json";
     protected static final String WITNESSES = "witnesses";
     protected static final String WITNESSES_WITNESS_ID = "witnessId";
     protected static final String WITNESSES_FIRST_NAME = "firstName";
@@ -124,7 +124,7 @@ public abstract class DataConstants {
     protected static final String WITNESSES_TYPE_OF_WITNESS = "typeOfWitness";
 
     // user.json
-    protected static final String USER_FILE_NAME = "jsonfiles/user.json";
+    protected static final String USER_FILE_NAME = "/Users/kpers/247Group/CriminalTrackingApp/jsonfiles/user.json";
     protected static final String USER_USER_ID = "userId";
     protected static final String USER_USERNAME = "username";
     protected static final String USER_PASSWORD = "password";
