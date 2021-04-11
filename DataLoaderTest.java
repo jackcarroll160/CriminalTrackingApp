@@ -16,6 +16,9 @@ public class DataLoaderTest {
     private CrimeList crimes = CrimeList.getInstance();
     private ArrayList<Crime> crimeList = crimes.getCrimeList();
 
+    private witnessList witnesses = witnessList.getInstance();
+    private ArrayList<Witness> WitnessList = witnesses.getWitnessList();
+
     private suspectsList suspects = suspectsList.getInstance();
     private ArrayList<Suspect> suspectList= suspects.getSuspectList();
 
@@ -73,6 +76,12 @@ public class DataLoaderTest {
     void testLoadCrimesList() {
         crimeList = DataLoader.loadCrime();
         assertEquals(crimeList, crimes);
+    }
+
+    @Test
+    void testLoadWitnessesList() {
+        WitnessList = DataLoader.loadWitnesses();
+        assertEquals(WitnessList, witnesses);
     }
 
     @Test
